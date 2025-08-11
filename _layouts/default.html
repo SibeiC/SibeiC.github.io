@@ -8,16 +8,10 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico'  | relative_url }}">
   <title>{{ page.title | default: "Sibei's GitHub Page" }}</title>
-  {% if site.google_analytics_v4 %}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_v4 }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.google_analytics_v4 }}');
-  </script>
+  {% if site.cloudflare_analytics %}
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics }}"}'></script>
+  <!-- End Cloudflare Web Analytics -->
   {% endif %}
 
   {% seo %}
