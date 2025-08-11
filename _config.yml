@@ -23,7 +23,7 @@ theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
-google_analytics_v4: G-QVNC2G6M54
+cloudflare_analytics: 54ec1fd326e94e19a351e401cb8f9eac
 
 languages: ["en", "zh"]
 
