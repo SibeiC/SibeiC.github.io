@@ -8,7 +8,7 @@ title: Sibei Chen's Resume
 email: resume
 
 multiLangLink: resume
-downloadLink: http://api.chencraft.com/v1.0/file/resume_enUS.pdf
+downloadLink: http://api.chencraft.com/file/resume_enUS.pdf
 
 languages: ["en", "zh"]
 ---
