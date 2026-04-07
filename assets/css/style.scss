@@ -1,0 +1,72 @@
+---
+---
+@import 'jekyll-theme-hacker';
+
+/* ---- Custom additions ---- */
+
+/* PDF print button icon */
+.btn-pdf .icon {
+  opacity: 0.6;
+  background: url("../images/pdf.png") 0 0 no-repeat;
+}
+
+/* CJK font support */
+body,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header h1 {
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, 微软雅黑, "Microsoft YaHei", 华文细黑, STXihei, monospace;
+}
+
+.right {
+  float: right;
+}
+
+#i18n_links {
+  float: right;
+}
+
+button:disabled,
+button[disabled] {
+  cursor: auto;
+  color: gray;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+/* Resume logos */
+.logo {
+  width: 7.5%;
+  float: right;
+}
+
+.logo.wide {
+  width: 20%;
+}
+
+/* Cupholder guide images */
+.audi_img {
+  vertical-align: top;
+}
+
+.audi_step_img {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Disabled language-switch link */
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: gray;
+}
