@@ -137,6 +137,7 @@ When the user sends a receipt image (optionally with a comment), do the followin
 ### Branch & PR cleanup
 
 - **Always pause for user approval before merging a PR.** Create the PR, summarise what it does, and wait for an explicit go-ahead. Never auto-merge, even for doc-only changes I authored.
+- **Exception — CLAUDE.md itself.** Changes to `CLAUDE.md` may be committed and pushed directly to `master` without going through a PR. This file is excluded from the published site (see `_config.yml`) and exists only for AI-agent use, so the usual review ceremony is overkill.
 - After merging, delete the branch locally (`git branch -D <name>`). Remote auto-delete is enabled on the repo (Settings → General → "Automatically delete head branches"), so the remote ref is cleaned up by GitHub on merge — no manual `git push --delete` needed.
 - Default PR merge method: squash, unless the user says otherwise.
 - After merging, remember to `git checkout master && git pull origin master` before starting new work — squash-merged commits on the remote won't be in the local `master` until pulled.
@@ -148,7 +149,7 @@ When the user sends a receipt image (optionally with a comment), do the followin
 
 ## Things not to do
 
-- Don't add `README.md`, `Gemfile`, `Gemfile.lock`, or `vendor/` to the site output — they are in `_config.yml`'s `exclude:` list already.
+- Don't add `README.md`, `CLAUDE.md`, `Gemfile`, `Gemfile.lock`, or `vendor/` to the site output — they are in `_config.yml`'s `exclude:` list already.
 - Don't commit `vendor/bundle/` (it's in `.gitignore` and only used locally thanks to `.bundle/config`).
 - Don't create new documentation files unless explicitly asked — prefer updating this one.
 - Don't introduce Jekyll plugins outside the GitHub Pages allowlist (`jekyll-feed`, `jekyll-seo-tag` are already configured); GitHub Pages will silently drop unsupported ones.

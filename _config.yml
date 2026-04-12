@@ -35,6 +35,7 @@ collections:
 
 exclude:
   - README.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
   - vendor/
