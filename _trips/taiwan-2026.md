@@ -35,7 +35,7 @@ cost:
         - { label: "citizenM Taipei（3 晚）", amount: 9275, in: primary }
         - { label: "水沙连大饭店（1 晚）", amount: 2800, in: primary, note: 估算 }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
-        - { label: "大榕树酒店（2 晚）", amount: 228.78, in: secondary }
+        - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
         - { label: "S.E.A. 民宿（1 晚）", amount: 3510, in: primary }
 
     - name: 交通
@@ -92,7 +92,7 @@ hotels:
     dates: 6/1 (一) – 6/2 (二)
     address: 嘉义县阿里山乡 42 号
     map_query: Chinshan Hotel Alishan 青山别馆
-  - name: 大榕树酒店 Grand Banyan Hotel
+  - name: 禧榕轩大饭店 Grand Banyan Hotel
     nights: 2
     dates: 6/2 (二) – 6/4 (四)
     address: 台南北区成功路 28 号
@@ -467,7 +467,7 @@ days:
       - time: 15:30 – 15:45
         title: 🚄 高铁 · 嘉义 → 台南（约 13 分钟）
         transit: true
-        detail: 嘉义高铁直达台南高铁站 13 分钟，再转乘台铁沙仑线至台南市区（25 分钟），或直接搭计程车到大榕树酒店（约 30 分钟）。
+        detail: 嘉义高铁直达台南高铁站 13 分钟，再转乘台铁沙仑线至台南市区（25 分钟），或直接搭计程车到禧榕轩大饭店（约 30 分钟）。
         tickets:
           - { tag: 高铁, value: NT$410 }
           - { tag: 沙仑线, value: NT$25 }
@@ -476,14 +476,14 @@ days:
           - { type: ticket, icon: 🎫, label: 台铁订票, url: "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" }
 
       - time: "17:00"
-        title: 🏨 大榕树酒店 Grand Banyan Hotel · Check-in
+        title: 🏨 禧榕轩大饭店 Grand Banyan Hotel · Check-in
         detail: 位于台南北区成功路，邻近台南公园与台南火车站。check-in 后可在附近吃晚餐 + 神农街夜逛。
         links:
           - { type: map, icon: 📍, label: 酒店位置, query: Grand Banyan Hotel Tainan }
     note: |
       <strong>💡 Day 6 林铁 vs 公车：</strong>此行程改搭台湾好行 7329A 公车下山（现买即走），并非阿里山森林铁路本线。若想坐百年林铁（阿里山→嘉义 约 NT$600，3h55m），务必出发前 14 天上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。
     stay:
-      hotel: 大榕树酒店 Grand Banyan Hotel
+      hotel: 禧榕轩大饭店 Grand Banyan Hotel
       label: 第 1 晚 / 共 2 晚
 
   - num: 7
@@ -549,7 +549,7 @@ days:
         links:
           - { type: map, icon: 📍, label: 保安路, query: 保安路小吃 台南 }
     stay:
-      hotel: 大榕树酒店 Grand Banyan Hotel
+      hotel: 禧榕轩大饭店 Grand Banyan Hotel
       label: 第 2 晚
 
   - num: 8
