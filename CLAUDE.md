@@ -117,6 +117,34 @@ Each item in `links:` arrays is rendered by `_includes/trip_link.html` as an `<a
 - `_layouts/default.html` uses `jekyll-theme-hacker` with additions in `assets/css/style.scss` (SCSS with Jekyll front matter to trigger Sass compilation). CJK fallback fonts (`微软雅黑`, `华文细黑`, `STXihei`) are stacked after the theme's Monaco/monospace.
 - `_layouts/trip.html` is self-contained and pulls **only** `assets/css/trip.css` (no theme base). Modify `trip.css` for any visual changes to trip pages. The layout also embeds a small `<script>` that handles theme toggle, thousand-separator formatting (`.fmt-num`), and the today-jump scroll — keep these working when editing the layout.
 
+## Working with the user (reusable session rules)
+
+These are standing behaviours the user has asked me to remember across sessions. Treat them as defaults — don't re-ask.
+
+### Receipt → trip update workflow
+
+When the user sends a receipt image (optionally with a comment), do the following without prompting:
+
+1. **Identify the trip.** OCR the receipt for date, vendor, city/country, currency. Cross-reference against `_trips/*.md`: match a trip whose `date_range` contains the receipt date; use city/country as tiebreaker. Ask before editing only if zero or multiple trips match, or the receipt is unreadable.
+2. **Identify the day.** Find the `days[]` entry whose `date:` (strict `YYYY-MM-DD`) equals the receipt date.
+3. **Apply the update.**
+   - **Cost item** → add to the appropriate `cost.groups[].items[]` with raw `amount` (no symbols / commas), correct `in: primary|secondary` based on receipt currency vs. the trip's `primary` / `secondary`, concise Chinese `label`.
+   - **Activity / comment** → append to that day's `items[]` with `time`, emoji-prefixed `title`, and the comment as `detail` (Chinese block scalar, tone matching `_trips/taiwan-2026.md`). If it's clearly the same activity as an existing item, extend that item's `detail` instead of adding a new one.
+4. **Commit, PR, merge, cleanup** — see branch-cleanup rule below.
+
+**Cost override rule (important):** If the receipt's cost already has a corresponding **estimate** line (typically tagged `note: 估算`), **replace** that line's `amount` with the actual and **drop** `note: 估算` — do NOT add a second line. Matching heuristic: same `cost.groups[]` category + same / similar `label` + plausible date. If the match is ambiguous (e.g. generic "交通杂费" vs. specific taxi fare), ask before overwriting vs. appending. Never manually recompute totals — the Liquid layout sums everything.
+
+### Branch & PR cleanup
+
+- After merging a PR for a branch I created in a session, delete the branch locally (`git branch -D <name>`). Remote auto-delete is enabled on the repo (Settings → General → "Automatically delete head branches"), so the remote ref is cleaned up by GitHub on merge — no manual `git push --delete` needed.
+- Default PR merge method: squash, unless the user says otherwise.
+- After merging, remember to `git checkout master && git pull origin master` before starting new work — squash-merged commits on the remote won't be in the local `master` until pulled.
+
+### Default language & tone
+
+- ZH-CN for all trip content, user-facing strings, receipt-derived labels, and free-form comments unless the user explicitly says otherwise.
+- Tone: informative, slightly enthusiastic — match `_trips/taiwan-2026.md`.
+
 ## Things not to do
 
 - Don't add `README.md`, `Gemfile`, `Gemfile.lock`, or `vendor/` to the site output — they are in `_config.yml`'s `exclude:` list already.
