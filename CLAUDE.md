@@ -136,7 +136,8 @@ When the user sends a receipt image (optionally with a comment), do the followin
 
 ### Branch & PR cleanup
 
-- After merging a PR for a branch I created in a session, delete the branch locally (`git branch -D <name>`). Remote auto-delete is enabled on the repo (Settings → General → "Automatically delete head branches"), so the remote ref is cleaned up by GitHub on merge — no manual `git push --delete` needed.
+- **Always pause for user approval before merging a PR.** Create the PR, summarise what it does, and wait for an explicit go-ahead. Never auto-merge, even for doc-only changes I authored.
+- After merging, delete the branch locally (`git branch -D <name>`). Remote auto-delete is enabled on the repo (Settings → General → "Automatically delete head branches"), so the remote ref is cleaned up by GitHub on merge — no manual `git push --delete` needed.
 - Default PR merge method: squash, unless the user says otherwise.
 - After merging, remember to `git checkout master && git pull origin master` before starting new work — squash-merged commits on the remote won't be in the local `master` until pulled.
 
