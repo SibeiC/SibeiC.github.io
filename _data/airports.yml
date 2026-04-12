@@ -28,10 +28,10 @@ REP: { city: 暹粒 吴哥 }
 RGN: { city: 仰光 }
 
 # ── Greater China ────────────────────────────────────────────────────────────
-TPE: { city: 台北 桃园 }
-TSA: { city: 台北 松山 }
-KHH: { city: 高雄 小港 }
-TXG: { city: 台中 清泉岗 }
+TPE: { city: 中国台北 桃园 }
+TSA: { city: 中国台北 松山 }
+KHH: { city: 中国高雄 小港 }
+TXG: { city: 中国台中 清泉岗 }
 HKG: { city: 香港 赤鱲角 }
 MFM: { city: 澳门 }
 PEK: { city: 北京 首都 }
