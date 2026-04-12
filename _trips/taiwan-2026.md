@@ -196,7 +196,7 @@ days:
         links:
           - { type: map,    icon: 📍, label: 地图, query: National Palace Museum Taipei }
           - { type: ticket, icon: 🎫, label: 故宫官网, url: "https://www.npm.gov.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook 预约, url: "https://www.klook.com/zh-CN/activity/1573-national-palace-museum-taipei/" }
+          - { type: ticket, icon: 🎫, label: Klook 预约, url: "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/" }
 
       - time: 12:30 – 14:00
         title: 🍱 午餐 · 故宫晶华 或 士林老街
@@ -268,8 +268,8 @@ days:
         links:
           - { type: map,    icon: 📍, label: 地图, query: Taipei 101 }
           - { type: ticket, icon: 🎫, label: 101 官网, url: "https://www.taipei-101.com.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook, url: "https://www.klook.com/zh-CN/activity/76-taipei-101-observatory/" }
-          - { type: ticket, icon: 🎫, label: KKday, url: "https://www.kkday.com/zh-cn/product/21257" }
+          - { type: ticket, icon: 🎫, label: Klook, url: "https://www.klook.com/zh-CN/activity/1659-taipei-101-taipei/" }
+          - { type: ticket, icon: 🎫, label: KKday, url: "https://www.kkday.com/zh-cn/product/8332-taipei-101-observatory-ticket" }
 
       - time: 19:00 – 22:30
         title: 🍢 饶河街观光夜市
@@ -304,7 +304,7 @@ days:
           - { tag: 早鸟 65 折, value: NT$455, note: 提前 5–28 天 }
         links:
           - { type: ticket, icon: 🎫, label: 台湾高铁官网, url: "https://www.thsrc.com.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook 高铁票, url: "https://www.klook.com/zh-CN/activity/2011-taiwan-high-speed-rail-ticket/" }
+          - { type: ticket, icon: 🎫, label: Klook 高铁票, url: "https://www.klook.com/zh-CN/activity/73749-thsr-one-way-ticket-taipei/" }
           - { type: map,    icon: 📍, label: 台北高铁站, query: HSR Taipei Station }
           - { type: map,    icon: 📍, label: 台中高铁站, query: HSR Taichung Station }
 
@@ -332,8 +332,8 @@ days:
         links:
           - { type: map,    icon: 📍, label: 九族文化村, query: Formosan Aboriginal Culture Village }
           - { type: ticket, icon: 🎫, label: 九族官网, url: "https://www.nine.com.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook, url: "https://www.klook.com/zh-CN/activity/574-formosan-aboriginal-culture-village-nantou/" }
-          - { type: ticket, icon: 🎫, label: KKday, url: "https://www.kkday.com/zh-cn/product/4180" }
+          - { type: ticket, icon: 🎫, label: Klook, url: "https://www.klook.com/zh-CN/activity/33027-formosa-aboriginal-cultural-village-ticket-sun-moon-lake-boat-pass/" }
+          - { type: ticket, icon: 🎫, label: KKday, url: "https://www.kkday.com/zh-cn/product/18440-taiwan-formosan-aboriginal-culture-village-sun-moon-lake-ropeway-ticket" }
 
       - time: 15:30 – 16:00
         title: 🚡 日月潭缆车 · 九族 → 伊达邵
@@ -353,7 +353,7 @@ days:
           - { type: map,    icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
           - { type: map,    icon: 📍, label: 玄光寺, query: 玄光寺 日月潭 }
           - { type: map,    icon: 📍, label: 水社码头, query: 水社码头 }
-          - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/2015-sun-moon-lake-boat-tour/" }
+          - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
     note: |
       <strong>💡 Day 4 建议：</strong>住日月潭水社比住台中更有效率 — 隔天 08:00 从水社出发搭台湾好行去阿里山，避免再花 1.5 小时从台中赶回日月潭。
     stay:
@@ -527,7 +527,7 @@ days:
         links:
           - { type: map,    icon: 📍, label: 安平树屋, query: Anping Tree House }
           - { type: map,    icon: 📍, label: 安平古堡, query: Anping Old Fort }
-          - { type: ticket, icon: 🎫, label: Klook 门票, url: "https://www.klook.com/zh-CN/activity/53574-anping-tree-house-tainan/" }
+          - { type: ticket, icon: 🎫, label: Klook 门票, url: "https://www.klook.com/zh-CN/activity/40974-anping-tree-house-ticket-district-taiwan/" }
 
       - time: 16:00 – 17:30
         title: 🍧 安平老街
@@ -658,7 +658,7 @@ days:
           - { tag: 机场捷运, value: NT$150 }
         links:
           - { type: ticket, icon: 🎫, label: 机场捷运官网, url: "https://www.tymetro.com.tw/tymetro-new/tc/" }
-          - { type: ticket, icon: 🎫, label: Klook 车票, url: "https://www.klook.com/zh-CN/activity/3091-taoyuan-airport-mrt-taipei/" }
+          - { type: ticket, icon: 🎫, label: Klook 车票, url: "https://www.klook.com/zh-CN/activity/11346-taoyuan-airport-mrt-ticket-taipei/" }
 
       - time: 18:30 – 22:55
         title: ✈️ 桃园国际机场 TPE · 晚餐 + 候机
@@ -685,10 +685,10 @@ booking_channels:
   - { name: 台湾好行 6739（日月潭-阿里山）, detail: '<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C" target="_blank">时刻表</a> · <a href="https://www.nantoubus.com.tw/" target="_blank">南投客运</a> 需电话或 APP 预约' }
   - { name: 台湾好行 7329A（阿里山-嘉义）, detail: '<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C" target="_blank">时刻表</a>' }
   - { name: 阿里山森林铁路, detail: '<a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a>（提前 14 天早上开放订票，订位即付款）' }
-  - { name: 九族文化村 + 日月潭缆车, detail: '<a href="https://www.klook.com/zh-CN/activity/574-formosan-aboriginal-culture-village-nantou/" target="_blank">Klook</a> / <a href="https://www.kkday.com/zh-cn/product/4180" target="_blank">KKday</a>' }
+  - { name: 九族文化村 + 日月潭缆车, detail: '<a href="https://www.klook.com/zh-CN/activity/33027-formosa-aboriginal-cultural-village-ticket-sun-moon-lake-boat-pass/" target="_blank">Klook</a> / <a href="https://www.kkday.com/zh-cn/product/18440-taiwan-formosan-aboriginal-culture-village-sun-moon-lake-ropeway-ticket" target="_blank">KKday</a>' }
   - { name: 多罗满赏鲸, detail: '<a href="https://www.klook.com/zh-CN/activity/697-hualien-whale-watching-rafting-hualien/" target="_blank">Klook</a> / <a href="https://www.turumoan.com.tw/" target="_blank">官网</a>' }
-  - { name: 台北 101 观景台, detail: '<a href="https://www.klook.com/zh-CN/activity/76-taipei-101-observatory/" target="_blank">Klook</a> / <a href="https://www.taipei-101.com.tw/" target="_blank">官网</a>' }
-  - { name: 故宫博物院, detail: '<a href="https://www.npm.gov.tw/" target="_blank">官网</a> / <a href="https://www.klook.com/zh-CN/activity/1573-national-palace-museum-taipei/" target="_blank">Klook</a>' }
+  - { name: 台北 101 观景台, detail: '<a href="https://www.klook.com/zh-CN/activity/1659-taipei-101-taipei/" target="_blank">Klook</a> / <a href="https://www.taipei-101.com.tw/" target="_blank">官网</a>' }
+  - { name: 故宫博物院, detail: '<a href="https://www.npm.gov.tw/" target="_blank">官网</a> / <a href="https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/" target="_blank">Klook</a>' }
   - { name: Scoot 航班管理, detail: '<a href="https://www.flyscoot.com/en/manage-booking" target="_blank">flyscoot.com</a>' }
 
 checklist:
