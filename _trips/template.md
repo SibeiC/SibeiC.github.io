@@ -55,7 +55,7 @@
 #   • For multi-line `detail`/`note`/`hotels_note` use YAML `|` block scalar.
 #     Inline HTML is allowed (<strong>, <br><br>, <a>, <em>).
 # ─────────────────────────────────────────────────────────────────────────────
-# published: false
+published: false
 
 # ── Page identity ────────────────────────────────────────────────────────────
 layout: trip                          # [REQUIRED] always literal "trip"
