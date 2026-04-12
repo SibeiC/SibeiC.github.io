@@ -147,6 +147,30 @@ When the user sends a receipt image (optionally with a comment), do the followin
 - ZH-CN for all trip content, user-facing strings, receipt-derived labels, and free-form comments unless the user explicitly says otherwise.
 - Tone: informative, slightly enthusiastic — match `_trips/taiwan-2026.md`.
 
+### Reusability / DRY preference
+
+The user prefers abstraction over duplication. If the same value, URL, snippet, or style rule would appear in two or more places, factor it out:
+
+- **CSS (`assets/css/trip.css`, `style.scss`)**: when two selectors need the same properties, use a combined selector (`a, b { … }`) with per-element overrides rather than two near-identical rule blocks. See `.home-link, .theme-toggle` in `trip.css` as a reference pattern. Prefer CSS custom properties (already in use for `--chip-*`, `--accent`, etc.) for colour/spacing tokens that are referenced more than twice.
+- **Layouts (`_layouts/*.html`)**: pull repeated markup into `_includes/*.html` partials (see `_includes/trip_link.html` for the chip-rendering pattern). Prefer passing structured data via `{% include foo.html param=value %}` over copy-paste.
+- **Data (`_data/*.yml`)**: already the canonical place for airlines/airports. When a new trip introduces a repeated concept (e.g., a chain hotel referenced across trips, a common ticket vendor), extend `_data/` rather than inlining.
+- **Trips (`_trips/*.md`)**: within a single trip file, the same URL often appears twice — once in a day's `links:` chip and again in `booking_channels:` at the bottom. Use YAML anchors (`&name`) and aliases (`*name`) to define once and reuse:
+
+  ```yaml
+  # Define inline once:
+  - { type: ticket, icon: 🎫, label: Klook, url: &klook_101 "https://www.klook.com/zh-CN/activity/1659-taipei-101-taipei/" }
+  # Reuse the URL later:
+  booking_channels:
+    - { name: 台北 101 观景台, detail: '<a href="*klook_101" target="_blank">…' }  # ← this exact syntax doesn't work in a quoted string; see note
+  ```
+
+  YAML anchors compose cleanly for scalar values and object merges at the YAML parser layer. They do NOT interpolate inside quoted strings (`'<a href="*klook_101">'` is a literal string). Practical guidance:
+    - For repeated **scalar values** (URLs, prices, names): declare once with `&anchor`, reference with `*anchor` in other mapping values.
+    - For repeated **objects** (full link chips): declare once with `&anchor`, reuse with `- *anchor`.
+    - When a URL must appear inside HTML prose (e.g., `booking_channels[].detail` block scalars with `<a href="…">`), YAML anchors don't help — in that case, lift the URL to a top-level key like `urls:` and reference via Liquid: `{{ page.urls.klook_101 }}`. Only do this when the repetition is genuine (≥ 2 occurrences) and the link is stable.
+
+When the abstraction would cost more clarity than the duplication (e.g., a single extra occurrence of a short string), leave it. The user's rule is pragmatic DRY, not dogmatic.
+
 ## Things not to do
 
 - Don't add `README.md`, `CLAUDE.md`, `Gemfile`, `Gemfile.lock`, or `vendor/` to the site output — they are in `_config.yml`'s `exclude:` list already.
