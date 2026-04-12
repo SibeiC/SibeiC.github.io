@@ -44,8 +44,8 @@ cost:
         - { label: "高铁 台北→台中", amount: 700, in: primary }
         - { label: "好行 6670A 台中→九族", amount: 229, in: primary }
         - { label: "好行 6739 日月潭→阿里山", amount: 329, in: primary }
-        - { label: "好行 7329A 阿里山→嘉义", amount: 283, in: primary }
-        - { label: "高铁 嘉义→台南", amount: 410, in: primary }
+        - { label: "林铁本线 阿里山→嘉义（首选）", amount: 600, in: primary }
+        - { label: "台铁 嘉义→台南", amount: 107, in: primary }
         - { label: "台铁自强号 台南→花莲", amount: 962, in: primary }
         - { label: "台铁 花莲→台北", amount: 440, in: primary }
         - { label: "机场捷运（往返）", amount: 300, in: primary }
@@ -439,49 +439,55 @@ days:
         links:
           - { type: map, icon: 📍, label: 祝山站, query: 祝山观日楼 }
 
-      - time: 10:10 – 13:10
-        title: 🚌 台湾好行 7329A · 阿里山 → 嘉义高铁站
+      - time: 11:50 – 15:45
+        title: 🚂 阿里山林铁本线 · 阿里山 → 嘉义（首选）
         transit: true
         detail: |
-          从阿里山转运站直达嘉义高铁站，约 3 小时，沿途经石桌、奋起湖、竹崎。
+          百年蒸汽林铁下山首选，阿里山车站 11:50 发车，约 3h55m 抵达<strong>嘉义车站（TRA 普通站，非高铁站）</strong>。沿途经奋起湖、竹崎等站，山岚林海风景绝佳。
           <br><br>
-          <strong>注：</strong>原本打算搭阿里山森林铁路本线下山，但由于本线需提前 14 天抢票且有时段限制，改搭台湾好行公车，时间更弹性。若想体验林铁，仍建议提前 14 天上官网抢票。
+          <strong>⚠️ 抢票：</strong>必须出发前 14 天上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 订票（订位即付款，2026 年新制，逾时取消）。
+          <br><br>
+          <strong>备选（若林铁票售罄）：</strong>改搭台湾好行 7329A 公车 10:10 / 12:00 / 13:30 发车，约 3h 直达<strong>嘉义高铁站</strong>，NT$283 现买即走。到高铁站后直接转高铁去台南（13 分钟 / NT$410），时间反而更早。
         transit_route:
-          preferred: 10:10 出发 → 13:10 抵达嘉义高铁
-          alternatives: ["12:00", "13:30", "14:40", "16:40"]
+          preferred: 林铁本线 11:50 阿里山 → 15:45 嘉义 TRA（NT$600）
+          alternatives: ["备选 · 好行 7329A 10:10 / 12:00 / 13:30 → 嘉义高铁（3h / NT$283）"]
         tickets:
-          - { tag: 票价, value: NT$283 }
+          - { tag: 林铁本线, value: "NT$600" }
+          - { tag: 7329A 公车（备选）, value: "NT$283" }
         links:
-          - { type: ticket, icon: 🎫, label: 7329A 时刻表, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C" }
-          - { type: ticket, icon: 🎫, label: 73290（慢车版）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" }
-          - { type: ticket, icon: 🎫, label: 林铁官网（备选）, url: "https://afrts.forest.gov.tw/" }
-          - { type: map,    icon: 📍, label: 嘉义高铁站, query: Chiayi HSR Station }
+          - { type: ticket, icon: 🎫, label: 林铁官网订票, url: "https://afrts.forest.gov.tw/" }
+          - { type: ticket, icon: 🎫, label: 7329A 时刻表（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C" }
+          - { type: ticket, icon: 🎫, label: 73290 慢车版（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" }
+          - { type: map,    icon: 📍, label: 嘉义车站（TRA）, query: Chiayi TRA Station }
 
-      - time: 13:30 – 15:00
-        title: 🍜 嘉义市区午餐 · 鸡肉饭巡礼
-        detail: 嘉义高铁站搭 BRT（凭高铁票免费）或台铁至嘉义市区，约 25 分钟。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。
+      - time: 16:00 – 17:30
+        title: 🍜 嘉义市区晚餐 · 鸡肉饭巡礼
+        detail: 林铁下车即嘉义 TRA 站，步行或短程计程车即可抵达市区老店。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。若走公车备选路线已到嘉义高铁站，可改搭 BRT（凭高铁票免费）或台铁 25 分钟进市区。
         links:
           - { type: map, icon: 📍, label: 林聪明沙锅鱼头, query: 林聪明沙锅鱼头 }
           - { type: map, icon: 📍, label: 刘里长鸡肉饭, query: 刘里长鸡肉饭 }
 
-      - time: 15:30 – 15:45
-        title: 🚄 高铁 · 嘉义 → 台南（约 13 分钟）
+      - time: 17:45 – 18:30
+        title: 🚆 台铁 · 嘉义 → 台南（约 40 分钟）
         transit: true
-        detail: 嘉义高铁直达台南高铁站 13 分钟，再转乘台铁沙仑线至台南市区（25 分钟），或直接搭计程车到禧榕轩大饭店（约 30 分钟）。
+        detail: |
+          林铁终点就是嘉义 TRA 站，直接转台铁自强号/区间车至台南车站，车程 35–45 分钟，步行或计程车约 15 分钟即可抵达禧榕轩大饭店。
+          <br><br>
+          <strong>若走公车备选路线：</strong>已在嘉义高铁站，改搭高铁 13 分钟到台南高铁站（NT$410），再转沙仑线 25 分钟进市区，反而更快到饭店。
         tickets:
-          - { tag: 高铁, value: NT$410 }
-          - { tag: 沙仑线, value: NT$25 }
+          - { tag: 台铁自强, value: "NT$107" }
+          - { tag: 高铁（备选）, value: "NT$410" }
         links:
-          - { type: ticket, icon: 🎫, label: 台湾高铁, url: "https://www.thsrc.com.tw/" }
           - { type: ticket, icon: 🎫, label: 台铁订票, url: "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" }
+          - { type: ticket, icon: 🎫, label: 台湾高铁（备选）, url: "https://www.thsrc.com.tw/" }
 
-      - time: "17:00"
+      - time: "19:00"
         title: 🏨 禧榕轩大饭店 Grand Banyan Hotel · Check-in
-        detail: 位于台南北区成功路，邻近台南公园与台南火车站。check-in 后可在附近吃晚餐 + 神农街夜逛。
+        detail: 位于台南北区成功路，邻近台南公园与台南火车站。check-in 后可在附近吃宵夜、逛神农街。
         links:
           - { type: map, icon: 📍, label: 酒店位置, query: Grand Banyan Hotel Tainan }
     note: |
-      <strong>💡 Day 6 林铁 vs 公车：</strong>此行程改搭台湾好行 7329A 公车下山（现买即走），并非阿里山森林铁路本线。若想坐百年林铁（阿里山→嘉义 约 NT$600，3h55m），务必出发前 14 天上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。
+      <strong>💡 Day 6 林铁优先：</strong>首选搭阿里山森林铁路本线下山（NT$600，3h55m，百年路线），<strong>务必出发前 14 天</strong>上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。若林铁票售罄，退而求其次搭台湾好行 7329A 公车（现买即走，NT$283，直达嘉义高铁站，到站反而更早）。林铁终点是嘉义 TRA 站，后续台铁去台南即可；公车到的是嘉义高铁站，接高铁去台南更顺。
     stay:
       hotel: 禧榕轩大饭店 Grand Banyan Hotel
       label: 第 1 晚 / 共 2 晚
