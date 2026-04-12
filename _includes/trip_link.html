@@ -1,0 +1,7 @@
+{%- assign link = include.link -%}
+{%- if link.query -%}
+  {%- assign href = link.query | url_encode | prepend: 'https://www.google.com/maps/search/?api=1&query=' -%}
+{%- else -%}
+  {%- assign href = link.url -%}
+{%- endif -%}
+<a class="chip{% if link.type %} {{ link.type }}{% endif %}" href="{{ href }}" target="_blank" rel="noopener">{{ link.icon }} {{ link.label }}</a>

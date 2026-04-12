@@ -28,6 +28,11 @@ cloudflare_analytics: 54ec1fd326e94e19a351e401cb8f9eac
 
 languages: ["en", "zh"]
 
+collections:
+  trips:
+    output: true
+    permalink: /trips/:path/
+
 exclude:
   - README.md
   - Gemfile

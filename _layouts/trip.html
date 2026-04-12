@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'zh-CN' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }}</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ page.favicon | default: '/assets/images/favicon.ico' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/trip.css' | relative_url }}">
+{% if site.cloudflare_analytics %}<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics }}"}'></script>{% endif %}
+</head>
+<body>
+
+<div class="hero">
+  <button type="button" class="theme-toggle" aria-label="切换深色 / 浅色模式">🌓</button>
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<div class="subtitle">{{ page.subtitle | join: ' · ' }}</div>{% endif %}
+  <div class="dates">
+    {% if page.date_range %}<div class="date-chip">{{ page.date_range }}</div>{% endif %}
+    {% if page.duration %}<div class="date-chip">{{ page.duration }}</div>{% endif %}
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="external-tools">
+    <a href="https://wanderlog.com" target="_blank" rel="noopener">🗺️ Wanderlog</a>
+    <a href="https://www.tripit.com" target="_blank" rel="noopener">✈️ TripIt</a>
+    <a href="https://www.flightaware.com" target="_blank" rel="noopener">📡 FlightAware</a>
+  </div>
+
+  {% if page.cost %}
+  {%- assign primary = page.cost.primary -%}
+  {%- assign secondary = page.cost.secondary -%}
+  {%- assign rate = page.cost.rate -%}
+  {%- assign grand = 0 -%}
+  {%- for g in page.cost.groups -%}
+    {%- for i in g.items -%}
+      {%- if i.in == 'secondary' -%}
+        {%- assign converted = i.amount | times: rate -%}
+        {%- assign grand = grand | plus: converted -%}
+      {%- else -%}
+        {%- assign grand = grand | plus: i.amount -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+  {%- assign grand_secondary = grand | divided_by: rate -%}
+  <div class="card cost-card">
+    <h3>
+      <span>💰 行程总预算</span>
+      <span class="cost-total"><span class="fmt-num">{{ primary }} {{ grand | round: 2 }}</span> <span class="other">≈ <span class="fmt-num">{{ secondary }} {{ grand_secondary | round: 0 }}</span></span></span>
+    </h3>
+    <div class="cost-grid">
+      {% for group in page.cost.groups %}
+      {%- assign group_total = 0 -%}
+      {%- for item in group.items -%}
+        {%- if item.in == 'secondary' -%}
+          {%- assign converted = item.amount | times: rate -%}
+          {%- assign group_total = group_total | plus: converted -%}
+        {%- else -%}
+          {%- assign group_total = group_total | plus: item.amount -%}
+        {%- endif -%}
+      {%- endfor -%}
+      <div class="cost-group-header">{{ group.icon }} {{ group.name }} · <span class="fmt-num">{{ primary }} {{ group_total | round: 2 }}</span></div>
+      {% for item in group.items %}
+      {%- if item.in == 'secondary' -%}{%- assign sym = secondary -%}{%- else -%}{%- assign sym = primary -%}{%- endif -%}
+      <div class="cost-row"><span class="lbl">{{ item.label }}{% if item.note %} <em style="opacity:0.7">({{ item.note }})</em>{% endif %}</span><span class="val fmt-num">{{ sym }} {{ item.amount }}</span></div>
+      {% endfor %}
+      {% endfor %}
+    </div>
+    {% if page.cost.notes or page.cost.rate %}
+    <div class="cost-footer">
+      {% if page.cost.notes %}<strong>⚠️ 未含：</strong>{{ page.cost.notes | join: ' · ' }}<br>{% endif %}
+      {% if page.cost.rate %}<strong>汇率参考：</strong>1 {{ secondary }} ≈ {{ rate }} {{ primary }}{% if page.cost.rate_note %}（{{ page.cost.rate_note }}）{% endif %}{% endif %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if page.flights %}
+  {%- assign first_airline = site.data.airlines[page.flights.first.airline] -%}
+  <div class="card">
+    <h3>✈️ 航班信息{% if page.flight_carrier %} · {{ page.flight_carrier }}{% elsif first_airline %} · {{ first_airline.name }}{% endif %}</h3>
+    {% for flight in page.flights %}
+    {%- assign airline = site.data.airlines[flight.airline] -%}
+    {%- assign from_ap = site.data.airports[flight.from.code] -%}
+    {%- assign to_ap = site.data.airports[flight.to.code] -%}
+    <div class="flight-row">
+      <div class="flight-port">
+        <div class="code">{{ flight.from.code }}</div>
+        <div class="city">{{ flight.from.city | default: from_ap.city }}</div>
+        <div class="time">{{ flight.from.time }}</div>
+      </div>
+      <div class="flight-arrow">
+        <div>{{ flight.date }}</div>
+        <span class="line"></span>
+        <div>{{ flight.duration }}</div>
+      </div>
+      <div class="flight-port">
+        <div class="code">{{ flight.to.code }}</div>
+        <div class="city">{{ flight.to.city | default: to_ap.city }}</div>
+        <div class="time">{{ flight.to.time }}</div>
+      </div>
+    </div>
+    <div class="flight-meta">
+      <span><strong>航班：</strong>{% if airline %}{{ airline.name }} {% endif %}{{ flight.airline }} {{ flight.number }}</span>
+      {% if flight.note %}<span><strong>备注：</strong>{{ flight.note }}</span>{% endif %}
+      {% if airline.manage_booking %}<a class="chip" href="{{ airline.manage_booking }}" target="_blank" rel="noopener">🔗 管理订票</a>{% endif %}
+      {% if airline.icao %}<a class="chip" href="https://www.flightaware.com/live/flight/{{ airline.icao }}{{ flight.number }}" target="_blank" rel="noopener">📡 实时状态</a>{% endif %}
+      {% for link in flight.links %}{% include trip_link.html link=link %}{% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.hotels %}
+  <div class="card">
+    <h3>🏨 已预订住宿</h3>
+    <div class="hotel-list">
+      {% for hotel in page.hotels %}
+      <div class="hotel-row">
+        <div class="hotel-nights"><span class="n">{{ hotel.nights }}</span><span class="lbl">晚</span></div>
+        <div>
+          <div class="hotel-name">{{ hotel.name }}</div>
+          <div class="hotel-dates">{{ hotel.dates }}{% if hotel.address %} · {{ hotel.address }}{% endif %}</div>
+        </div>
+        {% if hotel.map_query or hotel.map_url %}
+        <div>
+          {% assign hlink = hotel | default: nil %}
+          {% if hotel.map_query %}{% assign maphref = hotel.map_query | url_encode | prepend: 'https://www.google.com/maps/search/?api=1&query=' %}{% else %}{% assign maphref = hotel.map_url %}{% endif %}
+          <a class="chip map" href="{{ maphref }}" target="_blank" rel="noopener">📍 地图</a>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% if page.hotels_note %}
+    <div class="note-box" style="margin-bottom: 0;">{{ page.hotels_note }}</div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if page.overview or page.days %}
+  <div class="card">
+    <h3>🧭 行程总览</h3>
+    {% if page.overview %}
+    <div class="overview-grid">
+      {% for o in page.overview %}
+      <div class="overview-item"><strong>{{ o.label }}</strong>{{ o.text }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if page.days %}
+    <div class="toc">
+      {% for day in page.days %}
+      <a style="--day-color: {{ day.color }}" href="#d{{ day.num }}">D{{ day.num }} · {{ day.toc_label | default: day.title }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% for day in page.days %}
+  <div class="day-section" id="d{{ day.num }}" style="--day-color: {{ day.color }}"{% if day.date %} data-date="{{ day.date }}"{% endif %}>
+    <div class="day-header">
+      <div class="day-num">D{{ day.num }}</div>
+      <div>
+        <div class="day-title">{{ day.title }}</div>
+        <div class="day-route">{{ day.date_label }}{% if day.location %} · {{ day.location }}{% endif %}</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      {% for item in day.items %}
+      <div class="timeline-item{% if item.transit %} transit{% endif %}">
+        {% if item.time %}<div class="time-badge">{{ item.time }}</div>{% endif %}
+        {% if item.title %}<div class="item-title">{{ item.title }}</div>{% endif %}
+        {% if item.detail %}<div class="item-detail">{{ item.detail }}</div>{% endif %}
+        {% if item.transit_route %}
+        <div class="transit-route">
+          <div class="pref">✓ 首选：{{ item.transit_route.preferred }}</div>
+          {% if item.transit_route.alternatives %}<div class="alt"><strong>备选：</strong>{{ item.transit_route.alternatives | join: ' · ' }}</div>{% endif %}
+        </div>
+        {% endif %}
+        {% if item.tickets %}
+        <div class="ticket-info">
+          {% for t in item.tickets %}<span><span class="tag">{{ t.tag }}</span> {{ t.value }}{% if t.note %}（{{ t.note }}）{% endif %}</span>{% endfor %}
+        </div>
+        {% endif %}
+        {% if item.links %}
+        <div class="link-row">
+          {% for link in item.links %}{% include trip_link.html link=link %}{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if day.note %}
+    <div class="note-box">{{ day.note }}</div>
+    {% endif %}
+
+    {% if day.stay %}
+    {%- assign stay_hotel = day.stay.hotel | default: day.stay.name -%}
+    {%- assign matched = page.hotels | where: "name", stay_hotel | first -%}
+    {%- assign stay_addr = matched.address | default: day.stay.address -%}
+    {%- if matched.map_query -%}
+      {%- assign stay_map = matched.map_query | url_encode | prepend: 'https://www.google.com/maps/search/?api=1&query=' -%}
+    {%- elsif matched.map_url -%}
+      {%- assign stay_map = matched.map_url -%}
+    {%- endif -%}
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>{% if stay_map %}<a href="{{ stay_map }}" target="_blank" rel="noopener">{{ stay_hotel }}</a>{% else %}{{ stay_hotel }}{% endif %}{% if day.stay.label %}（{{ day.stay.label }}）{% endif %}
+      {% if stay_addr %}<div class="addr">{{ stay_addr }}</div>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  {% if page.booking_channels %}
+  <div class="card">
+    <h3>🎟️ 订票与购票渠道汇总</h3>
+    <div class="booking-list">
+      {% for c in page.booking_channels %}
+      <p><strong>{{ c.name }}</strong>：{{ c.detail }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.checklist %}
+  <div class="card" style="margin-bottom: 30px;">
+    <h3>📝 行前须知 Checklist</h3>
+    <div class="booking-list">
+      {% for c in page.checklist %}
+      <p>✅ {{ c }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% assign body_text = content | strip_html | strip %}
+  {% if body_text != "" %}
+  <div class="card">{{ content }}</div>
+  {% endif %}
+
+</div>
+
+<div class="footer">
+  行程规划仅供参考，实际班次与票价请以官方最新公告为准<br>
+  建议出发前再次确认各交通工具的时刻表与抢票时间
+  {% if page.last_updated %}<br><br>Last updated: {{ page.last_updated }}{% endif %}
+  <br><br>
+  <span style="opacity: 0.7;">© {{ 'now' | date: '%Y' }} Sibei Chen · All rights reserved</span>
+</div>
+
+<script>
+(function () {
+  // Theme toggle — session-only override of prefers-color-scheme (no localStorage)
+  var btn = document.querySelector('.theme-toggle');
+  if (btn) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function effective() {
+      var forced = document.documentElement.getAttribute('data-theme');
+      return forced || (mq.matches ? 'dark' : 'light');
+    }
+    function updateIcon() {
+      btn.textContent = effective() === 'dark' ? '🌞' : '🌙';
+    }
+    btn.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', effective() === 'dark' ? 'light' : 'dark');
+      updateIcon();
+    });
+    mq.addEventListener('change', updateIcon);
+    updateIcon();
+  }
+})();
+
+(function () {
+  // Add thousand-separator formatting to all .fmt-num spans
+  document.querySelectorAll('.fmt-num').forEach(function (el) {
+    var match = el.textContent.match(/^(.*?)(-?\d+(?:\.\d+)?)(.*)$/);
+    if (!match) return;
+    var n = parseFloat(match[2]);
+    if (isNaN(n)) return;
+    el.textContent = match[1] + n.toLocaleString('en-US', { maximumFractionDigits: 2 }) + match[3];
+  });
+})();
+
+(function () {
+  // Jump to today's day section if today falls within trip dates
+  var sections = document.querySelectorAll('.day-section[data-date]');
+  if (!sections.length) return;
+  var today = new Date();
+  var todayStr = today.getFullYear() + '-' +
+    String(today.getMonth() + 1).padStart(2, '0') + '-' +
+    String(today.getDate()).padStart(2, '0');
+  for (var i = 0; i < sections.length; i++) {
+    if (sections[i].getAttribute('data-date') === todayStr) {
+      // Only auto-jump if user landed without an explicit hash
+      if (!window.location.hash) {
+        sections[i].scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+      sections[i].style.boxShadow = '0 0 0 3px var(--day-color, #c0392b)';
+      sections[i].style.borderRadius = '12px';
+      sections[i].style.padding = '8px';
+      break;
+    }
+  }
+})();
+</script>
+
+</body>
+</html>

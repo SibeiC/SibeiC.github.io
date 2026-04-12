@@ -1,0 +1,109 @@
+# Airport lookup table, keyed by IATA 3-character airport code.
+# Build-time data only — not served to visitors.
+# The trip layout uses `_data/airports[code].city` as the fallback display
+# when a flight entry omits an inline `city:` field. Inline `city:` still
+# wins if present (useful for rare airports not in this file).
+#
+# Each entry:
+#   city: <string>  display text shown under the IATA code in flight row
+#                   (typical format: "城市 机场名", mixing Chinese + optional English)
+#
+# Add a new airport when you encounter one. AI agents generating trip files
+# should extend this file rather than hard-coding `city:` per flight.
+
+# ── Singapore / SE Asia ──────────────────────────────────────────────────────
+SIN: { city: 新加坡 樟宜 }
+KUL: { city: 吉隆坡 KLIA }
+PEN: { city: 槟城 }
+BKK: { city: 曼谷 素万那普 }
+DMK: { city: 曼谷 廊曼 }
+CGK: { city: 雅加达 苏哈托 }
+DPS: { city: 巴厘岛 登巴萨 }
+MNL: { city: 马尼拉 }
+CEB: { city: 宿雾 }
+SGN: { city: 胡志明 新山一 }
+HAN: { city: 河内 内排 }
+PNH: { city: 金边 }
+REP: { city: 暹粒 吴哥 }
+RGN: { city: 仰光 }
+
+# ── Greater China ────────────────────────────────────────────────────────────
+TPE: { city: 台北 桃园 }
+TSA: { city: 台北 松山 }
+KHH: { city: 高雄 小港 }
+TXG: { city: 台中 清泉岗 }
+HKG: { city: 香港 赤鱲角 }
+MFM: { city: 澳门 }
+PEK: { city: 北京 首都 }
+PKX: { city: 北京 大兴 }
+PVG: { city: 上海 浦东 }
+SHA: { city: 上海 虹桥 }
+CAN: { city: 广州 白云 }
+SZX: { city: 深圳 宝安 }
+CTU: { city: 成都 天府 }
+TFU: { city: 成都 天府 }
+XIY: { city: 西安 咸阳 }
+KMG: { city: 昆明 长水 }
+HGH: { city: 杭州 萧山 }
+NKG: { city: 南京 禄口 }
+CKG: { city: 重庆 江北 }
+
+# ── Japan ────────────────────────────────────────────────────────────────────
+NRT: { city: 东京 成田 }
+HND: { city: 东京 羽田 }
+KIX: { city: 大阪 关西 }
+ITM: { city: 大阪 伊丹 }
+NGO: { city: 名古屋 中部 }
+FUK: { city: 福冈 }
+OKA: { city: 冲绳 那霸 }
+CTS: { city: 札幌 新千岁 }
+HIJ: { city: 广岛 }
+
+# ── Korea ────────────────────────────────────────────────────────────────────
+ICN: { city: 首尔 仁川 }
+GMP: { city: 首尔 金浦 }
+PUS: { city: 釜山 金海 }
+CJU: { city: 济州 }
+
+# ── Australia / NZ / Pacific ─────────────────────────────────────────────────
+SYD: { city: 悉尼 金斯福德 }
+MEL: { city: 墨尔本 }
+BNE: { city: 布里斯班 }
+PER: { city: 珀斯 }
+AKL: { city: 奥克兰 }
+NAN: { city: 楠迪 斐济 }
+
+# ── South Asia / Middle East ─────────────────────────────────────────────────
+DEL: { city: 新德里 英迪拉·甘地 }
+BOM: { city: 孟买 贾特拉帕蒂 }
+CMB: { city: 科伦坡 }
+MLE: { city: 马累 }
+DXB: { city: 迪拜 }
+AUH: { city: 阿布扎比 }
+DOH: { city: 多哈 哈马德 }
+IST: { city: 伊斯坦布尔 }
+
+# ── Europe ───────────────────────────────────────────────────────────────────
+LHR: { city: 伦敦 希思罗 }
+LGW: { city: 伦敦 盖特威克 }
+CDG: { city: 巴黎 戴高乐 }
+AMS: { city: 阿姆斯特丹 }
+FRA: { city: 法兰克福 }
+MUC: { city: 慕尼黑 }
+ZRH: { city: 苏黎世 }
+FCO: { city: 罗马 菲乌米奇诺 }
+BCN: { city: 巴塞罗那 }
+MAD: { city: 马德里 }
+
+# ── North America ────────────────────────────────────────────────────────────
+LAX: { city: 洛杉矶 }
+SFO: { city: 旧金山 }
+SEA: { city: 西雅图 }
+ORD: { city: 芝加哥 奥黑尔 }
+JFK: { city: 纽约 JFK }
+EWR: { city: 纽瓦克 }
+BOS: { city: 波士顿 }
+IAD: { city: 华盛顿 杜勒斯 }
+YVR: { city: 温哥华 }
+YYZ: { city: 多伦多 皮尔逊 }
+YUL: { city: 蒙特利尔 }
