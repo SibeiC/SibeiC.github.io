@@ -23,7 +23,7 @@ ruby -v   # should show 3.3.x
 Install Bundler:
 
 ```bash
-gem install bundler
+gem install --user-install bundler
 ```
 
 ### Setup

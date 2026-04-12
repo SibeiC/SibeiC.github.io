@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台湾九日环岛行程 · 2026/5/28 – 6/6</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --paper: #faf8f5;
+    --accent: #c0392b;
+    --accent2: #2e86ab;
+    --gold: #d4a574;
+    --muted: #7a7a7a;
+    --border: #e8e4df;
+    --day1: #8e44ad;
+    --day2: #2980b9;
+    --day3: #16a085;
+    --day4: #2e86ab;
+    --day5: #27ae60;
+    --day6: #c0392b;
+    --day7: #e67e22;
+    --day8: #1abc9c;
+    --day9: #34495e;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 70px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(192,57,43,0.18) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(46,134,171,0.18) 0%, transparent 50%);
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    letter-spacing: 8px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .hero .subtitle {
+    font-size: 1em;
+    opacity: 0.75;
+    font-weight: 300;
+    letter-spacing: 3px;
+    position: relative;
+  }
+
+  .hero .dates {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .hero .date-chip {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.82em;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .card {
+    background: white;
+    padding: 22px 24px;
+    margin-top: 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.05em;
+    margin-bottom: 14px;
+    color: var(--accent);
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .overview-item {
+    padding: 10px 12px;
+    background: #f9f7f4;
+    border-radius: 8px;
+    font-size: 0.85em;
+  }
+
+  .overview-item strong {
+    display: block;
+    color: var(--accent2);
+    font-size: 0.78em;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+
+  .toc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .toc a {
+    display: block;
+    padding: 8px 10px;
+    background: #f9f7f4;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.85em;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+
+  .toc a:hover {
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  .toc a.d1 { border-left-color: var(--day1); }
+  .toc a.d2 { border-left-color: var(--day2); }
+  .toc a.d3 { border-left-color: var(--day3); }
+  .toc a.d4 { border-left-color: var(--day4); }
+  .toc a.d5 { border-left-color: var(--day5); }
+  .toc a.d6 { border-left-color: var(--day6); }
+  .toc a.d7 { border-left-color: var(--day7); }
+  .toc a.d8 { border-left-color: var(--day8); }
+  .toc a.d9 { border-left-color: var(--day9); }
+
+  /* Flight cards */
+  .flight-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 16px;
+    background: #f9f7f4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--accent2);
+  }
+
+  .flight-port {
+    text-align: center;
+  }
+
+  .flight-port .code {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 2px;
+  }
+
+  .flight-port .city {
+    font-size: 0.78em;
+    color: var(--muted);
+  }
+
+  .flight-port .time {
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  .flight-arrow {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--muted);
+  }
+
+  .flight-arrow .line {
+    display: block;
+    border-top: 1px dashed var(--muted);
+    width: 60px;
+    margin: 4px auto;
+  }
+
+  .flight-meta {
+    font-size: 0.82em;
+    color: var(--muted);
+    padding: 0 16px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .flight-meta strong {
+    color: var(--ink);
+  }
+
+  /* Hotel list */
+  .hotel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hotel-row {
+    display: grid;
+    grid-template-columns: 70px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    padding: 12px 14px;
+    background: #f9f7f4;
+    border-radius: 8px;
+    border-left: 3px solid var(--gold);
+    font-size: 0.88em;
+  }
+
+  .hotel-nights {
+    text-align: center;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+
+  .hotel-nights .n {
+    font-size: 1.5em;
+    display: block;
+  }
+
+  .hotel-nights .lbl {
+    font-size: 0.7em;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .hotel-name {
+    font-weight: 600;
+  }
+
+  .hotel-dates {
+    font-size: 0.82em;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* Day sections */
+  .day-section {
+    margin-top: 44px;
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+  }
+
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid;
+  }
+
+  .day1 .day-header { border-color: var(--day1); }
+  .day2 .day-header { border-color: var(--day2); }
+  .day3 .day-header { border-color: var(--day3); }
+  .day4 .day-header { border-color: var(--day4); }
+  .day5 .day-header { border-color: var(--day5); }
+  .day6 .day-header { border-color: var(--day6); }
+  .day7 .day-header { border-color: var(--day7); }
+  .day8 .day-header { border-color: var(--day8); }
+  .day9 .day-header { border-color: var(--day9); }
+
+  .day-num {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    flex-shrink: 0;
+  }
+
+  .day1 .day-num { background: var(--day1); }
+  .day2 .day-num { background: var(--day2); }
+  .day3 .day-num { background: var(--day3); }
+  .day4 .day-num { background: var(--day4); }
+  .day5 .day-num { background: var(--day5); }
+  .day6 .day-num { background: var(--day6); }
+  .day7 .day-num { background: var(--day7); }
+  .day8 .day-num { background: var(--day8); }
+  .day9 .day-num { background: var(--day9); }
+
+  .day-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.35em;
+    font-weight: 700;
+  }
+
+  .day-route {
+    font-size: 0.85em;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 22px;
+    background: white;
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    border-left: 3px solid transparent;
+  }
+
+  .day1 .timeline-item { border-left-color: var(--day1); }
+  .day2 .timeline-item { border-left-color: var(--day2); }
+  .day3 .timeline-item { border-left-color: var(--day3); }
+  .day4 .timeline-item { border-left-color: var(--day4); }
+  .day5 .timeline-item { border-left-color: var(--day5); }
+  .day6 .timeline-item { border-left-color: var(--day6); }
+  .day7 .timeline-item { border-left-color: var(--day7); }
+  .day8 .timeline-item { border-left-color: var(--day8); }
+  .day9 .timeline-item { border-left-color: var(--day9); }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 22px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+    background: white;
+  }
+
+  .day1 .timeline-item::before { border-color: var(--day1); }
+  .day2 .timeline-item::before { border-color: var(--day2); }
+  .day3 .timeline-item::before { border-color: var(--day3); }
+  .day4 .timeline-item::before { border-color: var(--day4); }
+  .day5 .timeline-item::before { border-color: var(--day5); }
+  .day6 .timeline-item::before { border-color: var(--day6); }
+  .day7 .timeline-item::before { border-color: var(--day7); }
+  .day8 .timeline-item::before { border-color: var(--day8); }
+  .day9 .timeline-item::before { border-color: var(--day9); }
+
+  .timeline-item.transit {
+    background: #fcfaf6;
+    border-left-width: 5px;
+  }
+
+  .time-badge {
+    display: inline-block;
+    font-size: 0.82em;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+
+  .day1 .time-badge { background: #f3e8f8; color: var(--day1); }
+  .day2 .time-badge { background: #e4eef8; color: var(--day2); }
+  .day3 .time-badge { background: #e0f3ee; color: var(--day3); }
+  .day4 .time-badge { background: #e8f4f8; color: var(--day4); }
+  .day5 .time-badge { background: #e8f8ed; color: var(--day5); }
+  .day6 .time-badge { background: #fce8e6; color: var(--day6); }
+  .day7 .time-badge { background: #fcf0e3; color: var(--day7); }
+  .day8 .time-badge { background: #e0f7f3; color: var(--day8); }
+  .day9 .time-badge { background: #e6eaef; color: var(--day9); }
+
+  .item-title {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 4px;
+  }
+
+  .item-detail {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.75;
+  }
+
+  /* Inline link chips */
+  .link-row {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  a.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.82em;
+    padding: 4px 10px;
+    background: #eef3f9;
+    color: var(--accent2);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #dde7f1;
+    transition: all 0.15s;
+  }
+
+  a.chip:hover {
+    background: var(--accent2);
+    color: white;
+    border-color: var(--accent2);
+  }
+
+  a.chip.ticket {
+    background: #fdf0ee;
+    color: var(--accent);
+    border-color: #f7ddd8;
+  }
+
+  a.chip.ticket:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  a.chip.map {
+    background: #e8f5ec;
+    color: #1e8449;
+    border-color: #d1e8d8;
+  }
+
+  a.chip.map:hover {
+    background: #1e8449;
+    color: white;
+    border-color: #1e8449;
+  }
+
+  /* Preferred / alternative transit */
+  .transit-route {
+    background: #f9f7f4;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-top: 8px;
+    font-size: 0.85em;
+  }
+
+  .transit-route .pref {
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .transit-route .alt {
+    font-size: 0.88em;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .transit-route .alt strong {
+    color: #555;
+    font-weight: 600;
+  }
+
+  .ticket-info {
+    background: #f9f7f4;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  .ticket-info span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .ticket-info .tag {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .stay-box {
+    background: linear-gradient(135deg, #fff4e0, #fce8c8);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin-top: 18px;
+    font-size: 0.9em;
+  }
+
+  .stay-box strong {
+    color: #b8860b;
+  }
+
+  .stay-box .addr {
+    font-size: 0.82em;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .note-box {
+    background: linear-gradient(135deg, #fff9e6, #fff5d6);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 18px 0;
+    font-size: 0.88em;
+    line-height: 1.75;
+  }
+
+  .note-box strong {
+    color: #b8860b;
+  }
+
+  .booking-list {
+    font-size: 0.9em;
+    line-height: 2;
+  }
+
+  .booking-list strong {
+    color: var(--accent);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 34px 20px;
+    color: var(--muted);
+    font-size: 0.82em;
+    border-top: 1px solid var(--border);
+    margin-top: 30px;
+    line-height: 2;
+  }
+
+  a { color: var(--accent2); }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.7em; letter-spacing: 4px; }
+    .overview-grid { grid-template-columns: 1fr; }
+    .toc { grid-template-columns: 1fr 1fr; }
+    .container { padding: 0 14px; }
+    .day-title { font-size: 1.15em; }
+    .hotel-row { grid-template-columns: 56px 1fr; }
+    .flight-port .code { font-size: 1.3em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>台湾九日环岛行程</h1>
+  <div class="subtitle">台北 · 日月潭 · 阿里山 · 台南 · 花莲</div>
+  <div class="dates">
+    <div class="date-chip">2026/5/28 – 6/6</div>
+    <div class="date-chip">共 9 天 8 夜</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Total Cost -->
+  <div class="card" style="background: linear-gradient(135deg, #fff, #fffaf0); border: 1px solid #f0e0c0;">
+    <h3 style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px;">
+      <span>💰 行程总预算</span>
+      <span style="font-family: 'Noto Serif SC', serif; font-size: 1.6em; color: var(--ink); font-weight: 700;">NT$ 24,500 <span style="font-size: 0.55em; color: var(--muted); font-weight: 400;">≈ SGD 1,040</span></span>
+    </h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; font-size: 0.86em;">
+      <div style="font-weight: 600; color: var(--accent2); grid-column: 1 / -1; margin-top: 4px;">🏨 住宿（8 晚）· NT$ 18,160</div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">citizenM Taipei（3 晚）</span><span style="font-weight: 600;">NT$ 9,275</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">水沙连大饭店（1 晚）</span><span style="font-weight: 600;">NT$ ~2,800</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">青山别馆（1 晚）</span><span style="font-weight: 600;">NT$ ~2,500</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">大榕树酒店（2 晚）</span><span style="font-weight: 600;">NT$ 5,376</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">S.E.A. 民宿（1 晚）</span><span style="font-weight: 600;">NT$ 3,510</span></div>
+
+      <div style="font-weight: 600; color: var(--accent2); grid-column: 1 / -1; margin-top: 10px;">🚆 交通 · NT$ 3,642</div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">高铁 台北→台中</span><span style="font-weight: 600;">NT$ 700</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">好行 6670A 台中→九族</span><span style="font-weight: 600;">NT$ 229</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">好行 6739 日月潭→阿里山</span><span style="font-weight: 600;">NT$ 329</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">好行 7329A 阿里山→嘉义</span><span style="font-weight: 600;">NT$ 283</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">高铁 嘉义→台南</span><span style="font-weight: 600;">NT$ 410</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">台铁自强号 台南→花莲</span><span style="font-weight: 600;">NT$ 962</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">台铁 花莲→台北</span><span style="font-weight: 600;">NT$ 440</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">机场捷运（往返）</span><span style="font-weight: 600;">NT$ 300</span></div>
+
+      <div style="font-weight: 600; color: var(--accent2); grid-column: 1 / -1; margin-top: 10px;">🎫 门票与体验 · NT$ 2,720</div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">故宫博物院</span><span style="font-weight: 600;">NT$ 350</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">台北 101（89F）</span><span style="font-weight: 600;">NT$ 600</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">九族文化村（含缆车）</span><span style="font-weight: 600;">NT$ 900</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">阿里山入园 + 支线 ×2</span><span style="font-weight: 600;">NT$ 400</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">安平树屋 + 古堡</span><span style="font-weight: 600;">NT$ 70</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--border);"><span style="color: var(--muted);">多罗满赏鲸</span><span style="font-weight: 600;">NT$ 800</span></div>
+    </div>
+    <div style="margin-top: 16px; padding-top: 12px; border-top: 2px solid var(--ink); font-size: 0.82em; color: var(--muted); line-height: 1.7;">
+      <strong style="color: var(--ink);">⚠️ 未含：</strong>国际机票 Scoot（已独立预订）· 每日餐饮 · 夜市小吃 · 小电驴租金 · 机场伴手礼 · 悠游卡押金 · 汇率浮动<br>
+      <strong style="color: var(--ink);">汇率参考：</strong>1 SGD ≈ 23.5 NT$（2026 年 4 月）· 部分住宿价格为估算
+    </div>
+  </div>
+
+  <!-- Flights -->
+  <div class="card">
+    <h3>✈️ 航班信息 · Scoot 酷航</h3>
+    <div class="flight-row">
+      <div class="flight-port">
+        <div class="code">SIN</div>
+        <div class="city">新加坡 樟宜</div>
+        <div class="time">09:30</div>
+      </div>
+      <div class="flight-arrow">
+        <div>5/28 (四)</div>
+        <span class="line"></span>
+        <div>约 4h 45m</div>
+      </div>
+      <div class="flight-port">
+        <div class="code">TPE</div>
+        <div class="city">台北 桃园</div>
+        <div class="time">14:15</div>
+      </div>
+    </div>
+    <div class="flight-meta">
+      <span><strong>航班：</strong>Scoot TR 874</span>
+      <span><strong>日期：</strong>2026/5/28 周四</span>
+      <a class="chip" href="https://www.flyscoot.com/en/manage-booking" target="_blank" rel="noopener">🔗 管理订票</a>
+      <a class="chip" href="https://www.flightaware.com/live/flight/TGW874" target="_blank" rel="noopener">📡 实时状态</a>
+    </div>
+
+    <div class="flight-row" style="margin-top: 14px;">
+      <div class="flight-port">
+        <div class="code">TPE</div>
+        <div class="city">台北 桃园</div>
+        <div class="time">00:55</div>
+      </div>
+      <div class="flight-arrow">
+        <div>6/6 (六)</div>
+        <span class="line"></span>
+        <div>约 4h 25m</div>
+      </div>
+      <div class="flight-port">
+        <div class="code">SIN</div>
+        <div class="city">新加坡 樟宜</div>
+        <div class="time">05:20</div>
+      </div>
+    </div>
+    <div class="flight-meta">
+      <span><strong>航班：</strong>Scoot TR 875</span>
+      <span><strong>日期：</strong>2026/6/6 周六（红眼航班，6/5 晚登机）</span>
+      <a class="chip" href="https://www.flyscoot.com/en/manage-booking" target="_blank" rel="noopener">🔗 管理订票</a>
+      <a class="chip" href="https://www.flightaware.com/live/flight/TGW875" target="_blank" rel="noopener">📡 实时状态</a>
+    </div>
+  </div>
+
+  <!-- Hotels -->
+  <div class="card">
+    <h3>🏨 已预订住宿</h3>
+    <div class="hotel-list">
+      <div class="hotel-row">
+        <div class="hotel-nights"><span class="n">3</span><span class="lbl">晚</span></div>
+        <div>
+          <div class="hotel-name">citizenM Taipei North Gate</div>
+          <div class="hotel-dates">5/28 (四) – 5/31 (日) · 台北中正区中华路一段 3 号</div>
+        </div>
+        <div>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=citizenM+Taipei+North+Gate" target="_blank" rel="noopener">📍 地图</a>
+        </div>
+      </div>
+
+      <div class="hotel-row">
+        <div class="hotel-nights"><span class="n">1</span><span class="lbl">晚</span></div>
+        <div>
+          <div class="hotel-name">水沙连大饭店 Shui Sha Lian Hotel</div>
+          <div class="hotel-dates">5/31 (日) – 6/1 (一) · 南投县鱼池乡民生街 5 号（日月潭水社）</div>
+        </div>
+        <div>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Shui+Sha+Lian+Hotel+%E6%B0%B4%E6%B2%99%E9%80%A3%E5%A4%A7%E9%A3%AF%E5%BA%97" target="_blank" rel="noopener">📍 地图</a>
+        </div>
+      </div>
+
+      <div class="hotel-row">
+        <div class="hotel-nights"><span class="n">1</span><span class="lbl">晚</span></div>
+        <div>
+          <div class="hotel-name">青山别馆 Chinshan Hotel</div>
+          <div class="hotel-dates">6/1 (一) – 6/2 (二) · 嘉义县阿里山乡 42 号</div>
+        </div>
+        <div>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Chinshan+Hotel+Alishan+%E9%9D%92%E5%B1%B1%E5%88%A5%E9%A4%A8" target="_blank" rel="noopener">📍 地图</a>
+        </div>
+      </div>
+
+      <div class="hotel-row">
+        <div class="hotel-nights"><span class="n">2</span><span class="lbl">晚</span></div>
+        <div>
+          <div class="hotel-name">大榕树酒店 Grand Banyan Hotel</div>
+          <div class="hotel-dates">6/2 (二) – 6/4 (四) · 台南北区成功路 28 号</div>
+        </div>
+        <div>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Grand+Banyan+Hotel+Tainan" target="_blank" rel="noopener">📍 地图</a>
+        </div>
+      </div>
+
+      <div class="hotel-row">
+        <div class="hotel-nights"><span class="n">1</span><span class="lbl">晚</span></div>
+        <div>
+          <div class="hotel-name">S.E.A. 民宿</div>
+          <div class="hotel-dates">6/4 (四) – 6/5 (五) · 花莲市海滨街 72 号</div>
+        </div>
+        <div>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=S.E.A+Hostel+Hualien+%E8%8A%B1%E8%93%AE%E6%B5%B7%E6%BB%A8%E8%A1%9772%E8%99%9F" target="_blank" rel="noopener">📍 地图</a>
+        </div>
+      </div>
+    </div>
+    <div class="note-box" style="margin-bottom: 0;">
+      <strong>⚠️ 6/5 (五) 夜晚：</strong>回程航班为 6/6 凌晨 00:55，6/5 当日需从花莲移动至桃园机场。尚未预订 6/5 住宿 → 建议直接搭车到台北寄放行李，当天返程桃园机场候机。
+    </div>
+  </div>
+
+  <!-- Overview / TOC -->
+  <div class="card">
+    <h3>🧭 行程总览</h3>
+    <div class="overview-grid">
+      <div class="overview-item"><strong>DAY 1–3</strong>台北市区深度游</div>
+      <div class="overview-item"><strong>DAY 4–6</strong>日月潭 · 阿里山 · 嘉义</div>
+      <div class="overview-item"><strong>DAY 7</strong>台南古都一日</div>
+      <div class="overview-item"><strong>DAY 8</strong>花莲赏鲸</div>
+      <div class="overview-item"><strong>DAY 9</strong>花莲→桃园返程</div>
+      <div class="overview-item"><strong>主要交通</strong>高铁 · 台铁 · 森林小火车</div>
+    </div>
+
+    <div class="toc">
+      <a class="d1" href="#d1">D1 · 5/28 抵台 · 台北</a>
+      <a class="d2" href="#d2">D2 · 5/29 故宫 / 阳明山</a>
+      <a class="d3" href="#d3">D3 · 5/30 中正 / 101</a>
+      <a class="d4" href="#d4">D4 · 5/31 日月潭</a>
+      <a class="d5" href="#d5">D5 · 6/1 阿里山</a>
+      <a class="d6" href="#d6">D6 · 6/2 阿里山→台南</a>
+      <a class="d7" href="#d7">D7 · 6/3 台南</a>
+      <a class="d8" href="#d8">D8 · 6/4 花莲赏鲸</a>
+      <a class="d9" href="#d9">D9 · 6/5 返程日</a>
+    </div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="day-section day1" id="d1">
+    <div class="day-header">
+      <div class="day-num">D1</div>
+      <div>
+        <div class="day-title">抵达台北 · 西门町 · 士林夜市</div>
+        <div class="day-route">5月28日（周四）· 台北市区</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item transit">
+        <div class="time-badge">14:15 抵达</div>
+        <div class="item-title">✈️ 桃园机场 TPE → 台北市区</div>
+        <div class="item-detail">
+          Scoot TR 874 14:15 落地桃园机场第一航厦。搭乘桃园机场捷运（MRT）直达台北车站，车程：直达车 35 分钟 / 普通车 50 分钟。
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.tymetro.com.tw/tymetro-new/tc/" target="_blank" rel="noopener">🎫 机场捷运官网</a>
+          <a class="chip" href="https://www.google.com/maps/search/?api=1&query=Taoyuan+Airport+MRT+Terminal+1" target="_blank" rel="noopener">📍 机场捷运 A12</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">16:00 – 17:00</div>
+        <div class="item-title">🏨 citizenM Taipei North Gate · Check-in</div>
+        <div class="item-detail">
+          台北车站步行约 8 分钟，邻近北门捷运站。放行李换装。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=citizenM+Taipei+North+Gate" target="_blank" rel="noopener">📍 地图</a>
+          <a class="chip" href="https://www.citizenm.com/hotels/asia/taipei/taipei-north-gate-hotel" target="_blank" rel="noopener">🔗 酒店官网</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">17:00 – 18:30</div>
+        <div class="item-title">🛍️ 西门町 Ximending</div>
+        <div class="item-detail">
+          台北最热闹的年轻潮流商圈，有「台北原宿」之称。以西门红楼为中心，步行街内潮牌、电影院、刺青街、小吃林立。推荐：阿宗面线、鸭肉扁、老天禄卤味。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E9%96%80%E7%94%BA+Ximending" target="_blank" rel="noopener">📍 西门町</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E9%96%80%E7%B4%85%E6%A8%93" target="_blank" rel="noopener">📍 西门红楼</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">18:30 – 19:30</div>
+        <div class="item-title">☕ 赤峰街 Chifeng St（大同区）</div>
+        <div class="item-detail">
+          老街改造的文青聚落，巷弄里藏着老五金行、复古咖啡馆与选物店。日落后光影最美，适合慢慢散步、拍照、逛独立小店。搭捷运中山站 1/4 号出口即达。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E8%B5%A4%E5%B3%B0%E8%A1%97+%E5%A4%A7%E5%90%8C%E5%8D%80" target="_blank" rel="noopener">📍 赤峰街</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">20:00 – 22:30</div>
+        <div class="item-title">🍜 士林夜市 Shilin Night Market</div>
+        <div class="item-detail">
+          台北最具代表性的大型夜市，小吃、服饰、杂货一应俱全。必吃：豪大大鸡排、生炒花枝、士林大香肠、青蛙下蛋、阿辉面线。搭捷运至「剑潭站」1 号出口，勿搭到「士林站」。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%A3%AB%E6%9E%97%E5%A4%9C%E5%B8%82" target="_blank" rel="noopener">📍 士林夜市</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%8A%8D%E6%BD%AD%E7%AB%99" target="_blank" rel="noopener">📍 剑潭站</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>citizenM Taipei North Gate（第 1 晚 / 共 3 晚）
+      <div class="addr">台北市中正区中华路一段 3 号</div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-section day2" id="d2">
+    <div class="day-header">
+      <div class="day-num">D2</div>
+      <div>
+        <div class="day-title">故宫博物院 · 阳明山国家公园</div>
+        <div class="day-route">5月29日（周五）· 台北近郊</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time-badge">09:00 – 12:30</div>
+        <div class="item-title">🏛️ 国立故宫博物院</div>
+        <div class="item-detail">
+          世界四大博物馆之一，收藏近 70 万件中华艺术珍品，包括翠玉白菜、肉形石、毛公鼎等镇馆之宝。建议 3–4 小时细看。搭捷运淡水线至士林站，转公车 255、304、815 至「故宫博物院站」。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">全票</span> NT$350</span>
+          <span><span class="tag">开放</span> 09:00–17:00（周一休馆）</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=National+Palace+Museum+Taipei" target="_blank" rel="noopener">📍 地图</a>
+          <a class="chip ticket" href="https://www.npm.gov.tw/" target="_blank" rel="noopener">🎫 故宫官网</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/1573-national-palace-museum-taipei/" target="_blank" rel="noopener">🎫 Klook 预约</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">12:30 – 14:00</div>
+        <div class="item-title">🍱 午餐 · 故宫晶华 或 士林老街</div>
+        <div class="item-detail">
+          故宫内的晶华餐厅有「国宝宴」菜色，可吃到翠玉白菜、肉形石造型料理。预算有限可回士林吃铭传大学周边小吃。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%95%85%E5%AE%AE%E6%99%B6%E8%8F%AF" target="_blank" rel="noopener">📍 故宫晶华</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">14:30 – 18:30</div>
+        <div class="item-title">🌋 阳明山国家公园</div>
+        <div class="item-detail">
+          台湾最大休眠火山群，有温泉、硫磺喷气口、花季步道。推荐路线：小油坑（火山地貌）→ 冷水坑（牛奶湖）→ 擎天岗（大草原、水牛）→ 竹子湖（季节限定海芋／绣球花）。
+          <br><br>
+          交通：搭红 5 公车至「阳明山总站」转 108 游园公车（NT$15/次，可用悠游卡）。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Yangmingshan+National+Park" target="_blank" rel="noopener">📍 阳明山</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%B2%B9%E5%9D%91+Xiaoyoukeng" target="_blank" rel="noopener">📍 小油坑</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%86%B7%E6%B0%B4%E5%9D%91" target="_blank" rel="noopener">📍 冷水坑</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%93%8E%E5%A4%A9%E5%B2%A1" target="_blank" rel="noopener">📍 擎天岗</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E5%AD%90%E6%B9%96+%E9%99%BD%E6%98%8E%E5%B1%B1" target="_blank" rel="noopener">📍 竹子湖</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">19:30</div>
+        <div class="item-title">♨️ 可选加码 · 北投温泉</div>
+        <div class="item-detail">
+          阳明山下来顺路可到北投泡汤，推荐「瀧乃汤」或「泷野温泉」，百年日式老汤屋，入浴 NT$150 起。搭捷运新北投站即达。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E7%80%A7%E4%B9%83%E6%B9%AF+Beitou" target="_blank" rel="noopener">📍 瀧乃汤</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E6%8A%95%E7%AB%99" target="_blank" rel="noopener">📍 新北投站</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>citizenM Taipei North Gate（第 2 晚）
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-section day3" id="d3">
+    <div class="day-header">
+      <div class="day-num">D3</div>
+      <div>
+        <div class="day-title">中正纪念堂 · 台北 101 · 饶河夜市</div>
+        <div class="day-route">5月30日（周六）· 台北市区</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time-badge">09:30 – 11:30</div>
+        <div class="item-title">🏛️ 中正纪念堂</div>
+        <div class="item-detail">
+          以「中正」与「正气」为名的大型纪念建筑。每小时整点可观看三军仪队交接仪式，动作整齐划一，为必看亮点。周边有国家戏剧院、音乐厅、蓝顶白墙建筑群，摄影绝佳。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">入场</span> 免费</span>
+          <span><span class="tag">交接仪式</span> 每日 09:00–17:00 整点</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Chiang+Kai-shek+Memorial+Hall" target="_blank" rel="noopener">📍 地图</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">12:00 – 14:00</div>
+        <div class="item-title">🍜 午餐 · 鼎泰丰 信义店</div>
+        <div class="item-detail">
+          米其林推荐小笼包名店，信义 101 分店排队比永康街总店快。必点：小笼包、蟹粉小笼、豆沙包。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E9%BC%8E%E6%B3%B0%E8%B1%90+%E4%BF%A1%E7%BE%A9%E5%BA%97" target="_blank" rel="noopener">📍 鼎泰丰 信义店</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">14:30 – 18:00</div>
+        <div class="item-title">🌈 台北 101 · 彩虹天空步道</div>
+        <div class="item-detail">
+          世界级地标，2004 年完工时曾是世界第一高楼。89 楼观景台视野全市；101 楼「Skyline 460」户外步道可俯瞰整个台北盆地，2024 年新推出的彩虹天空桥夜景绝美。
+          <br><br>
+          信义商圈周边可逛 A11、A13、微风南山、诚品信义旗舰店。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">89F 观景台</span> NT$600</span>
+          <span><span class="tag">Skyline 460</span> NT$3,000（含 89F）</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Taipei+101" target="_blank" rel="noopener">📍 地图</a>
+          <a class="chip ticket" href="https://www.taipei-101.com.tw/" target="_blank" rel="noopener">🎫 101 官网</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/76-taipei-101-observatory/" target="_blank" rel="noopener">🎫 Klook</a>
+          <a class="chip ticket" href="https://www.kkday.com/zh-cn/product/21257" target="_blank" rel="noopener">🎫 KKday</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">19:00 – 22:30</div>
+        <div class="item-title">🍢 饶河街观光夜市</div>
+        <div class="item-detail">
+          与士林齐名的台北双雄夜市，单一直线街道 600 米，吃完不走回头路。必吃：福州世祖胡椒饼（入口牌坊旁、排队名物）、陈董药炖排骨、东发蚵仔面线、红绿灯东山鸭头。
+          <br><br>
+          搭捷运至「松山站」5 号出口即达。夜市旁就是慈佑宫，百年妈祖庙也顺路参拜。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E9%A5%B6%E6%B2%B3%E8%A1%97%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82" target="_blank" rel="noopener">📍 饶河夜市</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E5%B1%B1%E6%85%88%E7%A5%90%E5%AE%AE" target="_blank" rel="noopener">📍 松山慈祐宫</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>citizenM Taipei North Gate（第 3 晚）
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-section day4" id="d4">
+    <div class="day-header">
+      <div class="day-num">D4</div>
+      <div>
+        <div class="day-title">台北 → 台中 → 九族文化村 → 日月潭</div>
+        <div class="day-route">5月31日（周日）· 中部大移动</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item transit">
+        <div class="time-badge">07:31 – 08:18</div>
+        <div class="item-title">🚅 高铁 · 台北 → 台中（约 47 分钟）</div>
+        <div class="item-detail">
+          从 citizenM 步行 8 分钟至台北高铁站。南下列车班次密集，周日上午每 15 分钟一班。
+        </div>
+        <div class="transit-route">
+          <div class="pref">✓ 首选：07:31 出发 → 08:18 抵达台中</div>
+          <div class="alt"><strong>备选：</strong>08:11 – 09:15 · 08:31 – 09:18</div>
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">标准车厢</span> NT$700</span>
+          <span><span class="tag">早鸟 65 折</span> NT$455（提前 5–28 天）</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.thsrc.com.tw/" target="_blank" rel="noopener">🎫 台湾高铁官网</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/2011-taiwan-high-speed-rail-ticket/" target="_blank" rel="noopener">🎫 Klook 高铁票</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=HSR+Taipei+Station" target="_blank" rel="noopener">📍 台北高铁站</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=HSR+Taichung+Station" target="_blank" rel="noopener">📍 台中高铁站</a>
+        </div>
+      </div>
+
+      <div class="timeline-item transit">
+        <div class="time-badge">08:45 – 09:30</div>
+        <div class="item-title">🚌 台湾好行 6670A · 台中高铁站 → 九族文化村</div>
+        <div class="item-detail">
+          高铁台中站 1 楼 5 号出口搭乘台湾好行 6670A（经九族）。车程约 45 分钟直达九族文化村。
+        </div>
+        <div class="transit-route">
+          <div class="pref">✓ 首选：08:45 出发 → 09:30 抵达</div>
+          <div class="alt"><strong>备选：</strong>07:45 · 09:45 · 15:45</div>
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">单程</span> NT$229（高铁站起）</span>
+          <span><span class="tag">悠游卡</span> 约 88 折</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=6670A&rn=1775391353552&lan=C" target="_blank" rel="noopener">🎫 6670A 时刻表</a>
+          <a class="chip ticket" href="https://www.taiwantrip.com.tw/line/11" target="_blank" rel="noopener">🎫 台湾好行日月潭线</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">09:30 – 15:30</div>
+        <div class="item-title">🎢 九族文化村</div>
+        <div class="item-detail">
+          一票玩到底，包含原住民九族文化展示、欧洲花园主题乐园、UFO 自由落体、加勒比海盗船、以及可俯瞰日月潭的「日月缆车」。推荐：马雅探险、西班牙海岸大漩涡、原住民歌舞表演。最后搭日月潭缆车前往日月潭。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">全票</span> NT$900（含日月潭缆车）</span>
+          <span><span class="tag">线上购票</span> 约 NT$780–830</span>
+          <span><span class="tag">营业时间</span> 09:30–17:00</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Formosan+Aboriginal+Culture+Village" target="_blank" rel="noopener">📍 九族文化村</a>
+          <a class="chip ticket" href="https://www.nine.com.tw/" target="_blank" rel="noopener">🎫 九族官网</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/574-formosan-aboriginal-culture-village-nantou/" target="_blank" rel="noopener">🎫 Klook</a>
+          <a class="chip ticket" href="https://www.kkday.com/zh-cn/product/4180" target="_blank" rel="noopener">🎫 KKday</a>
+        </div>
+      </div>
+
+      <div class="timeline-item transit">
+        <div class="time-badge">15:30 – 16:00</div>
+        <div class="item-title">🚡 日月潭缆车 · 九族 → 伊达邵</div>
+        <div class="item-detail">
+          从九族文化村搭缆车约 7 分钟直达日月潭缆车站（伊达邵）。<strong>缆车已含在九族门票中。</strong>注意末班缆车时间（约 16:00–16:30），务必提早搭乘。
+          <br><br>
+          抵达伊达邵后需搭轮渡到水沙连大饭店（水社码头）。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Sun+Moon+Lake+Ropeway" target="_blank" rel="noopener">📍 日月潭缆车</a>
+          <a class="chip ticket" href="https://www.ropeway.com.tw/" target="_blank" rel="noopener">🔗 缆车官网</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">16:00 – 18:30</div>
+        <div class="item-title">⛵ 日月潭游湖 · 伊达邵 → 水社</div>
+        <div class="item-detail">
+          搭游湖船从伊达邵码头 → 玄光寺 → 水社码头（三段式游湖船票 NT$300，当日不限次数）。伊达邵必吃：阿婆香菇茶叶蛋、总统鱼、邵族麻糬、山猪肉串。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E9%81%94%E9%82%B5%E7%A2%BC%E9%A0%AD" target="_blank" rel="noopener">📍 伊达邵码头</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E7%8E%84%E5%85%89%E5%AF%BA+%E6%97%A5%E6%9C%88%E6%BD%AD" target="_blank" rel="noopener">📍 玄光寺</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%B0%B4%E7%A4%BE%E7%A2%BC%E9%A0%AD" target="_blank" rel="noopener">📍 水社码头</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/2015-sun-moon-lake-boat-tour/" target="_blank" rel="noopener">🎫 游湖船 Klook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>💡 Day 4 建议：</strong>住日月潭水社比住台中更有效率 — 隔天 08:00 从水社出发搭台湾好行去阿里山，避免再花 1.5 小时从台中赶回日月潭。
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>水沙连大饭店 Shui Sha Lian Hotel
+      <div class="addr">南投县鱼池乡民生街 5 号（日月潭水社老街步行即达客运站）</div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-section day5" id="d5">
+    <div class="day-header">
+      <div class="day-num">D5</div>
+      <div>
+        <div class="day-title">日月潭 → 阿里山</div>
+        <div class="day-route">6月1日（周一）· 高山公路</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item transit">
+        <div class="time-badge">08:00 – 12:00</div>
+        <div class="item-title">🚌 台湾好行 6739 · 日月潭水社 → 阿里山</div>
+        <div class="item-detail">
+          从日月潭水社站出发，途经头社、信义乡、神木村、夫妻树、塔塔加，最终抵达阿里山转运站。<strong>全台海拔最高的高山公路路线</strong>，沿途风景壮阔，堪称绝美公车旅程。全程约 4 小时。
+          <br><br>
+          <strong>⚠️ 每日仅两班车，务必提前预约！</strong>
+        </div>
+        <div class="transit-route">
+          <div class="pref">✓ 首选：08:00 出发 → 12:00 抵达阿里山</div>
+          <div class="alt"><strong>备选：</strong>08:30 出发</div>
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">现金票价</span> NT$329</span>
+          <span><span class="tag">悠游卡</span> 约 88 折</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C" target="_blank" rel="noopener">🎫 6739 时刻表</a>
+          <a class="chip ticket" href="https://www.nantoubus.com.tw/" target="_blank" rel="noopener">🎫 南投客运预约</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%B0%B4%E7%A4%BE+Shuishe+Sun+Moon+Lake" target="_blank" rel="noopener">📍 水社站</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Alishan+National+Forest+Recreation+Area+Entrance" target="_blank" rel="noopener">📍 阿里山入口</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">12:00 – 13:00</div>
+        <div class="item-title">🎫 阿里山入园 · 午餐</div>
+        <div class="item-detail">
+          抵达阿里山转运站后购买入园门票，简易午餐。6/1 为周一，适用非假日票价 NT$200。转运站有厕所与行李寄放处。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">全票</span> NT$200（非假日）</span>
+          <span><span class="tag">假日</span> NT$300</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.ali-nsa.net/" target="_blank" rel="noopener">🎫 阿里山国家风景区</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">13:00 – 17:00</div>
+        <div class="item-title">🌲 阿里山森林游乐区 · 神木线 + 沼平线</div>
+        <div class="item-detail">
+          <strong>推荐路线：</strong><br>
+          ① 搭小火车神木线至神木站（10 分钟，NT$100），漫步巨木群栈道<br>
+          ② 步行至姐妹潭、受镇宫<br>
+          ③ 搭沼平线至沼平站（6 分钟，NT$100），走沼平天空步道、樱之道<br>
+          ④ 回到阿里山车站
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">神木线</span> NT$100（单程）</span>
+          <span><span class="tag">沼平线</span> NT$100（单程）</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E9%98%BF%E9%87%8C%E5%B1%B1%E8%BB%8A%E7%AB%99" target="_blank" rel="noopener">📍 阿里山车站</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Sacred+Tree+Station+Alishan" target="_blank" rel="noopener">📍 神木站</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%A7%8A%E5%A6%B9%E6%BD%AD+%E9%98%BF%E9%87%8C%E5%B1%B1" target="_blank" rel="noopener">📍 姐妹潭</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%BC%E5%B9%B3%E7%AB%99" target="_blank" rel="noopener">📍 沼平站</a>
+          <a class="chip ticket" href="https://afrts.forest.gov.tw/" target="_blank" rel="noopener">🎫 林铁支线订票</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">17:30</div>
+        <div class="item-title">🏨 青山别馆 Chinshan Hotel · Check-in</div>
+        <div class="item-detail">
+          阿里山园区内住宿，靠近阿里山车站，方便隔日搭森林铁路下山。<strong>园区晚上 7 点后几乎无餐厅营业，建议提早用餐。</strong>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Chinshan+Hotel+%E9%9D%92%E5%B1%B1%E5%88%A5%E9%A4%A8+%E9%98%BF%E9%87%8C%E5%B1%B1" target="_blank" rel="noopener">📍 酒店位置</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>💡 Day 5 看日出选择：</strong>若想看日出，可于隔天清晨（6/2）搭乘祝山线观日出火车（NT$150），发车时间依日出当日 4:30 公告，通常约 04:30–05:00 发车。在 Chinshan Hotel 柜台或阿里山车站购票。
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>青山别馆 Chinshan Hotel
+      <div class="addr">嘉义县阿里山乡 42 号（阿里山园区内）</div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="day-section day6" id="d6">
+    <div class="day-header">
+      <div class="day-num">D6</div>
+      <div>
+        <div class="day-title">阿里山 → 嘉义 → 台南</div>
+        <div class="day-route">6月2日（周二）· 百年林铁 · 古都入城</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time-badge">可选 04:30</div>
+        <div class="item-title">🌅 祝山线观日出（可选）</div>
+        <div class="item-detail">
+          前一天下午在阿里山车站或酒店柜台购票。搭观日出火车至祝山站 → 看日出 → 原路返回，约 2 小时。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">祝山线</span> NT$150</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9D%E5%B1%B1%E8%A7%80%E6%97%A5%E6%A8%93" target="_blank" rel="noopener">📍 祝山站</a>
+        </div>
+      </div>
+
+      <div class="timeline-item transit">
+        <div class="time-badge">10:10 – 13:10</div>
+        <div class="item-title">🚌 台湾好行 7329A · 阿里山 → 嘉义高铁站</div>
+        <div class="item-detail">
+          从阿里山转运站直达嘉义高铁站，约 3 小时，沿途经石桌、奋起湖、竹崎。
+          <br><br>
+          <strong>注：</strong>原本打算搭阿里山森林铁路本线下山，但由于本线需提前 14 天抢票且有时段限制，改搭台湾好行公车，时间更弹性。若想体验林铁，仍建议提前 14 天上官网抢票。
+        </div>
+        <div class="transit-route">
+          <div class="pref">✓ 首选：10:10 出发 → 13:10 抵达嘉义高铁</div>
+          <div class="alt"><strong>备选：</strong>12:00 · 13:30 · 14:40 · 16:40</div>
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">票价</span> NT$283</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C" target="_blank" rel="noopener">🎫 7329A 时刻表</a>
+          <a class="chip ticket" href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" target="_blank" rel="noopener">🎫 73290（慢车版）</a>
+          <a class="chip ticket" href="https://afrts.forest.gov.tw/" target="_blank" rel="noopener">🎫 林铁官网（备选）</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Chiayi+HSR+Station" target="_blank" rel="noopener">📍 嘉义高铁站</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">13:30 – 15:00</div>
+        <div class="item-title">🍜 嘉义市区午餐 · 鸡肉饭巡礼</div>
+        <div class="item-detail">
+          嘉义高铁站搭 BRT（凭高铁票免费）或台铁至嘉义市区，约 25 分钟。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%9E%97%E8%81%B0%E6%98%8E%E6%B2%99%E9%8D%8B%E9%AD%9A%E9%A0%AD" target="_blank" rel="noopener">📍 林聪明沙锅鱼头</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%8A%89%E9%87%8C%E9%95%B7%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">📍 刘里长鸡肉饭</a>
+        </div>
+      </div>
+
+      <div class="timeline-item transit">
+        <div class="time-badge">15:30 – 15:45</div>
+        <div class="item-title">🚄 高铁 · 嘉义 → 台南（约 13 分钟）</div>
+        <div class="item-detail">
+          嘉义高铁直达台南高铁站 13 分钟，再转乘台铁沙仑线至台南市区（25 分钟），或直接搭计程车到大榕树酒店（约 30 分钟）。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">高铁</span> NT$410</span>
+          <span><span class="tag">沙仑线</span> NT$25</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.thsrc.com.tw/" target="_blank" rel="noopener">🎫 台湾高铁</a>
+          <a class="chip ticket" href="https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" target="_blank" rel="noopener">🎫 台铁订票</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">17:00</div>
+        <div class="item-title">🏨 大榕树酒店 Grand Banyan Hotel · Check-in</div>
+        <div class="item-detail">
+          位于台南北区成功路，邻近台南公园与台南火车站。check-in 后可在附近吃晚餐 + 神农街夜逛。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Grand+Banyan+Hotel+Tainan" target="_blank" rel="noopener">📍 酒店位置</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>💡 Day 6 林铁 vs 公车：</strong>此行程改搭台湾好行 7329A 公车下山（现买即走），并非阿里山森林铁路本线。若想坐百年林铁（阿里山→嘉义 约 NT$600，3h55m），务必出发前 14 天上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>大榕树酒店 Grand Banyan Hotel（第 1 晚 / 共 2 晚）
+      <div class="addr">台南市北区成功路 28 号</div>
+    </div>
+  </div>
+
+  <!-- DAY 7 -->
+  <div class="day-section day7" id="d7">
+    <div class="day-header">
+      <div class="day-num">D7</div>
+      <div>
+        <div class="day-title">台南古都一日 · 安平树屋 · 神农街</div>
+        <div class="day-route">6月3日（周三）· 台南文化漫游</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time-badge">推荐</div>
+        <div class="item-title">🛵 租一台电动机车（小电驴）</div>
+        <div class="item-detail">
+          台南景点分散，市区与安平距离 15 分钟车程，巷弄多、单行道多。推荐租电动机车（GoShare / WeMo / iRent），自由度高。<strong>需持国际驾照。</strong>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.goshare.com.tw/" target="_blank" rel="noopener">🛵 GoShare</a>
+          <a class="chip ticket" href="https://www.wemoscooter.com/" target="_blank" rel="noopener">🛵 WeMo</a>
+          <a class="chip ticket" href="https://www.irentcar.com.tw/" target="_blank" rel="noopener">🛵 iRent</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">09:00 – 11:00</div>
+        <div class="item-title">📚 国立台湾文学馆</div>
+        <div class="item-detail">
+          台湾第一座国家级文学博物馆。建筑为 1916 年日治时期台南州厅，巴洛克风格古蹟，内部展出台湾百年文学演变。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">入场</span> 免费</span>
+          <span><span class="tag">开放</span> 09:00–18:00（周一休）</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Taiwan+Literature" target="_blank" rel="noopener">📍 地图</a>
+          <a class="chip ticket" href="https://www.nmtl.gov.tw/" target="_blank" rel="noopener">🔗 官网</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">11:30 – 13:00</div>
+        <div class="item-title">🍜 国华街小吃集散地 · 午餐</div>
+        <div class="item-detail">
+          推荐：金得春卷、富盛号碗粿、邱家小卷米粉、修安扁担豆花、江水号绿豆汤。国华街短短 300 米集合了台南数十家老店，排队值得。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%9C%8B%E8%8F%AF%E8%A1%97+%E5%8F%B0%E5%8D%97" target="_blank" rel="noopener">📍 国华街</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E9%87%91%E5%BE%97%E6%98%A5%E6%8D%B2" target="_blank" rel="noopener">📍 金得春卷</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">13:30 – 16:00</div>
+        <div class="item-title">🌳 安平树屋 + 安平古堡</div>
+        <div class="item-detail">
+          安平树屋原为德记洋行仓库，百年榕树盘根错节、穿墙破顶，与红砖老屋共生，被 CNN 誉为「全球最美 10 大树屋」之一。隔壁为荷兰人建造的安平古堡（热兰遮城），台湾最早城堡。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">联票</span> NT$70（树屋+古堡）</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Anping+Tree+House" target="_blank" rel="noopener">📍 安平树屋</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Anping+Old+Fort" target="_blank" rel="noopener">📍 安平古堡</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/53574-anping-tree-house-tainan/" target="_blank" rel="noopener">🎫 Klook 门票</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">16:00 – 17:30</div>
+        <div class="item-title">🍧 安平老街</div>
+        <div class="item-detail">
+          推荐：周氏虾卷、陈家蚵卷、同记安平豆花（招牌花生豆花）、林永泰兴蜜饯行（百年老店）。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%AE%89%E5%B9%B3%E8%80%81%E8%A1%97" target="_blank" rel="noopener">📍 安平老街</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">18:00 – 20:30</div>
+        <div class="item-title">🏮 神农街 Shennung Street</div>
+        <div class="item-detail">
+          清代遗留的古老街道，两旁保留大量清末民初老屋，如今转型为文青酒吧、独立书店、选物店、老派咖啡馆聚落。傍晚灯笼亮起最有味道，是台南最美的一条老街。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E8%BE%B2%E8%A1%97+%E5%8F%B0%E5%8D%97" target="_blank" rel="noopener">📍 神农街</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8D%97%E6%B0%B4%E4%BB%99%E5%AE%AE" target="_blank" rel="noopener">📍 水仙宫</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E8%B5%A4%E5%B4%81%E6%A8%93+%E5%8F%B0%E5%8D%97" target="_blank" rel="noopener">📍 赤崁楼</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">21:00 起</div>
+        <div class="item-title">🌃 夜宵 · 保安路小吃</div>
+        <div class="item-detail">
+          6/3 为周三，台南花园夜市/大东夜市均未开市，可到保安路一带：阿村牛肉汤、阿明猪心、阿龙香肠熟肉、叶家小卷米粉（24 小时）。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E4%BF%9D%E5%AE%89%E8%B7%AF%E5%B0%8F%E5%90%83+%E5%8F%B0%E5%8D%97" target="_blank" rel="noopener">📍 保安路</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>大榕树酒店 Grand Banyan Hotel（第 2 晚）
+    </div>
+  </div>
+
+  <!-- DAY 8 -->
+  <div class="day-section day8" id="d8">
+    <div class="day-header">
+      <div class="day-num">D8</div>
+      <div>
+        <div class="day-title">台南 → 花莲 · 多罗满赏鲸</div>
+        <div class="day-route">6月4日（周四）· 东海岸出海</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item transit">
+        <div class="time-badge">06:30 – 10:59</div>
+        <div class="item-title">🚆 台铁自强号 301 · 国军福利站台南 → 花莲</div>
+        <div class="item-detail">
+          <strong>全程约 4.5 小时直达</strong>（自强号 3000 系列 301 次）。此为南回线顺时针绕半岛东岸的直达班次，沿途高雄、枋寮、台东、瑞穗、花莲，风景极佳（右侧座位看海）。
+          <br><br>
+          <strong>⚠️ 座位紧俏</strong>，务必提前 14 天上台铁官网抢票（06:30 开抢）。车票费用 NT$962。
+        </div>
+        <div class="transit-route">
+          <div class="pref">✓ 首选：06:30 台南 → 10:59 花莲（自强 301）</div>
+          <div class="alt"><strong>备选：</strong>普悠玛/太鲁阁号（需转车北回线，约 5.5h）</div>
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">自强 301</span> NT$962</span>
+          <span><span class="tag">提早 14 天</span> 开放订票</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" target="_blank" rel="noopener">🎫 台铁官网</a>
+          <a class="chip ticket" href="https://tip.railway.gov.tw/tra-tip-web/tip/tip001/tip123/query" target="_blank" rel="noopener">🎫 台铁时刻查询</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%9C%8B%E8%BB%8D%E7%A6%8F%E5%88%A9%E7%AB%99+%E5%8F%B0%E5%8D%97%E5%BA%97" target="_blank" rel="noopener">📍 国军福利站 台南站</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Hualien+Station" target="_blank" rel="noopener">📍 花莲车站</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">11:30 – 13:30</div>
+        <div class="item-title">🏨 S.E.A. 民宿 Check-in · 花莲午餐</div>
+        <div class="item-detail">
+          放行李后午餐。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=S.E.A.+Hostel+Hualien" target="_blank" rel="noopener">📍 S.E.A. 民宿</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%85%AC%E6%AD%A3%E5%8C%85%E5%AD%90" target="_blank" rel="noopener">📍 公正包子</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">13:20 集合 · 14:00 出船</div>
+        <div class="item-title">🐋 多罗满赏鲸 Duoloman Whale Watching</div>
+        <div class="item-detail">
+          花莲外海黑潮经过，全年可观赏飞旋海豚、花纹海豚、伪虎鲸，运气好还能看到抹香鲸、大翅鲸。多罗满为在地老牌业者，船长与解说员皆有海洋生态背景。
+          <br><br>
+          <strong>集合地点：</strong>多罗满赏鲸海矿馆 · 花莲市华东 15 号<br>
+          <strong>集合时间：</strong>14:00 发船（请提前 40 分钟抵达）<br>
+          <strong>行程时长：</strong>约 2 小时
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">费用</span> CN¥183 / NT$800</span>
+          <span><span class="tag">出船时段</span> 06:30 / 08:30 / 10:30 / 14:00 / 16:00</span>
+          <span><span class="tag">携带</span> 防晒 · 晕船药 · 薄外套</span>
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%9A%E7%BE%85%E6%BB%BF%E8%B3%9E%E9%AF%A8+%E8%8A%B1%E8%93%AE%E5%B8%82%E8%8F%AF%E6%9D%B115%E8%99%9F" target="_blank" rel="noopener">📍 集合地点</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/697-hualien-whale-watching-rafting-hualien/" target="_blank" rel="noopener">🎫 Klook 订票</a>
+          <a class="chip ticket" href="https://www.turumoan.com.tw/" target="_blank" rel="noopener">🔗 多罗满官网</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">17:00 – 19:00</div>
+        <div class="item-title">🌅 北滨公园 · 太平洋夕阳</div>
+        <div class="item-detail">
+          赏鲸结束后，步行至北滨公园看太平洋海景，天气好时可见日落染红海面。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Beibin+Park+Hualien+%E5%8C%97%E6%BB%A8%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">📍 北滨公园</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">19:00 – 22:00</div>
+        <div class="item-title">🍢 东大门夜市</div>
+        <div class="item-detail">
+          花莲最大夜市，四大主题街区：福町夜市、各省一条街、原住民一条街、自强夜市。必吃：官财板、炸蛋葱油饼、第一家烤肉串、蒋记公正包子。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Dongdamen+Night+Market" target="_blank" rel="noopener">📍 东大门夜市</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E8%8A%B1%E8%93%AE%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80" target="_blank" rel="noopener">📍 花莲文创园区</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stay-box">
+      <strong>🏨 住宿：</strong>S.E.A. 民宿
+      <div class="addr">花莲市海滨街 72 号</div>
+    </div>
+  </div>
+
+  <!-- DAY 9 -->
+  <div class="day-section day9" id="d9">
+    <div class="day-header">
+      <div class="day-num">D9</div>
+      <div>
+        <div class="day-title">花莲 → 桃园机场 · 红眼返程</div>
+        <div class="day-route">6月5日（周五）· 归国日（6/6 00:55 航班）</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time-badge">09:00 – 11:00</div>
+        <div class="item-title">🌊 七星潭 · 最后的太平洋（可选）</div>
+        <div class="item-detail">
+          花莲市区 20 分钟车程可达，鹅卵石月牙湾海滩，太平洋最美蓝。建议 S.E.A. 民宿 check-out 后寄放行李搭计程车前往（单程约 NT$250）。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Qixingtan+Beach+Hualien" target="_blank" rel="noopener">📍 七星潭</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E5%9C%92%E5%88%A5%E9%A4%A8" target="_blank" rel="noopener">📍 松园别馆</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">12:00 – 13:00</div>
+        <div class="item-title">🍱 花莲午餐 + 取行李</div>
+        <div class="item-detail">
+          回 S.E.A. 民宿取行李。可以吃最后一餐花莲小吃（戴记扁食、液香扁食、蓝蜻蜓炸鸡）。
+        </div>
+      </div>
+
+      <div class="timeline-item transit">
+        <div class="time-badge">14:00 – 16:30</div>
+        <div class="item-title">🚆 台铁 · 花莲 → 台北（约 2.5 小时）</div>
+        <div class="item-detail">
+          花莲车站搭普悠玛/太鲁阁号/自强号至台北车站。<strong>务必提前 14 天抢票，周五热门班次秒杀。</strong>
+        </div>
+        <div class="transit-route">
+          <div class="pref">✓ 首选：普悠玛号 · 14:xx 花莲 → 16:xx 台北</div>
+          <div class="alt"><strong>备选：</strong>太鲁阁号 · 自强号（车程 3h）</div>
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">普悠玛</span> NT$440</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" target="_blank" rel="noopener">🎫 台铁订票</a>
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Taipei+Main+Station" target="_blank" rel="noopener">📍 台北车站</a>
+        </div>
+      </div>
+
+      <div class="timeline-item transit">
+        <div class="time-badge">17:30 – 18:10</div>
+        <div class="item-title">🚇 机场捷运 · 台北 A1 → 桃园机场 A12/A13</div>
+        <div class="item-detail">
+          台北车站地下 B1 机场捷运，直达车约 35 分钟到 T1，普通车 50 分钟。建议直达车。
+        </div>
+        <div class="ticket-info">
+          <span><span class="tag">机场捷运</span> NT$150</span>
+        </div>
+        <div class="link-row">
+          <a class="chip ticket" href="https://www.tymetro.com.tw/tymetro-new/tc/" target="_blank" rel="noopener">🎫 机场捷运官网</a>
+          <a class="chip ticket" href="https://www.klook.com/zh-CN/activity/3091-taoyuan-airport-mrt-taipei/" target="_blank" rel="noopener">🎫 Klook 车票</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time-badge">18:30 – 22:55</div>
+        <div class="item-title">✈️ 桃园国际机场 TPE · 晚餐 + 候机</div>
+        <div class="item-detail">
+          Scoot 航站位于 T1。红眼航班 00:55 起飞，建议 22:55 前完成值机（起飞前 2 小时）。机场设有 24 小时微热山丘、星巴克、佳德凤梨酥专柜。T1 出境后有免税店与观景台。
+          <br><br>
+          <strong>伴手礼：</strong>凤梨酥（微热山丘/佳德/犁记）、乌龙茶、高粱酒、Mr. Brown 咖啡、乖乖、方块酥。
+        </div>
+        <div class="link-row">
+          <a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Taiwan+Taoyuan+International+Airport+Terminal+1" target="_blank" rel="noopener">📍 桃园机场 T1</a>
+          <a class="chip" href="https://www.taoyuan-airport.com/" target="_blank" rel="noopener">🔗 机场官网</a>
+        </div>
+      </div>
+
+      <div class="timeline-item transit">
+        <div class="time-badge">6/6 00:55</div>
+        <div class="item-title">✈️ Scoot TR 875 · TPE → SIN</div>
+        <div class="item-detail">
+          00:55 起飞，05:20 抵达新加坡樟宜机场。红眼航班建议穿宽松衣物、带颈枕与眼罩。
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>💡 Day 9 Plan B · 花莲 → 松山 → 桃园：</strong>若台铁抢不到票，可改搭立荣/华信航空花莲→松山机场（30 分钟），再搭国道客运 1960/1961 松山→桃园（约 1 小时）。费用较高但时间可控。
+    </div>
+  </div>
+
+  <!-- Booking Info -->
+  <div class="card" style="margin-bottom: 30px;">
+    <h3>🎟️ 订票与购票渠道汇总</h3>
+    <div class="booking-list">
+      <p><strong>台湾高铁 HSR</strong>：<a href="https://www.thsrc.com.tw" target="_blank">thsrc.com.tw</a>（提前 29 天购票）/ T-EX App</p>
+      <p><strong>台铁 / 普悠玛 / 自强号</strong>：<a href="https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" target="_blank">railway.gov.tw</a>（提前 14 天 06:30 开售）</p>
+      <p><strong>机场捷运</strong>：<a href="https://www.tymetro.com.tw/tymetro-new/tc/" target="_blank">tymetro.com.tw</a> / 悠游卡直刷</p>
+      <p><strong>台湾好行 6670A（台中-日月潭）</strong>：<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=6670A&rn=1775391353552&lan=C" target="_blank">时刻表</a> · 现场购票</p>
+      <p><strong>台湾好行 6739（日月潭-阿里山）</strong>：<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C" target="_blank">时刻表</a> · <a href="https://www.nantoubus.com.tw/" target="_blank">南投客运</a> 需电话或 APP 预约</p>
+      <p><strong>台湾好行 7329A（阿里山-嘉义）</strong>：<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C" target="_blank">时刻表</a></p>
+      <p><strong>阿里山森林铁路</strong>：<a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a>（提前 14 天早上开放订票，订位即付款）</p>
+      <p><strong>九族文化村 + 日月潭缆车</strong>：<a href="https://www.klook.com/zh-CN/activity/574-formosan-aboriginal-culture-village-nantou/" target="_blank">Klook</a> / <a href="https://www.kkday.com/zh-cn/product/4180" target="_blank">KKday</a></p>
+      <p><strong>多罗满赏鲸</strong>：<a href="https://www.klook.com/zh-CN/activity/697-hualien-whale-watching-rafting-hualien/" target="_blank">Klook</a> / <a href="https://www.turumoan.com.tw/" target="_blank">官网</a></p>
+      <p><strong>台北 101 观景台</strong>：<a href="https://www.klook.com/zh-CN/activity/76-taipei-101-observatory/" target="_blank">Klook</a> / <a href="https://www.taipei-101.com.tw/" target="_blank">官网</a></p>
+      <p><strong>故宫博物院</strong>：<a href="https://www.npm.gov.tw/" target="_blank">官网</a> / <a href="https://www.klook.com/zh-CN/activity/1573-national-palace-museum-taipei/" target="_blank">Klook</a></p>
+      <p><strong>Scoot 航班管理</strong>：<a href="https://www.flyscoot.com/en/manage-booking" target="_blank">flyscoot.com</a></p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom: 30px;">
+    <h3>📝 行前须知 Checklist</h3>
+    <div class="booking-list">
+      <p>✅ <strong>悠游卡 EasyCard</strong>：机场、捷运站可购（NT$100 押金），台北捷运、公车、台铁、便利店、台湾好行均可用</p>
+      <p>✅ <strong>网络</strong>：桃园机场 Chunghwa Telecom 柜台办 8 天无限流量 SIM 约 NT$500，或 eSIM（Airalo/Saily）</p>
+      <p>✅ <strong>国际驾照</strong>：台南租机车必备，出发前在当地监理所办理</p>
+      <p>✅ <strong>防晒 & 薄外套</strong>：5–6 月台湾平地 28–32°C，阿里山海拔 2,200m 早晚 10–15°C，日夜温差大</p>
+      <p>✅ <strong>梅雨季</strong>：5–6 月台湾进入梅雨，备好雨具，阿里山湿滑需防滑鞋</p>
+      <p>✅ <strong>现金</strong>：老店小摊仅收现金，建议备 NT$3,000–5,000</p>
+      <p>✅ <strong>插座</strong>：台湾电压 110V，与美国同型，中国/新加坡电器需转接头</p>
+      <p>✅ <strong>抢票提醒</strong>：台铁（提前 14 天 06:30）· 林铁（提前 14 天 05:00）· 高铁（提前 29 天）</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  行程规划仅供参考，实际班次与票价请以官方最新公告为准<br>
+  建议出发前再次确认各交通工具的时刻表与抢票时间<br><br>
+  Last updated: 2026/4/12
+</div>
+
+</body>
+</html>
