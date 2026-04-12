@@ -11,6 +11,27 @@ date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
 last_updated: 2026/4/12
 
+# Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
+# Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
+# their use site for readability.
+urls:
+  tymetro:     &url_tymetro      "https://www.tymetro.com.tw/tymetro-new/tc/"
+  thsrc:       &url_thsrc        "https://www.thsrc.com.tw/"
+  railway:     &url_railway      "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW"
+  bus_6670a:   &url_bus_6670a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=6670A&rn=1775391353552&lan=C"
+  bus_6739:    &url_bus_6739     "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C"
+  bus_7329a:   &url_bus_7329a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C"
+  afrts:       &url_afrts        "https://afrts.forest.gov.tw/"
+  nantoubus:   &url_nantoubus    "https://www.nantoubus.com.tw/"
+  klook_nine:  &url_klook_nine   "https://www.klook.com/zh-CN/activity/33027-formosa-aboriginal-cultural-village-ticket-sun-moon-lake-boat-pass/"
+  kkday_nine:  &url_kkday_nine   "https://www.kkday.com/zh-cn/product/18440-taiwan-formosan-aboriginal-culture-village-sun-moon-lake-ropeway-ticket"
+  klook_whale: &url_klook_whale  "https://www.klook.com/zh-CN/activity/697-hualien-whale-watching-rafting-hualien/"
+  turumoan:    &url_turumoan     "https://www.turumoan.com.tw/"
+  klook_101:   &url_klook_101    "https://www.klook.com/zh-CN/activity/1659-taipei-101-taipei/"
+  taipei_101:  &url_taipei_101   "https://www.taipei-101.com.tw/"
+  klook_npm:   &url_klook_npm    "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/"
+  npm:         &url_npm          "https://www.npm.gov.tw/"
+
 cost:
   primary: NT$
   secondary: SGD
@@ -129,7 +150,7 @@ days:
         detail: |
           Scoot TR 874 14:15 落地桃园机场第一航厦。搭乘桃园机场捷运（MRT）直达台北车站，车程：直达车 35 分钟 / 普通车 50 分钟。
         links:
-          - { type: ticket, icon: 🎫, label: 机场捷运官网, url: "https://www.tymetro.com.tw/tymetro-new/tc/" }
+          - { type: ticket, icon: 🎫, label: 机场捷运官网, url: *url_tymetro }
           - { type: map,    icon: 📍, label: 机场捷运 A12, query: Taoyuan Airport MRT Terminal 1 }
 
       - time: 16:00 – 17:00
@@ -195,8 +216,8 @@ days:
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
         links:
           - { type: map,    icon: 📍, label: 地图, query: National Palace Museum Taipei }
-          - { type: ticket, icon: 🎫, label: 故宫官网, url: "https://www.npm.gov.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook 预约, url: "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/" }
+          - { type: ticket, icon: 🎫, label: 故宫官网, url: *url_npm }
+          - { type: ticket, icon: 🎫, label: Klook 预约, url: *url_klook_npm }
 
       - time: 12:30 – 14:00
         title: 🍱 午餐 · 故宫晶华 或 士林老街
@@ -267,8 +288,8 @@ days:
           - { tag: Skyline 460, value: "NT$3,000（含 89F）" }
         links:
           - { type: map,    icon: 📍, label: 地图, query: Taipei 101 }
-          - { type: ticket, icon: 🎫, label: 101 官网, url: "https://www.taipei-101.com.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook, url: "https://www.klook.com/zh-CN/activity/1659-taipei-101-taipei/" }
+          - { type: ticket, icon: 🎫, label: 101 官网, url: *url_taipei_101 }
+          - { type: ticket, icon: 🎫, label: Klook, url: *url_klook_101 }
           - { type: ticket, icon: 🎫, label: KKday, url: "https://www.kkday.com/zh-cn/product/8332-taipei-101-observatory-ticket" }
 
       - time: 19:00 – 22:30
@@ -303,7 +324,7 @@ days:
           - { tag: 标准车厢, value: NT$700 }
           - { tag: 早鸟 65 折, value: NT$455, note: 提前 5–28 天 }
         links:
-          - { type: ticket, icon: 🎫, label: 台湾高铁官网, url: "https://www.thsrc.com.tw/" }
+          - { type: ticket, icon: 🎫, label: 台湾高铁官网, url: *url_thsrc }
           - { type: ticket, icon: 🎫, label: Klook 高铁票, url: "https://www.klook.com/zh-CN/activity/73749-thsr-one-way-ticket-taipei/" }
           - { type: map,    icon: 📍, label: 台北高铁站, query: HSR Taipei Station }
           - { type: map,    icon: 📍, label: 台中高铁站, query: HSR Taichung Station }
@@ -319,7 +340,7 @@ days:
           - { tag: 单程, value: NT$229, note: 高铁站起 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
-          - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=6670A&rn=1775391353552&lan=C" }
+          - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: *url_bus_6670a }
           - { type: ticket, icon: 🎫, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
 
       - time: 09:30 – 15:30
@@ -332,8 +353,8 @@ days:
         links:
           - { type: map,    icon: 📍, label: 九族文化村, query: Formosan Aboriginal Culture Village }
           - { type: ticket, icon: 🎫, label: 九族官网, url: "https://www.nine.com.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook, url: "https://www.klook.com/zh-CN/activity/33027-formosa-aboriginal-cultural-village-ticket-sun-moon-lake-boat-pass/" }
-          - { type: ticket, icon: 🎫, label: KKday, url: "https://www.kkday.com/zh-cn/product/18440-taiwan-formosan-aboriginal-culture-village-sun-moon-lake-ropeway-ticket" }
+          - { type: ticket, icon: 🎫, label: Klook, url: *url_klook_nine }
+          - { type: ticket, icon: 🎫, label: KKday, url: *url_kkday_nine }
 
       - time: 15:30 – 16:00
         title: 🚡 日月潭缆车 · 九族 → 伊达邵
@@ -381,8 +402,8 @@ days:
           - { tag: 现金票价, value: NT$329 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
-          - { type: ticket, icon: 🎫, label: 6739 时刻表, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C" }
-          - { type: ticket, icon: 🎫, label: 南投客运预约, url: "https://www.nantoubus.com.tw/" }
+          - { type: ticket, icon: 🎫, label: 6739 时刻表, url: *url_bus_6739 }
+          - { type: ticket, icon: 🎫, label: 南投客运预约, url: *url_nantoubus }
           - { type: map,    icon: 📍, label: 水社站, query: 水社 Shuishe Sun Moon Lake }
           - { type: map,    icon: 📍, label: 阿里山入口, query: Alishan National Forest Recreation Area Entrance }
 
@@ -411,7 +432,7 @@ days:
           - { type: map,    icon: 📍, label: 神木站, query: Sacred Tree Station Alishan }
           - { type: map,    icon: 📍, label: 姐妹潭, query: 姐妹潭 阿里山 }
           - { type: map,    icon: 📍, label: 沼平站, query: 沼平站 }
-          - { type: ticket, icon: 🎫, label: 林铁支线订票, url: "https://afrts.forest.gov.tw/" }
+          - { type: ticket, icon: 🎫, label: 林铁支线订票, url: *url_afrts }
 
       - time: "17:30"
         title: 🏨 青山别馆 Chinshan Hotel · Check-in
@@ -455,8 +476,8 @@ days:
           - { tag: 林铁本线, value: "NT$600" }
           - { tag: 7329A 公车（备选）, value: "NT$283" }
         links:
-          - { type: ticket, icon: 🎫, label: 林铁官网订票, url: "https://afrts.forest.gov.tw/" }
-          - { type: ticket, icon: 🎫, label: 7329A 时刻表（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C" }
+          - { type: ticket, icon: 🎫, label: 林铁官网订票, url: *url_afrts }
+          - { type: ticket, icon: 🎫, label: 7329A 时刻表（备选）, url: *url_bus_7329a }
           - { type: ticket, icon: 🎫, label: 73290 慢车版（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" }
           - { type: map,    icon: 📍, label: 嘉义车站（TRA）, query: Chiayi TRA Station }
 
@@ -478,8 +499,8 @@ days:
           - { tag: 台铁自强, value: "NT$107" }
           - { tag: 高铁（备选）, value: "NT$410" }
         links:
-          - { type: ticket, icon: 🎫, label: 台铁订票, url: "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" }
-          - { type: ticket, icon: 🎫, label: 台湾高铁（备选）, url: "https://www.thsrc.com.tw/" }
+          - { type: ticket, icon: 🎫, label: 台铁订票, url: *url_railway }
+          - { type: ticket, icon: 🎫, label: 台湾高铁（备选）, url: *url_thsrc }
 
       - time: "19:00"
         title: 🏨 禧榕轩大饭店 Grand Banyan Hotel · Check-in
@@ -580,7 +601,7 @@ days:
           - { tag: 自强 301, value: NT$962 }
           - { tag: 提早 14 天, value: 开放订票 }
         links:
-          - { type: ticket, icon: 🎫, label: 台铁官网, url: "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" }
+          - { type: ticket, icon: 🎫, label: 台铁官网, url: *url_railway }
           - { type: ticket, icon: 🎫, label: 台铁时刻查询, url: "https://tip.railway.gov.tw/tra-tip-web/tip/tip001/tip123/query" }
           - { type: map,    icon: 📍, label: 国军福利站 台南站, query: 国军福利站 台南店 }
           - { type: map,    icon: 📍, label: 花莲车站, query: Hualien Station }
@@ -606,8 +627,8 @@ days:
           - { tag: 携带, value: 防晒 · 晕船药 · 薄外套 }
         links:
           - { type: map,    icon: 📍, label: 集合地点, query: 多罗满赏鲸 花莲市华东15号 }
-          - { type: ticket, icon: 🎫, label: Klook 订票, url: "https://www.klook.com/zh-CN/activity/697-hualien-whale-watching-rafting-hualien/" }
-          - { type: ticket, icon: 🔗, label: 多罗满官网, url: "https://www.turumoan.com.tw/" }
+          - { type: ticket, icon: 🎫, label: Klook 订票, url: *url_klook_whale }
+          - { type: ticket, icon: 🔗, label: 多罗满官网, url: *url_turumoan }
 
       - time: 17:00 – 19:00
         title: 🌅 北滨公园 · 太平洋夕阳
@@ -653,7 +674,7 @@ days:
         tickets:
           - { tag: 普悠玛, value: NT$440 }
         links:
-          - { type: ticket, icon: 🎫, label: 台铁订票, url: "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" }
+          - { type: ticket, icon: 🎫, label: 台铁订票, url: *url_railway }
           - { type: map,    icon: 📍, label: 台北车站, query: Taipei Main Station }
 
       - time: 17:30 – 18:10
@@ -663,7 +684,7 @@ days:
         tickets:
           - { tag: 机场捷运, value: NT$150 }
         links:
-          - { type: ticket, icon: 🎫, label: 机场捷运官网, url: "https://www.tymetro.com.tw/tymetro-new/tc/" }
+          - { type: ticket, icon: 🎫, label: 机场捷运官网, url: *url_tymetro }
           - { type: ticket, icon: 🎫, label: Klook 车票, url: "https://www.klook.com/zh-CN/activity/11346-taoyuan-airport-mrt-ticket-taipei/" }
 
       - time: 18:30 – 22:55
@@ -684,18 +705,46 @@ days:
       <strong>💡 Day 9 Plan B · 花莲 → 松山 → 桃园：</strong>若台铁抢不到票，可改搭立荣/华信航空花莲→松山机场（30 分钟），再搭国道客运 1960/1961 松山→桃园（约 1 小时）。费用较高但时间可控。
 
 booking_channels:
-  - { name: 台湾高铁 HSR, detail: '<a href="https://www.thsrc.com.tw" target="_blank">thsrc.com.tw</a>（提前 29 天购票）/ T-EX App' }
-  - { name: 台铁 / 普悠玛 / 自强号, detail: '<a href="https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW" target="_blank">railway.gov.tw</a>（提前 14 天 06:30 开售）' }
-  - { name: 机场捷运, detail: '<a href="https://www.tymetro.com.tw/tymetro-new/tc/" target="_blank">tymetro.com.tw</a> / 悠游卡直刷' }
-  - { name: 台湾好行 6670A（台中-日月潭）, detail: '<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=6670A&rn=1775391353552&lan=C" target="_blank">时刻表</a> · 现场购票' }
-  - { name: 台湾好行 6739（日月潭-阿里山）, detail: '<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C" target="_blank">时刻表</a> · <a href="https://www.nantoubus.com.tw/" target="_blank">南投客运</a> 需电话或 APP 预约' }
-  - { name: 台湾好行 7329A（阿里山-嘉义）, detail: '<a href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C" target="_blank">时刻表</a>' }
-  - { name: 阿里山森林铁路, detail: '<a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a>（提前 14 天早上开放订票，订位即付款）' }
-  - { name: 九族文化村 + 日月潭缆车, detail: '<a href="https://www.klook.com/zh-CN/activity/33027-formosa-aboriginal-cultural-village-ticket-sun-moon-lake-boat-pass/" target="_blank">Klook</a> / <a href="https://www.kkday.com/zh-cn/product/18440-taiwan-formosan-aboriginal-culture-village-sun-moon-lake-ropeway-ticket" target="_blank">KKday</a>' }
-  - { name: 多罗满赏鲸, detail: '<a href="https://www.klook.com/zh-CN/activity/697-hualien-whale-watching-rafting-hualien/" target="_blank">Klook</a> / <a href="https://www.turumoan.com.tw/" target="_blank">官网</a>' }
-  - { name: 台北 101 观景台, detail: '<a href="https://www.klook.com/zh-CN/activity/1659-taipei-101-taipei/" target="_blank">Klook</a> / <a href="https://www.taipei-101.com.tw/" target="_blank">官网</a>' }
-  - { name: 故宫博物院, detail: '<a href="https://www.npm.gov.tw/" target="_blank">官网</a> / <a href="https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/" target="_blank">Klook</a>' }
-  - { name: Scoot 航班管理, detail: '<a href="https://www.flyscoot.com/en/manage-booking" target="_blank">flyscoot.com</a>' }
+  - name: 台湾高铁 HSR
+    links: [{ label: thsrc.com.tw, url: *url_thsrc }]
+    note: 提前 29 天购票 · T-EX App
+  - name: 台铁 / 普悠玛 / 自强号
+    links: [{ label: railway.gov.tw, url: *url_railway }]
+    note: 提前 14 天 06:30 开售
+  - name: 机场捷运
+    links: [{ label: tymetro.com.tw, url: *url_tymetro }]
+    note: 悠游卡直刷
+  - name: 台湾好行 6670A（台中-日月潭）
+    links: [{ label: 时刻表, url: *url_bus_6670a }]
+    note: 现场购票
+  - name: 台湾好行 6739（日月潭-阿里山）
+    links:
+      - { label: 时刻表, url: *url_bus_6739 }
+      - { label: 南投客运, url: *url_nantoubus }
+    note: 需电话或 APP 预约
+  - name: 台湾好行 7329A（阿里山-嘉义）
+    links: [{ label: 时刻表, url: *url_bus_7329a }]
+  - name: 阿里山森林铁路
+    links: [{ label: afrts.forest.gov.tw, url: *url_afrts }]
+    note: 提前 14 天早上开放订票，订位即付款
+  - name: 九族文化村 + 日月潭缆车
+    links:
+      - { label: Klook, url: *url_klook_nine }
+      - { label: KKday, url: *url_kkday_nine }
+  - name: 多罗满赏鲸
+    links:
+      - { label: Klook, url: *url_klook_whale }
+      - { label: 官网, url: *url_turumoan }
+  - name: 台北 101 观景台
+    links:
+      - { label: Klook, url: *url_klook_101 }
+      - { label: 官网, url: *url_taipei_101 }
+  - name: 故宫博物院
+    links:
+      - { label: 官网, url: *url_npm }
+      - { label: Klook, url: *url_klook_npm }
+  - name: Scoot 航班管理
+    links: [{ label: flyscoot.com, url: "https://www.flyscoot.com/en/manage-booking" }]
 
 checklist:
   - '<strong>悠游卡 EasyCard</strong>：机场、捷运站可购（NT$100 押金），台北捷运、公车、台铁、便利店、台湾好行均可用。<strong>建议初始储值 NT$1,000</strong>（机捷往返约 NT$300 + 台北捷运 / 公车 NT$300 + 便利店 & 备用 NT$400），不够随时到 7-11 / 全家加值即可'

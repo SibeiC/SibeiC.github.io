@@ -225,7 +225,7 @@
     <h3>🎟️ 订票与购票渠道汇总</h3>
     <div class="booking-list">
       {% for c in page.booking_channels %}
-      <p><strong>{{ c.name }}</strong>：{{ c.detail }}</p>
+      <p><strong>{{ c.name }}</strong>：{% if c.links %}{% for l in c.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% unless forloop.last %} / {% endunless %}{% endfor %}{% if c.note %} · {{ c.note }}{% endif %}{% else %}{{ c.detail }}{% endif %}</p>
       {% endfor %}
     </div>
   </div>
