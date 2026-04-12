@@ -698,7 +698,7 @@ booking_channels:
   - { name: Scoot 航班管理, detail: '<a href="https://www.flyscoot.com/en/manage-booking" target="_blank">flyscoot.com</a>' }
 
 checklist:
-  - '<strong>悠游卡 EasyCard</strong>：机场、捷运站可购（NT$100 押金），台北捷运、公车、台铁、便利店、台湾好行均可用'
+  - '<strong>悠游卡 EasyCard</strong>：机场、捷运站可购（NT$100 押金），台北捷运、公车、台铁、便利店、台湾好行均可用。<strong>建议初始储值 NT$1,000</strong>（机捷往返约 NT$300 + 台北捷运 / 公车 NT$300 + 便利店 & 备用 NT$400），不够随时到 7-11 / 全家加值即可'
   - '<strong>网络</strong>：桃园机场 Chunghwa Telecom 柜台办 8 天无限流量 SIM 约 NT$500，或 eSIM（Airalo/Saily）'
   - '<strong>国际驾照</strong>：台南租机车必备，出发前在当地监理所办理'
   - '<strong>防晒 & 薄外套</strong>：5–6 月台湾平地 28–32°C，阿里山海拔 2,200m 早晚 10–15°C，日夜温差大'
