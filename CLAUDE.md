@@ -48,7 +48,7 @@ bundle exec jekyll serve            # http://localhost:4000
 bundle exec jekyll serve --livereload
 ```
 
-Requires Ruby 3.0+ (webrick gem is explicit for this reason). Changes to `_config.yml` do NOT hot-reload — restart the server. Deployment is just `git push origin master`.
+Ruby **3.2.11** (final 3.2 patch; 3.2 series reached EOL in March 2026) is pinned across `.ruby-version`, `Gemfile`, `Gemfile.lock` (`RUBY VERSION` line), `.github/workflows/jekyll-build.yml`, and Cloudflare Pages' `RUBY_VERSION` env var — keep all five in sync if you ever bump it. When eventually moving off the 3.2 series, prefer 3.3.x next: 3.4 dropped `bigdecimal` from default gems, which breaks Liquid 4.0.4 (Jekyll dep) until upstream catches up. Changes to `_config.yml` do NOT hot-reload — restart the server. Deployment is just `git push origin master`.
 
 ## Deployment / branching
 
