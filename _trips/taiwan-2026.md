@@ -31,6 +31,8 @@ urls:
   taipei_101:  &url_taipei_101   "https://www.taipei-101.com.tw/"
   klook_npm:   &url_klook_npm    "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/"
   npm:         &url_npm          "https://www.npm.gov.tw/"
+  bus_6670a_ticket: &url_bus_6670a_ticket "https://ntbus.welcometw.com/tour/MvmY"
+  bus_6739_ticket:  &url_bus_6739_ticket  "https://ylbus-shop.fontour.com/tour/NOyj"
 
 cost:
   primary: NT$
@@ -122,7 +124,7 @@ hotels:
     nights: 1
     dates: 6/4 (四) – 6/5 (五)
     address: 花莲市海滨街 72 号
-    map_query: S.E.A Hostel Hualien 花莲海滨街72号
+    map_query: S.E.A. 民宿 花莲海滨街 72 号
 
 hotels_note: |
   <strong>⚠️ 6/5 (五) 夜晚：</strong>回程航班为 6/6 凌晨 00:55，6/5 当日需从花莲移动至桃园机场。尚未预订 6/5 住宿 → 建议直接搭车到台北寄放行李，当天返程桃园机场候机。
@@ -341,6 +343,7 @@ days:
           - { tag: 悠游卡, value: 约 88 折 }
         links:
           - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: *url_bus_6670a }
+          - { type: ticket, icon: 🎫, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
           - { type: ticket, icon: 🎫, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
 
       - time: 09:30 – 15:30
@@ -423,6 +426,7 @@ days:
           - { tag: 悠游卡, value: 约 88 折 }
         links:
           - { type: ticket, icon: 🎫, label: 6739 时刻表, url: *url_bus_6739 }
+          - { type: ticket, icon: 🎫, label: 购票（员林客运）, url: *url_bus_6739_ticket }
           - { type: ticket, icon: 🎫, label: 南投客运预约, url: *url_nantoubus }
           - { type: map,    icon: 📍, label: 水社站, query: 水社 Shuishe Sun Moon Lake }
           - { type: map,    icon: 📍, label: 阿里山入口, query: Alishan National Forest Recreation Area Entrance }
@@ -556,12 +560,10 @@ days:
     toc_label: 6/3 台南
     items:
       - time: 推荐
-        title: 🛵 租一台电动机车（小电驴）
-        detail: 台南景点分散，市区与安平距离 15 分钟车程，巷弄多、单行道多。推荐租电动机车（GoShare / WeMo / iRent），自由度高。<strong>需持国际驾照。</strong>
+        title: 🛵 WeMo 共享电动机车
+        detail: 台南景点分散、巷弄多、单行道多，市区到安平骑车 15 分钟左右；共享电动机车是最灵活的移动方式。用 WeMo App 扫码取车，按分钟计费，停车不用找位还能直接还车。<strong>需持国际驾照 + 原本国驾照 + 护照。</strong>建议出发前下载 App 注册好、上传驾照审核通过。
         links:
-          - { type: ticket, icon: 🛵, label: GoShare, url: "https://www.goshare.com.tw/" }
           - { type: ticket, icon: 🛵, label: WeMo, url: "https://www.wemoscooter.com/" }
-          - { type: ticket, icon: 🛵, label: iRent, url: "https://www.irentcar.com.tw/" }
 
       - time: 09:00 – 11:00
         title: 📚 国立台湾文学馆
@@ -644,7 +646,7 @@ days:
         title: 🎒 S.E.A. 民宿 · 行李寄存 + 花莲午餐
         detail: 14:00 要赶多罗满赏鲸，先把背包扔民宿（正式 check-in 通常 15:00 后，但柜台可先帮忙存）再出门吃午餐。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
         links:
-          - { type: map, icon: 📍, label: S.E.A. 民宿, query: S.E.A. Hostel Hualien }
+          - { type: map, icon: 📍, label: S.E.A. 民宿, query: S.E.A. 民宿 花莲海滨街 72 号 }
           - { type: map, icon: 📍, label: 公正包子, query: 公正包子 }
 
       - time: 13:20 集合 · 14:00 出船
@@ -701,7 +703,7 @@ days:
       - time: 14:00 – 16:30
         title: 🚆 台铁 · 花莲 → 台北（约 2.5 小时）
         transit: true
-        detail: 花莲车站搭普悠玛/太鲁阁号/自强号至台北车站。<strong>务必提前 14 天抢票，周五热门班次秒杀。</strong>
+        detail: 花莲车站搭普悠玛/太鲁阁号/自强号至台北车站。非连续假期通常座位充足，仍建议 14 天开放订票后尽快买好 — 普悠玛/太鲁阁较紧，若满了 自强号班次多、一般抢得到。
         transit_route:
           preferred: 普悠玛号 · 14:xx 花莲 → 16:xx 台北
           alternatives: ["太鲁阁号", "自强号（车程 3h）"]
@@ -749,11 +751,14 @@ booking_channels:
     links: [{ label: tymetro.com.tw, url: *url_tymetro }]
     note: 悠游卡直刷
   - name: 台湾好行 6670A（台中-日月潭）
-    links: [{ label: 时刻表, url: *url_bus_6670a }]
-    note: 现场购票
+    links:
+      - { label: 时刻表, url: *url_bus_6670a }
+      - { label: 南投客运购票, url: *url_bus_6670a_ticket }
+    note: 亦可现场购票
   - name: 台湾好行 6739（日月潭-阿里山）
     links:
       - { label: 时刻表, url: *url_bus_6739 }
+      - { label: 员林客运购票, url: *url_bus_6739_ticket }
       - { label: 南投客运, url: *url_nantoubus }
     note: 需电话或 APP 预约
   - name: 台湾好行 7329A（阿里山-嘉义）
