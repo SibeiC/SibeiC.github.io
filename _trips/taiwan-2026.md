@@ -561,9 +561,16 @@ days:
     items:
       - time: 推荐
         title: 🛵 WeMo 共享电动机车
-        detail: 台南景点分散、巷弄多、单行道多，市区到安平骑车 15 分钟左右；共享电动机车是最灵活的移动方式。用 WeMo App 扫码取车，按分钟计费，停车不用找位还能直接还车。<strong>需持国际驾照 + 原本国驾照 + 护照。</strong>建议出发前下载 App 注册好、上传驾照审核通过。
+        detail: |
+          台南景点分散、巷弄多、单行道多，市区到安平骑车 15 分钟左右；共享电动机车是最灵活的移动方式。用 WeMo App 扫码取车，按分钟计费，停车不用找位还能直接还车。
+          <br><br>
+          <strong>⚠️ 驾照硬性要求：</strong>WeMo（以及台湾任何机车租借）外籍人士需提供 <strong>A 类（机车）国际驾照</strong> + 原本国机车驾照 + 护照，缺一不可。仅有 B 类（汽车）国际驾照<strong>不能</strong>租机车 — 这是台湾交通法规，连 50cc 以下电动 lite 车也已经纳入管理，没有 license-free 漏洞。
+          <br><br>
+          <strong>没有机车驾照的备案：</strong>台南市区可叫 Uber / 计程车（起跳 NT$85），或搭红干线公车 + 步行，景点之间 1.5–4 km 不等。
+          <br><br>
+          建议出发前下载 WeMo App 注册好、上传 A 类国际驾照 + 原驾照审核通过（审核需 1–2 天）。
         links:
-          - { type: ticket, icon: 🛵, label: WeMo, url: "https://www.wemoscooter.com/" }
+          - { type: ticket, icon: 🛵, label: WeMo 官网, url: "https://www.wemoscooter.com/" }
 
       - time: 09:00 – 11:00
         title: 📚 国立台湾文学馆
@@ -788,7 +795,7 @@ booking_channels:
 checklist:
   - '<strong>悠游卡 EasyCard</strong>：机场、捷运站可购（NT$100 押金），台北捷运、公车、台铁、便利店、台湾好行均可用。<strong>建议初始储值 NT$1,000</strong>（机捷往返约 NT$300 + 台北捷运 / 公车 NT$300 + 便利店 & 备用 NT$400），不够随时到 7-11 / 全家加值即可'
   - '<strong>网络</strong>：桃园机场 Chunghwa Telecom 柜台办 8 天无限流量 SIM 约 NT$500，或 eSIM（Airalo/Saily）'
-  - '<strong>国际驾照</strong>：台南租机车必备，出发前在当地监理所办理'
+  - '<strong>国际驾照</strong>：Day 2 台北单日租车需 B 类（汽车），Day 7 台南租 WeMo 机车需<strong>另外一张 A 类（机车）</strong>。两类各自要对应原本国驾照（即原本国必须先有该类驾照才能办对应的国际驾照）。出发前在原属国监理所/陆路交通局办理 — 台湾境内办不了。'
   - '<strong>防晒 & 薄外套</strong>：5–6 月台湾平地 28–32°C，阿里山海拔 2,200m 早晚 10–15°C，日夜温差大'
   - '<strong>梅雨季</strong>：5–6 月台湾进入梅雨，备好雨具，阿里山湿滑需防滑鞋'
   - '<strong>现金</strong>：老店小摊仅收现金，建议备 NT$3,000–5,000'
