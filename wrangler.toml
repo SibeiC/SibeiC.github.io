@@ -8,7 +8,7 @@
 # IMPORTANT: `name` below MUST exactly match the Project name set in the
 # Cloudflare dashboard. If you renamed the project, change it here too.
 
-name = "sibeic-github-io"
+name = "my-homepage"
 compatibility_date = "2026-04-13"
 
 [assets]
