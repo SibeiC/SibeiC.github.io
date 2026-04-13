@@ -12,9 +12,13 @@
 #
 # Output: a new file at `_trips/<slug>.md` (kebab-case slug → URL path).
 #
-# Default language: ZH-CN. All user-facing strings in Chinese unless the user
-# specifies otherwise. Tone is informative and slightly enthusiastic — match
-# the style of `_trips/taiwan-2026.md` which is the reference example.
+# Language: set `lang: zh-CN` (default) or `lang: en-US` in the front matter
+# below. Each trip is MONOLINGUAL — the layout renders all chrome (card
+# titles, chip labels, footer, weekday fallbacks) in the declared language,
+# pulling strings from `_data/trip_i18n.yml`. Authored content (day titles,
+# details, notes, labels) must be written in the same language — the layout
+# does not translate user content. Tone is informative and slightly
+# enthusiastic — match `_trips/taiwan-2026.md` (zh-CN) as the reference.
 #
 # Each comment below is tagged to tell you what to do with that field:
 #
@@ -74,6 +78,7 @@ published: false
 
 # ── Page identity ────────────────────────────────────────────────────────────
 layout: trip                          # [REQUIRED] always literal "trip"
+lang: zh-CN                           # [USER:CONFIRM] {zh-CN|en-US} default zh-CN. Drives UI chrome language and data lookups (airline/airport names). Each trip is monolingual.
 title: 行程标题                        # [REQUIRED][AI:INFER] <string> compose from destination + duration, e.g. "日本九州七日行"
 favicon: /assets/images/favicon.ico   # [OPTIONAL] <string> path; defaults to site favicon. Override only if user requests a custom one.
 
