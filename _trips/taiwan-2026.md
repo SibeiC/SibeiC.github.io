@@ -63,7 +63,7 @@ cost:
       icon: 🚆
       items:
         - { label: "高铁 台北→台中", amount: 700, in: primary }
-        - { label: "好行 6670A 台中→九族", amount: 229, in: primary }
+        - { label: "好行 6670A 台中→水社", amount: 193, in: primary }
         - { label: "好行 6739 日月潭→阿里山", amount: 329, in: primary }
         - { label: "林铁本线 阿里山→嘉义（首选）", amount: 600, in: primary }
         - { label: "台铁 嘉义→台南", amount: 107, in: primary }
@@ -329,25 +329,67 @@ days:
           - { type: map,    icon: 📍, label: 台北高铁站, query: HSR Taipei Station }
           - { type: map,    icon: 📍, label: 台中高铁站, query: HSR Taichung Station }
 
-      - time: 08:45 – 09:30
-        title: 🚌 台湾好行 6670A · 台中高铁站 → 九族文化村
+      - time: 08:45 – 10:45
+        title: 🚌 台湾好行 6670A · 台中高铁站 → 日月潭水社
         transit: true
-        detail: 高铁台中站 1 楼 5 号出口搭乘台湾好行 6670A（经九族）。车程约 45 分钟直达九族文化村。
+        detail: |
+          高铁台中站 1 楼 5 号出口搭乘台湾好行 6670A（日月潭线），终点站水社游客中心。全程约 1h45m–2h，沿途经埔里、鱼池、九族文化村，最后抵达水社。<strong>坐到终点 水社下车</strong>，先把行李扔酒店再出门玩。
         transit_route:
-          preferred: 08:45 出发 → 09:30 抵达
-          alternatives: ["07:45", "09:45", "15:45"]
+          preferred: 08:45 台中 → 10:45 水社
+          alternatives: ["07:45", "09:45", "15:45 （末班）"]
         tickets:
-          - { tag: 单程, value: NT$229, note: 高铁站起 }
+          - { tag: 单程, value: NT$193, note: 台中高铁→水社 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
           - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: *url_bus_6670a }
           - { type: ticket, icon: 🎫, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
+          - { type: map,    icon: 📍, label: 水社游客中心, query: 水社游客中心 日月潭 }
 
-      - time: 09:30 – 15:30
-        title: 🎢 九族文化村
-        detail: 一票玩到底，包含原住民九族文化展示、欧洲花园主题乐园、UFO 自由落体、加勒比海盗船、以及可俯瞰日月潭的「日月缆车」。推荐：马雅探险、西班牙海岸大漩涡、原住民歌舞表演。最后搭日月潭缆车前往日月潭。
+      - time: 10:45 – 11:15
+        title: 🎒 水沙连大饭店 · 行李寄存
+        detail: |
+          水沙连就在水社码头步行 3 分钟内。正式 check-in 通常 15:00 后，但柜台可先帮忙保管行李（多数日月潭酒店均支持）。拿了船票、门票、换装轻便装备再出门，省得拖着大包跑景点。
+        links:
+          - { type: map, icon: 📍, label: 水沙连大饭店, query: Shui Sha Lian Hotel 水沙连大饭店 }
+
+      - time: 11:30 – 12:15
+        title: ⛵ 日月潭游湖船（段 1+2）· 水社 → 玄光寺 → 伊达邵
+        transit: true
+        detail: |
+          水社码头右边入口 1 号浮排登船。一日票 NT$300 限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社）— 今天会完整用掉这一圈：<strong>出发把段 1+2 用掉到伊达邵，晚上回程再用段 3 回水社</strong>。每半小时一班，乘客下船后由工作人员派发到下一班。
+          <br><br>
+          玄光寺只是中转，无需在此停留（可留到回程顺道拍照）；直接衔接下一班到伊达邵。
         tickets:
-          - { tag: 全票, value: NT$900, note: 含日月潭缆车 }
+          - { tag: 一日票, value: "NT$300（限搭一圈，今日用满 3 段）" }
+          - { tag: 营运时间, value: "09:00 – 17:00（末班 17:00 伊达邵开船）" }
+          - { tag: 班次, value: 每半小时一班 }
+        links:
+          - { type: map,    icon: 📍, label: 水社码头, query: 水社码头 }
+          - { type: map,    icon: 📍, label: 玄光寺, query: 玄光寺 日月潭 }
+          - { type: map,    icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
+          - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
+          - { type: ticket, icon: 🎫, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
+
+      - time: 12:15 – 13:00
+        title: 🍱 伊达邵码头午餐 · 邵族小吃
+        detail: 阿婆香菇茶叶蛋、邵族麻糬、山猪肉串、总统鱼。码头周边摊贩集中，快吃完上缆车。
+        links:
+          - { type: map, icon: 📍, label: 伊达邵老街, query: 伊达邵老街 }
+
+      - time: 13:00 – 13:15
+        title: 🚡 日月潭缆车 · 伊达邵 → 九族文化村
+        transit: true
+        detail: |
+          缆车站就在伊达邵码头步行 5 分钟。单程约 7 分钟飞越山脊直达九族。<strong>缆车往返含在九族门票中</strong>，当日不限次数。从水社方向进九族是「反向进园」，上午反而人少。
+        links:
+          - { type: map, icon: 📍, label: 日月潭缆车, query: Sun Moon Lake Ropeway }
+          - { icon: 🔗, label: 缆车官网, url: "https://www.ropeway.com.tw/" }
+
+      - time: 13:15 – 16:00
+        title: 🎢 九族文化村
+        detail: 一票玩到底 — 原住民九族文化展示、欧洲花园主题乐园、UFO 自由落体、加勒比海盗船。推荐：马雅探险、西班牙海岸大漩涡、原住民歌舞表演。反向进园从缆车站那头开逛，路线更顺。
+        tickets:
+          - { tag: 全票, value: NT$900, note: 含日月潭缆车往返 }
           - { tag: 线上购票, value: 约 NT$780–830 }
           - { tag: 营业时间, value: 09:30–17:00 }
         links:
@@ -356,35 +398,27 @@ days:
           - { type: ticket, icon: 🎫, label: Klook, url: *url_klook_nine }
           - { type: ticket, icon: 🎫, label: KKday, url: *url_kkday_nine }
 
-      - time: 15:30 – 16:00
-        title: 🚡 日月潭缆车 · 九族 → 伊达邵
+      - time: 16:00 – 16:15
+        title: 🚡 日月潭缆车 · 九族 → 伊达邵（返程）
         transit: true
         detail: |
-          从九族文化村搭缆车约 7 分钟直达日月潭缆车站（伊达邵）。<strong>缆车已含在九族门票中。</strong>注意末班缆车时间（约 16:00–16:30），务必提早搭乘。
-          <br><br>
-          抵达伊达邵后需搭轮渡到水沙连大饭店（水社码头）。
+          <strong>末班缆车约 16:00–16:30，不可拖延。</strong>回伊达邵后直奔码头赶末班船回水社。
         links:
-          - { type: map, icon: 📍, label: 日月潭缆车, query: Sun Moon Lake Ropeway }
-          - { icon: 🔗, label: 缆车官网, url: "https://www.ropeway.com.tw/" }
+          - { type: map, icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
 
-      - time: 15:40 – 17:00
-        title: ⛵ 日月潭游湖船 · 伊达邵 → (玄光寺) → 水社
+      - time: 16:30 – 16:50
+        title: ⛵ 日月潭游湖船（段 3）· 伊达邵 → 水社（返程）
+        transit: true
         detail: |
-          缆车下站后步行约 5 分钟至伊达邵码头。一日票 NT$300，<strong>限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社），用完即止</strong>，并非当日不限次数。船班每半小时一班，假日会机动加班。<strong>末班船 17:00 整点从伊达邵开</strong> — 务必 16:30 前到码头 check-in。若要在玄光寺停留，建议搭更早的班次，否则直接 伊达邵 → 水社 约 20 分钟抵达。
-          <br><br>
-          <strong>水社上船位置：</strong>水社码头右边入口 1 号浮排。现场工作人员会派船，船员会通知下一段发船时间。
-          <br><br>
-          伊达邵必吃（缆车下站 → 码头的 20 分钟内快速解决）：阿婆香菇茶叶蛋、邵族麻糬、山猪肉串。
+          使用上午同一张一日票的最后一段。<strong>末班船 17:00 整点从伊达邵开 — 务必 16:30 前到码头 check-in。</strong>伊达邵 → 水社 约 20 分钟。错过末班就只能打车（一圈湖路约 30–40 分钟 NT$500+）。
         tickets:
-          - { tag: 一日票, value: "NT$300（限搭一圈）" }
-          - { tag: 营运时间, value: "09:00 – 17:00（末班 17:00 伊达邵开船）" }
-          - { tag: 班次, value: 每半小时一班 }
+          - { tag: 用票, value: 上午购的一日票最后一段 }
         links:
-          - { type: map,    icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
-          - { type: map,    icon: 📍, label: 玄光寺, query: 玄光寺 日月潭 }
-          - { type: map,    icon: 📍, label: 水社码头, query: 水社码头 }
-          - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
-          - { type: ticket, icon: 🎫, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
+          - { type: map, icon: 📍, label: 水社码头, query: 水社码头 }
+
+      - time: "17:00"
+        title: 🏨 水沙连大饭店 · 正式 check-in
+        detail: 早上已经寄存过行李，这时候拿钥匙上楼、冲个澡、换衣服准备去觅食或洗衣。
 
       - time: 19:30 – 21:30
         title: 🧺 招茗自助洗衣店 · 行程过半补给
