@@ -1,0 +1,32 @@
+name: Jekyll build check
+
+# Runs `bundle exec jekyll build` on every PR (GitHub Pages does NOT build
+# PR branches, so this is our only pre-merge safety net for YAML / Liquid /
+# data-reference errors in trip files) and on pushes to master (belt-and-
+# suspenders; GH Pages will also build master on push, but this surfaces
+# failures faster and in the Actions tab directly).
+#
+# No deploy step here — GitHub Pages owns deployment.
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby and install gems (with cache)
+        uses: ruby/setup-ruby@v1
+        with:
+          # Match the github-pages gem set: it pins Jekyll, Liquid, etc.
+          # Ruby 3.2 is a safe default; bump if the Gemfile ever pins a newer version.
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build --trace
