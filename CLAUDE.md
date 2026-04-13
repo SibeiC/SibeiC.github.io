@@ -134,6 +134,17 @@ When the user sends a receipt image (optionally with a comment), do the followin
 
 **Cost override rule (important):** If the receipt's cost already has a corresponding **estimate** line (typically tagged `note: 估算`), **replace** that line's `amount` with the actual and **drop** `note: 估算` — do NOT add a second line. Matching heuristic: same `cost.groups[]` category + same / similar `label` + plausible date. If the match is ambiguous (e.g. generic "交通杂费" vs. specific taxi fare), ask before overwriting vs. appending. Never manually recompute totals — the Liquid layout sums everything.
 
+### Itinerary authoring: bag-drop before sightseeing on transition days
+
+On any day where the traveller moves from one accommodation to another, the day's `items[]` should include an explicit **`🎒 <hotel name> · 行李寄存`** (or `· Check-in`) step **before** the first sightseeing item at the destination. Don't assume the hotel is reachable only at `stay:` time in the evening — most hotels in Taiwan / Japan / SEA accept early luggage drop at the front desk even before the formal check-in window.
+
+Rule of thumb:
+- Arriving at a new city with bags + a bunch of activities planned → insert 🎒 行李寄存 right after the transit item that landed them in town.
+- Mid-day transit where they won't be near the hotel → OK to keep bags with them, but flag it in the transit item's `detail`.
+- Last-day / airport-return transit (e.g., Taiwan Day 9) → keep bags at the prior-night's accommodation, do morning activities, then pick up bags on the way out. This is the inverse pattern; same principle: don't drag bags through activities.
+
+Apply this retroactively when editing existing trips, not just for new ones. If a location-change day looks like it's missing a 行李寄存 item, flag it or add it without being asked.
+
 ### Branch & PR cleanup
 
 - **Always pause for user approval before merging a PR.** Create the PR, summarise what it does, and wait for an explicit go-ahead. Never auto-merge, even for doc-only changes I authored.
