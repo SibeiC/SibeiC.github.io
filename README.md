@@ -6,17 +6,17 @@ Personal website hosted at [github.chencraft.com](https://github.chencraft.com) 
 
 ### Prerequisites
 
-Ruby **3.2.0** is pinned (see `.ruby-version` / `Gemfile`). macOS ships with Ruby 2.6 which is too old. Install via Homebrew + rbenv:
+Ruby **3.2.11** is pinned (see `.ruby-version` / `Gemfile`). macOS ships with Ruby 2.6 which is too old. Install via Homebrew + rbenv:
 
 ```bash
 brew install rbenv ruby-build
-rbenv install 3.2.0
+rbenv install 3.2.11
 ```
 
-`cd` into the repo — rbenv auto-switches to 3.2.0 via `.ruby-version`. Verify:
+`cd` into the repo — rbenv auto-switches to 3.2.11 via `.ruby-version`. Verify:
 
 ```bash
-ruby -v   # should show 3.2.0
+ruby -v   # should show 3.2.11
 ```
 
 Install Bundler:
