@@ -3,194 +3,232 @@
 # The trip layout inlines resolved URLs into the generated HTML.
 #
 # Each entry needs:
-#   name:           <string>   display name in Chinese (or any language)
+#   name_en:        <string>   display name in English (for lang: en-US trips)
+#   name_zh:        <string>   display name in Chinese (for lang: zh-CN trips)
 #   icao:           <string>   ICAO 3-char code, used in FlightAware URL path
 #   manage_booking: <string>   carrier's "manage booking" / check-in portal
 #
-# Add a new airline when you encounter one — AI agents generating new trip
-# files should extend this file rather than hard-coding links per-trip.
+# Layout picks name_en or name_zh based on the trip's lang: front-matter field.
+# When adding a new airline, populate BOTH name_en and name_zh — the file is
+# language-agnostic so any future trip (either language) can consume it.
 
 # ── SEA / AU carriers ────────────────────────────────────────────────────────
 TR:
-  name: Scoot 酷航
+  name_en: Scoot
+  name_zh: 酷航
   icao: TGW
   manage_booking: https://www.flyscoot.com/en/manage-booking
 
 SQ:
-  name: Singapore Airlines 新加坡航空
+  name_en: Singapore Airlines
+  name_zh: 新加坡航空
   icao: SIA
   manage_booking: https://www.singaporeair.com/en_UK/sg/manage-booking/manageBookingDashboard/
 
 MI:
-  name: Scoot (SilkAir legacy)
+  name_en: Scoot (SilkAir legacy)
+  name_zh: 酷航（原胜安航空）
   icao: SLK
   manage_booking: https://www.flyscoot.com/en/manage-booking
 
 AK:
-  name: AirAsia 亚洲航空
+  name_en: AirAsia
+  name_zh: 亚洲航空
   icao: AXM
   manage_booking: https://www.airasia.com/manage/
 
 D7:
-  name: AirAsia X
+  name_en: AirAsia X
+  name_zh: 亚航 X
   icao: XAX
   manage_booking: https://www.airasia.com/manage/
 
 MH:
-  name: Malaysia Airlines 马来西亚航空
+  name_en: Malaysia Airlines
+  name_zh: 马来西亚航空
   icao: MAS
   manage_booking: https://www.malaysiaairlines.com/sg/en/manage-booking.html
 
 TG:
-  name: Thai Airways 泰国国际航空
+  name_en: Thai Airways
+  name_zh: 泰国国际航空
   icao: THA
   manage_booking: https://www.thaiairways.com/en/manage/index.page
 
 PR:
-  name: Philippine Airlines 菲律宾航空
+  name_en: Philippine Airlines
+  name_zh: 菲律宾航空
   icao: PAL
   manage_booking: https://www.philippineairlines.com/en/managebooking/
 
 5J:
-  name: Cebu Pacific 宿雾太平洋
+  name_en: Cebu Pacific
+  name_zh: 宿雾太平洋航空
   icao: CEB
   manage_booking: https://www.cebupacificair.com/manage-booking
 
 GA:
-  name: Garuda Indonesia 印尼鹰航
+  name_en: Garuda Indonesia
+  name_zh: 印尼鹰航
   icao: GIA
   manage_booking: https://www.garuda-indonesia.com/manage-booking
 
 VN:
-  name: Vietnam Airlines 越南航空
+  name_en: Vietnam Airlines
+  name_zh: 越南航空
   icao: HVN
   manage_booking: https://www.vietnamairlines.com/manage-booking
 
 QF:
-  name: Qantas 澳洲航空
+  name_en: Qantas
+  name_zh: 澳洲航空
   icao: QFA
   manage_booking: https://www.qantas.com/au/en/manage-booking.html
 
 # ── NE Asia carriers ─────────────────────────────────────────────────────────
 CI:
-  name: China Airlines 中华航空
+  name_en: China Airlines
+  name_zh: 中华航空
   icao: CAL
   manage_booking: https://www.china-airlines.com/tw/en/manage/manage-booking
 
 BR:
-  name: EVA Air 长荣航空
+  name_en: EVA Air
+  name_zh: 长荣航空
   icao: EVA
   manage_booking: https://www.evaair.com/en-global/managing-your-trip/
 
 CX:
-  name: Cathay Pacific 国泰航空
+  name_en: Cathay Pacific
+  name_zh: 国泰航空
   icao: CPA
   manage_booking: https://www.cathaypacific.com/cx/en_HK/manage-booking.html
 
 HX:
-  name: Hong Kong Airlines 香港航空
+  name_en: Hong Kong Airlines
+  name_zh: 香港航空
   icao: CRK
   manage_booking: https://www.hongkongairlines.com/en_HK/managemyreservation/
 
 JL:
-  name: JAL 日本航空
+  name_en: JAL
+  name_zh: 日本航空
   icao: JAL
   manage_booking: https://www.jal.co.jp/jp/en/
 
 NH:
-  name: ANA 全日空
+  name_en: ANA
+  name_zh: 全日空
   icao: ANA
   manage_booking: https://www.ana.co.jp/en/
 
 KE:
-  name: Korean Air 大韩航空
+  name_en: Korean Air
+  name_zh: 大韩航空
   icao: KAL
   manage_booking: https://www.koreanair.com/us/en/booking/manage-booking/
 
 OZ:
-  name: Asiana Airlines 韩亚航空
+  name_en: Asiana Airlines
+  name_zh: 韩亚航空
   icao: AAR
   manage_booking: https://flyasiana.com/
 
 # ── Mainland China carriers ──────────────────────────────────────────────────
 CA:
-  name: Air China 中国国际航空
+  name_en: Air China
+  name_zh: 中国国际航空
   icao: CCA
   manage_booking: https://www.airchina.com/en/booking/view.html
 
 MU:
-  name: China Eastern 中国东方航空
+  name_en: China Eastern
+  name_zh: 中国东方航空
   icao: CES
   manage_booking: https://us.ceair.com/
 
 CZ:
-  name: China Southern 中国南方航空
+  name_en: China Southern
+  name_zh: 中国南方航空
   icao: CSN
   manage_booking: https://www.csair.com/en/
 
 HU:
-  name: Hainan Airlines 海南航空
+  name_en: Hainan Airlines
+  name_zh: 海南航空
   icao: CHH
   manage_booking: https://www.hainanairlines.com/en/
 
 # ── Middle East / Europe ─────────────────────────────────────────────────────
 EK:
-  name: Emirates 阿联酋航空
+  name_en: Emirates
+  name_zh: 阿联酋航空
   icao: UAE
   manage_booking: https://www.emirates.com/english/manage-booking/
 
 QR:
-  name: Qatar Airways 卡塔尔航空
+  name_en: Qatar Airways
+  name_zh: 卡塔尔航空
   icao: QTR
   manage_booking: https://www.qatarairways.com/en/manage-booking.html
 
 EY:
-  name: Etihad Airways 阿提哈德航空
+  name_en: Etihad Airways
+  name_zh: 阿提哈德航空
   icao: ETD
   manage_booking: https://www.etihad.com/en/manage
 
 TK:
-  name: Turkish Airlines 土耳其航空
+  name_en: Turkish Airlines
+  name_zh: 土耳其航空
   icao: THY
   manage_booking: https://www.turkishairlines.com/en-int/any-questions/manage-booking/
 
 BA:
-  name: British Airways 英国航空
+  name_en: British Airways
+  name_zh: 英国航空
   icao: BAW
   manage_booking: https://www.britishairways.com/travel/managebooking/
 
 LH:
-  name: Lufthansa 汉莎航空
+  name_en: Lufthansa
+  name_zh: 汉莎航空
   icao: DLH
   manage_booking: https://www.lufthansa.com/us/en/homepage
 
 AF:
-  name: Air France 法国航空
+  name_en: Air France
+  name_zh: 法国航空
   icao: AFR
   manage_booking: https://www.airfrance.us/
 
 KL:
-  name: KLM 荷兰皇家航空
+  name_en: KLM
+  name_zh: 荷兰皇家航空
   icao: KLM
   manage_booking: https://www.klm.com/
 
 # ── North America ────────────────────────────────────────────────────────────
 AA:
-  name: American Airlines 美国航空
+  name_en: American Airlines
+  name_zh: 美国航空
   icao: AAL
   manage_booking: https://www.aa.com/reservation/view/find-your-reservation
 
 UA:
-  name: United Airlines 联合航空
+  name_en: United Airlines
+  name_zh: 联合航空
   icao: UAL
   manage_booking: https://www.united.com/en/us/manageres/
 
 DL:
-  name: Delta Air Lines 达美航空
+  name_en: Delta Air Lines
+  name_zh: 达美航空
   icao: DAL
   manage_booking: https://www.delta.com/mytrips/findYourTripMain.action
 
 AC:
-  name: Air Canada 加拿大航空
+  name_en: Air Canada
+  name_zh: 加拿大航空
   icao: ACA
   manage_booking: https://www.aircanada.com/ca/en/aco/home/book/manage-your-bookings.html

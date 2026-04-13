@@ -1,109 +1,111 @@
 # Airport lookup table, keyed by IATA 3-character airport code.
 # Build-time data only — not served to visitors.
-# The trip layout uses `_data/airports[code].city` as the fallback display
-# when a flight entry omits an inline `city:` field. Inline `city:` still
-# wins if present (useful for rare airports not in this file).
+# The trip layout uses `_data/airports[code].city_{en|zh}` as the fallback
+# display when a flight entry omits an inline `city:` field. Inline `city:`
+# still wins if present (useful for rare airports not in this file).
 #
 # Each entry:
-#   city: <string>  display text shown under the IATA code in flight row
-#                   (typical format: "城市 机场名", mixing Chinese + optional English)
+#   city_en: <string>   display text in English (for lang: en-US trips)
+#                        format: "City AirportName" (e.g. "Singapore Changi")
+#   city_zh: <string>   display text in Chinese (for lang: zh-CN trips)
+#                        format: "城市 机场名" (e.g. "新加坡 樟宜")
 #
-# Add a new airport when you encounter one. AI agents generating trip files
-# should extend this file rather than hard-coding `city:` per flight.
+# Layout picks city_en or city_zh based on the trip's lang: front-matter field.
+# When adding a new airport, populate BOTH keys so any future trip can use it.
 
 # ── Singapore / SE Asia ──────────────────────────────────────────────────────
-SIN: { city: 新加坡 樟宜 }
-KUL: { city: 吉隆坡 KLIA }
-PEN: { city: 槟城 }
-BKK: { city: 曼谷 素万那普 }
-DMK: { city: 曼谷 廊曼 }
-CGK: { city: 雅加达 苏哈托 }
-DPS: { city: 巴厘岛 登巴萨 }
-MNL: { city: 马尼拉 }
-CEB: { city: 宿雾 }
-SGN: { city: 胡志明 新山一 }
-HAN: { city: 河内 内排 }
-PNH: { city: 金边 }
-REP: { city: 暹粒 吴哥 }
-RGN: { city: 仰光 }
+SIN: { city_en: Singapore Changi,          city_zh: 新加坡 樟宜 }
+KUL: { city_en: Kuala Lumpur KLIA,         city_zh: 吉隆坡 KLIA }
+PEN: { city_en: Penang,                    city_zh: 槟城 }
+BKK: { city_en: Bangkok Suvarnabhumi,      city_zh: 曼谷 素万那普 }
+DMK: { city_en: Bangkok Don Mueang,        city_zh: 曼谷 廊曼 }
+CGK: { city_en: Jakarta Soekarno-Hatta,    city_zh: 雅加达 苏哈托 }
+DPS: { city_en: Bali Denpasar,             city_zh: 巴厘岛 登巴萨 }
+MNL: { city_en: Manila,                    city_zh: 马尼拉 }
+CEB: { city_en: Cebu,                      city_zh: 宿雾 }
+SGN: { city_en: Ho Chi Minh Tan Son Nhat,  city_zh: 胡志明 新山一 }
+HAN: { city_en: Hanoi Noi Bai,             city_zh: 河内 内排 }
+PNH: { city_en: Phnom Penh,                city_zh: 金边 }
+REP: { city_en: Siem Reap Angkor,          city_zh: 暹粒 吴哥 }
+RGN: { city_en: Yangon,                    city_zh: 仰光 }
 
 # ── Greater China ────────────────────────────────────────────────────────────
-TPE: { city: 中国台北 桃园 }
-TSA: { city: 中国台北 松山 }
-KHH: { city: 中国高雄 小港 }
-TXG: { city: 中国台中 清泉岗 }
-HKG: { city: 香港 赤鱲角 }
-MFM: { city: 澳门 }
-PEK: { city: 北京 首都 }
-PKX: { city: 北京 大兴 }
-PVG: { city: 上海 浦东 }
-SHA: { city: 上海 虹桥 }
-CAN: { city: 广州 白云 }
-SZX: { city: 深圳 宝安 }
-CTU: { city: 成都 天府 }
-TFU: { city: 成都 天府 }
-XIY: { city: 西安 咸阳 }
-KMG: { city: 昆明 长水 }
-HGH: { city: 杭州 萧山 }
-NKG: { city: 南京 禄口 }
-CKG: { city: 重庆 江北 }
+TPE: { city_en: Taipei Taoyuan,            city_zh: 中国台北 桃园 }
+TSA: { city_en: Taipei Songshan,           city_zh: 中国台北 松山 }
+KHH: { city_en: Kaohsiung,                 city_zh: 中国高雄 小港 }
+TXG: { city_en: Taichung,                  city_zh: 中国台中 清泉岗 }
+HKG: { city_en: Hong Kong,                 city_zh: 香港 赤鱲角 }
+MFM: { city_en: Macau,                     city_zh: 澳门 }
+PEK: { city_en: Beijing Capital,           city_zh: 北京 首都 }
+PKX: { city_en: Beijing Daxing,            city_zh: 北京 大兴 }
+PVG: { city_en: Shanghai Pudong,           city_zh: 上海 浦东 }
+SHA: { city_en: Shanghai Hongqiao,         city_zh: 上海 虹桥 }
+CAN: { city_en: Guangzhou Baiyun,          city_zh: 广州 白云 }
+SZX: { city_en: Shenzhen Bao'an,           city_zh: 深圳 宝安 }
+CTU: { city_en: Chengdu Tianfu,            city_zh: 成都 天府 }
+TFU: { city_en: Chengdu Tianfu,            city_zh: 成都 天府 }
+XIY: { city_en: Xi'an Xianyang,            city_zh: 西安 咸阳 }
+KMG: { city_en: Kunming Changshui,         city_zh: 昆明 长水 }
+HGH: { city_en: Hangzhou Xiaoshan,         city_zh: 杭州 萧山 }
+NKG: { city_en: Nanjing Lukou,             city_zh: 南京 禄口 }
+CKG: { city_en: Chongqing Jiangbei,        city_zh: 重庆 江北 }
 
 # ── Japan ────────────────────────────────────────────────────────────────────
-NRT: { city: 东京 成田 }
-HND: { city: 东京 羽田 }
-KIX: { city: 大阪 关西 }
-ITM: { city: 大阪 伊丹 }
-NGO: { city: 名古屋 中部 }
-FUK: { city: 福冈 }
-OKA: { city: 冲绳 那霸 }
-CTS: { city: 札幌 新千岁 }
-HIJ: { city: 广岛 }
+NRT: { city_en: Tokyo Narita,              city_zh: 东京 成田 }
+HND: { city_en: Tokyo Haneda,              city_zh: 东京 羽田 }
+KIX: { city_en: Osaka Kansai,              city_zh: 大阪 关西 }
+ITM: { city_en: Osaka Itami,               city_zh: 大阪 伊丹 }
+NGO: { city_en: Nagoya Chubu,              city_zh: 名古屋 中部 }
+FUK: { city_en: Fukuoka,                   city_zh: 福冈 }
+OKA: { city_en: Okinawa Naha,              city_zh: 冲绳 那霸 }
+CTS: { city_en: Sapporo New Chitose,       city_zh: 札幌 新千岁 }
+HIJ: { city_en: Hiroshima,                 city_zh: 广岛 }
 
 # ── Korea ────────────────────────────────────────────────────────────────────
-ICN: { city: 首尔 仁川 }
-GMP: { city: 首尔 金浦 }
-PUS: { city: 釜山 金海 }
-CJU: { city: 济州 }
+ICN: { city_en: Seoul Incheon,             city_zh: 首尔 仁川 }
+GMP: { city_en: Seoul Gimpo,               city_zh: 首尔 金浦 }
+PUS: { city_en: Busan Gimhae,              city_zh: 釜山 金海 }
+CJU: { city_en: Jeju,                      city_zh: 济州 }
 
 # ── Australia / NZ / Pacific ─────────────────────────────────────────────────
-SYD: { city: 悉尼 金斯福德 }
-MEL: { city: 墨尔本 }
-BNE: { city: 布里斯班 }
-PER: { city: 珀斯 }
-AKL: { city: 奥克兰 }
-NAN: { city: 楠迪 斐济 }
+SYD: { city_en: Sydney Kingsford Smith,    city_zh: 悉尼 金斯福德 }
+MEL: { city_en: Melbourne,                 city_zh: 墨尔本 }
+BNE: { city_en: Brisbane,                  city_zh: 布里斯班 }
+PER: { city_en: Perth,                     city_zh: 珀斯 }
+AKL: { city_en: Auckland,                  city_zh: 奥克兰 }
+NAN: { city_en: Nadi Fiji,                 city_zh: 楠迪 斐济 }
 
 # ── South Asia / Middle East ─────────────────────────────────────────────────
-DEL: { city: 新德里 英迪拉·甘地 }
-BOM: { city: 孟买 贾特拉帕蒂 }
-CMB: { city: 科伦坡 }
-MLE: { city: 马累 }
-DXB: { city: 迪拜 }
-AUH: { city: 阿布扎比 }
-DOH: { city: 多哈 哈马德 }
-IST: { city: 伊斯坦布尔 }
+DEL: { city_en: Delhi Indira Gandhi,       city_zh: 新德里 英迪拉·甘地 }
+BOM: { city_en: Mumbai Chhatrapati,        city_zh: 孟买 贾特拉帕蒂 }
+CMB: { city_en: Colombo,                   city_zh: 科伦坡 }
+MLE: { city_en: Malé,                      city_zh: 马累 }
+DXB: { city_en: Dubai,                     city_zh: 迪拜 }
+AUH: { city_en: Abu Dhabi,                 city_zh: 阿布扎比 }
+DOH: { city_en: Doha Hamad,                city_zh: 多哈 哈马德 }
+IST: { city_en: Istanbul,                  city_zh: 伊斯坦布尔 }
 
 # ── Europe ───────────────────────────────────────────────────────────────────
-LHR: { city: 伦敦 希思罗 }
-LGW: { city: 伦敦 盖特威克 }
-CDG: { city: 巴黎 戴高乐 }
-AMS: { city: 阿姆斯特丹 }
-FRA: { city: 法兰克福 }
-MUC: { city: 慕尼黑 }
-ZRH: { city: 苏黎世 }
-FCO: { city: 罗马 菲乌米奇诺 }
-BCN: { city: 巴塞罗那 }
-MAD: { city: 马德里 }
+LHR: { city_en: London Heathrow,           city_zh: 伦敦 希思罗 }
+LGW: { city_en: London Gatwick,            city_zh: 伦敦 盖特威克 }
+CDG: { city_en: Paris Charles de Gaulle,   city_zh: 巴黎 戴高乐 }
+AMS: { city_en: Amsterdam,                 city_zh: 阿姆斯特丹 }
+FRA: { city_en: Frankfurt,                 city_zh: 法兰克福 }
+MUC: { city_en: Munich,                    city_zh: 慕尼黑 }
+ZRH: { city_en: Zurich,                    city_zh: 苏黎世 }
+FCO: { city_en: Rome Fiumicino,            city_zh: 罗马 菲乌米奇诺 }
+BCN: { city_en: Barcelona,                 city_zh: 巴塞罗那 }
+MAD: { city_en: Madrid,                    city_zh: 马德里 }
 
 # ── North America ────────────────────────────────────────────────────────────
-LAX: { city: 洛杉矶 }
-SFO: { city: 旧金山 }
-SEA: { city: 西雅图 }
-ORD: { city: 芝加哥 奥黑尔 }
-JFK: { city: 纽约 JFK }
-EWR: { city: 纽瓦克 }
-BOS: { city: 波士顿 }
-IAD: { city: 华盛顿 杜勒斯 }
-YVR: { city: 温哥华 }
-YYZ: { city: 多伦多 皮尔逊 }
-YUL: { city: 蒙特利尔 }
+LAX: { city_en: Los Angeles,               city_zh: 洛杉矶 }
+SFO: { city_en: San Francisco,             city_zh: 旧金山 }
+SEA: { city_en: Seattle,                   city_zh: 西雅图 }
+ORD: { city_en: Chicago O'Hare,            city_zh: 芝加哥 奥黑尔 }
+JFK: { city_en: New York JFK,              city_zh: 纽约 JFK }
+EWR: { city_en: Newark,                    city_zh: 纽瓦克 }
+BOS: { city_en: Boston,                    city_zh: 波士顿 }
+IAD: { city_en: Washington Dulles,         city_zh: 华盛顿 杜勒斯 }
+YVR: { city_en: Vancouver,                 city_zh: 温哥华 }
+YYZ: { city_en: Toronto Pearson,           city_zh: 多伦多 皮尔逊 }
+YUL: { city_en: Montreal,                  city_zh: 蒙特利尔 }
