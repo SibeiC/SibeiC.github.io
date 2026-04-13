@@ -48,7 +48,7 @@ bundle exec jekyll serve            # http://localhost:4000
 bundle exec jekyll serve --livereload
 ```
 
-Requires Ruby 3.0+ (webrick gem is explicit for this reason). Changes to `_config.yml` do NOT hot-reload — restart the server. Deployment is just `git push origin master`.
+Ruby **3.2.0** is pinned across `.ruby-version`, `Gemfile`, the GitHub Actions workflow, and Cloudflare Pages' `RUBY_VERSION` env var — keep all four in sync if you ever bump it. Changes to `_config.yml` do NOT hot-reload — restart the server. Deployment is just `git push origin master`.
 
 ## Deployment / branching
 

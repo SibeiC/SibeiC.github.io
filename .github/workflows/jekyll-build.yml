@@ -23,9 +23,8 @@ jobs:
       - name: Set up Ruby and install gems (with cache)
         uses: ruby/setup-ruby@v1
         with:
-          # Match the github-pages gem set: it pins Jekyll, Liquid, etc.
-          # Ruby 3.2 is a safe default; bump if the Gemfile ever pins a newer version.
-          ruby-version: '3.2'
+          # Pinned to match .ruby-version / Gemfile / Cloudflare Pages RUBY_VERSION.
+          ruby-version: '3.2.0'
           bundler-cache: true
 
       - name: Build site

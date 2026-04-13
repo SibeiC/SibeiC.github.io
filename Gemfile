@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+# Pinned Ruby version — must match .ruby-version, .github/workflows/jekyll-build.yml,
+# and Cloudflare Pages' RUBY_VERSION env var.
+ruby "3.2.0"
+
 # Matches the gem set used by GitHub Pages for maximum compatibility.
 # To update: bundle update github-pages
 gem "github-pages", group: :jekyll_plugins
