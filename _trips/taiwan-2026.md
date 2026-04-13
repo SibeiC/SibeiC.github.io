@@ -367,14 +367,34 @@ days:
           - { type: map, icon: 📍, label: 日月潭缆车, query: Sun Moon Lake Ropeway }
           - { icon: 🔗, label: 缆车官网, url: "https://www.ropeway.com.tw/" }
 
-      - time: 16:00 – 18:30
-        title: ⛵ 日月潭游湖 · 伊达邵 → 水社
-        detail: 搭游湖船从伊达邵码头 → 玄光寺 → 水社码头（三段式游湖船票 NT$300，当日不限次数）。伊达邵必吃：阿婆香菇茶叶蛋、总统鱼、邵族麻糬、山猪肉串。
+      - time: 15:40 – 17:00
+        title: ⛵ 日月潭游湖船 · 伊达邵 → (玄光寺) → 水社
+        detail: |
+          缆车下站后步行约 5 分钟至伊达邵码头。一日票 NT$300，<strong>限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社），用完即止</strong>，并非当日不限次数。船班每半小时一班，假日会机动加班。<strong>末班船 17:00 整点从伊达邵开</strong> — 务必 16:30 前到码头 check-in。若要在玄光寺停留，建议搭更早的班次，否则直接 伊达邵 → 水社 约 20 分钟抵达。
+          <br><br>
+          <strong>水社上船位置：</strong>水社码头右边入口 1 号浮排。现场工作人员会派船，船员会通知下一段发船时间。
+          <br><br>
+          伊达邵必吃（缆车下站 → 码头的 20 分钟内快速解决）：阿婆香菇茶叶蛋、邵族麻糬、山猪肉串。
+        tickets:
+          - { tag: 一日票, value: "NT$300（限搭一圈）" }
+          - { tag: 营运时间, value: "09:00 – 17:00（末班 17:00 伊达邵开船）" }
+          - { tag: 班次, value: 每半小时一班 }
         links:
           - { type: map,    icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
           - { type: map,    icon: 📍, label: 玄光寺, query: 玄光寺 日月潭 }
           - { type: map,    icon: 📍, label: 水社码头, query: 水社码头 }
           - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
+          - { type: ticket, icon: 🎫, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
+
+      - time: 19:30 – 21:30
+        title: 🧺 招茗自助洗衣店 · 行程过半补给
+        detail: |
+          行程正好过半，趁今晚在日月潭把衣服一口气洗了 — 阿里山、花莲两站停留都短，错过这次就得拖到台南 Day 6。24 小时自助投币（或刷悠游卡），洗 + 烘一次约 NT$150–200。扔进去、去吃宵夜或回饭店，烘完再去拿。
+        tickets:
+          - { tag: 洗 + 烘, value: "NT$150–200" }
+          - { tag: 营业, value: 24 小时自助 }
+        links:
+          - { type: map, icon: 📍, label: 招茗自助洗衣店, query: 招茗自助洗衣店 日月潭 }
     note: |
       <strong>💡 Day 4 建议：</strong>住日月潭水社比住台中更有效率 — 隔天 08:00 从水社出发搭台湾好行去阿里山，避免再花 1.5 小时从台中赶回日月潭。
     stay:
