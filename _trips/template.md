@@ -54,6 +54,21 @@
 #     (`amount:` in cost items uses raw numbers without commas, so it's safe.)
 #   • For multi-line `detail`/`note`/`hotels_note` use YAML `|` block scalar.
 #     Inline HTML is allowed (<strong>, <br><br>, <a>, <em>).
+#   • REUSABILITY — if the same URL appears 2+ times in this file (typically
+#     once in a day's `links:` chip and once in `booking_channels`), declare
+#     it ONCE under a top-level `urls:` map with a YAML anchor, then reference
+#     via alias at each use site. Saves edits when a URL changes and makes
+#     intent explicit. Example:
+#         urls:
+#           klook_101: &url_klook_101 "https://www.klook.com/zh-CN/activity/1659-…/"
+#         # … later in a day item:
+#         - { type: ticket, icon: 🎫, label: Klook, url: *url_klook_101 }
+#         # … and in booking_channels:
+#         - name: 台北 101 观景台
+#           links: [{ label: Klook, url: *url_klook_101 }]
+#     YAML anchors do NOT interpolate inside quoted strings — if a URL is
+#     embedded in HTML prose (a `note:` block scalar with <a href="…">), leave
+#     that one inline. See `_trips/taiwan-2026.md` for a worked example.
 # ─────────────────────────────────────────────────────────────────────────────
 published: false
 
@@ -184,8 +199,27 @@ days:                                 # [REQUIRED] <array<object>>
 # ── Booking channels (订票渠道汇总) ──────────────────────────────────────────
 # [AI:RESEARCH] Compile all booking platforms touched in `flights[].links`,
 # `hotels[]`, and `days[].items[].links`. One row per channel.
+#
+# Two formats are accepted by the layout; PREFER the structured `links:` form:
+#
+# PREFERRED — structured (clean, DRY-friendly with YAML anchors):
+#   - name: 渠道名
+#     links:
+#       - { label: 官网,  url: *url_anchor_if_repeated }
+#       - { label: Klook, url: "https://..." }
+#     note: 中文说明（提前 N 天开售 / 是否需注册 / 等）
+#
+# LEGACY — raw HTML prose (only use when the note mixes links and text in a
+# way the structured form can't express; duplicates URL strings → avoid):
+#   - { name: 渠道名, detail: '<a href="..." target="_blank">链接</a> 说明' }
+#
+# Separator rendering in the structured form: " / " between multiple links,
+# " · " between the last link and the note.
 booking_channels:                     # [OPTIONAL] <array<object>> bottom card
-  - { name: 渠道名, detail: '<a href="..." target="_blank">链接</a> + 中文说明（提前 N 天开售 / 是否需注册 / 等）' }
+  - name: 渠道名
+    links:
+      - { label: 官网, url: "https://..." }
+    note: 中文说明（提前 N 天开售 / 是否需注册 / 等）
 
 # ── Pre-trip checklist (行前须知) ────────────────────────────────────────────
 # [AI:INFER] Synthesize a destination-specific checklist. Always cover:
