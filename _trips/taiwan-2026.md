@@ -429,14 +429,20 @@ days:
 
       - time: 12:00 – 13:00
         title: 🎫 阿里山入园 · 午餐
-        detail: 抵达阿里山转运站后购买入园门票，简易午餐。6/1 为周一，适用非假日票价 NT$200。转运站有厕所与行李寄放处。
+        detail: 抵达阿里山转运站后购买入园门票，简易午餐。6/1 为周一，适用非假日票价 NT$200。转运站有厕所与行李寄放处（作为青山别馆柜台的备案）。
         tickets:
           - { tag: 全票, value: NT$200, note: 非假日 }
           - { tag: 假日, value: NT$300 }
         links:
           - { type: ticket, icon: 🎫, label: 阿里山国家风景区, url: "https://www.ali-nsa.net/" }
 
-      - time: 13:00 – 17:00
+      - time: 13:00 – 13:20
+        title: 🎒 青山别馆 · 行李寄存
+        detail: 青山别馆就在阿里山车站旁，走过去约 3–5 分钟。正式 check-in 15:00 后才能进房，但柜台可先帮忙存行李。放下大包换轻装再上山，接下来 4 小时走神木栈道会舒服很多。
+        links:
+          - { type: map, icon: 📍, label: 青山别馆, query: Chinshan Hotel 青山别馆 阿里山 }
+
+      - time: 13:20 – 17:00
         title: 🌲 阿里山森林游乐区 · 神木线 + 沼平线
         detail: |
           <strong>推荐路线：</strong><br>
@@ -503,7 +509,10 @@ days:
 
       - time: 16:00 – 17:30
         title: 🍜 嘉义市区晚餐 · 鸡肉饭巡礼
-        detail: 林铁下车即嘉义 TRA 站，步行或短程计程车即可抵达市区老店。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。若走公车备选路线已到嘉义高铁站，可改搭 BRT（凭高铁票免费）或台铁 25 分钟进市区。
+        detail: |
+          林铁下车即嘉义 TRA 站，步行或短程计程车即可抵达市区老店。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。若走公车备选路线已到嘉义高铁站，可改搭 BRT（凭高铁票免费）或台铁 25 分钟进市区。
+          <br><br>
+          <strong>🎒 不想拖行李：</strong>嘉义 TRA 站地下一楼有投币置物柜，小柜 NT$20 / 时、大柜 NT$50 / 时 — 夕阳前寄存，吃完饭回来取，省得拖着跑鸡肉饭老店。
         links:
           - { type: map, icon: 📍, label: 林聪明沙锅鱼头, query: 林聪明沙锅鱼头 }
           - { type: map, icon: 📍, label: 刘里长鸡肉饭, query: 刘里长鸡肉饭 }
@@ -627,8 +636,8 @@ days:
           - { type: map,    icon: 📍, label: 花莲车站, query: Hualien Station }
 
       - time: 11:30 – 13:30
-        title: 🏨 S.E.A. 民宿 Check-in · 花莲午餐
-        detail: 放行李后午餐。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
+        title: 🎒 S.E.A. 民宿 · 行李寄存 + 花莲午餐
+        detail: 14:00 要赶多罗满赏鲸，先把背包扔民宿（正式 check-in 通常 15:00 后，但柜台可先帮忙存）再出门吃午餐。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
         links:
           - { type: map, icon: 📍, label: S.E.A. 民宿, query: S.E.A. Hostel Hualien }
           - { type: map, icon: 📍, label: 公正包子, query: 公正包子 }
