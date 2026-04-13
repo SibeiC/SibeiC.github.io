@@ -367,9 +367,15 @@ days:
           - { type: map, icon: 📍, label: 日月潭缆车, query: Sun Moon Lake Ropeway }
           - { icon: 🔗, label: 缆车官网, url: "https://www.ropeway.com.tw/" }
 
-      - time: 16:00 – 18:30
-        title: ⛵ 日月潭游湖 · 伊达邵 → 水社
-        detail: 搭游湖船从伊达邵码头 → 玄光寺 → 水社码头（三段式游湖船票 NT$300，当日不限次数）。伊达邵必吃：阿婆香菇茶叶蛋、总统鱼、邵族麻糬、山猪肉串。
+      - time: 15:40 – 17:00
+        title: ⛵ 日月潭游湖船 · 伊达邵 → (玄光寺) → 水社
+        detail: |
+          缆车下站后步行约 5 分钟至伊达邵码头。三段式游湖船 NT$300 当日不限次数，但<strong>末班船 17:00 整点从伊达邵开</strong> — 务必 16:30 前到码头 check-in。若要在玄光寺停留，建议搭更早的班次，否则直接 伊达邵 → 水社 约 20 分钟抵达。
+          <br><br>
+          伊达邵必吃（缆车下站 → 码头的 20 分钟内快速解决）：阿婆香菇茶叶蛋、邵族麻糬、山猪肉串。
+        tickets:
+          - { tag: 三段式船票, value: "NT$300" }
+          - { tag: 营运时间, value: "09:00 – 17:00（末班 17:00 伊达邵开船）" }
         links:
           - { type: map,    icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
           - { type: map,    icon: 📍, label: 玄光寺, query: 玄光寺 日月潭 }
