@@ -1,0 +1,15 @@
+# Cloudflare Workers config for hosting this site as static assets.
+#
+# This file is read by `wrangler deploy` (the modern Workers + Static Assets
+# flow that replaces the legacy Pages CLI). The CI build runs
+# `bundle exec jekyll build` to produce `_site/`, then `wrangler deploy`
+# uploads everything in `_site/` to Cloudflare's edge as static assets.
+#
+# IMPORTANT: `name` below MUST exactly match the Project name set in the
+# Cloudflare dashboard. If you renamed the project, change it here too.
+
+name = "sibeic-github-io"
+compatibility_date = "2026-04-13"
+
+[assets]
+directory = "./_site"
