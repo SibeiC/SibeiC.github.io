@@ -427,22 +427,27 @@ days:
           - { type: map,    icon: 📍, label: 水社站, query: 水社 Shuishe Sun Moon Lake }
           - { type: map,    icon: 📍, label: 阿里山入口, query: Alishan National Forest Recreation Area Entrance }
 
-      - time: 12:00 – 13:00
+      - time: 12:00 – 12:20
+        title: 🎒 阿里山游客中心 · 免费行李寄放
+        detail: |
+          下了好行公车走到阿里山游客中心（从转运站步行 2 分钟），<strong>开放式行李架免费寄放</strong>，不收钱也不做保管 — <strong>贵重物品（护照、现金、相机、电子产品）务必随身</strong>，只把换洗衣物 / 大包丢进去。
+          <br><br>
+          <strong>⚠️ 营业时间 08:30–17:00</strong>，必须在 17:00 前取回，沼平线下山务必 16:45 前抵达车站，留 15 分钟取行李走去青山别馆。
+          <br><br>
+          付费备案：阿里山车站 2F 投币置物柜 24 小时营业；转运站 1F 置物柜到 17:00。
+        links:
+          - { type: map, icon: 📍, label: 阿里山游客中心, query: 阿里山国家森林游乐区游客中心 }
+
+      - time: 12:30 – 13:20
         title: 🎫 阿里山入园 · 午餐
-        detail: 抵达阿里山转运站后购买入园门票，简易午餐。6/1 为周一，适用非假日票价 NT$200。转运站有厕所与行李寄放处（作为青山别馆柜台的备案）。
+        detail: 车站/转运站周边购买入园门票 + 简易午餐。6/1 为周一，适用非假日票价 NT$200。
         tickets:
           - { tag: 全票, value: NT$200, note: 非假日 }
           - { tag: 假日, value: NT$300 }
         links:
           - { type: ticket, icon: 🎫, label: 阿里山国家风景区, url: "https://www.ali-nsa.net/" }
 
-      - time: 13:00 – 13:20
-        title: 🎒 青山别馆 · 行李寄存
-        detail: 青山别馆就在阿里山车站旁，走过去约 3–5 分钟。正式 check-in 15:00 后才能进房，但柜台可先帮忙存行李。放下大包换轻装再上山，接下来 4 小时走神木栈道会舒服很多。
-        links:
-          - { type: map, icon: 📍, label: 青山别馆, query: Chinshan Hotel 青山别馆 阿里山 }
-
-      - time: 13:20 – 17:00
+      - time: 13:20 – 16:45
         title: 🌲 阿里山森林游乐区 · 神木线 + 沼平线
         detail: |
           <strong>推荐路线：</strong><br>
@@ -460,9 +465,9 @@ days:
           - { type: map,    icon: 📍, label: 沼平站, query: 沼平站 }
           - { type: ticket, icon: 🎫, label: 林铁支线订票, url: *url_afrts }
 
-      - time: "17:30"
-        title: 🏨 青山别馆 Chinshan Hotel · Check-in
-        detail: 阿里山园区内住宿，靠近阿里山车站，方便隔日搭森林铁路下山。<strong>园区晚上 7 点后几乎无餐厅营业，建议提早用餐。</strong>
+      - time: "17:00"
+        title: 🏨 青山别馆 Chinshan Hotel · Check-in（顺路取行李）
+        detail: 沼平线下山到阿里山车站 → 游客中心取回行李（17:00 关门前）→ 步行 3 分钟至青山别馆。园区内住宿，靠近阿里山车站，方便隔日搭森林铁路下山。<strong>园区晚上 7 点后几乎无餐厅营业，建议提早用餐。</strong>
         links:
           - { type: map, icon: 📍, label: 酒店位置, query: Chinshan Hotel 青山别馆 阿里山 }
     note: |
