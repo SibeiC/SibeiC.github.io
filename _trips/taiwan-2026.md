@@ -205,6 +205,19 @@ days:
           - { type: map,    icon: 📍, label: 取车门市, query: 固得租車 台北車站店 }
           - { type: ticket, icon: 🎫, label: GoodCars 官网预订, url: "https://www.goodcars.tw/" }
 
+      - time: 08:30 – 11:00
+        title: 🗿 慈湖纪念雕塑公园（可选加码）
+        detail: |
+          两蒋文化园区，户外雕塑公园集中展示全台各机关学校移走的蒋中正铜像，超过 200 座造型各异，园区景致清幽。同区内还有慈湖陵寝（蒋中正安灵处）与整点的卫兵交接仪式。自驾台北车站经國道 3 南下约 50 分钟。
+          <br><br>
+          <strong>⚠️ 取舍：</strong>加入本项会让 Day 2 的故宫与阳明山时间都变紧 — 建议故宫缩短至 12:30–15:30（3 小时），阳明山只选 1–2 个点（如小油坑 + 擎天岗 16:00–18:30），并取消 19:00 的北投温泉。若不想赶，直接跳过即可。
+        tickets:
+          - { tag: 门票, value: 免费 }
+          - { tag: 开放, value: 08:00–17:00（每日） }
+        links:
+          - { type: map, icon: 📍, label: 慈湖纪念雕塑公园, query: Cihu Memorial Sculpture Park 慈湖纪念雕塑公园 }
+          - { type: map, icon: 📍, label: 慈湖陵寝, query: 慈湖陵寝 大溪 }
+
       - time: 09:00 – 12:30
         title: 🏛️ 国立故宫博物院
         detail: |
@@ -507,6 +520,17 @@ days:
         detail: 位于台南北区成功路，邻近台南公园与台南火车站。check-in 后可在附近吃宵夜、逛神农街。
         links:
           - { type: map, icon: 📍, label: 酒店位置, query: Grand Banyan Hotel Tainan }
+
+      - time: 20:00 – 22:00
+        title: 🧺 自助洗衣 · 行程过半补给（可选）
+        detail: |
+          台南住 2 晚，是全程最适合洗衣的停点 — 扔进去、去逛夜市 / 吃宵夜、回来拿就好。禧榕轩步行 5–10 分钟范围内有多家 24h 自助洗衣店，洗 + 烘一次约 NT$150–200（多数机台刷悠游卡或投币皆可）。带足当日换洗即可，其他脏衣服一次解决。
+          <br><br>
+          另可先在 check-in 时问饭店柜台是否有送洗服务作为备案。
+        tickets:
+          - { tag: 洗 + 烘, value: "NT$150–200" }
+        links:
+          - { type: map, icon: 📍, label: 附近自助洗衣店, query: 自助洗衣店 台南北区 成功路 }
     note: |
       <strong>💡 Day 6 林铁优先：</strong>首选搭阿里山森林铁路本线下山（NT$600，3h55m，百年路线），<strong>务必出发前 14 天</strong>上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。若林铁票售罄，退而求其次搭台湾好行 7329A 公车（现买即走，NT$283，直达嘉义高铁站，到站反而更早）。林铁终点是嘉义 TRA 站，后续台铁去台南即可；公车到的是嘉义高铁站，接高铁去台南更顺。
     stay:
