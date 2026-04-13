@@ -370,17 +370,21 @@ days:
       - time: 15:40 – 17:00
         title: ⛵ 日月潭游湖船 · 伊达邵 → (玄光寺) → 水社
         detail: |
-          缆车下站后步行约 5 分钟至伊达邵码头。三段式游湖船 NT$300 当日不限次数，但<strong>末班船 17:00 整点从伊达邵开</strong> — 务必 16:30 前到码头 check-in。若要在玄光寺停留，建议搭更早的班次，否则直接 伊达邵 → 水社 约 20 分钟抵达。
+          缆车下站后步行约 5 分钟至伊达邵码头。一日票 NT$300，<strong>限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社），用完即止</strong>，并非当日不限次数。船班每半小时一班，假日会机动加班。<strong>末班船 17:00 整点从伊达邵开</strong> — 务必 16:30 前到码头 check-in。若要在玄光寺停留，建议搭更早的班次，否则直接 伊达邵 → 水社 约 20 分钟抵达。
+          <br><br>
+          <strong>水社上船位置：</strong>水社码头右边入口 1 号浮排。现场工作人员会派船，船员会通知下一段发船时间。
           <br><br>
           伊达邵必吃（缆车下站 → 码头的 20 分钟内快速解决）：阿婆香菇茶叶蛋、邵族麻糬、山猪肉串。
         tickets:
-          - { tag: 三段式船票, value: "NT$300" }
+          - { tag: 一日票, value: "NT$300（限搭一圈）" }
           - { tag: 营运时间, value: "09:00 – 17:00（末班 17:00 伊达邵开船）" }
+          - { tag: 班次, value: 每半小时一班 }
         links:
           - { type: map,    icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
           - { type: map,    icon: 📍, label: 玄光寺, query: 玄光寺 日月潭 }
           - { type: map,    icon: 📍, label: 水社码头, query: 水社码头 }
           - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
+          - { type: ticket, icon: 🎫, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
 
       - time: 19:30 – 21:30
         title: 🧺 招茗自助洗衣店 · 行程过半补给
