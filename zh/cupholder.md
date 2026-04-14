@@ -22,7 +22,7 @@ languages: ["zh", "en"]
 |:------------:|:---------------------------------:|:----:|:-----------:|:------:|
 |              |                                   |      |    合计：    | $95.00 |
 
-<div style="text-align: center;">
+<div class="text-center">
     <img class="audi_img" alt="奥迪USA购物车截图" src="/assets/images/cupholder/audi_cart.png" width="45%">
     <img class="audi_img" alt="杯架" src="/assets/images/cupholder/cupholder.jpeg" width="45%">
 </div>

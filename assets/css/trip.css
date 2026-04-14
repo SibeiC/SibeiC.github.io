@@ -140,6 +140,12 @@ body {
   font-weight: 400;
 }
 
+/* --- Small utility / scoped style rules formerly inlined in trip.html --- */
+.cost-row em { opacity: 0.7; }
+.note-box.flush { margin-bottom: 0; }
+.card.checklist-card { margin-bottom: 30px; }
+.footer .copy { opacity: 0.7; }
+
 /* Preview-build banner — renders only on CF Preview deployments */
 .preview-banner {
   position: sticky;
