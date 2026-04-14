@@ -50,6 +50,8 @@ bundle exec jekyll serve --livereload
 
 Ruby **3.2.11** (final 3.2 patch; 3.2 series reached EOL in March 2026) is pinned across `.ruby-version`, `Gemfile`, `Gemfile.lock` (`RUBY VERSION` line), `.github/workflows/jekyll-build.yml`, and Cloudflare Pages' `RUBY_VERSION` env var — keep all five in sync if you ever bump it. When eventually moving off the 3.2 series, prefer 3.3.x next: 3.4 dropped `bigdecimal` from default gems, which breaks Liquid 4.0.4 (Jekyll dep) until upstream catches up. Changes to `_config.yml` do NOT hot-reload — restart the server. Deployment is just `git push origin master`.
 
+**CF Workers Builds**: the project (`my-homepage`) uses `bin/cf-build.sh` as its Build command. That wrapper reads the CF-provided branch env var (`WORKERS_CI_BRANCH` or legacy `CF_PAGES_BRANCH`) and exports `JEKYLL_ENV=production` for master, `JEKYLL_ENV=preview` for every other branch — this is the source of the `[PREVIEW]` title + banner on PR previews. Dashboard env-var scoping isn't needed; if you ever change the mapping, edit the script, not the dashboard.
+
 ## Deployment / branching
 
 - Production branch: **`master`** (GitHub Pages builds this automatically).
