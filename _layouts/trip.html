@@ -8,15 +8,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title }}</title>
+<title>{% if jekyll.environment == "preview" %}[PREVIEW] {% endif %}{{ page.title }}</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ page.favicon | default: '/assets/images/favicon.ico' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/trip.css' | relative_url }}">
+<script src="{{ '/assets/js/trip.js' | relative_url }}" defer></script>
 {% if site.cloudflare_analytics %}<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics }}"}'></script>{% endif %}
 </head>
 <body>
+
+{% include preview_banner.html %}
 
 <div class="hero">
   <a class="home-link" href="/" aria-label="{{ t.home }}">🏠</a>
@@ -72,7 +75,7 @@
       <div class="cost-group-header">{{ group.icon }} {{ group.name }} · <span class="fmt-num">{{ primary }} {{ group_total | round: 2 }}</span></div>
       {% for item in group.items %}
       {%- if item.in == 'secondary' -%}{%- assign sym = secondary -%}{%- else -%}{%- assign sym = primary -%}{%- endif -%}
-      <div class="cost-row"><span class="lbl">{{ item.label }}{% if item.note %} <em style="opacity:0.7">({{ item.note }})</em>{% endif %}</span><span class="val fmt-num">{{ sym }} {{ item.amount }}</span></div>
+      <div class="cost-row"><span class="lbl">{{ item.label }}{% if item.note %} <em>({{ item.note }})</em>{% endif %}</span><span class="val fmt-num">{{ sym }} {{ item.amount }}</span></div>
       {% endfor %}
       {% endfor %}
     </div>
@@ -143,7 +146,7 @@
       {% endfor %}
     </div>
     {% if page.hotels_note %}
-    <div class="note-box" style="margin-bottom: 0;">{{ page.hotels_note }}</div>
+    <div class="note-box flush">{{ page.hotels_note }}</div>
     {% endif %}
   </div>
   {% endif %}
@@ -245,7 +248,7 @@
   {% endif %}
 
   {% if page.checklist %}
-  <div class="card" style="margin-bottom: 30px;">
+  <div class="card checklist-card">
     <h3>{{ t.checklist }}</h3>
     <div class="booking-list">
       {% for c in page.checklist %}
@@ -267,65 +270,8 @@
   {{ t.footer_line2 }}
   {% if page.last_updated %}<br><br>{{ t.last_updated }}{{ page.last_updated }}{% endif %}
   <br><br>
-  <span style="opacity: 0.7;">© {{ 'now' | date: '%Y' }} Sibei Chen · All rights reserved</span>
+  <span class="copy">© {{ 'now' | date: '%Y' }} Sibei Chen · All rights reserved</span>
 </div>
-
-<script>
-(function () {
-  // Theme toggle — session-only override of prefers-color-scheme (no localStorage)
-  var btn = document.querySelector('.theme-toggle');
-  if (btn) {
-    var mq = window.matchMedia('(prefers-color-scheme: dark)');
-    function effective() {
-      var forced = document.documentElement.getAttribute('data-theme');
-      return forced || (mq.matches ? 'dark' : 'light');
-    }
-    function updateIcon() {
-      btn.textContent = effective() === 'dark' ? '🌞' : '🌙';
-    }
-    btn.addEventListener('click', function () {
-      document.documentElement.setAttribute('data-theme', effective() === 'dark' ? 'light' : 'dark');
-      updateIcon();
-    });
-    mq.addEventListener('change', updateIcon);
-    updateIcon();
-  }
-})();
-
-(function () {
-  // Add thousand-separator formatting to all .fmt-num spans
-  var locale = document.documentElement.lang || 'zh-CN';
-  document.querySelectorAll('.fmt-num').forEach(function (el) {
-    var match = el.textContent.match(/^(.*?)(-?\d+(?:\.\d+)?)(.*)$/);
-    if (!match) return;
-    var n = parseFloat(match[2]);
-    if (isNaN(n)) return;
-    el.textContent = match[1] + n.toLocaleString(locale, { maximumFractionDigits: 2 }) + match[3];
-  });
-})();
-
-(function () {
-  // Jump to today's day section if today falls within trip dates
-  var sections = document.querySelectorAll('.day-section[data-date]');
-  if (!sections.length) return;
-  var today = new Date();
-  var todayStr = today.getFullYear() + '-' +
-    String(today.getMonth() + 1).padStart(2, '0') + '-' +
-    String(today.getDate()).padStart(2, '0');
-  for (var i = 0; i < sections.length; i++) {
-    if (sections[i].getAttribute('data-date') === todayStr) {
-      // Only auto-jump if user landed without an explicit hash
-      if (!window.location.hash) {
-        sections[i].scrollIntoView({ behavior: 'instant', block: 'start' });
-      }
-      sections[i].style.boxShadow = '0 0 0 3px var(--day-color, #c0392b)';
-      sections[i].style.borderRadius = '12px';
-      sections[i].style.padding = '8px';
-      break;
-    }
-  }
-})();
-</script>
 
 </body>
 </html>

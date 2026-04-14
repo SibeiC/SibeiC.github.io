@@ -22,7 +22,7 @@ One set of bolts (required), and the cupholder itself (black / fine cream).
 |:------------:|:---------------------------------:|:----:|:-----------:|:------:|
 |              |                                   |      |    Total：    | $95.00 |
 
-<div style="text-align: center;">
+<div class="text-center">
     <img class="audi_img" alt="AudiUSA Shopping Cart Screenshot" src="/assets/images/cupholder/audi_cart.png" width="45%">
     <img class="audi_img" alt="Cupholder" src="/assets/images/cupholder/cupholder.jpeg" width="45%">
 </div>

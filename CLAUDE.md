@@ -116,7 +116,7 @@ Each item in `links:` arrays is rendered by `_includes/trip_link.html` as an `<a
 ## Styling
 
 - `_layouts/default.html` uses `jekyll-theme-hacker` with additions in `assets/css/style.scss` (SCSS with Jekyll front matter to trigger Sass compilation). CJK fallback fonts (`微软雅黑`, `华文细黑`, `STXihei`) are stacked after the theme's Monaco/monospace.
-- `_layouts/trip.html` is self-contained and pulls **only** `assets/css/trip.css` (no theme base). Modify `trip.css` for any visual changes to trip pages. The layout also embeds a small `<script>` that handles theme toggle, thousand-separator formatting (`.fmt-num`), and the today-jump scroll — keep these working when editing the layout.
+- `_layouts/trip.html` is self-contained and pulls only `assets/css/trip.css` (no theme base) and `assets/js/trip.js` (loaded with `defer`). Behaviour split: CSS for visuals, `trip.js` for the three client-side scripts (theme toggle, thousand-separator formatting on `.fmt-num`, today-jump scroll). No inline `<script>` or `<style>` in the layout or anywhere else — HTML/CSS/JS live in separate files. Exception: a handful of `style="--day-color: {{ day.color }}"` attributes on day-section elements, kept inline because the value is data-driven from Liquid.
 
 ## Working with the user (reusable session rules)
 
