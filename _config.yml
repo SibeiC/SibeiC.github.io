@@ -14,6 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 email: "@chencraft.com"
+# repository: required by jekyll-github-metadata (part of github-pages gem) to
+# populate site.github.* fields. GitHub Pages infers this from the git remote
+# at build time, but Cloudflare Workers Builds doesn't set up a git remote, so
+# we declare it explicitly here. Must match the GitHub repo slug exactly.
+repository: SibeiC/SibeiC.github.io
 github:
   repository_url: https://github.com/SibeiC/
 
