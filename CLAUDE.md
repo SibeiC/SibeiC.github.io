@@ -86,6 +86,7 @@ Key invariants that are easy to get wrong:
 
 - **File path → URL**: `_trips/foo-2026.md` → `/trips/foo-2026/` (see `collections.trips.permalink` in `_config.yml`). Use kebab-case slugs. Don't prefix filenames with `_`.
 - **Default language is ZH-CN**: all user-facing strings in Chinese unless the user says otherwise. Match the slightly-enthusiastic tone of `taiwan-2026.md`.
+- **Bilingual support (`lang:` front matter)**: each trip declares `lang: zh-CN` (default) or `lang: en-US`. The layout renders all UI chrome (card titles, chip labels, weekday fallback, footer) in that language via `_data/trip_i18n.yml`. Each trip is monolingual — author content (day titles, details, labels, notes) must match the declared `lang`; the layout does not translate user content. When adding a new chrome label to `_layouts/trip.html`, populate the key in BOTH `zh-CN` and `en-US` blocks of `_data/trip_i18n.yml`. When extending `_data/airlines.yml` / `_data/airports.yml`, populate both language variants (`name_en`+`name_zh`, `city_en`+`city_zh`) so either-language trips can consume the entry. If `day.date_label` is omitted, the layout auto-renders `M/D + weekday` from `day.date` in the current language.
 - **Draft state**: set `published: false` at the top of front matter while drafting — it will be excluded from the build until you flip it.
 - **YAML flow-mapping comma trap**: inside `{ key: val, key: val }`, any unquoted comma is a separator. So `value: NT$ 2,500` silently becomes `value: "NT$ 2"` plus a stray `500: null` key. ALWAYS double-quote flow-mapping values containing `, : [ ] #`. Raw `amount:` numbers (no thousand separators) are safe.
 - **Multi-line prose** (`detail`, `note`, `hotels_note`): use YAML `|` block scalars. Inline HTML (`<br><br>`, `<strong>`, `<em>`, `<a>`) is allowed and commonly used.
@@ -133,6 +134,17 @@ When the user sends a receipt image (optionally with a comment), do the followin
 4. **Commit, PR, merge, cleanup** — see branch-cleanup rule below.
 
 **Cost override rule (important):** If the receipt's cost already has a corresponding **estimate** line (typically tagged `note: 估算`), **replace** that line's `amount` with the actual and **drop** `note: 估算` — do NOT add a second line. Matching heuristic: same `cost.groups[]` category + same / similar `label` + plausible date. If the match is ambiguous (e.g. generic "交通杂费" vs. specific taxi fare), ask before overwriting vs. appending. Never manually recompute totals — the Liquid layout sums everything.
+
+### Itinerary authoring: bag-drop before sightseeing on transition days
+
+On any day where the traveller moves from one accommodation to another, the day's `items[]` should include an explicit **`🎒 <hotel name> · 行李寄存`** (or `· Check-in`) step **before** the first sightseeing item at the destination. Don't assume the hotel is reachable only at `stay:` time in the evening — most hotels in Taiwan / Japan / SEA accept early luggage drop at the front desk even before the formal check-in window.
+
+Rule of thumb:
+- Arriving at a new city with bags + a bunch of activities planned → insert 🎒 行李寄存 right after the transit item that landed them in town.
+- Mid-day transit where they won't be near the hotel → OK to keep bags with them, but flag it in the transit item's `detail`.
+- Last-day / airport-return transit (e.g., Taiwan Day 9) → keep bags at the prior-night's accommodation, do morning activities, then pick up bags on the way out. This is the inverse pattern; same principle: don't drag bags through activities.
+
+Apply this retroactively when editing existing trips, not just for new ones. If a location-change day looks like it's missing a 行李寄存 item, flag it or add it without being asked.
 
 ### Branch & PR cleanup
 

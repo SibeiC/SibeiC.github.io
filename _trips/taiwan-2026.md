@@ -31,6 +31,8 @@ urls:
   taipei_101:  &url_taipei_101   "https://www.taipei-101.com.tw/"
   klook_npm:   &url_klook_npm    "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/"
   npm:         &url_npm          "https://www.npm.gov.tw/"
+  bus_6670a_ticket: &url_bus_6670a_ticket "https://ntbus.welcometw.com/tour/MvmY"
+  bus_6739_ticket:  &url_bus_6739_ticket  "https://ylbus-shop.fontour.com/tour/NOyj"
 
 cost:
   primary: NT$
@@ -122,7 +124,7 @@ hotels:
     nights: 1
     dates: 6/4 (四) – 6/5 (五)
     address: 花莲市海滨街 72 号
-    map_query: S.E.A Hostel Hualien 花莲海滨街72号
+    map_query: S.E.A. 民宿 花莲海滨街 72 号
 
 hotels_note: |
   <strong>⚠️ 6/5 (五) 夜晚：</strong>回程航班为 6/6 凌晨 00:55，6/5 当日需从花莲移动至桃园机场。尚未预订 6/5 住宿 → 建议直接搭车到台北寄放行李，当天返程桃园机场候机。
@@ -342,6 +344,7 @@ days:
           - { tag: 悠游卡, value: 约 88 折 }
         links:
           - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: *url_bus_6670a }
+          - { type: ticket, icon: 🎫, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
           - { type: ticket, icon: 🎫, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
           - { type: map,    icon: 📍, label: 水社游客中心, query: 水社游客中心 日月潭 }
 
@@ -457,20 +460,32 @@ days:
           - { tag: 悠游卡, value: 约 88 折 }
         links:
           - { type: ticket, icon: 🎫, label: 6739 时刻表, url: *url_bus_6739 }
+          - { type: ticket, icon: 🎫, label: 购票（员林客运）, url: *url_bus_6739_ticket }
           - { type: ticket, icon: 🎫, label: 南投客运预约, url: *url_nantoubus }
           - { type: map,    icon: 📍, label: 水社站, query: 水社 Shuishe Sun Moon Lake }
           - { type: map,    icon: 📍, label: 阿里山入口, query: Alishan National Forest Recreation Area Entrance }
 
-      - time: 12:00 – 13:00
+      - time: 12:00 – 12:20
+        title: 🎒 阿里山游客中心 · 免费行李寄放
+        detail: |
+          下了好行公车走到阿里山游客中心（从转运站步行 2 分钟），<strong>开放式行李架免费寄放</strong>，不收钱也不做保管 — <strong>贵重物品（护照、现金、相机、电子产品）务必随身</strong>，只把换洗衣物 / 大包丢进去。
+          <br><br>
+          <strong>⚠️ 营业时间 08:30–17:00</strong>，必须在 17:00 前取回，沼平线下山务必 16:45 前抵达车站，留 15 分钟取行李走去青山别馆。
+          <br><br>
+          付费备案：阿里山车站 2F 投币置物柜 24 小时营业；转运站 1F 置物柜到 17:00。
+        links:
+          - { type: map, icon: 📍, label: 阿里山游客中心, query: 阿里山国家森林游乐区游客中心 }
+
+      - time: 12:30 – 13:20
         title: 🎫 阿里山入园 · 午餐
-        detail: 抵达阿里山转运站后购买入园门票，简易午餐。6/1 为周一，适用非假日票价 NT$200。转运站有厕所与行李寄放处。
+        detail: 车站/转运站周边购买入园门票 + 简易午餐。6/1 为周一，适用非假日票价 NT$200。
         tickets:
           - { tag: 全票, value: NT$200, note: 非假日 }
           - { tag: 假日, value: NT$300 }
         links:
           - { type: ticket, icon: 🎫, label: 阿里山国家风景区, url: "https://www.ali-nsa.net/" }
 
-      - time: 13:00 – 17:00
+      - time: 13:20 – 16:45
         title: 🌲 阿里山森林游乐区 · 神木线 + 沼平线
         detail: |
           <strong>推荐路线：</strong><br>
@@ -488,9 +503,9 @@ days:
           - { type: map,    icon: 📍, label: 沼平站, query: 沼平站 }
           - { type: ticket, icon: 🎫, label: 林铁支线订票, url: *url_afrts }
 
-      - time: "17:30"
-        title: 🏨 青山别馆 Chinshan Hotel · Check-in
-        detail: 阿里山园区内住宿，靠近阿里山车站，方便隔日搭森林铁路下山。<strong>园区晚上 7 点后几乎无餐厅营业，建议提早用餐。</strong>
+      - time: "17:00"
+        title: 🏨 青山别馆 Chinshan Hotel · Check-in（顺路取行李）
+        detail: 沼平线下山到阿里山车站 → 游客中心取回行李（17:00 关门前）→ 步行 3 分钟至青山别馆。园区内住宿，靠近阿里山车站，方便隔日搭森林铁路下山。<strong>园区晚上 7 点后几乎无餐厅营业，建议提早用餐。</strong>
         links:
           - { type: map, icon: 📍, label: 酒店位置, query: Chinshan Hotel 青山别馆 阿里山 }
     note: |
@@ -537,7 +552,10 @@ days:
 
       - time: 16:00 – 17:30
         title: 🍜 嘉义市区晚餐 · 鸡肉饭巡礼
-        detail: 林铁下车即嘉义 TRA 站，步行或短程计程车即可抵达市区老店。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。若走公车备选路线已到嘉义高铁站，可改搭 BRT（凭高铁票免费）或台铁 25 分钟进市区。
+        detail: |
+          林铁下车即嘉义 TRA 站，步行或短程计程车即可抵达市区老店。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。若走公车备选路线已到嘉义高铁站，可改搭 BRT（凭高铁票免费）或台铁 25 分钟进市区。
+          <br><br>
+          <strong>🎒 不想拖行李：</strong>嘉义 TRA 站地下一楼有投币置物柜，小柜 NT$20 / 时、大柜 NT$50 / 时 — 夕阳前寄存，吃完饭回来取，省得拖着跑鸡肉饭老店。
         links:
           - { type: map, icon: 📍, label: 林聪明沙锅鱼头, query: 林聪明沙锅鱼头 }
           - { type: map, icon: 📍, label: 刘里长鸡肉饭, query: 刘里长鸡肉饭 }
@@ -576,12 +594,10 @@ days:
     toc_label: 6/3 台南
     items:
       - time: 推荐
-        title: 🛵 租一台电动机车（小电驴）
-        detail: 台南景点分散，市区与安平距离 15 分钟车程，巷弄多、单行道多。推荐租电动机车（GoShare / WeMo / iRent），自由度高。<strong>需持国际驾照。</strong>
+        title: 🛵 WeMo 共享电动机车
+        detail: 台南景点分散、巷弄多、单行道多，市区到安平骑车 15 分钟左右；共享电动机车是最灵活的移动方式。用 WeMo App 扫码取车，按分钟计费，停车不用找位还能直接还车。<strong>需持国际驾照 + 原本国驾照 + 护照。</strong>建议出发前下载 App 注册好、上传驾照审核通过。
         links:
-          - { type: ticket, icon: 🛵, label: GoShare, url: "https://www.goshare.com.tw/" }
           - { type: ticket, icon: 🛵, label: WeMo, url: "https://www.wemoscooter.com/" }
-          - { type: ticket, icon: 🛵, label: iRent, url: "https://www.irentcar.com.tw/" }
 
       - time: 09:00 – 11:00
         title: 📚 国立台湾文学馆
@@ -661,10 +677,10 @@ days:
           - { type: map,    icon: 📍, label: 花莲车站, query: Hualien Station }
 
       - time: 11:30 – 13:30
-        title: 🏨 S.E.A. 民宿 Check-in · 花莲午餐
-        detail: 放行李后午餐。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
+        title: 🎒 S.E.A. 民宿 · 行李寄存 + 花莲午餐
+        detail: 14:00 要赶多罗满赏鲸，先把背包扔民宿（正式 check-in 通常 15:00 后，但柜台可先帮忙存）再出门吃午餐。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
         links:
-          - { type: map, icon: 📍, label: S.E.A. 民宿, query: S.E.A. Hostel Hualien }
+          - { type: map, icon: 📍, label: S.E.A. 民宿, query: S.E.A. 民宿 花莲海滨街 72 号 }
           - { type: map, icon: 📍, label: 公正包子, query: 公正包子 }
 
       - time: 13:20 集合 · 14:00 出船
@@ -721,7 +737,7 @@ days:
       - time: 14:00 – 16:30
         title: 🚆 台铁 · 花莲 → 台北（约 2.5 小时）
         transit: true
-        detail: 花莲车站搭普悠玛/太鲁阁号/自强号至台北车站。<strong>务必提前 14 天抢票，周五热门班次秒杀。</strong>
+        detail: 花莲车站搭普悠玛/太鲁阁号/自强号至台北车站。非连续假期通常座位充足，仍建议 14 天开放订票后尽快买好 — 普悠玛/太鲁阁较紧，若满了 自强号班次多、一般抢得到。
         transit_route:
           preferred: 普悠玛号 · 14:xx 花莲 → 16:xx 台北
           alternatives: ["太鲁阁号", "自强号（车程 3h）"]
@@ -769,11 +785,14 @@ booking_channels:
     links: [{ label: tymetro.com.tw, url: *url_tymetro }]
     note: 悠游卡直刷
   - name: 台湾好行 6670A（台中-日月潭）
-    links: [{ label: 时刻表, url: *url_bus_6670a }]
-    note: 现场购票
+    links:
+      - { label: 时刻表, url: *url_bus_6670a }
+      - { label: 南投客运购票, url: *url_bus_6670a_ticket }
+    note: 亦可现场购票
   - name: 台湾好行 6739（日月潭-阿里山）
     links:
       - { label: 时刻表, url: *url_bus_6739 }
+      - { label: 员林客运购票, url: *url_bus_6739_ticket }
       - { label: 南投客运, url: *url_nantoubus }
     note: 需电话或 APP 预约
   - name: 台湾好行 7329A（阿里山-嘉义）

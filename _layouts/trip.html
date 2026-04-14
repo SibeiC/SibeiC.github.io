@@ -1,5 +1,10 @@
+{%- assign lang = page.lang | default: 'zh-CN' -%}
+{%- assign t = site.data.trip_i18n[lang] | default: site.data.trip_i18n['zh-CN'] -%}
+{%- if lang == 'en-US' -%}{%- assign lk = 'en' -%}{%- else -%}{%- assign lk = 'zh' -%}{%- endif -%}
+{%- assign name_key = 'name_' | append: lk -%}
+{%- assign city_key = 'city_' | append: lk -%}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: 'zh-CN' }}">
+<html lang="{{ lang }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +19,8 @@
 <body>
 
 <div class="hero">
-  <a class="home-link" href="/" aria-label="返回主页">🏠</a>
-  <button type="button" class="theme-toggle" aria-label="切换深色 / 浅色模式">🌓</button>
+  <a class="home-link" href="/" aria-label="{{ t.home }}">🏠</a>
+  <button type="button" class="theme-toggle" aria-label="{{ t.theme_toggle }}">🌓</button>
   <h1>{{ page.title }}</h1>
   {% if page.subtitle %}<div class="subtitle">{{ page.subtitle | join: ' · ' }}</div>{% endif %}
   <div class="dates">
@@ -50,7 +55,7 @@
   {%- assign grand_secondary = grand | divided_by: rate -%}
   <div class="card cost-card">
     <h3>
-      <span>💰 行程总预算</span>
+      <span>{{ t.budget }}</span>
       <span class="cost-total"><span class="fmt-num">{{ primary }} {{ grand | round: 2 }}</span> <span class="other">≈ <span class="fmt-num">{{ secondary }} {{ grand_secondary | round: 0 }}</span></span></span>
     </h3>
     <div class="cost-grid">
@@ -73,8 +78,8 @@
     </div>
     {% if page.cost.notes or page.cost.rate %}
     <div class="cost-footer">
-      {% if page.cost.notes %}<strong>⚠️ 未含：</strong>{{ page.cost.notes | join: ' · ' }}<br>{% endif %}
-      {% if page.cost.rate %}<strong>汇率参考：</strong>1 {{ secondary }} ≈ {{ rate }} {{ primary }}{% if page.cost.rate_note %}（{{ page.cost.rate_note }}）{% endif %}{% endif %}
+      {% if page.cost.notes %}<strong>{{ t.not_included }}</strong>{{ page.cost.notes | join: ' · ' }}<br>{% endif %}
+      {% if page.cost.rate %}<strong>{{ t.rate_ref }}</strong>1 {{ secondary }} ≈ {{ rate }} {{ primary }}{% if page.cost.rate_note %}（{{ page.cost.rate_note }}）{% endif %}{% endif %}
     </div>
     {% endif %}
   </div>
@@ -83,7 +88,7 @@
   {% if page.flights %}
   {%- assign first_airline = site.data.airlines[page.flights.first.airline] -%}
   <div class="card">
-    <h3>✈️ 航班信息{% if page.flight_carrier %} · {{ page.flight_carrier }}{% elsif first_airline %} · {{ first_airline.name }}{% endif %}</h3>
+    <h3>{{ t.flights }}{% if page.flight_carrier %} · {{ page.flight_carrier }}{% elsif first_airline %} · {{ first_airline[name_key] }}{% endif %}</h3>
     {% for flight in page.flights %}
     {%- assign airline = site.data.airlines[flight.airline] -%}
     {%- assign from_ap = site.data.airports[flight.from.code] -%}
@@ -91,7 +96,7 @@
     <div class="flight-row">
       <div class="flight-port">
         <div class="code">{{ flight.from.code }}</div>
-        <div class="city">{{ flight.from.city | default: from_ap.city }}</div>
+        <div class="city">{{ flight.from.city | default: from_ap[city_key] }}</div>
         <div class="time">{{ flight.from.time }}</div>
       </div>
       <div class="flight-arrow">
@@ -101,15 +106,15 @@
       </div>
       <div class="flight-port">
         <div class="code">{{ flight.to.code }}</div>
-        <div class="city">{{ flight.to.city | default: to_ap.city }}</div>
+        <div class="city">{{ flight.to.city | default: to_ap[city_key] }}</div>
         <div class="time">{{ flight.to.time }}</div>
       </div>
     </div>
     <div class="flight-meta">
-      <span><strong>航班：</strong>{% if airline %}{{ airline.name }} {% endif %}{{ flight.airline }} {{ flight.number }}</span>
-      {% if flight.note %}<span><strong>备注：</strong>{{ flight.note }}</span>{% endif %}
-      {% if airline.manage_booking %}<a class="chip" href="{{ airline.manage_booking }}" target="_blank" rel="noopener">🔗 管理订票</a>{% endif %}
-      {% if airline.icao %}<a class="chip" href="https://www.flightaware.com/live/flight/{{ airline.icao }}{{ flight.number }}" target="_blank" rel="noopener">📡 实时状态</a>{% endif %}
+      <span><strong>{{ t.flight }}</strong>{% if airline %}{{ airline[name_key] }} {% endif %}{{ flight.airline }} {{ flight.number }}</span>
+      {% if flight.note %}<span><strong>{{ t.note }}</strong>{{ flight.note }}</span>{% endif %}
+      {% if airline.manage_booking %}<a class="chip" href="{{ airline.manage_booking }}" target="_blank" rel="noopener">{{ t.manage_booking }}</a>{% endif %}
+      {% if airline.icao %}<a class="chip" href="https://www.flightaware.com/live/flight/{{ airline.icao }}{{ flight.number }}" target="_blank" rel="noopener">{{ t.live_status }}</a>{% endif %}
       {% for link in flight.links %}{% include trip_link.html link=link %}{% endfor %}
     </div>
     {% endfor %}
@@ -118,11 +123,11 @@
 
   {% if page.hotels %}
   <div class="card">
-    <h3>🏨 已预订住宿</h3>
+    <h3>{{ t.hotels }}</h3>
     <div class="hotel-list">
       {% for hotel in page.hotels %}
       <div class="hotel-row">
-        <div class="hotel-nights"><span class="n">{{ hotel.nights }}</span><span class="lbl">晚</span></div>
+        <div class="hotel-nights"><span class="n">{{ hotel.nights }}</span><span class="lbl">{{ t.nights }}</span></div>
         <div>
           <div class="hotel-name">{{ hotel.name }}</div>
           <div class="hotel-dates">{{ hotel.dates }}{% if hotel.address %} · {{ hotel.address }}{% endif %}</div>
@@ -131,7 +136,7 @@
         <div>
           {% assign hlink = hotel | default: nil %}
           {% if hotel.map_query %}{% assign maphref = hotel.map_query | url_encode | prepend: 'https://www.google.com/maps/search/?api=1&query=' %}{% else %}{% assign maphref = hotel.map_url %}{% endif %}
-          <a class="chip map" href="{{ maphref }}" target="_blank" rel="noopener">📍 地图</a>
+          <a class="chip map" href="{{ maphref }}" target="_blank" rel="noopener">{{ t.map }}</a>
         </div>
         {% endif %}
       </div>
@@ -145,7 +150,7 @@
 
   {% if page.overview or page.days %}
   <div class="card">
-    <h3>🧭 行程总览</h3>
+    <h3>{{ t.overview }}</h3>
     {% if page.overview %}
     <div class="overview-grid">
       {% for o in page.overview %}
@@ -169,7 +174,15 @@
       <div class="day-num">D{{ day.num }}</div>
       <div>
         <div class="day-title">{{ day.title }}</div>
-        <div class="day-route">{{ day.date_label }}{% if day.location %} · {{ day.location }}{% endif %}</div>
+        <div class="day-route">
+          {%- if day.date_label -%}
+            {{ day.date_label }}
+          {%- elsif day.date -%}
+            {%- assign wi = day.date | date: "%w" | plus: 0 -%}
+            {{ day.date | date: "%-m/%-d" }} {{ t.weekdays[wi] }}
+          {%- endif -%}
+          {% if day.location %} · {{ day.location }}{% endif %}
+        </div>
       </div>
     </div>
 
@@ -181,13 +194,13 @@
         {% if item.detail %}<div class="item-detail">{{ item.detail }}</div>{% endif %}
         {% if item.transit_route %}
         <div class="transit-route">
-          <div class="pref">✓ 首选：{{ item.transit_route.preferred }}</div>
-          {% if item.transit_route.alternatives %}<div class="alt"><strong>备选：</strong>{{ item.transit_route.alternatives | join: ' · ' }}</div>{% endif %}
+          <div class="pref">{{ t.preferred }}{{ item.transit_route.preferred }}</div>
+          {% if item.transit_route.alternatives %}<div class="alt"><strong>{{ t.alternatives }}</strong>{{ item.transit_route.alternatives | join: ' · ' }}</div>{% endif %}
         </div>
         {% endif %}
         {% if item.tickets %}
         <div class="ticket-info">
-          {% for t in item.tickets %}<span><span class="tag">{{ t.tag }}</span> {{ t.value }}{% if t.note %}（{{ t.note }}）{% endif %}</span>{% endfor %}
+          {% for t_item in item.tickets %}<span><span class="tag">{{ t_item.tag }}</span> {{ t_item.value }}{% if t_item.note %}（{{ t_item.note }}）{% endif %}</span>{% endfor %}
         </div>
         {% endif %}
         {% if item.links %}
@@ -213,7 +226,7 @@
       {%- assign stay_map = matched.map_url -%}
     {%- endif -%}
     <div class="stay-box">
-      <strong>🏨 住宿：</strong>{% if stay_map %}<a href="{{ stay_map }}" target="_blank" rel="noopener">{{ stay_hotel }}</a>{% else %}{{ stay_hotel }}{% endif %}{% if day.stay.label %}（{{ day.stay.label }}）{% endif %}
+      <strong>{{ t.stay }}</strong>{% if stay_map %}<a href="{{ stay_map }}" target="_blank" rel="noopener">{{ stay_hotel }}</a>{% else %}{{ stay_hotel }}{% endif %}{% if day.stay.label %}（{{ day.stay.label }}）{% endif %}
       {% if stay_addr %}<div class="addr">{{ stay_addr }}</div>{% endif %}
     </div>
     {% endif %}
@@ -222,10 +235,10 @@
 
   {% if page.booking_channels %}
   <div class="card">
-    <h3>🎟️ 订票与购票渠道汇总</h3>
+    <h3>{{ t.booking_channels }}</h3>
     <div class="booking-list">
       {% for c in page.booking_channels %}
-      <p><strong>{{ c.name }}</strong>：{% if c.links %}{% for l in c.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% unless forloop.last %} / {% endunless %}{% endfor %}{% if c.note %} · {{ c.note }}{% endif %}{% else %}{{ c.detail }}{% endif %}</p>
+      <p><strong>{{ c.name }}</strong>{{ t.name_sep }}{% if c.links %}{% for l in c.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% unless forloop.last %} / {% endunless %}{% endfor %}{% if c.note %} · {{ c.note }}{% endif %}{% else %}{{ c.detail }}{% endif %}</p>
       {% endfor %}
     </div>
   </div>
@@ -233,7 +246,7 @@
 
   {% if page.checklist %}
   <div class="card" style="margin-bottom: 30px;">
-    <h3>📝 行前须知 Checklist</h3>
+    <h3>{{ t.checklist }}</h3>
     <div class="booking-list">
       {% for c in page.checklist %}
       <p>✅ {{ c }}</p>
@@ -250,9 +263,9 @@
 </div>
 
 <div class="footer">
-  行程规划仅供参考，实际班次与票价请以官方最新公告为准<br>
-  建议出发前再次确认各交通工具的时刻表与抢票时间
-  {% if page.last_updated %}<br><br>Last updated: {{ page.last_updated }}{% endif %}
+  {{ t.footer_line1 }}<br>
+  {{ t.footer_line2 }}
+  {% if page.last_updated %}<br><br>{{ t.last_updated }}{{ page.last_updated }}{% endif %}
   <br><br>
   <span style="opacity: 0.7;">© {{ 'now' | date: '%Y' }} Sibei Chen · All rights reserved</span>
 </div>
@@ -281,12 +294,13 @@
 
 (function () {
   // Add thousand-separator formatting to all .fmt-num spans
+  var locale = document.documentElement.lang || 'zh-CN';
   document.querySelectorAll('.fmt-num').forEach(function (el) {
     var match = el.textContent.match(/^(.*?)(-?\d+(?:\.\d+)?)(.*)$/);
     if (!match) return;
     var n = parseFloat(match[2]);
     if (isNaN(n)) return;
-    el.textContent = match[1] + n.toLocaleString('en-US', { maximumFractionDigits: 2 }) + match[3];
+    el.textContent = match[1] + n.toLocaleString(locale, { maximumFractionDigits: 2 }) + match[3];
   });
 })();
 
