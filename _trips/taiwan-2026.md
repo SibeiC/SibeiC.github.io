@@ -82,7 +82,7 @@ cost:
         - { label: "九族文化村（含缆车）", amount: 900, in: primary }
         - { label: "阿里山入园 + 支线 ×2", amount: 400, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
-        - { label: 多罗满赏鲸, amount: 800, in: primary }
+        - { label: "多罗满赏鲸（含免费接送）", amount: 900, in: primary }
 
 flights:
   - airline: TR
@@ -459,9 +459,12 @@ days:
           ② 步行至姐妹潭、受镇宫<br>
           ③ 搭沼平线至沼平站（6 分钟，NT$100），走沼平天空步道、樱之道<br>
           ④ 回到阿里山车站
+          <br><br>
+          <strong>🎫 支线票建议提前在 7-11 / 全家 ibon 机台买纸本票</strong>：支线座位有限，假日上午山上售票窗口排队久，买过的班次也容易满。ibon 代售（ticket.ibon.com.tw）可提前几天买指定车次的纸本票，锁定座位，到站直接进月台。现场窗口排到之前可能已经售罄下一班。
         tickets:
           - { tag: 神木线, value: NT$100, note: 单程 }
           - { tag: 沼平线, value: NT$100, note: 单程 }
+          - { tag: 推荐购票, value: 全家/7-11 ibon 代售纸本票 }
         links:
           - { type: map,    icon: 📍, label: 阿里山车站, query: 阿里山车站 }
           - { type: map,    icon: 📍, label: 神木站, query: Sacred Tree Station Alishan }
@@ -642,23 +645,28 @@ days:
           - { type: map,    icon: 📍, label: 国军福利站 台南站, query: 国军福利站 台南店 }
           - { type: map,    icon: 📍, label: 花莲车站, query: Hualien Station }
 
-      - time: 11:30 – 13:30
-        title: 🎒 S.E.A. 民宿 · 行李寄存 + 花莲午餐
-        detail: 14:00 要赶多罗满赏鲸，先把背包扔民宿（正式 check-in 通常 15:00 后，但柜台可先帮忙存）再出门吃午餐。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
+      - time: 11:30 – 14:30
+        title: 🎒 S.E.A. 民宿 · 行李寄存 + 花莲午餐 + 下午休整
+        detail: |
+          下午 16:00 赏鲸，所以到了花莲先把背包扔民宿（正式 check-in 通常 15:00 后，柜台先帮忙存即可）然后慢慢吃午餐 + 逛花莲市区。花莲必吃：公正包子、蒋记公正包子、戴记扁食、液香扁食。
+          <br><br>
+          赏鲸出船前有空档可以在民宿小睡，或者附近咖啡馆歇脚 — 下午 15:20 前 check-in 完接驳车即可。
         links:
           - { type: map, icon: 📍, label: S.E.A. 民宿, query: S.E.A. 民宿 花莲海滨街 72 号 }
           - { type: map, icon: 📍, label: 公正包子, query: 公正包子 }
 
-      - time: 13:20 集合 · 14:00 出船
-        title: 🐋 多罗满赏鲸 Duoloman Whale Watching
+      - time: 15:20 接驳 · 16:00 出船
+        title: 🐋 多罗满赏鲸 Duoloman Whale Watching（含花莲市区免费接送）
         detail: |
           花莲外海黑潮经过，全年可观赏飞旋海豚、花纹海豚、伪虎鲸，运气好还能看到抹香鲸、大翅鲸。多罗满为在地老牌业者，船长与解说员皆有海洋生态背景。
           <br><br>
-          <strong>集合地点：</strong>多罗满赏鲸海矿馆 · 花莲市华东 15 号<br>
-          <strong>集合时间：</strong>14:00 发船（请提前 40 分钟抵达）<br>
-          <strong>行程时长：</strong>约 2 小时
+          <strong>选含接送方案（NT$900）：</strong>花莲市区指定接驳点或民宿免费接送 → 海矿馆集合 → 出海约 2 小时 → 送回市区。订票时填写 S.E.A. 民宿地址即可，接驳时间 15:20 左右（出船前 40 分钟，以多罗满当日通知为准）。
+          <br><br>
+          <strong>行程时长：</strong>约 2 小时（16:00 出船，约 18:00 回港）<br>
+          <strong>集合点备案：</strong>多罗满赏鲸海矿馆 · 花莲市华东 15 号
         tickets:
-          - { tag: 费用, value: CN¥183 / NT$800 }
+          - { tag: 含接送方案, value: "NT$900" }
+          - { tag: 标准方案（无接送）, value: "NT$800" }
           - { tag: 出船时段, value: 06:30 / 08:30 / 10:30 / 14:00 / 16:00 }
           - { tag: 携带, value: 防晒 · 晕船药 · 薄外套 }
         links:
@@ -666,15 +674,9 @@ days:
           - { type: ticket, icon: 🎫, label: Klook 订票, url: *url_klook_whale }
           - { type: ticket, icon: 🔗, label: 多罗满官网, url: *url_turumoan }
 
-      - time: 17:00 – 19:00
-        title: 🌅 北滨公园 · 太平洋夕阳
-        detail: 赏鲸结束后，步行至北滨公园看太平洋海景，天气好时可见日落染红海面。
-        links:
-          - { type: map, icon: 📍, label: 北滨公园, query: Beibin Park Hualien 北滨公园 }
-
-      - time: 19:00 – 22:00
+      - time: 18:30 – 22:00
         title: 🍢 东大门夜市
-        detail: 花莲最大夜市，四大主题街区：福町夜市、各省一条街、原住民一条街、自强夜市。必吃：官财板、炸蛋葱油饼、第一家烤肉串、蒋记公正包子。
+        detail: 花莲最大夜市，四大主题街区：福町夜市、各省一条街、原住民一条街、自强夜市。必吃：官财板、炸蛋葱油饼、第一家烤肉串、蒋记公正包子。赏鲸送回市区后直接过去最顺。
         links:
           - { type: map, icon: 📍, label: 东大门夜市, query: Dongdamen Night Market }
           - { type: map, icon: 📍, label: 花莲文创园区, query: 花莲文创园区 }
@@ -689,16 +691,20 @@ days:
     location: 归国日（6/6 00:55 航班）
     toc_label: 6/5 返程日
     items:
-      - time: 09:00 – 11:00
+      - time: 09:00 – 09:30
+        title: 🏨 S.E.A. 民宿 · check-out + 携带行李出发
+        detail: 今天全程带着行李走 — check-out 后不再回民宿。计程车或租借大件行李寄放服务可考虑，但最省事还是一路拖着到车站锁柜。
+
+      - time: 09:30 – 11:30
         title: 🌊 七星潭 · 最后的太平洋（可选）
-        detail: 花莲市区 20 分钟车程可达，鹅卵石月牙湾海滩，太平洋最美蓝。建议 S.E.A. 民宿 check-out 后寄放行李搭计程车前往（单程约 NT$250）。
+        detail: 花莲市区 20 分钟车程可达，鹅卵石月牙湾海滩，太平洋最美蓝。拖着行李搭计程车单程约 NT$250，行李留车上或直接抱着下车短停拍照。不想多折腾可跳过，直接去车站吃午餐 + 寄物。
         links:
           - { type: map, icon: 📍, label: 七星潭, query: Qixingtan Beach Hualien }
           - { type: map, icon: 📍, label: 松园别馆, query: 松园别馆 }
 
-      - time: 12:00 – 13:00
-        title: 🍱 花莲午餐 + 取行李
-        detail: 回 S.E.A. 民宿取行李。可以吃最后一餐花莲小吃（戴记扁食、液香扁食、蓝蜻蜓炸鸡）。
+      - time: 12:00 – 13:30
+        title: 🍱 花莲车站附近午餐
+        detail: 回花莲车站周边吃最后一餐花莲小吃（戴记扁食、液香扁食、蓝蜻蜓炸鸡），吃完直接进站不用绕回民宿。<strong>🎒 行李：</strong>车站地下有投币置物柜，若在用餐前还想去其他景点可先锁柜；否则直接带到月台候车。
 
       - time: 14:00 – 16:30
         title: 🚆 台铁 · 花莲 → 台北（约 2.5 小时）
