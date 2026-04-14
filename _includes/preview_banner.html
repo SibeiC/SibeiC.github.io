@@ -1,0 +1,13 @@
+{%- comment -%}
+Renders a sticky "PREVIEW" banner when Jekyll is built with
+JEKYLL_ENV=preview. Cloudflare Workers Builds sets this env var in the
+Preview scope; Production and local dev leave it as 'development' (default)
+or 'production', in which case this partial renders nothing.
+
+To preview locally: JEKYLL_ENV=preview bundle exec jekyll serve
+{%- endcomment -%}
+{%- if jekyll.environment == "preview" -%}
+<div class="preview-banner" role="note" aria-label="Preview build banner">
+  ⚠️ <strong>PREVIEW</strong> · Pre-merge preview build · Not the live site.
+</div>
+{%- endif -%}

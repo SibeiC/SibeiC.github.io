@@ -50,6 +50,8 @@ bundle exec jekyll serve --livereload
 
 Ruby **3.2.11** (final 3.2 patch; 3.2 series reached EOL in March 2026) is pinned across `.ruby-version`, `Gemfile`, `Gemfile.lock` (`RUBY VERSION` line), `.github/workflows/jekyll-build.yml`, and Cloudflare Pages' `RUBY_VERSION` env var — keep all five in sync if you ever bump it. When eventually moving off the 3.2 series, prefer 3.3.x next: 3.4 dropped `bigdecimal` from default gems, which breaks Liquid 4.0.4 (Jekyll dep) until upstream catches up. Changes to `_config.yml` do NOT hot-reload — restart the server. Deployment is just `git push origin master`.
 
+**CF Workers Builds**: the project (`my-homepage`) uses `bin/cf-build.sh` as its Build command. That wrapper reads the CF-provided branch env var (`WORKERS_CI_BRANCH` or legacy `CF_PAGES_BRANCH`) and exports `JEKYLL_ENV=production` for master, `JEKYLL_ENV=preview` for every other branch — this is the source of the `[PREVIEW]` title + banner on PR previews. Dashboard env-var scoping isn't needed; if you ever change the mapping, edit the script, not the dashboard.
+
 ## Deployment / branching
 
 - Production branch: **`master`** (GitHub Pages builds this automatically).
@@ -116,7 +118,7 @@ Each item in `links:` arrays is rendered by `_includes/trip_link.html` as an `<a
 ## Styling
 
 - `_layouts/default.html` uses `jekyll-theme-hacker` with additions in `assets/css/style.scss` (SCSS with Jekyll front matter to trigger Sass compilation). CJK fallback fonts (`微软雅黑`, `华文细黑`, `STXihei`) are stacked after the theme's Monaco/monospace.
-- `_layouts/trip.html` is self-contained and pulls **only** `assets/css/trip.css` (no theme base). Modify `trip.css` for any visual changes to trip pages. The layout also embeds a small `<script>` that handles theme toggle, thousand-separator formatting (`.fmt-num`), and the today-jump scroll — keep these working when editing the layout.
+- `_layouts/trip.html` is self-contained and pulls only `assets/css/trip.css` (no theme base) and `assets/js/trip.js` (loaded with `defer`). Behaviour split: CSS for visuals, `trip.js` for the three client-side scripts (theme toggle, thousand-separator formatting on `.fmt-num`, today-jump scroll). No inline `<script>` or `<style>` in the layout or anywhere else — HTML/CSS/JS live in separate files. Exception: a handful of `style="--day-color: {{ day.color }}"` attributes on day-section elements, kept inline because the value is data-driven from Liquid.
 
 ## Working with the user (reusable session rules)
 
