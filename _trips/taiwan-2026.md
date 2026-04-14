@@ -27,8 +27,6 @@ urls:
   kkday_nine:  &url_kkday_nine   "https://www.kkday.com/zh-cn/product/18440-taiwan-formosan-aboriginal-culture-village-sun-moon-lake-ropeway-ticket"
   klook_whale: &url_klook_whale  "https://www.klook.com/zh-CN/activity/697-hualien-whale-watching-rafting-hualien/"
   turumoan:    &url_turumoan     "https://www.turumoan.com.tw/"
-  klook_101:   &url_klook_101    "https://www.klook.com/zh-CN/activity/1659-taipei-101-taipei/"
-  taipei_101:  &url_taipei_101   "https://www.taipei-101.com.tw/"
   klook_npm:   &url_klook_npm    "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/"
   npm:         &url_npm          "https://www.npm.gov.tw/"
   bus_6670a_ticket: &url_bus_6670a_ticket "https://ntbus.welcometw.com/tour/MvmY"
@@ -78,7 +76,6 @@ cost:
       icon: 🎫
       items:
         - { label: 故宫博物院, amount: 350, in: primary }
-        - { label: "台北 101（89F）", amount: 600, in: primary }
         - { label: "九族文化村（含缆车）", amount: 900, in: primary }
         - { label: "阿里山入园 + 支线 ×2", amount: 400, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
@@ -141,7 +138,7 @@ days:
   - num: 1
     color: "#8e44ad"
     date: 2026-05-28
-    title: 抵达台北 · 西门町 · 士林夜市
+    title: 抵达台北 · 赤峰街 · 士林夜市
     date_label: 5月28日（周四）
     location: 台北市区
     toc_label: 5/28 抵台 · 台北
@@ -161,13 +158,6 @@ days:
         links:
           - { type: map, icon: 📍, label: 地图, query: citizenM Taipei North Gate }
           - { icon: 🔗, label: 酒店官网, url: "https://www.citizenm.com/hotels/asia/taipei/taipei-north-gate-hotel" }
-
-      - time: 17:00 – 18:30
-        title: 🛍️ 西门町 Ximending
-        detail: 台北最热闹的年轻潮流商圈，有「台北原宿」之称。以西门红楼为中心，步行街内潮牌、电影院、刺青街、小吃林立。推荐：阿宗面线、鸭肉扁、老天禄卤味。
-        links:
-          - { type: map, icon: 📍, label: 西门町, query: 西门町 Ximending }
-          - { type: map, icon: 📍, label: 西门红楼, query: 西门红楼 }
 
       - time: 18:30 – 19:30
         title: ☕ 赤峰街 Chifeng St（大同区）
@@ -193,41 +183,44 @@ days:
     location: 台北近郊
     toc_label: 5/29 故宫 / 阳明山
     items:
-      - time: 08:00 – 08:30
+      - time: 09:00 – 09:30
         title: 🚗 固得租車 台北车站店 · 取车
         transit: true
         detail: |
-          单日租车，方便当日跨故宫博物院（士林）、阳明山国家公园（北投）两个景点 — 公车换乘需近 2 小时，自驾约 40 分钟。
+          单日租车，方便当日跨故宫博物院（士林）、阳明山国家公园（北投）两个景点 — 公车换乘需近 2 小时，自驾约 40 分钟。门市营业时间 <strong>09:00 – 21:00</strong>，取车最早 09:00，还车最晚 21:00 前。
           <br><br>
           <strong>⚠️ 需国际驾照 + 原本国驾照 + 护照。</strong>预订时留意保险（建议加购 CDW 全险）与还车时油量要求。
         tickets:
           - { tag: 预估, value: "NT$ 2,500", note: 含基础险 · 未预订 }
-          - { tag: 还车, value: 当日 20:00 前 }
+          - { tag: 门市营业, value: 09:00 – 21:00 }
         links:
           - { type: map,    icon: 📍, label: 取车门市, query: 固得租車 台北車站店 }
           - { type: ticket, icon: 🎫, label: GoodCars 官网预订, url: "https://www.goodcars.tw/" }
 
-      - time: 09:00 – 12:30
+      - time: 10:00 – 13:30
         title: 🏛️ 国立故宫博物院
         detail: |
           世界四大博物馆之一，收藏近 70 万件中华艺术珍品，包括翠玉白菜、肉形石、毛公鼎等镇馆之宝。建议 3–4 小时细看。
+          <br><br>
+          <strong>🎧 免费定时导览：</strong>上午约 10:00 在 1F 服务台集合，中文场约 1.5 小时。英文/日文场时段官网当日公告，可现场询问。跟导览解说入门比自己瞎看效率高很多。
           <br><br>
           <strong>自驾：</strong>从台北车站出发约 25 分钟，馆区有停车场（小型车 NT$50/小时）。
         tickets:
           - { tag: 全票, value: NT$350 }
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
+          - { tag: 免费导览, value: 约 10:00 1F 服务台集合 }
         links:
           - { type: map,    icon: 📍, label: 地图, query: National Palace Museum Taipei }
           - { type: ticket, icon: 🎫, label: 故宫官网, url: *url_npm }
           - { type: ticket, icon: 🎫, label: Klook 预约, url: *url_klook_npm }
 
-      - time: 12:30 – 14:00
+      - time: 13:30 – 14:30
         title: 🍱 午餐 · 故宫晶华 或 士林老街
         detail: 故宫内的晶华餐厅有「国宝宴」菜色，可吃到翠玉白菜、肉形石造型料理。预算有限可开车下山到士林吃铭传大学周边小吃。
         links:
           - { type: map, icon: 📍, label: 故宫晶华, query: 故宫晶华 }
 
-      - time: 14:30 – 18:30
+      - time: 14:45 – 18:45
         title: 🌋 阳明山国家公园
         detail: |
           台湾最大休眠火山群，有温泉、硫磺喷气口、花季步道。推荐路线：小油坑（火山地貌）→ 冷水坑（牛奶湖）→ 擎天岗（大草原、水牛）→ 竹子湖（季节限定海芋／绣球花）。
@@ -240,16 +233,10 @@ days:
           - { type: map, icon: 📍, label: 擎天岗, query: 擎天岗 }
           - { type: map, icon: 📍, label: 竹子湖, query: 竹子湖 阳明山 }
 
-      - time: "19:00"
-        title: ♨️ 可选加码 · 北投温泉
-        detail: 阳明山下山顺路到北投泡汤，推荐「瀧乃汤」或「泷野温泉」，百年日式老汤屋，入浴 NT$150 起。温泉区周边停车场不多，建议短停。
-        links:
-          - { type: map, icon: 📍, label: 瀧乃汤, query: 瀧乃汤 Beitou }
-
       - time: 19:30 – 20:00
         title: 🚗 固得租車 台北车站店 · 还车
         transit: true
-        detail: 还车前记得加满油（取车时的油表刻度为准）。门市营业至 22:00，20:00 前到店较宽松。
+        detail: 还车前记得加满油（取车时的油表刻度为准）。门市营业至 21:00，20:00 前到店较宽松，最晚 21:00 前必须到。
         links:
           - { type: map, icon: 📍, label: 还车门市, query: 固得租車 台北車站店 }
     stay:
@@ -259,10 +246,10 @@ days:
   - num: 3
     color: "#16a085"
     date: 2026-05-30
-    title: 中正纪念堂 · 台北 101 · 饶河夜市
+    title: 中正纪念堂 · 101 彩虹路 · 西门町 · 饶河夜市
     date_label: 5月30日（周六）
     location: 台北市区
-    toc_label: 5/30 中正 / 101
+    toc_label: 5/30 中正 / 彩虹路
     items:
       - time: 09:30 – 11:30
         title: 🏛️ 中正纪念堂
@@ -279,20 +266,25 @@ days:
         links:
           - { type: map, icon: 📍, label: 鼎泰丰 信义店, query: 鼎泰丰 信义店 }
 
-      - time: 14:30 – 18:00
-        title: 🌈 台北 101 · 彩虹天空步道
+      - time: 14:00 – 15:00
+        title: 🌈 Taipei 101 彩虹路（Rainbow Starting Line）
         detail: |
-          世界级地标，2004 年完工时曾是世界第一高楼。89 楼观景台视野全市；101 楼「Skyline 460」户外步道可俯瞰整个台北盆地，2024 年新推出的彩虹天空桥夜景绝美。
+          捷运市政府站 2 号出口旁的地面彩虹人行道（2020 年市府前「Rainbow Starting Line」），以 101 大楼为背景的免费打卡点。只拍照不上楼 — 不进 89F 观景台、不做 Skyline 460，够拍两张就走。
           <br><br>
-          信义商圈周边可逛 A11、A13、微风南山、诚品信义旗舰店。
+          信义商圈顺便可逛 A11 / A13 / 微风南山 / 诚品信义旗舰店，不过今天重点是继续往西门町。
         tickets:
-          - { tag: 89F 观景台, value: NT$600 }
-          - { tag: Skyline 460, value: "NT$3,000（含 89F）" }
+          - { tag: 门票, value: 免费 }
         links:
-          - { type: map,    icon: 📍, label: 地图, query: Taipei 101 }
-          - { type: ticket, icon: 🎫, label: 101 官网, url: *url_taipei_101 }
-          - { type: ticket, icon: 🎫, label: Klook, url: *url_klook_101 }
-          - { type: ticket, icon: 🎫, label: KKday, url: "https://www.kkday.com/zh-cn/product/8332-taipei-101-observatory-ticket" }
+          - { type: map, icon: 📍, label: 101 彩虹路, query: Rainbow Starting Line Taipei City Hall }
+          - { type: map, icon: 📍, label: Taipei 101（作背景）, query: Taipei 101 }
+
+      - time: 15:30 – 18:30
+        title: 🛍️ 西门町 Ximending
+        detail: 台北最热闹的年轻潮流商圈，有「台北原宿」之称。以西门红楼为中心，步行街内潮牌、电影院、刺青街、小吃林立。推荐：阿宗面线、鸭肉扁、老天禄卤味。<strong>彩虹 Six 斑马线</strong>就在西门町六号出口旁，是 2019 年首条彩虹人行道，顺路打卡。
+        links:
+          - { type: map, icon: 📍, label: 西门町, query: 西门町 Ximending }
+          - { type: map, icon: 📍, label: 西门红楼, query: 西门红楼 }
+          - { type: map, icon: 📍, label: 彩虹六号斑马线, query: Rainbow Six Ximending }
 
       - time: 19:00 – 22:30
         title: 🍢 饶河街观光夜市
@@ -808,10 +800,6 @@ booking_channels:
     links:
       - { label: Klook, url: *url_klook_whale }
       - { label: 官网, url: *url_turumoan }
-  - name: 台北 101 观景台
-    links:
-      - { label: Klook, url: *url_klook_101 }
-      - { label: 官网, url: *url_taipei_101 }
   - name: 故宫博物院
     links:
       - { label: 官网, url: *url_npm }
