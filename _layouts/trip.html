@@ -17,7 +17,7 @@
 <script src="{{ '/assets/js/trip.js' | relative_url }}" defer></script>
 {% if site.cloudflare_analytics %}<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics }}"}'></script>{% endif %}
 </head>
-<body>
+<body class="{% if jekyll.environment == 'preview' %}has-preview-banner{% endif %}">
 
 {% include preview_banner.html %}
 

@@ -21,17 +21,21 @@
 /* Generic utility: center-aligned block content */
 .text-center { text-align: center; }
 
-/* Preview-build banner — renders only on CF Preview deployments */
+/* Preview-build banner — renders only on CF Preview deployments.
+   position: fixed (not sticky) — guaranteed viewport-anchored. */
 html, body { margin: 0; padding: 0; overflow-x: hidden; }
+body.has-preview-banner { padding-top: 40px; }
+@media (max-width: 640px) {
+  body.has-preview-banner { padding-top: 32px; }
+}
 .preview-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: block;
   box-sizing: border-box;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   background: #ff6b00;
   color: white;
   padding: 8px 16px;
@@ -47,8 +51,8 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
 .preview-banner__detail { opacity: 0.95; }
 @media (max-width: 640px) {
   .preview-banner {
-    padding: 6px 12px;
-    font-size: 0.78em;
+    padding: 8px 12px;
+    font-size: 0.82em;
     letter-spacing: 0;
   }
   .preview-banner__detail { display: none; }

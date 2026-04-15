@@ -139,6 +139,11 @@ html, body {
   overflow-x: hidden;
 }
 
+body.has-preview-banner { padding-top: 40px; }
+@media (max-width: 640px) {
+  body.has-preview-banner { padding-top: 32px; }
+}
+
 body {
   font-family: 'Noto Sans SC', sans-serif;
   background: var(--paper);
@@ -153,16 +158,17 @@ body {
 .card.checklist-card { margin-bottom: 30px; }
 .footer .copy { opacity: 0.7; }
 
-/* Preview-build banner — renders only on CF Preview deployments */
+/* Preview-build banner — renders only on CF Preview deployments.
+   position: fixed (not sticky) — guaranteed viewport-anchored regardless of
+   ancestor containing-block quirks or horizontal overflow elsewhere. */
 .preview-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: block;
   box-sizing: border-box;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   background: #ff6b00;
   color: white;
   padding: 8px 16px;
@@ -178,8 +184,8 @@ body {
 .preview-banner__detail { opacity: 0.95; }
 @media (max-width: 640px) {
   .preview-banner {
-    padding: 6px 12px;
-    font-size: 0.78em;
+    padding: 8px 12px;
+    font-size: 0.82em;
     letter-spacing: 0;
   }
   .preview-banner__detail { display: none; }
