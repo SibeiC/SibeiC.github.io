@@ -9,7 +9,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/4/12
+last_updated: 2026/4/15
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
@@ -18,7 +18,7 @@ urls:
   tymetro:     &url_tymetro      "https://www.tymetro.com.tw/tymetro-new/tc/"
   thsrc:       &url_thsrc        "https://www.thsrc.com.tw/"
   railway:     &url_railway      "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW"
-  bus_6670a:   &url_bus_6670a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=6670A&rn=1775391353552&lan=C"
+  bus_6670d:   &url_bus_6670d    "http://www.ntbus.com.tw/hsr6.html"
   bus_6739:    &url_bus_6739     "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C"
   bus_7329a:   &url_bus_7329a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C"
   afrts:       &url_afrts        "https://afrts.forest.gov.tw/"
@@ -29,8 +29,9 @@ urls:
   turumoan:    &url_turumoan     "https://www.turumoan.com.tw/"
   klook_npm:   &url_klook_npm    "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/"
   npm:         &url_npm          "https://www.npm.gov.tw/"
-  bus_6670a_ticket: &url_bus_6670a_ticket "https://ntbus.welcometw.com/tour/MvmY"
+  bus_6670d_ticket: &url_bus_6670d_ticket "https://ntbus.welcometw.com/tour/MvmY"
   bus_6739_ticket:  &url_bus_6739_ticket  "https://ylbus-shop.fontour.com/tour/NOyj"
+  boat_sml_ticket:  &url_boat_sml_ticket  "https://ntbus.welcometw.com/tour/WY09"
 
 cost:
   primary: NT$
@@ -54,8 +55,7 @@ cost:
       icon: 🏨
       items:
         - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
-        - { label: "台中赫丝珀高铁行旅（1 晚）", amount: 83.60, in: secondary }
-        - { label: "水沙连大饭店（1 晚）", amount: 2800, in: primary, note: 估算 }
+        - { label: "水沙连大饭店（2 晚）", amount: 5600, in: primary, note: 估算 }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
         - { label: "S.E.A. 民宿（1 晚）", amount: 3510, in: primary }
@@ -64,7 +64,7 @@ cost:
       icon: 🚆
       items:
         - { label: "高铁 台北→台中", amount: 700, in: primary }
-        - { label: "好行 6670A 台中→水社", amount: 193, in: primary }
+        - { label: "好行 6670D 台中→水社", amount: 193, in: primary }
         - { label: "好行 6739 日月潭→阿里山", amount: 329, in: primary }
         - { label: "林铁本线 阿里山→嘉义（首选）", amount: 600, in: primary }
         - { label: "台铁 嘉义→台南", amount: 107, in: primary }
@@ -103,14 +103,9 @@ hotels:
     dates: 5/28 (四) – 5/30 (六)
     address: 台北市中正区中华路一段 3 号
     map_query: citizenM Taipei North Gate
-  - name: 台中赫丝珀高铁行旅 Hesper HSR Hotel
-    nights: 1
-    dates: 5/30 (六) – 5/31 (日)
-    address: 台中高铁站步行圈内（Day 4 早上在台中高铁停靠点上 6670A）
-    map_query: 台中赫丝珀高铁行旅
   - name: 水沙连大饭店 Shui Sha Lian Hotel
-    nights: 1
-    dates: 5/31 (日) – 6/1 (一)
+    nights: 2
+    dates: 5/30 (六) – 6/1 (一)
     address: 南投县鱼池乡民生街 5 号（日月潭水社）
     map_query: Shui Sha Lian Hotel 水沙连大饭店
   - name: 青山别馆 Chin Shan Villa
@@ -208,16 +203,17 @@ days:
         detail: |
           世界四大博物馆之一，收藏近 70 万件中华艺术珍品，包括翠玉白菜、肉形石、毛公鼎等镇馆之宝。建议 3–4 小时细看。
           <br><br>
-          <strong>🎧 免费定时导览：</strong>上午约 10:00 在 1F 服务台集合，中文场约 1.5 小时。英文/日文场时段官网当日公告，可现场询问。跟导览解说入门比自己瞎看效率高很多。
+          <strong>🎧 免费定时导览（需预约）：</strong>上午约 10:00 在 1F 服务台集合，中文场约 1.5 小时，跟导览解说入门比自己瞎看效率高很多。<strong>需提前 30 天</strong>到故宫官方报名系统（signup.npm.edu.tw）网上预约，热门时段会被抢光。5/29 场次 → <strong>4/29 开放预约</strong>，设个提醒。英文 / 日文场时段官网当日公告，可现场询问。
           <br><br>
           <strong>自驾：</strong>从台北车站出发约 25 分钟，馆区有停车场（小型车 NT$50/小时）。
         tickets:
           - { tag: 全票, value: NT$350 }
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
-          - { tag: 免费导览, value: 约 10:00 1F 服务台集合 }
+          - { tag: 免费导览, value: 约 10:00 集合 · 提前 30 天预约 }
         links:
           - { type: map, label: 地图, query: National Palace Museum Taipei }
           - { type: ticket, label: 故宫官网, url: *url_npm }
+          - { type: ticket, label: 免费导览预约, url: "https://signup.npm.edu.tw/Advice.aspx?ActivityId=6&LangId=1" }
           - { type: ticket, label: Klook 预约, url: *url_klook_npm }
 
       - time: 13:30 – 14:30
@@ -252,10 +248,10 @@ days:
   - num: 3
     color: "#16a085"
     date: 2026-05-30
-    title: 中正纪念堂 · 市府彩虹起点 · 西门町 · HSR 南下台中
+    title: 中正纪念堂 · 市府彩虹起点 · 西门町 · 南下日月潭
     date_label: 5月30日（周六）
-    location: 台北 → 台中
-    toc_label: 5/30 台北 → 台中
+    location: 台北 → 日月潭
+    toc_label: 5/30 台北 → 水社
     items:
       - time: 09:00 – 09:30
         title: 🎒 citizenM · 退房 + 寄放行李
@@ -303,7 +299,7 @@ days:
         detail: |
           南下对号 1321 次，<strong>台北 16:01 发车 → 台中 16:54 抵达</strong>，约 53 分钟（途经南港→台北→桃园→台中 停站）。该车次运行日：一/二/三/四/六，周六 5/30 有车。
           <br><br>
-          抵达台中高铁站后转乘当地交通前往台中过夜的酒店（干城 / 台中车站附近建议搭高铁接驳车或台铁 1 站到台中车站；再步行或计程车到酒店）。
+          抵达台中高铁后直接在站内 / 附近吃晚餐，吃完回到 1F 台湾好行站牌搭 6670D 南下日月潭水社 — 当晚住水沙连。
         tickets:
           - { tag: 标准车厢, value: NT$700 }
           - { tag: 早鸟 65 折, value: NT$455, note: 提前 5–28 天 }
@@ -313,85 +309,83 @@ days:
           - { type: map, label: 台北高铁站, query: HSR Taipei Station }
           - { type: map, label: 台中高铁站, query: HSR Taichung Station }
 
-      - time: 17:30 – 18:30
-        title: 🏨 台中赫丝珀高铁行旅 · Check-in
-        detail: 台中高铁站步行圈内，明早直接走 5 分钟到 台中高铁 就能上 6670A，不用折腾回干城。
-        links:
-          - { type: map, label: 台中赫丝珀高铁行旅, query: 台中赫丝珀高铁行旅 }
-
-      - time: 19:00 – 21:30
-        title: 🍢 台中晚餐
+      - time: 17:00 – 18:45
+        title: 🍢 台中高铁站周边晚餐
         detail: |
-          赫丝珀在高铁站一带，市区餐饮需进市中心。
+          抵达台中高铁后先解决晚餐，吃完直接回 1F 台湾好行站牌上 6670D 南下水社。控制在 18:50 前回到站（20 分钟规则），别错过 19:10 首选班次。
           <br><br>
-          <strong>逢甲夜市：</strong>全台最大夜市之一。从 HSR 搭计程车约 20 分钟，回程同。必吃：大肠包小肠、日船章鱼小丸子、豪大大鸡排、明伦蛋饼。
+          <strong>HSR 站内懒人版：</strong>台中高铁 1F / B1 有餐饮街 — 牛肉面、日式拉面、汉堡、便利店等，最省事。
           <br><br>
-          <strong>第二市场 + 台中车站附近：</strong>先搭高铁接驳车（免费）到台中车站（约 10 分钟），百年老市场步行 10 分钟。山河鲁肉饭、颜记肉包、李海鲁肉饭关门早，多 22:00 前。
+          <strong>HSR 周边小吃：</strong>新乌日车站一带步行可达几家在地面线 / 肉圆店，吃完再走回高铁 1F。
           <br><br>
-          <strong>HSR 附近懒人版：</strong>高铁站 1F 有餐饮街，若当天累就直接吃 — 牛肉面、拉面、汉堡王等快餐。
+          <strong>进市中心（需预留时间）：</strong>搭免费高铁接驳车或台铁 1 站到台中车站，第二市场百年老市场（山河鲁肉饭 / 颜记肉包 / 李海鲁肉饭）。多数 22:00 前打烊，来回含吃饭需 90 分钟以上 — 吃完折返高铁较赶，建议只当备选。
         links:
-          - { type: map, label: 逢甲夜市, query: Fengjia Night Market }
+          - { type: map, label: 台中高铁站美食街, query: 台中高铁站 美食 }
           - { type: map, label: 台中第二市场, query: 台中第二市场 }
-          - { type: map, label: 台中高铁站美食街, query: 台中高铁站 }
+
+      - time: 19:10 – 20:30
+        title: 🚌 台湾好行 6670D · 高铁台中 → 日月潭水社
+        transit: true
+        detail: |
+          <strong>搭 6670D 直达班次</strong>（D = 直达，高铁台中 → 埔里 → 水社，不停暨南 / 九族）。<strong>首选 19:10 发车 → 20:30 抵达水社</strong>，约 80 分钟。吃饱上车小睡正好到酒店。
+          <br><br>
+          <strong>备选 20:10 → 21:30（仅周五~日行驶，5/30 周六可搭）：</strong>留晚餐更多时间，但到店晚、行李整理偏赶。
+          <br><br>
+          <strong>取票：</strong>南投客运线上预购的纸本票到高铁台中站 1F 柜台换取，20 分钟规则 → 最晚 18:50 到站。
+        transit_route:
+          preferred: 6670D 19:10 高铁台中 → 20:30 水社
+          alternatives: ["6670D 20:10 → 21:30（仅周五~日）", "6670D 18:10 → 19:30（若想早到）"]
+        tickets:
+          - { tag: 单程, value: NT$193, note: 高铁台中 → 水社 }
+          - { tag: 悠游卡, value: 约 88 折 }
+        links:
+          - { type: ticket, label: 6670D 时刻表, url: *url_bus_6670d }
+          - { type: ticket, label: 购票（南投客运）, url: *url_bus_6670d_ticket }
+          - { type: ticket, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
+          - { type: map, label: 高铁台中站 好行站牌, query: 台中高铁站 台湾好行 }
+          - { type: map, label: 水社游客中心, query: 水社游客中心 日月潭 }
+
+      - time: 20:30 – 21:00
+        title: 🎒 水沙连大饭店 · 到店 check-in
+        detail: 水社下车步行 3 分钟到水沙连，柜台办入住，早点休息 — 明天九族文化村 + 游湖 + 缆车走一整天。
+        links:
+          - { type: map, label: 水沙连大饭店, query: Shui Sha Lian Hotel 水沙连大饭店 }
     stay:
-      hotel: 台中赫丝珀高铁行旅 Hesper HSR Hotel
+      hotel: 水沙连大饭店 Shui Sha Lian Hotel
+      label: 第 1 晚
 
   - num: 4
     color: "#2e86ab"
     date: 2026-05-31
-    title: 台中 → 日月潭 · 九族文化村
+    title: 日月潭 · 九族文化村
     date_label: 5月31日（周日）
     location: 日月潭
     toc_label: 5/31 日月潭
     items:
-      - time: 07:30 – 07:50
-        title: 🎒 赫丝珀退房 · 走去 台中高铁站
-        detail: 今早退房带上行李走 5 分钟到台中高铁站 6670A 上客点，07:50 前到站取票（20 分钟规则，为 08:10 bus buffer）。
-
-      - time: 08:10 – 09:45
-        title: 🚌 台湾好行 6670A · 台中高铁 → 日月潭水社
-        transit: true
+      - time: 07:30 – 09:30
+        title: 🌅 水社晨间漫步 + 早餐
         detail: |
-          在台中高铁站上客点登车，这班 6670A 从台中干城 07:45 发车，约 08:05–08:10 到台中高铁站接客，之后经埔里、鱼池、九族文化村，约 09:45 抵达水社（终点）。
-          <br><br>
-          <strong>取票：</strong>南投客运预购的纸本票（扫码留底凭证）到柜台取一下；20 分钟规则 → 最晚 07:50 到位。
-          <br><br>
-          <strong>坐到终点 水社下车</strong>，先把行李扔酒店再出门玩。
-        transit_route:
-          preferred: 07:45 干城 → 08:10 台中高铁 → 09:45 水社
-          alternatives: ["08:45", "09:45", "15:45 （末班）"]
-        tickets:
-          - { tag: 单程, value: NT$193, note: 台中高铁→水社 }
-          - { tag: 悠游卡, value: 约 88 折 }
+          昨晚已到水社、行李在房，今早先在水沙连吃早餐（含在房费里），再沿水社码头 → 水社亲水步道散步 30–40 分钟，清晨湖面雾气特别出片。吃饱喝足，今天要走一整天（九族 + 游湖 2 段 + 缆车 2 次）。
         links:
-          - { type: ticket, label: 6670A 时刻表, url: *url_bus_6670a }
-          - { type: ticket, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
-          - { type: ticket, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
-          - { type: map, label: 台中高铁站 6670A 站牌, query: 台中高铁站 6670A }
-          - { type: map, label: 水社游客中心, query: 水社游客中心 日月潭 }
-
-      - time: 09:45 – 10:15
-        title: 🎒 水沙连大饭店 · 行李寄存
-        detail: |
-          水沙连就在水社码头步行 3 分钟内。正式 check-in 通常 15:00 后，但柜台可先帮忙保管行李（多数日月潭酒店均支持）。拿了船票、门票、换装轻便装备再出门，省得拖着大包跑景点。
-        links:
-          - { type: map, label: 水沙连大饭店, query: Shui Sha Lian Hotel 水沙连大饭店 }
+          - { type: map, label: 水社码头, query: 水社码头 }
+          - { type: map, label: 水社亲水步道, query: 水社亲水步道 日月潭 }
 
       - time: 10:30 – 11:15
         title: ⛵ 日月潭游湖船（段 1+2）· 水社 → 玄光寺 → 伊达邵
         transit: true
         detail: |
-          水社码头右边入口 1 号浮排登船。一日票 NT$300 限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社）— 今天会完整用掉这一圈：<strong>出发把段 1+2 用掉到伊达邵，晚上回程再用段 3 回水社</strong>。每半小时一班，乘客下船后由工作人员派发到下一班。
+          水社码头右边入口 1 号浮排登船。一日票 NT$250 限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社）— 今天会完整用掉这一圈：<strong>出发把段 1+2 用掉到伊达邵，晚上回程再用段 3 回水社</strong>。每半小时一班，乘客下船后由工作人员派发到下一班。
           <br><br>
           玄光寺只是中转，无需在此停留（可留到回程顺道拍照）；直接衔接下一班到伊达邵。
         tickets:
-          - { tag: 一日票, value: "NT$300（限搭一圈，今日用满 3 段）" }
+          - { tag: 一日票, value: "NT$250（限搭一圈，今日用满 3 段）" }
           - { tag: 营运时间, value: "09:00 – 17:00（末班 17:00 伊达邵开船）" }
           - { tag: 班次, value: 每半小时一班 }
         links:
           - { type: map, label: 水社码头, query: 水社码头 }
           - { type: map, label: 玄光寺, query: 玄光寺 日月潭 }
           - { type: map, label: 伊达邵码头, query: 伊达邵码头 }
+          - { type: ticket, label: 购票（南投客运）, url: *url_boat_sml_ticket }
           - { type: ticket, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
           - { type: ticket, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
 
@@ -441,9 +435,9 @@ days:
         links:
           - { type: map, label: 水社码头, query: 水社码头 }
 
-      - time: "17:00"
-        title: 🏨 水沙连大饭店 · 正式 check-in
-        detail: 早上已经寄存过行李，这时候拿钥匙上楼、冲个澡、换衣服准备去觅食或洗衣。
+      - time: "17:00 – 19:30"
+        title: 🏨 水沙连大饭店 · 休整 + 觅食
+        detail: 回房间冲个澡、换衣服，再出门吃晚餐（水社码头周边小吃摊 / 邵族料理），顺路把脏衣服带去洗衣店。
 
       - time: 19:30 – 21:30
         title: 🧺 招茗自助洗衣店 · 行程过半补给
@@ -455,9 +449,10 @@ days:
         links:
           - { type: map, label: 招茗自助洗衣店, query: 招茗自助洗衣店 日月潭 }
     note: |
-      <strong>💡 Day 4 建议：</strong>住日月潭水社比住台中更有效率 — 隔天 08:00 从水社出发搭台湾好行去阿里山，避免再花 1.5 小时从台中赶回日月潭。
+      <strong>💡 为什么住 2 晚水沙连：</strong>5/30 晚从台中高铁搭 6670D 直上水社，隔天九族 + 游湖不用起早赶车；6/1 早上从水社 08:00 上 6739 直达阿里山，全程一次到位。
     stay:
       hotel: 水沙连大饭店 Shui Sha Lian Hotel
+      label: 第 2 晚
 
   - num: 5
     color: "#27ae60"
@@ -812,11 +807,15 @@ booking_channels:
   - name: 机场捷运
     links: [{ label: tymetro.com.tw, url: *url_tymetro }]
     note: 悠游卡直刷
-  - name: 台湾好行 6670A（台中-日月潭）
+  - name: 台湾好行 6670D（台中-日月潭水社 直达）
     links:
-      - { label: 时刻表, url: *url_bus_6670a }
-      - { label: 南投客运购票, url: *url_bus_6670a_ticket }
+      - { label: 6670D 时刻表, url: *url_bus_6670d }
+      - { label: 南投客运购票, url: *url_bus_6670d_ticket }
     note: 亦可现场购票
+  - name: 日月潭游湖船（南投客运）
+    links:
+      - { label: 购票, url: *url_boat_sml_ticket }
+    note: NT$250 一日票
   - name: 台湾好行 6739（日月潭-阿里山）
     links:
       - { label: 时刻表, url: *url_bus_6739 }
