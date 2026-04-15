@@ -54,7 +54,7 @@ cost:
       icon: 🏨
       items:
         - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
-        - { label: "台中 (1 晚)", amount: 3000, in: primary, note: 估算 · 未预订 }
+        - { label: "Hotel Hesper HSR 台中（1 晚）", amount: 83.60, in: secondary }
         - { label: "水沙连大饭店（1 晚）", amount: 2800, in: primary, note: 估算 }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
@@ -103,11 +103,11 @@ hotels:
     dates: 5/28 (四) – 5/30 (六)
     address: 台北市中正区中华路一段 3 号
     map_query: citizenM Taipei North Gate
-  - name: 台中一晚（待订）
+  - name: Hotel Hesper HSR - Taichung
     nights: 1
     dates: 5/30 (六) – 5/31 (日)
-    address: 建议选台中车站 / 干城转运站步行圈内酒店（Day 4 早上 07:45 在 6670A 发车）
-    map_query: 台中 火车站 饭店
+    address: 台中高铁站步行圈内（Day 4 早上在台中高铁停靠点上 6670A）
+    map_query: Hotel Hesper HSR Taichung
   - name: 水沙连大饭店 Shui Sha Lian Hotel
     nights: 1
     dates: 5/31 (日) – 6/1 (一)
@@ -314,23 +314,27 @@ days:
           - { type: map,    icon: 📍, label: 台中高铁站, query: HSR Taichung Station }
 
       - time: 17:30 – 18:30
-        title: 🏨 台中酒店 · Check-in
-        detail: 选台中车站 / 干城转运站步行圈内酒店，明早 6670A 07:45 从台中干城发车（搭车前要取票，最晚 07:25 到站）。
+        title: 🏨 Hotel Hesper HSR · Check-in
+        detail: 台中高铁站步行圈内，明早直接走 5 分钟到 台中高铁 就能上 6670A，不用折腾回干城。
         links:
-          - { type: map, icon: 📍, label: 台中干城站, query: 台中干城转运站 }
-          - { type: map, icon: 📍, label: 台中车站, query: 台中车站 }
+          - { type: map, icon: 📍, label: Hotel Hesper HSR, query: Hotel Hesper HSR Taichung }
 
       - time: 19:00 – 21:30
-        title: 🍢 台中晚餐 · 逢甲夜市 或 第二市场
+        title: 🍢 台中晚餐
         detail: |
-          <strong>逢甲夜市：</strong>全台最大夜市之一，必吃：大肠包小肠、日船章鱼小丸子、豪大大鸡排、明伦蛋饼。计程车从台中车站约 20 分钟，搭公车 35 分钟。
+          Hotel Hesper 在高铁站一带，市区餐饮需进市中心。
           <br><br>
-          <strong>第二市场（懒人版）：</strong>百年老市场、步行可达台中车站 10 分钟。山河鲁肉饭、颜记肉包、丁山肉丸、李海鲁肉饭都是老字号，关门早（多 22:00 前）。不想折腾可选这个。
+          <strong>逢甲夜市：</strong>全台最大夜市之一。从 HSR 搭计程车约 20 分钟，回程同。必吃：大肠包小肠、日船章鱼小丸子、豪大大鸡排、明伦蛋饼。
+          <br><br>
+          <strong>第二市场 + 台中车站附近：</strong>先搭高铁接驳车（免费）到台中车站（约 10 分钟），百年老市场步行 10 分钟。山河鲁肉饭、颜记肉包、李海鲁肉饭关门早，多 22:00 前。
+          <br><br>
+          <strong>HSR 附近懒人版：</strong>高铁站 1F 有餐饮街，若当天累就直接吃 — 牛肉面、拉面、汉堡王等快餐。
         links:
           - { type: map, icon: 📍, label: 逢甲夜市, query: Fengjia Night Market }
           - { type: map, icon: 📍, label: 台中第二市场, query: 台中第二市场 }
+          - { type: map, icon: 📍, label: 台中高铁站美食街, query: 台中高铁站 }
     stay:
-      hotel: 台中一晚（待订）
+      hotel: Hotel Hesper HSR - Taichung
 
   - num: 4
     color: "#2e86ab"
@@ -340,28 +344,30 @@ days:
     location: 日月潭
     toc_label: 5/31 日月潭
     items:
-      - time: 07:00 – 07:25
-        title: 🎒 酒店退房 · 走去 台中干城站
-        detail: 昨晚在台中过夜，今早退房带上行李走去台中干城转运站（南投客运发车点），07:25 前到站取票。
+      - time: 07:30 – 07:50
+        title: 🎒 Hotel Hesper 退房 · 走去 台中高铁站
+        detail: 今早退房带上行李走 5 分钟到台中高铁站 6670A 上客点，07:50 前到站取票（20 分钟规则，为 08:10 bus buffer）。
 
-      - time: 07:45 – 09:45
-        title: 🚌 台湾好行 6670A · 台中干城 → 日月潭水社
+      - time: 08:10 – 09:45
+        title: 🚌 台湾好行 6670A · 台中高铁 → 日月潭水社
         transit: true
         detail: |
-          从台中干城转运站 07:45 首班车上车，途经台中高铁站 → 埔里 → 鱼池 → 九族文化村，<strong>坐到终点水社</strong>约 2 小时。坐到水社下车，先把行李扔酒店再出门玩。
+          在台中高铁站上客点登车，这班 6670A 从台中干城 07:45 发车，约 08:05–08:10 到台中高铁站接客，之后经埔里、鱼池、九族文化村，约 09:45 抵达水社（终点）。
           <br><br>
-          <strong>取票：</strong>最晚 07:25 到干城站南投客运柜台取纸本票（预购扫码留底的凭证），硬性 20 分钟规则。
+          <strong>取票：</strong>南投客运预购的纸本票（扫码留底凭证）到柜台取一下；20 分钟规则 → 最晚 07:50 到位。
+          <br><br>
+          <strong>坐到终点 水社下车</strong>，先把行李扔酒店再出门玩。
         transit_route:
-          preferred: 07:45 干城 → 09:45 水社
+          preferred: 07:45 干城 → 08:10 台中高铁 → 09:45 水社
           alternatives: ["08:45", "09:45", "15:45 （末班）"]
         tickets:
-          - { tag: 单程, value: NT$235, note: 台中干城→水社 }
+          - { tag: 单程, value: NT$193, note: 台中高铁→水社 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
           - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: *url_bus_6670a }
           - { type: ticket, icon: 🎫, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
           - { type: ticket, icon: 🎫, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
-          - { type: map,    icon: 📍, label: 台中干城站, query: 台中干城转运站 }
+          - { type: map,    icon: 📍, label: 台中高铁站 6670A 站牌, query: 台中高铁站 6670A }
           - { type: map,    icon: 📍, label: 水社游客中心, query: 水社游客中心 日月潭 }
 
       - time: 09:45 – 10:15
