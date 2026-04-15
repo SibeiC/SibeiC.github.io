@@ -1,7 +1,37 @@
+{%- comment -%}
+  Renders a single "chip" <a> link for a trip item's links: entry.
+
+  Expected link object shape:
+    label: <string>                    visible text
+    type:  {map | ticket | <omit>}     drives chip colour AND default icon
+    url:   <string>                    full URL (most link types)
+    query: <string>                    Google Maps search keyword (map chips only)
+    icon:  <string>                    OPTIONAL emoji override — omit when the
+                                       default icon for the type is fine
+
+  Default icon per type:
+    map    → 📍   (pin)
+    ticket → 🎫   (ticket stub)
+    (none) → 🔗   (generic link)
+
+  Override `icon:` only when a link genuinely needs a non-default emoji
+  (e.g. 🛵 for a scooter-rental ticket link, 🏨 for a hotel-specific ticket,
+  🎒 for a luggage-related link, etc.). For standard map/ticket links you
+  should NOT specify `icon:` — the include fills it in.
+{%- endcomment -%}
 {%- assign link = include.link -%}
 {%- if link.query -%}
   {%- assign href = link.query | url_encode | prepend: 'https://www.google.com/maps/search/?api=1&query=' -%}
 {%- else -%}
   {%- assign href = link.url -%}
 {%- endif -%}
-<a class="chip{% if link.type %} {{ link.type }}{% endif %}" href="{{ href }}" target="_blank" rel="noopener">{{ link.icon }} {{ link.label }}</a>
+{%- if link.icon -%}
+  {%- assign icon = link.icon -%}
+{%- elsif link.type == 'map' -%}
+  {%- assign icon = '📍' -%}
+{%- elsif link.type == 'ticket' -%}
+  {%- assign icon = '🎫' -%}
+{%- else -%}
+  {%- assign icon = '🔗' -%}
+{%- endif -%}
+<a class="chip{% if link.type %} {{ link.type }}{% endif %}" href="{{ href }}" target="_blank" rel="noopener">{{ icon }} {{ link.label }}</a>

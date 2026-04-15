@@ -66,7 +66,7 @@
 #         urls:
 #           klook_101: &url_klook_101 "https://www.klook.com/zh-CN/activity/1659-…/"
 #         # … later in a day item:
-#         - { type: ticket, icon: 🎫, label: Klook, url: *url_klook_101 }
+#         - { type: ticket, label: Klook, url: *url_klook_101 }
 #         # … and in booking_channels:
 #         - name: 台北 101 观景台
 #           links: [{ label: Klook, url: *url_klook_101 }]
@@ -191,8 +191,8 @@ days:                                 # [REQUIRED] <array<object>>
         tickets:                      # [OPTIONAL][AI:RESEARCH] price tags for the activity / transit. Look up current official rates.
           - { tag: 票种, value: 价格或时间, note: 附注 }
         links:                        # [REQUIRED in spirit][AI:RESEARCH] always add: a 📍 map chip; a 🎫 ticket/official chip if applicable
-          - { type: map,    icon: 📍, label: 地图标签, query: 地图搜索关键词 }      # query = English name + city (best Maps results)
-          - { type: ticket, icon: 🎫, label: 购票链接, url: "https://..." }      # official site preferred; Klook/KKday as alternative
+          - { type: map,    label: 地图标签, query: 地图搜索关键词 }       # query = English name + city (best Maps results)
+          - { type: ticket, label: 购票链接, url: "https://..." }        # official site preferred; Klook/KKday as alternative
     note: |                           # [OPTIONAL][AI:INFER] yellow callout for important warnings (抢票提醒, 季节限制, 交通衔接风险). HTML allowed.
       <strong>💡 提示：</strong>这一天的总结性提醒
     stay:                             # [OPTIONAL] References an entry in top-level `hotels:` list
@@ -244,15 +244,18 @@ checklist:                            # [OPTIONAL] <array<string>> each line get
 # Link object schema (used by flights[].links, hotels (via map_query/map_url),
 # days[].items[].links):
 #
-#   icon:  <string>  emoji shown before label, e.g. 📍 🎫 🔗 🛵
 #   label: <string>  visible text on the chip
 #   type:  {ticket | map | <omit>}
-#          • ticket → red chip (purchase / booking links)
-#          • map    → green chip (location pins)
-#          • omit   → blue chip (default; generic info / official sites)
+#          • ticket → red chip (purchase / booking links) — default icon 🎫
+#          • map    → green chip (location pins) — default icon 📍
+#          • omit   → blue chip (generic info / official sites) — default icon 🔗
 #   url:   <string>  full URL — use for any non-map link
 #   query: <string>  Google Maps search keyword — auto-generates the maps URL.
 #                    Use INSTEAD of `url` for map chips. Ignored if `url` present.
+#   icon:  <string>  OPTIONAL emoji override — omit for standard map/ticket/no-type
+#                    links (the include auto-fills from type). Only specify when a
+#                    link genuinely needs a non-default emoji, e.g. 🛵 for scooter
+#                    rental, 🎒 for luggage, 🏨 for hotel-specific booking.
 # ─────────────────────────────────────────────────────────────────────────────
 ---
 
