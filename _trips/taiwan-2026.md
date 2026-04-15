@@ -632,7 +632,7 @@ days:
           - { tag: 开放, value: 09:00–18:00（周一休） }
         links:
           - { type: map, label: 地图, query: National Museum of Taiwan Literature }
-          - { type: ticket, icon: 🔗, label: 官网, url: "https://www.nmtl.gov.tw/" }
+          - { label: 官网, url: "https://www.nmtl.gov.tw/" }
 
       - time: 11:30 – 13:00
         title: 🍜 国华街小吃集散地 · 午餐
@@ -728,7 +728,7 @@ days:
         links:
           - { type: map, label: 集合地点, query: 多罗满赏鲸 花莲市华东15号 }
           - { type: ticket, label: Klook 订票, url: *url_klook_whale }
-          - { type: ticket, icon: 🔗, label: 多罗满官网, url: *url_turumoan }
+          - { label: 多罗满官网, url: *url_turumoan }
 
       - time: 18:30 – 22:00
         title: 🍢 东大门夜市

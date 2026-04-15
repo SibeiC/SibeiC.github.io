@@ -20,10 +20,17 @@
   should NOT specify `icon:` — the include fills it in.
 {%- endcomment -%}
 {%- assign link = include.link -%}
-{%- if link.query -%}
-  {%- assign href = link.query | url_encode | prepend: 'https://www.google.com/maps/search/?api=1&query=' -%}
-{%- else -%}
+{%- comment -%}
+  href precedence (matches the template.md schema):
+  — `url` wins when present (any chip type)
+  — otherwise fall back to `query` (encoded into a Google Maps search URL;
+    intended for map chips, but technically works for any type if url is
+    absent)
+{%- endcomment -%}
+{%- if link.url -%}
   {%- assign href = link.url -%}
+{%- elsif link.query -%}
+  {%- assign href = link.query | url_encode | prepend: 'https://www.google.com/maps/search/?api=1&query=' -%}
 {%- endif -%}
 {%- if link.icon -%}
   {%- assign icon = link.icon -%}
