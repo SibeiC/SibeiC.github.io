@@ -21,7 +21,7 @@ urls:
   bus_6670d:   &url_bus_6670d    "http://www.ntbus.com.tw/hsr6.html"
   bus_6739:    &url_bus_6739     "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C"
   bus_7329a:   &url_bus_7329a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C"
-  afrts:       &url_afrts        "https://afrts.forest.gov.tw/"
+  afrts:       &url_afrts        "https://afrts.forest.gov.tw/OT01_1.aspx"
   nantoubus:   &url_nantoubus    "https://www.nantoubus.com.tw/"
   klook_nine:  &url_klook_nine   "https://www.klook.com/zh-CN/activity/33027-formosa-aboriginal-cultural-village-ticket-sun-moon-lake-boat-pass/"
   kkday_nine:  &url_kkday_nine   "https://www.kkday.com/zh-cn/product/18440-taiwan-formosan-aboriginal-culture-village-sun-moon-lake-ropeway-ticket"
@@ -77,7 +77,8 @@ cost:
     - name: 门票与体验
       icon: 🎫
       items:
-        - { label: 故宫博物院, amount: 350, in: primary }
+        - { label: 故宫博物院 全票, amount: 350, in: primary }
+        - { label: "故宫 语音导览子机（定时导览必租）", amount: 30, in: primary }
         - { label: "九族 + 游湖套票（中台湾好玩卡）", amount: 1050, in: primary }
         - { label: "阿里山入园 + 支线 ×2", amount: 400, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
@@ -204,13 +205,14 @@ days:
         detail: |
           世界四大博物馆之一，收藏近 70 万件中华艺术珍品，包括翠玉白菜、肉形石、毛公鼎等镇馆之宝。建议 3–4 小时细看。
           <br><br>
-          <strong>🎧 免费定时导览（需预约）：</strong>上午约 10:00 在 1F 服务台集合，中文场约 1.5 小时，跟导览解说入门比自己瞎看效率高很多。<strong>需提前 30 天</strong>到故宫官方报名系统（signup.npm.edu.tw）网上预约，热门时段会被抢光。5/29 场次 → <strong>4/29 开放预约</strong>，设个提醒。英文 / 日文场时段官网当日公告，可现场询问。
+          <strong>🎧 免费定时导览（需预约）：</strong>中文场每日两场，<strong>上午 10:30 / 下午 14:30</strong>，每场 20 人，1 F 服务台集合，约 1.5 小时，跟导览解说入门比自己瞎看效率高很多。到故宫官方报名系统（signup.npm.edu.tw）网上预约，<strong>最迟参观前 3 天</strong>（含当日）截止，热门时段会被抢光 — 愈早订愈稳。参加者另需租用<strong>语音导览子机 NT$30/人</strong>（自 2023 年起实施）。英文 / 日文场时段官网当日公告，可现场询问。
           <br><br>
           <strong>自驾：</strong>从台北车站出发约 25 分钟，馆区有停车场（小型车 NT$50/小时）。
         tickets:
           - { tag: 全票, value: NT$350 }
+          - { tag: 子机租金, value: NT$30, note: 参加定时导览者每人必租 }
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
-          - { tag: 免费导览, value: 约 10:00 集合 · 提前 30 天预约 }
+          - { tag: 免费导览, value: 10:30 / 14:30 · 参观前 3 天截止预约 }
         links:
           - { type: map, label: 地图, query: National Palace Museum Taipei }
           - { type: ticket, label: 故宫官网, url: *url_npm }
