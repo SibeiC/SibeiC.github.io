@@ -132,6 +132,13 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Noto Sans SC', sans-serif;
   background: var(--paper);
@@ -149,8 +156,10 @@ body {
 /* Preview-build banner — renders only on CF Preview deployments */
 .preview-banner {
   display: block;
-  width: 100%;
-  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   position: sticky;
   top: 0;
   z-index: 1000;
