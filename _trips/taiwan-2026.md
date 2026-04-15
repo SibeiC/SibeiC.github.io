@@ -71,7 +71,7 @@ cost:
         - { label: "台铁自强号 台南→花莲", amount: 962, in: primary }
         - { label: "台铁 花莲→台北", amount: 440, in: primary }
         - { label: "机场捷运（往返）", amount: 300, in: primary }
-        - { label: "单日租车 5/29（固得租車）", amount: 2500, in: primary, note: 估算 · 未预订 }
+        - { label: "单日租车 5/29（固得租車）", amount: 1371, in: primary }
 
     - name: 门票与体验
       icon: 🎫
@@ -193,12 +193,12 @@ days:
         title: 🚗 固得租車 台北车站店 · 取车
         transit: true
         detail: |
-          单日租车，方便当日跨故宫博物院（士林）、阳明山国家公园（北投）两个景点 — 公车换乘需近 2 小时，自驾约 40 分钟。门市营业时间 <strong>09:00 – 21:00</strong>，取车最早 09:00，还车最晚 21:00 前。
+          单日租车，方便当日跨故宫博物院（士林）、阳明山国家公园（北投）两个景点 — 公车换乘需近 2 小时，自驾约 40 分钟。已预订经济款五人座（随机车型），取还车都在台北车站店，取车 09:00 / 还车 20:30 前。
           <br><br>
-          <strong>⚠️ 需国际驾照 + 原本国驾照 + 护照。</strong>预订时留意保险（建议加购 CDW 全险）与还车时油量要求。
+          <strong>⚠️ 取车时带齐：国际驾照 + 原本国驾照 + 护照。</strong>还车无需加油 — 按行驶里程计费 NT$ 3.1/km。
         tickets:
-          - { tag: 预估, value: "NT$ 2,500", note: 含基础险 · 未预订 }
-          - { tag: 门市营业, value: 09:00 – 21:00 }
+          - { tag: 已订, value: "NT$ 1,371", note: 经济款五人座 · 随机车型 }
+          - { tag: 取还车, value: 09:00 取 / 20:30 前还 }
         links:
           - { type: map, label: 取车门市, query: 固得租車 台北車站店 }
           - { type: ticket, label: GoodCars 官网预订, url: "https://www.goodcars.tw/" }
@@ -242,7 +242,7 @@ days:
       - time: 19:30 – 20:00
         title: 🚗 固得租車 台北车站店 · 还车
         transit: true
-        detail: 还车前记得加满油（取车时的油表刻度为准）。门市营业至 21:00，20:00 前到店较宽松，最晚 21:00 前必须到。
+        detail: 按里程计费（NT$ 3.1/km），无需加油。最晚 20:30 前到店还车，20:00 前更宽松。
         links:
           - { type: map, label: 还车门市, query: 固得租車 台北車站店 }
     stay:
