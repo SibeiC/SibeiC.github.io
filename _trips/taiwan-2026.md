@@ -65,7 +65,7 @@ cost:
       icon: 🚆
       items:
         - { label: "高铁 台北→台中", amount: 700, in: primary }
-        - { label: "好行 6670D 高铁台中→水社", amount: 193, in: primary }
+        - { label: "好行 6670D 台中→水社", amount: 193, in: primary }
         - { label: "好行 6739 日月潭→阿里山", amount: 329, in: primary }
         - { label: "林铁本线 阿里山→嘉义（首选）", amount: 600, in: primary }
         - { label: "台铁 嘉义→台南", amount: 107, in: primary }
@@ -341,7 +341,7 @@ days:
           - { tag: 单程, value: NT$193, note: 高铁台中 → 水社 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
-          - { type: ticket, label: 6670 时刻表, url: *url_bus_6670 }
+          - { type: ticket, label: 6670D 时刻表, url: *url_bus_6670 }
           - { type: ticket, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
           - { type: ticket, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
           - { type: map, label: 高铁台中站 好行站牌, query: 台中高铁站 台湾好行 }
@@ -376,7 +376,7 @@ days:
         title: ⛵ 日月潭游湖船（段 1+2）· 水社 → 玄光寺 → 伊达邵
         transit: true
         detail: |
-          水社码头右边入口 1 号浮排登船。一日票 NT$300 限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社）— 今天会完整用掉这一圈：<strong>出发把段 1+2 用掉到伊达邵，晚上回程再用段 3 回水社</strong>。每半小时一班，乘客下船后由工作人员派发到下一班。
+          水社码头右边入口 1 号浮排登船。一日票 NT$250 限搭一圈（水社 → 玄光寺 → 伊达邵 → 水社）— 今天会完整用掉这一圈：<strong>出发把段 1+2 用掉到伊达邵，晚上回程再用段 3 回水社</strong>。每半小时一班，乘客下船后由工作人员派发到下一班。
           <br><br>
           玄光寺只是中转，无需在此停留（可留到回程顺道拍照）；直接衔接下一班到伊达邵。
         tickets:
@@ -818,7 +818,7 @@ booking_channels:
   - name: 日月潭游湖船（南投客运）
     links:
       - { label: 购票, url: *url_boat_sml_ticket }
-    note: NT$ 250 一日票
+    note: NT$250 一日票
   - name: 台湾好行 6739（日月潭-阿里山）
     links:
       - { label: 时刻表, url: *url_bus_6739 }
