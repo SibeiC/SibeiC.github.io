@@ -54,7 +54,7 @@ cost:
       icon: 🏨
       items:
         - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
-        - { label: "Hotel Hesper HSR 台中（1 晚）", amount: 83.60, in: secondary }
+        - { label: "台中赫丝珀高铁行旅（1 晚）", amount: 83.60, in: secondary }
         - { label: "水沙连大饭店（1 晚）", amount: 2800, in: primary, note: 估算 }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
@@ -103,21 +103,21 @@ hotels:
     dates: 5/28 (四) – 5/30 (六)
     address: 台北市中正区中华路一段 3 号
     map_query: citizenM Taipei North Gate
-  - name: Hotel Hesper HSR - Taichung
+  - name: 台中赫丝珀高铁行旅 Hesper HSR Hotel
     nights: 1
     dates: 5/30 (六) – 5/31 (日)
     address: 台中高铁站步行圈内（Day 4 早上在台中高铁停靠点上 6670A）
-    map_query: Hotel Hesper HSR Taichung
+    map_query: 台中赫丝珀高铁行旅
   - name: 水沙连大饭店 Shui Sha Lian Hotel
     nights: 1
     dates: 5/31 (日) – 6/1 (一)
     address: 南投县鱼池乡民生街 5 号（日月潭水社）
     map_query: Shui Sha Lian Hotel 水沙连大饭店
-  - name: 青山别馆 Chinshan Hotel
+  - name: 青山别馆 Chin Shan Villa
     nights: 1
     dates: 6/1 (一) – 6/2 (二)
     address: 嘉义县阿里山乡 42 号
-    map_query: Chinshan Hotel Alishan 青山别馆
+    map_query: Chin Shan Villa Alishan 青山别馆
   - name: 禧榕轩大饭店 Grand Banyan Hotel
     nights: 2
     dates: 6/2 (二) – 6/4 (四)
@@ -155,28 +155,28 @@ days:
         detail: |
           Scoot TR 874 14:15 落地桃园机场第一航厦。搭乘桃园机场捷运（MRT）直达台北车站，车程：直达车 35 分钟 / 普通车 50 分钟。
         links:
-          - { type: ticket, icon: 🎫, label: 机场捷运官网, url: *url_tymetro }
-          - { type: map,    icon: 📍, label: 机场捷运 A12, query: Taoyuan Airport MRT Terminal 1 }
+          - { type: ticket, label: 机场捷运官网, url: *url_tymetro }
+          - { type: map, label: 机场捷运 A12, query: Taoyuan Airport MRT Terminal 1 }
 
       - time: 16:00 – 17:00
         title: 🏨 citizenM Taipei North Gate · Check-in
         detail: 台北车站步行约 8 分钟，邻近北门捷运站。放行李换装。
         links:
-          - { type: map, icon: 📍, label: 地图, query: citizenM Taipei North Gate }
-          - { icon: 🔗, label: 酒店官网, url: "https://www.citizenm.com/hotels/asia/taipei/taipei-north-gate-hotel" }
+          - { type: map, label: 地图, query: citizenM Taipei North Gate }
+          - { label: 酒店官网, url: "https://www.citizenm.com/hotels/asia/taipei/taipei-north-gate-hotel" }
 
       - time: 18:30 – 19:30
         title: ☕ 赤峰街 Chifeng St（大同区）
         detail: 老街改造的文青聚落，巷弄里藏着老五金行、复古咖啡馆与选物店。日落后光影最美，适合慢慢散步、拍照、逛独立小店。搭捷运中山站 1/4 号出口即达。
         links:
-          - { type: map, icon: 📍, label: 赤峰街, query: 赤峰街 大同区 }
+          - { type: map, label: 赤峰街, query: 赤峰街 大同区 }
 
       - time: 20:00 – 22:30
         title: 🍜 士林夜市 Shilin Night Market
         detail: 台北最具代表性的大型夜市，小吃、服饰、杂货一应俱全。必吃：豪大大鸡排、生炒花枝、士林大香肠、青蛙下蛋、阿辉面线。搭捷运至「剑潭站」1 号出口，勿搭到「士林站」。
         links:
-          - { type: map, icon: 📍, label: 士林夜市, query: 士林夜市 }
-          - { type: map, icon: 📍, label: 剑潭站, query: 剑潭站 }
+          - { type: map, label: 士林夜市, query: 士林夜市 }
+          - { type: map, label: 剑潭站, query: 剑潭站 }
     stay:
       hotel: citizenM Taipei North Gate
       label: 第 1 晚 / 共 3 晚
@@ -200,8 +200,8 @@ days:
           - { tag: 预估, value: "NT$ 2,500", note: 含基础险 · 未预订 }
           - { tag: 门市营业, value: 09:00 – 21:00 }
         links:
-          - { type: map,    icon: 📍, label: 取车门市, query: 固得租車 台北車站店 }
-          - { type: ticket, icon: 🎫, label: GoodCars 官网预订, url: "https://www.goodcars.tw/" }
+          - { type: map, label: 取车门市, query: 固得租車 台北車站店 }
+          - { type: ticket, label: GoodCars 官网预订, url: "https://www.goodcars.tw/" }
 
       - time: 10:00 – 13:30
         title: 🏛️ 国立故宫博物院
@@ -216,15 +216,15 @@ days:
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
           - { tag: 免费导览, value: 约 10:00 1F 服务台集合 }
         links:
-          - { type: map,    icon: 📍, label: 地图, query: National Palace Museum Taipei }
-          - { type: ticket, icon: 🎫, label: 故宫官网, url: *url_npm }
-          - { type: ticket, icon: 🎫, label: Klook 预约, url: *url_klook_npm }
+          - { type: map, label: 地图, query: National Palace Museum Taipei }
+          - { type: ticket, label: 故宫官网, url: *url_npm }
+          - { type: ticket, label: Klook 预约, url: *url_klook_npm }
 
       - time: 13:30 – 14:30
         title: 🍱 午餐 · 故宫晶华 或 士林老街
         detail: 故宫内的晶华餐厅有「国宝宴」菜色，可吃到翠玉白菜、肉形石造型料理。预算有限可开车下山到士林吃铭传大学周边小吃。
         links:
-          - { type: map, icon: 📍, label: 故宫晶华, query: 故宫晶华 }
+          - { type: map, label: 故宫晶华, query: 故宫晶华 }
 
       - time: 14:45 – 18:45
         title: 🌋 阳明山国家公园
@@ -233,18 +233,18 @@ days:
           <br><br>
           <strong>自驾：</strong>从故宫约 30 分钟经阳金公路上山。各景点停车场多为免费，周末车位紧张建议早上进山。
         links:
-          - { type: map, icon: 📍, label: 阳明山, query: Yangmingshan National Park }
-          - { type: map, icon: 📍, label: 小油坑, query: 小油坑 Xiaoyoukeng }
-          - { type: map, icon: 📍, label: 冷水坑, query: 冷水坑 }
-          - { type: map, icon: 📍, label: 擎天岗, query: 擎天岗 }
-          - { type: map, icon: 📍, label: 竹子湖, query: 竹子湖 阳明山 }
+          - { type: map, label: 阳明山, query: Yangmingshan National Park }
+          - { type: map, label: 小油坑, query: 小油坑 Xiaoyoukeng }
+          - { type: map, label: 冷水坑, query: 冷水坑 }
+          - { type: map, label: 擎天岗, query: 擎天岗 }
+          - { type: map, label: 竹子湖, query: 竹子湖 阳明山 }
 
       - time: 19:30 – 20:00
         title: 🚗 固得租車 台北车站店 · 还车
         transit: true
         detail: 还车前记得加满油（取车时的油表刻度为准）。门市营业至 21:00，20:00 前到店较宽松，最晚 21:00 前必须到。
         links:
-          - { type: map, icon: 📍, label: 还车门市, query: 固得租車 台北車站店 }
+          - { type: map, label: 还车门市, query: 固得租車 台北車站店 }
     stay:
       hotel: citizenM Taipei North Gate
       label: 第 2 晚
@@ -252,7 +252,7 @@ days:
   - num: 3
     color: "#16a085"
     date: 2026-05-30
-    title: 中正纪念堂 · 101 彩虹路 · 西门町 · HSR 南下台中
+    title: 中正纪念堂 · 市府彩虹起点 · 西门町 · HSR 南下台中
     date_label: 5月30日（周六）
     location: 台北 → 台中
     toc_label: 5/30 台北 → 台中
@@ -268,30 +268,30 @@ days:
           - { tag: 入场, value: 免费 }
           - { tag: 交接仪式, value: 每日 09:00–17:00 整点 }
         links:
-          - { type: map, icon: 📍, label: 地图, query: Chiang Kai-shek Memorial Hall }
+          - { type: map, label: 地图, query: Chiang Kai-shek Memorial Hall }
 
       - time: 11:30 – 13:00
         title: 🍜 午餐 · 鼎泰丰 信义店
         detail: 米其林推荐小笼包名店，信义 101 分店排队比永康街总店快。必点：小笼包、蟹粉小笼、豆沙包。
         links:
-          - { type: map, icon: 📍, label: 鼎泰丰 信义店, query: 鼎泰丰 信义店 }
+          - { type: map, label: 鼎泰丰 信义店, query: 鼎泰丰 信义店 }
 
       - time: 13:00 – 13:30
-        title: 🌈 Taipei 101 彩虹路（Rainbow Starting Line）
+        title: 🌈 市府彩虹起点（Rainbow Starting Line）
         detail: 捷运市政府站 2 号出口旁的地面彩虹人行道，以 101 大楼为背景的免费打卡点。只拍照不上楼 — 不进 89F 观景台、不做 Skyline 460。
         tickets:
           - { tag: 门票, value: 免费 }
         links:
-          - { type: map, icon: 📍, label: 101 彩虹路, query: Rainbow Starting Line Taipei City Hall }
-          - { type: map, icon: 📍, label: Taipei 101（作背景）, query: Taipei 101 }
+          - { type: map, label: 市府彩虹起点, query: Rainbow Starting Line Taipei City Hall }
+          - { type: map, label: Taipei 101（作背景）, query: Taipei 101 }
 
       - time: 13:45 – 15:15
         title: 🛍️ 西门町 Ximending
         detail: 台北最热闹的年轻潮流商圈，有「台北原宿」之称。以西门红楼为中心，潮牌、电影院、刺青街、小吃林立。推荐：阿宗面线、鸭肉扁、老天禄卤味。<strong>彩虹 Six 斑马线</strong>就在 6 号出口旁，2019 年首条彩虹人行道，顺路打卡。板南线 1 站到台北车站取行李。
         links:
-          - { type: map, icon: 📍, label: 西门町, query: 西门町 Ximending }
-          - { type: map, icon: 📍, label: 西门红楼, query: 西门红楼 }
-          - { type: map, icon: 📍, label: 彩虹六号斑马线, query: Rainbow Six Ximending }
+          - { type: map, label: 西门町, query: 西门町 Ximending }
+          - { type: map, label: 西门红楼, query: 西门红楼 }
+          - { type: map, label: 彩虹六号斑马线, query: Rainbow Six Ximending }
 
       - time: 15:30 – 16:00
         title: 🎒 citizenM 取行李 · 走去台北高铁站
@@ -308,21 +308,21 @@ days:
           - { tag: 标准车厢, value: NT$700 }
           - { tag: 早鸟 65 折, value: NT$455, note: 提前 5–28 天 }
         links:
-          - { type: ticket, icon: 🎫, label: 台湾高铁官网, url: *url_thsrc }
-          - { type: ticket, icon: 🎫, label: Klook 高铁票, url: "https://www.klook.com/zh-CN/activity/73749-thsr-one-way-ticket-taipei/" }
-          - { type: map,    icon: 📍, label: 台北高铁站, query: HSR Taipei Station }
-          - { type: map,    icon: 📍, label: 台中高铁站, query: HSR Taichung Station }
+          - { type: ticket, label: 台湾高铁官网, url: *url_thsrc }
+          - { type: ticket, label: Klook 高铁票, url: "https://www.klook.com/zh-CN/activity/73749-thsr-one-way-ticket-taipei/" }
+          - { type: map, label: 台北高铁站, query: HSR Taipei Station }
+          - { type: map, label: 台中高铁站, query: HSR Taichung Station }
 
       - time: 17:30 – 18:30
-        title: 🏨 Hotel Hesper HSR · Check-in
+        title: 🏨 台中赫丝珀高铁行旅 · Check-in
         detail: 台中高铁站步行圈内，明早直接走 5 分钟到 台中高铁 就能上 6670A，不用折腾回干城。
         links:
-          - { type: map, icon: 📍, label: Hotel Hesper HSR, query: Hotel Hesper HSR Taichung }
+          - { type: map, label: 台中赫丝珀高铁行旅, query: 台中赫丝珀高铁行旅 }
 
       - time: 19:00 – 21:30
         title: 🍢 台中晚餐
         detail: |
-          Hotel Hesper 在高铁站一带，市区餐饮需进市中心。
+          赫丝珀在高铁站一带，市区餐饮需进市中心。
           <br><br>
           <strong>逢甲夜市：</strong>全台最大夜市之一。从 HSR 搭计程车约 20 分钟，回程同。必吃：大肠包小肠、日船章鱼小丸子、豪大大鸡排、明伦蛋饼。
           <br><br>
@@ -330,11 +330,11 @@ days:
           <br><br>
           <strong>HSR 附近懒人版：</strong>高铁站 1F 有餐饮街，若当天累就直接吃 — 牛肉面、拉面、汉堡王等快餐。
         links:
-          - { type: map, icon: 📍, label: 逢甲夜市, query: Fengjia Night Market }
-          - { type: map, icon: 📍, label: 台中第二市场, query: 台中第二市场 }
-          - { type: map, icon: 📍, label: 台中高铁站美食街, query: 台中高铁站 }
+          - { type: map, label: 逢甲夜市, query: Fengjia Night Market }
+          - { type: map, label: 台中第二市场, query: 台中第二市场 }
+          - { type: map, label: 台中高铁站美食街, query: 台中高铁站 }
     stay:
-      hotel: Hotel Hesper HSR - Taichung
+      hotel: 台中赫丝珀高铁行旅 Hesper HSR Hotel
 
   - num: 4
     color: "#2e86ab"
@@ -345,7 +345,7 @@ days:
     toc_label: 5/31 日月潭
     items:
       - time: 07:30 – 07:50
-        title: 🎒 Hotel Hesper 退房 · 走去 台中高铁站
+        title: 🎒 赫丝珀退房 · 走去 台中高铁站
         detail: 今早退房带上行李走 5 分钟到台中高铁站 6670A 上客点，07:50 前到站取票（20 分钟规则，为 08:10 bus buffer）。
 
       - time: 08:10 – 09:45
@@ -364,18 +364,18 @@ days:
           - { tag: 单程, value: NT$193, note: 台中高铁→水社 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
-          - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: *url_bus_6670a }
-          - { type: ticket, icon: 🎫, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
-          - { type: ticket, icon: 🎫, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
-          - { type: map,    icon: 📍, label: 台中高铁站 6670A 站牌, query: 台中高铁站 6670A }
-          - { type: map,    icon: 📍, label: 水社游客中心, query: 水社游客中心 日月潭 }
+          - { type: ticket, label: 6670A 时刻表, url: *url_bus_6670a }
+          - { type: ticket, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
+          - { type: ticket, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
+          - { type: map, label: 台中高铁站 6670A 站牌, query: 台中高铁站 6670A }
+          - { type: map, label: 水社游客中心, query: 水社游客中心 日月潭 }
 
       - time: 09:45 – 10:15
         title: 🎒 水沙连大饭店 · 行李寄存
         detail: |
           水沙连就在水社码头步行 3 分钟内。正式 check-in 通常 15:00 后，但柜台可先帮忙保管行李（多数日月潭酒店均支持）。拿了船票、门票、换装轻便装备再出门，省得拖着大包跑景点。
         links:
-          - { type: map, icon: 📍, label: 水沙连大饭店, query: Shui Sha Lian Hotel 水沙连大饭店 }
+          - { type: map, label: 水沙连大饭店, query: Shui Sha Lian Hotel 水沙连大饭店 }
 
       - time: 10:30 – 11:15
         title: ⛵ 日月潭游湖船（段 1+2）· 水社 → 玄光寺 → 伊达邵
@@ -389,17 +389,17 @@ days:
           - { tag: 营运时间, value: "09:00 – 17:00（末班 17:00 伊达邵开船）" }
           - { tag: 班次, value: 每半小时一班 }
         links:
-          - { type: map,    icon: 📍, label: 水社码头, query: 水社码头 }
-          - { type: map,    icon: 📍, label: 玄光寺, query: 玄光寺 日月潭 }
-          - { type: map,    icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
-          - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
-          - { type: ticket, icon: 🎫, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
+          - { type: map, label: 水社码头, query: 水社码头 }
+          - { type: map, label: 玄光寺, query: 玄光寺 日月潭 }
+          - { type: map, label: 伊达邵码头, query: 伊达邵码头 }
+          - { type: ticket, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
+          - { type: ticket, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
 
       - time: 11:15 – 12:00
         title: 🍱 伊达邵码头午餐 · 邵族小吃
         detail: 阿婆香菇茶叶蛋、邵族麻糬、山猪肉串、总统鱼。码头周边摊贩集中，快吃完上缆车。
         links:
-          - { type: map, icon: 📍, label: 伊达邵老街, query: 伊达邵老街 }
+          - { type: map, label: 伊达邵老街, query: 伊达邵老街 }
 
       - time: 12:00 – 12:15
         title: 🚡 日月潭缆车 · 伊达邵 → 九族文化村
@@ -407,8 +407,8 @@ days:
         detail: |
           缆车站就在伊达邵码头步行 5 分钟。单程约 7 分钟飞越山脊直达九族。<strong>缆车往返含在九族门票中</strong>，当日不限次数。从水社方向进九族是「反向进园」，上午反而人少。
         links:
-          - { type: map, icon: 📍, label: 日月潭缆车, query: Sun Moon Lake Ropeway }
-          - { icon: 🔗, label: 缆车官网, url: "https://www.ropeway.com.tw/" }
+          - { type: map, label: 日月潭缆车, query: Sun Moon Lake Ropeway }
+          - { label: 缆车官网, url: "https://www.ropeway.com.tw/" }
 
       - time: 12:15 – 16:00
         title: 🎢 九族文化村
@@ -418,10 +418,10 @@ days:
           - { tag: 线上购票, value: 约 NT$780–830 }
           - { tag: 营业时间, value: 09:30–17:00 }
         links:
-          - { type: map,    icon: 📍, label: 九族文化村, query: Formosan Aboriginal Culture Village }
-          - { type: ticket, icon: 🎫, label: 九族官网, url: "https://www.nine.com.tw/" }
-          - { type: ticket, icon: 🎫, label: Klook, url: *url_klook_nine }
-          - { type: ticket, icon: 🎫, label: KKday, url: *url_kkday_nine }
+          - { type: map, label: 九族文化村, query: Formosan Aboriginal Culture Village }
+          - { type: ticket, label: 九族官网, url: "https://www.nine.com.tw/" }
+          - { type: ticket, label: Klook, url: *url_klook_nine }
+          - { type: ticket, label: KKday, url: *url_kkday_nine }
 
       - time: 16:00 – 16:15
         title: 🚡 日月潭缆车 · 九族 → 伊达邵（返程）
@@ -429,7 +429,7 @@ days:
         detail: |
           <strong>末班缆车约 16:00–16:30，不可拖延。</strong>回伊达邵后直奔码头赶末班船回水社。
         links:
-          - { type: map, icon: 📍, label: 伊达邵码头, query: 伊达邵码头 }
+          - { type: map, label: 伊达邵码头, query: 伊达邵码头 }
 
       - time: 16:30 – 16:50
         title: ⛵ 日月潭游湖船（段 3）· 伊达邵 → 水社（返程）
@@ -439,7 +439,7 @@ days:
         tickets:
           - { tag: 用票, value: 上午购的一日票最后一段 }
         links:
-          - { type: map, icon: 📍, label: 水社码头, query: 水社码头 }
+          - { type: map, label: 水社码头, query: 水社码头 }
 
       - time: "17:00"
         title: 🏨 水沙连大饭店 · 正式 check-in
@@ -453,7 +453,7 @@ days:
           - { tag: 洗 + 烘, value: "NT$150–200" }
           - { tag: 营业, value: 24 小时自助 }
         links:
-          - { type: map, icon: 📍, label: 招茗自助洗衣店, query: 招茗自助洗衣店 日月潭 }
+          - { type: map, label: 招茗自助洗衣店, query: 招茗自助洗衣店 日月潭 }
     note: |
       <strong>💡 Day 4 建议：</strong>住日月潭水社比住台中更有效率 — 隔天 08:00 从水社出发搭台湾好行去阿里山，避免再花 1.5 小时从台中赶回日月潭。
     stay:
@@ -481,11 +481,11 @@ days:
           - { tag: 现金票价, value: NT$329 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
-          - { type: ticket, icon: 🎫, label: 6739 时刻表, url: *url_bus_6739 }
-          - { type: ticket, icon: 🎫, label: 购票（员林客运）, url: *url_bus_6739_ticket }
-          - { type: ticket, icon: 🎫, label: 南投客运预约, url: *url_nantoubus }
-          - { type: map,    icon: 📍, label: 水社站, query: 水社 Shuishe Sun Moon Lake }
-          - { type: map,    icon: 📍, label: 阿里山入口, query: Alishan National Forest Recreation Area Entrance }
+          - { type: ticket, label: 6739 时刻表, url: *url_bus_6739 }
+          - { type: ticket, label: 购票（员林客运）, url: *url_bus_6739_ticket }
+          - { type: ticket, label: 南投客运预约, url: *url_nantoubus }
+          - { type: map, label: 水社站, query: 水社 Shuishe Sun Moon Lake }
+          - { type: map, label: 阿里山入口, query: Alishan National Forest Recreation Area Entrance }
 
       - time: 12:00 – 12:20
         title: 🎒 阿里山游客中心 · 免费行李寄放
@@ -496,7 +496,7 @@ days:
           <br><br>
           付费备案：阿里山车站 2F 投币置物柜 24 小时营业；转运站 1F 置物柜到 17:00。
         links:
-          - { type: map, icon: 📍, label: 阿里山游客中心, query: 阿里山国家森林游乐区游客中心 }
+          - { type: map, label: 阿里山游客中心, query: 阿里山国家森林游乐区游客中心 }
 
       - time: 12:30 – 13:20
         title: 🎫 阿里山入园 · 午餐
@@ -505,7 +505,7 @@ days:
           - { tag: 全票, value: NT$200, note: 非假日 }
           - { tag: 假日, value: NT$300 }
         links:
-          - { type: ticket, icon: 🎫, label: 阿里山国家风景区, url: "https://www.ali-nsa.net/" }
+          - { type: ticket, label: 阿里山国家风景区（周边资讯）, url: "https://www.ali-nsa.net/" }
 
       - time: 13:20 – 16:45
         title: 🌲 阿里山森林游乐区 · 神木线 + 沼平线
@@ -522,21 +522,21 @@ days:
           - { tag: 沼平线, value: NT$100, note: 单程 }
           - { tag: 推荐购票, value: 全家/7-11 ibon 代售纸本票 }
         links:
-          - { type: map,    icon: 📍, label: 阿里山车站, query: 阿里山车站 }
-          - { type: map,    icon: 📍, label: 神木站, query: Sacred Tree Station Alishan }
-          - { type: map,    icon: 📍, label: 姐妹潭, query: 姐妹潭 阿里山 }
-          - { type: map,    icon: 📍, label: 沼平站, query: 沼平站 }
-          - { type: ticket, icon: 🎫, label: 林铁支线订票, url: *url_afrts }
+          - { type: map, label: 阿里山车站, query: 阿里山车站 }
+          - { type: map, label: 神木站, query: Sacred Tree Station Alishan }
+          - { type: map, label: 姐妹潭, query: 姐妹潭 阿里山 }
+          - { type: map, label: 沼平站, query: 沼平站 }
+          - { type: ticket, label: 林铁支线订票, url: *url_afrts }
 
       - time: "17:00"
-        title: 🏨 青山别馆 Chinshan Hotel · Check-in（顺路取行李）
+        title: 🏨 青山别馆 Chin Shan Villa · Check-in（顺路取行李）
         detail: 沼平线下山到阿里山车站 → 游客中心取回行李（17:00 关门前）→ 步行 3 分钟至青山别馆。园区内住宿，靠近阿里山车站，方便隔日搭森林铁路下山。<strong>园区晚上 7 点后几乎无餐厅营业，建议提早用餐。</strong>
         links:
-          - { type: map, icon: 📍, label: 酒店位置, query: Chinshan Hotel 青山别馆 阿里山 }
+          - { type: map, label: 酒店位置, query: Chin Shan Villa 青山别馆 阿里山 }
     note: |
-      <strong>💡 Day 5 看日出选择：</strong>若想看日出，可于隔天清晨（6/2）搭乘祝山线观日出火车（NT$150），发车时间依日出当日 4:30 公告，通常约 04:30–05:00 发车。在 Chinshan Hotel 柜台或阿里山车站购票。
+      <strong>💡 Day 5 看日出选择：</strong>若想看日出，可于隔天清晨（6/2）搭乘祝山线观日出火车（NT$150），发车时间依日出当日 4:30 公告，通常约 04:30–05:00 发车。在 Chin Shan Villa 柜台或阿里山车站购票。
     stay:
-      hotel: 青山别馆 Chinshan Hotel
+      hotel: 青山别馆 Chin Shan Villa
 
   - num: 6
     color: "#c0392b"
@@ -552,7 +552,7 @@ days:
         tickets:
           - { tag: 祝山线, value: NT$150 }
         links:
-          - { type: map, icon: 📍, label: 祝山站, query: 祝山观日楼 }
+          - { type: map, label: 祝山站, query: 祝山观日楼 }
 
       - time: 11:50 – 15:45
         title: 🚂 阿里山林铁本线 · 阿里山 → 嘉义（首选）
@@ -570,10 +570,10 @@ days:
           - { tag: 林铁本线, value: "NT$600" }
           - { tag: 7329A 公车（备选）, value: "NT$283" }
         links:
-          - { type: ticket, icon: 🎫, label: 林铁官网订票, url: *url_afrts }
-          - { type: ticket, icon: 🎫, label: 7329A 时刻表（备选）, url: *url_bus_7329a }
-          - { type: ticket, icon: 🎫, label: 73290 慢车版（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" }
-          - { type: map,    icon: 📍, label: 嘉义车站（TRA）, query: Chiayi TRA Station }
+          - { type: ticket, label: 林铁官网订票, url: *url_afrts }
+          - { type: ticket, label: 7329A 时刻表（备选）, url: *url_bus_7329a }
+          - { type: ticket, label: 73290 慢车版（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" }
+          - { type: map, label: 嘉义车站（TRA）, query: Chiayi TRA Station }
 
       - time: 16:00 – 17:30
         title: 🍜 嘉义市区晚餐 · 鸡肉饭巡礼
@@ -582,8 +582,8 @@ days:
           <br><br>
           <strong>🎒 不想拖行李：</strong>嘉义 TRA 站地下一楼有投币置物柜，小柜 NT$20 / 时、大柜 NT$50 / 时 — 夕阳前寄存，吃完饭回来取，省得拖着跑鸡肉饭老店。
         links:
-          - { type: map, icon: 📍, label: 林聪明沙锅鱼头, query: 林聪明沙锅鱼头 }
-          - { type: map, icon: 📍, label: 刘里长鸡肉饭, query: 刘里长鸡肉饭 }
+          - { type: map, label: 林聪明沙锅鱼头, query: 林聪明沙锅鱼头 }
+          - { type: map, label: 刘里长鸡肉饭, query: 刘里长鸡肉饭 }
 
       - time: 17:45 – 18:30
         title: 🚆 台铁 · 嘉义 → 台南（约 40 分钟）
@@ -596,14 +596,14 @@ days:
           - { tag: 台铁自强, value: "NT$107" }
           - { tag: 高铁（备选）, value: "NT$410" }
         links:
-          - { type: ticket, icon: 🎫, label: 台铁订票, url: *url_railway }
-          - { type: ticket, icon: 🎫, label: 台湾高铁（备选）, url: *url_thsrc }
+          - { type: ticket, label: 台铁订票, url: *url_railway }
+          - { type: ticket, label: 台湾高铁（备选）, url: *url_thsrc }
 
       - time: "19:00"
         title: 🏨 禧榕轩大饭店 Grand Banyan Hotel · Check-in
         detail: 位于台南北区成功路，邻近台南公园与台南火车站。check-in 后可在附近吃宵夜、逛神农街。
         links:
-          - { type: map, icon: 📍, label: 酒店位置, query: Grand Banyan Hotel Tainan }
+          - { type: map, label: 酒店位置, query: Grand Banyan Hotel Tainan }
     note: |
       <strong>💡 Day 6 林铁优先：</strong>首选搭阿里山森林铁路本线下山（NT$600，3h55m，百年路线），<strong>务必出发前 14 天</strong>上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。若林铁票售罄，退而求其次搭台湾好行 7329A 公车（现买即走，NT$283，直达嘉义高铁站，到站反而更早）。林铁终点是嘉义 TRA 站，后续台铁去台南即可；公车到的是嘉义高铁站，接高铁去台南更顺。
     stay:
@@ -631,15 +631,15 @@ days:
           - { tag: 入场, value: 免费 }
           - { tag: 开放, value: 09:00–18:00（周一休） }
         links:
-          - { type: map,    icon: 📍, label: 地图, query: National Museum of Taiwan Literature }
-          - { type: ticket, icon: 🔗, label: 官网, url: "https://www.nmtl.gov.tw/" }
+          - { type: map, label: 地图, query: National Museum of Taiwan Literature }
+          - { label: 官网, url: "https://www.nmtl.gov.tw/" }
 
       - time: 11:30 – 13:00
         title: 🍜 国华街小吃集散地 · 午餐
         detail: 推荐：金得春卷、富盛号碗粿、邱家小卷米粉、修安扁担豆花、江水号绿豆汤。国华街短短 300 米集合了台南数十家老店，排队值得。
         links:
-          - { type: map, icon: 📍, label: 国华街, query: 国华街 台南 }
-          - { type: map, icon: 📍, label: 金得春卷, query: 金得春卷 }
+          - { type: map, label: 国华街, query: 国华街 台南 }
+          - { type: map, label: 金得春卷, query: 金得春卷 }
 
       - time: 13:30 – 16:00
         title: 🌳 安平树屋 + 安平古堡
@@ -647,29 +647,29 @@ days:
         tickets:
           - { tag: 联票, value: NT$70, note: 树屋+古堡 }
         links:
-          - { type: map,    icon: 📍, label: 安平树屋, query: Anping Tree House }
-          - { type: map,    icon: 📍, label: 安平古堡, query: Anping Old Fort }
-          - { type: ticket, icon: 🎫, label: Klook 门票, url: "https://www.klook.com/zh-CN/activity/40974-anping-tree-house-ticket-district-taiwan/" }
+          - { type: map, label: 安平树屋, query: Anping Tree House }
+          - { type: map, label: 安平古堡, query: Anping Old Fort }
+          - { type: ticket, label: Klook 门票, url: "https://www.klook.com/zh-CN/activity/40974-anping-tree-house-ticket-district-taiwan/" }
 
       - time: 16:00 – 17:30
         title: 🍧 安平老街
         detail: 推荐：周氏虾卷、陈家蚵卷、同记安平豆花（招牌花生豆花）、林永泰兴蜜饯行（百年老店）。
         links:
-          - { type: map, icon: 📍, label: 安平老街, query: 安平老街 }
+          - { type: map, label: 安平老街, query: 安平老街 }
 
       - time: 18:00 – 20:30
-        title: 🏮 神农街 Shennung Street
+        title: 🏮 神农街 Shennong Street
         detail: 清代遗留的古老街道，两旁保留大量清末民初老屋，如今转型为文青酒吧、独立书店、选物店、老派咖啡馆聚落。傍晚灯笼亮起最有味道，是台南最美的一条老街。
         links:
-          - { type: map, icon: 📍, label: 神农街, query: 神农街 台南 }
-          - { type: map, icon: 📍, label: 水仙宫, query: 台南水仙宫 }
-          - { type: map, icon: 📍, label: 赤崁楼, query: 赤崁楼 台南 }
+          - { type: map, label: 神农街, query: 神农街 台南 }
+          - { type: map, label: 水仙宫, query: 台南水仙宫 }
+          - { type: map, label: 赤崁楼, query: 赤崁楼 台南 }
 
       - time: 21:00 起
         title: 🌃 夜宵 · 保安路小吃
         detail: 6/3 为周三，台南花园夜市/大东夜市均未开市，可到保安路一带：阿村牛肉汤、阿明猪心、阿龙香肠熟肉、叶家小卷米粉（24 小时）。
         links:
-          - { type: map, icon: 📍, label: 保安路, query: 保安路小吃 台南 }
+          - { type: map, label: 保安路, query: 保安路小吃 台南 }
     stay:
       hotel: 禧榕轩大饭店 Grand Banyan Hotel
       label: 第 2 晚
@@ -683,7 +683,7 @@ days:
     toc_label: 6/4 花莲赏鲸
     items:
       - time: 06:30 – 10:59
-        title: 🚆 台铁自强号 301 · 国军福利站台南 → 花莲
+        title: 🚆 台铁自强号 301 · 台南 → 花莲
         transit: true
         detail: |
           <strong>全程约 4.5 小时直达</strong>（自强号 3000 系列 301 次）。此为南回线顺时针绕半岛东岸的直达班次，沿途高雄、枋寮、台东、瑞穗、花莲，风景极佳（右侧座位看海）。
@@ -696,10 +696,10 @@ days:
           - { tag: 自强 301, value: NT$962 }
           - { tag: 提早 14 天, value: 开放订票 }
         links:
-          - { type: ticket, icon: 🎫, label: 台铁官网, url: *url_railway }
-          - { type: ticket, icon: 🎫, label: 台铁时刻查询, url: "https://tip.railway.gov.tw/tra-tip-web/tip/tip001/tip123/query" }
-          - { type: map,    icon: 📍, label: 国军福利站 台南站, query: 国军福利站 台南店 }
-          - { type: map,    icon: 📍, label: 花莲车站, query: Hualien Station }
+          - { type: ticket, label: 台铁官网, url: *url_railway }
+          - { type: ticket, label: 台铁时刻查询, url: "https://tip.railway.gov.tw/tra-tip-web/tip/tip001/tip123/query" }
+          - { type: map, label: 台南车站, query: Tainan Station 台南车站 }
+          - { type: map, label: 花莲车站, query: Hualien Station }
 
       - time: 11:30 – 14:30
         title: 🎒 S.E.A. 民宿 · 行李寄存 + 花莲午餐 + 下午休整
@@ -708,11 +708,11 @@ days:
           <br><br>
           赏鲸出船前有空档可以在民宿小睡，或者附近咖啡馆歇脚 — 下午 15:20 前 check-in 完接驳车即可。
         links:
-          - { type: map, icon: 📍, label: S.E.A. 民宿, query: S.E.A. 民宿 花莲海滨街 72 号 }
-          - { type: map, icon: 📍, label: 公正包子, query: 公正包子 }
+          - { type: map, label: S.E.A. 民宿, query: S.E.A. 民宿 花莲海滨街 72 号 }
+          - { type: map, label: 公正包子, query: 公正包子 }
 
       - time: 15:20 接驳 · 16:00 出船
-        title: 🐋 多罗满赏鲸 Duoloman Whale Watching（含花莲市区免费接送）
+        title: 🐋 多罗满赏鲸 Turumoan Whale Watching（含花莲市区免费接送）
         detail: |
           花莲外海黑潮经过，全年可观赏飞旋海豚、花纹海豚、伪虎鲸，运气好还能看到抹香鲸、大翅鲸。多罗满为在地老牌业者，船长与解说员皆有海洋生态背景。
           <br><br>
@@ -726,16 +726,16 @@ days:
           - { tag: 出船时段, value: 06:30 / 08:30 / 10:30 / 14:00 / 16:00 }
           - { tag: 携带, value: 防晒 · 晕船药 · 薄外套 }
         links:
-          - { type: map,    icon: 📍, label: 集合地点, query: 多罗满赏鲸 花莲市华东15号 }
-          - { type: ticket, icon: 🎫, label: Klook 订票, url: *url_klook_whale }
-          - { type: ticket, icon: 🔗, label: 多罗满官网, url: *url_turumoan }
+          - { type: map, label: 集合地点, query: 多罗满赏鲸 花莲市华东15号 }
+          - { type: ticket, label: Klook 订票, url: *url_klook_whale }
+          - { label: 多罗满官网, url: *url_turumoan }
 
       - time: 18:30 – 22:00
         title: 🍢 东大门夜市
         detail: 花莲最大夜市，四大主题街区：福町夜市、各省一条街、原住民一条街、自强夜市。必吃：官财板、炸蛋葱油饼、第一家烤肉串、蒋记公正包子。赏鲸送回市区后直接过去最顺。
         links:
-          - { type: map, icon: 📍, label: 东大门夜市, query: Dongdamen Night Market }
-          - { type: map, icon: 📍, label: 花莲文创园区, query: 花莲文创园区 }
+          - { type: map, label: 东大门夜市, query: Dongdamen Night Market }
+          - { type: map, label: 花莲文创园区, query: 花莲文创园区 }
     stay:
       hotel: S.E.A. 民宿
 
@@ -755,8 +755,8 @@ days:
         title: 🌊 七星潭 · 最后的太平洋（可选）
         detail: 花莲市区 20 分钟车程可达，鹅卵石月牙湾海滩，太平洋最美蓝。拖着行李搭计程车单程约 NT$250，行李留车上或直接抱着下车短停拍照。不想多折腾可跳过，直接去车站吃午餐 + 寄物。
         links:
-          - { type: map, icon: 📍, label: 七星潭, query: Qixingtan Beach Hualien }
-          - { type: map, icon: 📍, label: 松园别馆, query: 松园别馆 }
+          - { type: map, label: 七星潭, query: Qixingtan Beach Hualien }
+          - { type: map, label: 松园别馆, query: 松园别馆 }
 
       - time: 12:00 – 13:30
         title: 🍱 花莲车站附近午餐
@@ -772,8 +772,8 @@ days:
         tickets:
           - { tag: 普悠玛, value: NT$440 }
         links:
-          - { type: ticket, icon: 🎫, label: 台铁订票, url: *url_railway }
-          - { type: map,    icon: 📍, label: 台北车站, query: Taipei Main Station }
+          - { type: ticket, label: 台铁订票, url: *url_railway }
+          - { type: map, label: 台北车站, query: Taipei Main Station }
 
       - time: 17:30 – 18:10
         title: 🚇 机场捷运 · 台北 A1 → 桃园机场 A12/A13
@@ -782,8 +782,8 @@ days:
         tickets:
           - { tag: 机场捷运, value: NT$150 }
         links:
-          - { type: ticket, icon: 🎫, label: 机场捷运官网, url: *url_tymetro }
-          - { type: ticket, icon: 🎫, label: Klook 车票, url: "https://www.klook.com/zh-CN/activity/11346-taoyuan-airport-mrt-ticket-taipei/" }
+          - { type: ticket, label: 机场捷运官网, url: *url_tymetro }
+          - { type: ticket, label: Klook 车票, url: "https://www.klook.com/zh-CN/activity/11346-taoyuan-airport-mrt-ticket-taipei/" }
 
       - time: 18:30 – 22:55
         title: ✈️ 桃园国际机场 TPE · 晚餐 + 候机
@@ -792,8 +792,8 @@ days:
           <br><br>
           <strong>伴手礼：</strong>凤梨酥（微热山丘/佳德/犁记）、乌龙茶、高粱酒、Mr. Brown 咖啡、乖乖、方块酥。
         links:
-          - { type: map, icon: 📍, label: 桃园机场 T1, query: Taiwan Taoyuan International Airport Terminal 1 }
-          - { icon: 🔗, label: 机场官网, url: "https://www.taoyuan-airport.com/" }
+          - { type: map, label: 桃园机场 T1, query: Taiwan Taoyuan International Airport Terminal 1 }
+          - { label: 机场官网, url: "https://www.taoyuan-airport.com/" }
 
       - time: 6/6 00:55
         title: ✈️ Scoot TR 875 · TPE → SIN

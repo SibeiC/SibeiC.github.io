@@ -132,6 +132,18 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body.has-preview-banner { padding-top: 40px; }
+@media (max-width: 640px) {
+  body.has-preview-banner { padding-top: 32px; }
+}
+
 body {
   font-family: 'Noto Sans SC', sans-serif;
   background: var(--paper);
@@ -146,18 +158,37 @@ body {
 .card.checklist-card { margin-bottom: 30px; }
 .footer .copy { opacity: 0.7; }
 
-/* Preview-build banner — renders only on CF Preview deployments */
+/* Preview-build banner — renders only on CF Preview deployments.
+   position: fixed (not sticky) — guaranteed viewport-anchored regardless of
+   ancestor containing-block quirks or horizontal overflow elsewhere. */
 .preview-banner {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  display: block;
+  box-sizing: border-box;
   background: #ff6b00;
   color: white;
   padding: 8px 16px;
   text-align: center;
   font-size: 0.88em;
   letter-spacing: 0.5px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.preview-banner__detail { opacity: 0.95; }
+@media (max-width: 640px) {
+  .preview-banner {
+    padding: 8px 12px;
+    font-size: 0.82em;
+    letter-spacing: 0;
+  }
+  .preview-banner__detail { display: none; }
 }
 
 /* Hero — always dark, unchanged by color scheme */

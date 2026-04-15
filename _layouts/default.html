@@ -17,7 +17,7 @@
   {% seo %}
 </head>
 
-<body>
+<body class="{% if jekyll.environment == 'preview' %}has-preview-banner{% endif %}">
 
   {% include preview_banner.html %}
 

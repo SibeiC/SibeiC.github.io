@@ -8,6 +8,6 @@ To preview locally: JEKYLL_ENV=preview bundle exec jekyll serve
 {%- endcomment -%}
 {%- if jekyll.environment == "preview" -%}
 <div class="preview-banner" role="note" aria-label="Preview build banner">
-  ⚠️ <strong>PREVIEW</strong> · Pre-merge preview build · Not the live site.
+  <strong>⚠️ PREVIEW</strong><span class="preview-banner__detail"> · Pre-merge build · Not the live site</span>
 </div>
 {%- endif -%}

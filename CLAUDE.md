@@ -111,9 +111,11 @@ Inline overrides (`{ code: XXX, city: "…" }`) are a fallback when you cannot e
 
 Each item in `links:` arrays is rendered by `_includes/trip_link.html` as an `<a class="chip …">`. Conventions:
 
-- `type: map` → green chip. Use `query:` (not `url:`) so the include auto-encodes it into a Google Maps search URL.
-- `type: ticket` → red chip. Use `url:` to the official booking site; Klook / KKday acceptable as alternatives.
-- no `type` → blue chip (generic info / official reference).
+- `type: map` → green chip, default icon 📍. Use `query:` (not `url:`) so the include auto-encodes it into a Google Maps search URL.
+- `type: ticket` → red chip, default icon 🎫. Use `url:` to the official booking site; Klook / KKday acceptable as alternatives.
+- no `type` → blue chip (generic info / official reference), default icon 🔗.
+
+**Icon is auto-filled from `type`**, so trip files should **omit `icon:`** for standard map/ticket/none links. Only specify `icon:` when a link genuinely needs a non-default emoji (e.g. `🛵` for a scooter-rental ticket, `🎒` for a luggage-related chip) — the include treats `icon:` as an explicit override.
 
 ## Styling
 
