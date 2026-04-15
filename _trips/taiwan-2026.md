@@ -18,8 +18,7 @@ urls:
   tymetro:     &url_tymetro      "https://www.tymetro.com.tw/tymetro-new/tc/"
   thsrc:       &url_thsrc        "https://www.thsrc.com.tw/"
   railway:     &url_railway      "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW"
-  bus_6670:    &url_bus_6670     "http://www.ntbus.com.tw/hsr6.html"
-  bus_6670a:   &url_bus_6670a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=6670A&rn=1775391353552&lan=C"
+  bus_6670d:   &url_bus_6670d    "http://www.ntbus.com.tw/hsr6.html"
   bus_6739:    &url_bus_6739     "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C"
   bus_7329a:   &url_bus_7329a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C"
   afrts:       &url_afrts        "https://afrts.forest.gov.tw/"
@@ -30,7 +29,7 @@ urls:
   turumoan:    &url_turumoan     "https://www.turumoan.com.tw/"
   klook_npm:   &url_klook_npm    "https://www.klook.com/zh-CN/activity/10136-national-palace-museum-ticket-package-taipei/"
   npm:         &url_npm          "https://www.npm.gov.tw/"
-  bus_6670a_ticket: &url_bus_6670a_ticket "https://ntbus.welcometw.com/tour/MvmY"
+  bus_6670d_ticket: &url_bus_6670d_ticket "https://ntbus.welcometw.com/tour/MvmY"
   bus_6739_ticket:  &url_bus_6739_ticket  "https://ylbus-shop.fontour.com/tour/NOyj"
   boat_sml_ticket:  &url_boat_sml_ticket  "https://ntbus.welcometw.com/tour/WY09"
 
@@ -204,16 +203,17 @@ days:
         detail: |
           世界四大博物馆之一，收藏近 70 万件中华艺术珍品，包括翠玉白菜、肉形石、毛公鼎等镇馆之宝。建议 3–4 小时细看。
           <br><br>
-          <strong>🎧 免费定时导览：</strong>上午约 10:00 在 1F 服务台集合，中文场约 1.5 小时。英文/日文场时段官网当日公告，可现场询问。跟导览解说入门比自己瞎看效率高很多。
+          <strong>🎧 免费定时导览（需预约）：</strong>上午约 10:00 在 1F 服务台集合，中文场约 1.5 小时，跟导览解说入门比自己瞎看效率高很多。<strong>需提前 30 天</strong>到故宫官方报名系统（signup.npm.edu.tw）网上预约，热门时段会被抢光。5/29 场次 → <strong>4/29 开放预约</strong>，设个提醒。英文 / 日文场时段官网当日公告，可现场询问。
           <br><br>
           <strong>自驾：</strong>从台北车站出发约 25 分钟，馆区有停车场（小型车 NT$50/小时）。
         tickets:
           - { tag: 全票, value: NT$350 }
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
-          - { tag: 免费导览, value: 约 10:00 1F 服务台集合 }
+          - { tag: 免费导览, value: 约 10:00 集合 · 提前 30 天预约 }
         links:
           - { type: map, label: 地图, query: National Palace Museum Taipei }
           - { type: ticket, label: 故宫官网, url: *url_npm }
+          - { type: ticket, label: 免费导览预约, url: "https://signup.npm.edu.tw/Advice.aspx?ActivityId=6&LangId=1" }
           - { type: ticket, label: Klook 预约, url: *url_klook_npm }
 
       - time: 13:30 – 14:30
@@ -331,8 +331,6 @@ days:
           <br><br>
           <strong>备选 20:10 → 21:30（仅周五~日行驶，5/30 周六可搭）：</strong>留晚餐更多时间，但到店晚、行李整理偏赶。
           <br><br>
-          <strong>⚠️ 别搭到「6670 加」：</strong>加班车仅行驶到<strong>埔里</strong>（不延伸到水社 / 日月潭），在高铁台中上错车会卡在埔里转客运。
-          <br><br>
           <strong>取票：</strong>南投客运线上预购的纸本票到高铁台中站 1F 柜台换取，20 分钟规则 → 最晚 18:50 到站。
         transit_route:
           preferred: 6670D 19:10 高铁台中 → 20:30 水社
@@ -341,8 +339,8 @@ days:
           - { tag: 单程, value: NT$193, note: 高铁台中 → 水社 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
-          - { type: ticket, label: 6670D 时刻表, url: *url_bus_6670 }
-          - { type: ticket, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
+          - { type: ticket, label: 6670D 时刻表, url: *url_bus_6670d }
+          - { type: ticket, label: 购票（南投客运）, url: *url_bus_6670d_ticket }
           - { type: ticket, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
           - { type: map, label: 高铁台中站 好行站牌, query: 台中高铁站 台湾好行 }
           - { type: map, label: 水社游客中心, query: 水社游客中心 日月潭 }
@@ -809,11 +807,10 @@ booking_channels:
   - name: 机场捷运
     links: [{ label: tymetro.com.tw, url: *url_tymetro }]
     note: 悠游卡直刷
-  - name: 台湾好行 6670 / 6670A（台中-日月潭）
+  - name: 台湾好行 6670D（台中-日月潭水社 直达）
     links:
-      - { label: 6670 时刻表, url: *url_bus_6670 }
-      - { label: 6670A 时刻表, url: *url_bus_6670a }
-      - { label: 南投客运购票, url: *url_bus_6670a_ticket }
+      - { label: 6670D 时刻表, url: *url_bus_6670d }
+      - { label: 南投客运购票, url: *url_bus_6670d_ticket }
     note: 亦可现场购票
   - name: 日月潭游湖船（南投客运）
     links:
