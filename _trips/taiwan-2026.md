@@ -53,7 +53,8 @@ cost:
     - name: 住宿（8 晚）
       icon: 🏨
       items:
-        - { label: "citizenM Taipei（3 晚）", amount: 9275, in: primary }
+        - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
+        - { label: "台中 (1 晚)", amount: 3000, in: primary, note: 估算 · 未预订 }
         - { label: "水沙连大饭店（1 晚）", amount: 2800, in: primary, note: 估算 }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
@@ -98,10 +99,15 @@ flights:
 
 hotels:
   - name: citizenM Taipei North Gate
-    nights: 3
-    dates: 5/28 (四) – 5/31 (日)
+    nights: 2
+    dates: 5/28 (四) – 5/30 (六)
     address: 台北市中正区中华路一段 3 号
     map_query: citizenM Taipei North Gate
+  - name: 台中一晚（待订）
+    nights: 1
+    dates: 5/30 (六) – 5/31 (日)
+    address: 建议选台中车站 / 干城转运站步行圈内酒店（Day 4 早上 07:45 在 6670A 发车）
+    map_query: 台中 火车站 饭店
   - name: 水沙连大饭店 Shui Sha Lian Hotel
     nights: 1
     dates: 5/31 (日) – 6/1 (一)
@@ -246,11 +252,15 @@ days:
   - num: 3
     color: "#16a085"
     date: 2026-05-30
-    title: 中正纪念堂 · 101 彩虹路 · 西门町 · 饶河夜市
+    title: 中正纪念堂 · 101 彩虹路 · 西门町 · HSR 南下台中
     date_label: 5月30日（周六）
-    location: 台北市区
-    toc_label: 5/30 中正 / 彩虹路
+    location: 台北 → 台中
+    toc_label: 5/30 台北 → 台中
     items:
+      - time: 09:00 – 09:30
+        title: 🎒 citizenM · 退房 + 寄放行李
+        detail: 今天下午要南下台中，先退房但把大件行李寄存在 citizenM 柜台（一般免费，直到下午取走），轻装出门玩。午后回来拿行李直接走去台北车站。
+
       - time: 09:30 – 11:30
         title: 🏛️ 中正纪念堂
         detail: 以「中正」与「正气」为名的大型纪念建筑。每小时整点可观看三军仪队交接仪式，动作整齐划一，为必看亮点。周边有国家戏剧院、音乐厅、蓝顶白墙建筑群，摄影绝佳。
@@ -260,60 +270,40 @@ days:
         links:
           - { type: map, icon: 📍, label: 地图, query: Chiang Kai-shek Memorial Hall }
 
-      - time: 12:00 – 14:00
+      - time: 11:30 – 13:00
         title: 🍜 午餐 · 鼎泰丰 信义店
         detail: 米其林推荐小笼包名店，信义 101 分店排队比永康街总店快。必点：小笼包、蟹粉小笼、豆沙包。
         links:
           - { type: map, icon: 📍, label: 鼎泰丰 信义店, query: 鼎泰丰 信义店 }
 
-      - time: 14:00 – 15:00
+      - time: 13:00 – 13:30
         title: 🌈 Taipei 101 彩虹路（Rainbow Starting Line）
-        detail: |
-          捷运市政府站 2 号出口旁的地面彩虹人行道（2020 年市府前「Rainbow Starting Line」），以 101 大楼为背景的免费打卡点。只拍照不上楼 — 不进 89F 观景台、不做 Skyline 460，够拍两张就走。
-          <br><br>
-          信义商圈顺便可逛 A11 / A13 / 微风南山 / 诚品信义旗舰店，不过今天重点是继续往西门町。
+        detail: 捷运市政府站 2 号出口旁的地面彩虹人行道，以 101 大楼为背景的免费打卡点。只拍照不上楼 — 不进 89F 观景台、不做 Skyline 460。
         tickets:
           - { tag: 门票, value: 免费 }
         links:
           - { type: map, icon: 📍, label: 101 彩虹路, query: Rainbow Starting Line Taipei City Hall }
           - { type: map, icon: 📍, label: Taipei 101（作背景）, query: Taipei 101 }
 
-      - time: 15:30 – 18:30
+      - time: 13:45 – 15:15
         title: 🛍️ 西门町 Ximending
-        detail: 台北最热闹的年轻潮流商圈，有「台北原宿」之称。以西门红楼为中心，步行街内潮牌、电影院、刺青街、小吃林立。推荐：阿宗面线、鸭肉扁、老天禄卤味。<strong>彩虹 Six 斑马线</strong>就在西门町六号出口旁，是 2019 年首条彩虹人行道，顺路打卡。
+        detail: 台北最热闹的年轻潮流商圈，有「台北原宿」之称。以西门红楼为中心，潮牌、电影院、刺青街、小吃林立。推荐：阿宗面线、鸭肉扁、老天禄卤味。<strong>彩虹 Six 斑马线</strong>就在 6 号出口旁，2019 年首条彩虹人行道，顺路打卡。板南线 1 站到台北车站取行李。
         links:
           - { type: map, icon: 📍, label: 西门町, query: 西门町 Ximending }
           - { type: map, icon: 📍, label: 西门红楼, query: 西门红楼 }
           - { type: map, icon: 📍, label: 彩虹六号斑马线, query: Rainbow Six Ximending }
 
-      - time: 19:00 – 22:30
-        title: 🍢 饶河街观光夜市
-        detail: |
-          与士林齐名的台北双雄夜市，单一直线街道 600 米，吃完不走回头路。必吃：福州世祖胡椒饼（入口牌坊旁、排队名物）、陈董药炖排骨、东发蚵仔面线、红绿灯东山鸭头。
-          <br><br>
-          搭捷运至「松山站」5 号出口即达。夜市旁就是慈佑宫，百年妈祖庙也顺路参拜。
-        links:
-          - { type: map, icon: 📍, label: 饶河夜市, query: 饶河街观光夜市 }
-          - { type: map, icon: 📍, label: 松山慈祐宫, query: 松山慈祐宫 }
-    stay:
-      hotel: citizenM Taipei North Gate
-      label: 第 3 晚
+      - time: 15:30 – 16:00
+        title: 🎒 citizenM 取行李 · 走去台北高铁站
+        detail: 回 citizenM 拿回寄存的大行李，步行约 8 分钟到台北高铁站（地下 B1 月台层）。务必 15:45 前到站进月台。
 
-  - num: 4
-    color: "#2e86ab"
-    date: 2026-05-31
-    title: 台北 → 台中 → 九族文化村 → 日月潭
-    date_label: 5月31日（周日）
-    location: 中部大移动
-    toc_label: 5/31 日月潭
-    items:
-      - time: 07:31 – 08:18
-        title: 🚅 高铁 · 台北 → 台中（约 47 分钟）
+      - time: 16:01 – 16:54
+        title: 🚅 高铁 1321 · 台北 → 台中
         transit: true
-        detail: 从 citizenM 步行 8 分钟至台北高铁站。南下列车班次密集，周日上午每 15 分钟一班。
-        transit_route:
-          preferred: 07:31 出发 → 08:18 抵达台中
-          alternatives: ["08:11 – 09:15", "08:31 – 09:18"]
+        detail: |
+          南下对号 1321 次，<strong>台北 16:01 发车 → 台中 16:54 抵达</strong>，约 53 分钟（途经南港→台北→桃园→台中 停站）。该车次运行日：一/二/三/四/六，周六 5/30 有车。
+          <br><br>
+          抵达台中高铁站后转乘当地交通前往台中过夜的酒店（干城 / 台中车站附近建议搭高铁接驳车或台铁 1 站到台中车站；再步行或计程车到酒店）。
         tickets:
           - { tag: 标准车厢, value: NT$700 }
           - { tag: 早鸟 65 折, value: NT$455, note: 提前 5–28 天 }
@@ -323,31 +313,65 @@ days:
           - { type: map,    icon: 📍, label: 台北高铁站, query: HSR Taipei Station }
           - { type: map,    icon: 📍, label: 台中高铁站, query: HSR Taichung Station }
 
-      - time: 08:45 – 10:45
-        title: 🚌 台湾好行 6670A · 台中高铁站 → 日月潭水社
+      - time: 17:30 – 18:30
+        title: 🏨 台中酒店 · Check-in
+        detail: 选台中车站 / 干城转运站步行圈内酒店，明早 6670A 07:45 从台中干城发车（搭车前要取票，最晚 07:25 到站）。
+        links:
+          - { type: map, icon: 📍, label: 台中干城站, query: 台中干城转运站 }
+          - { type: map, icon: 📍, label: 台中车站, query: 台中车站 }
+
+      - time: 19:00 – 21:30
+        title: 🍢 台中晚餐 · 逢甲夜市 或 第二市场
+        detail: |
+          <strong>逢甲夜市：</strong>全台最大夜市之一，必吃：大肠包小肠、日船章鱼小丸子、豪大大鸡排、明伦蛋饼。计程车从台中车站约 20 分钟，搭公车 35 分钟。
+          <br><br>
+          <strong>第二市场（懒人版）：</strong>百年老市场、步行可达台中车站 10 分钟。山河鲁肉饭、颜记肉包、丁山肉丸、李海鲁肉饭都是老字号，关门早（多 22:00 前）。不想折腾可选这个。
+        links:
+          - { type: map, icon: 📍, label: 逢甲夜市, query: Fengjia Night Market }
+          - { type: map, icon: 📍, label: 台中第二市场, query: 台中第二市场 }
+    stay:
+      hotel: 台中一晚（待订）
+
+  - num: 4
+    color: "#2e86ab"
+    date: 2026-05-31
+    title: 台中 → 日月潭 · 九族文化村
+    date_label: 5月31日（周日）
+    location: 日月潭
+    toc_label: 5/31 日月潭
+    items:
+      - time: 07:00 – 07:25
+        title: 🎒 酒店退房 · 走去 台中干城站
+        detail: 昨晚在台中过夜，今早退房带上行李走去台中干城转运站（南投客运发车点），07:25 前到站取票。
+
+      - time: 07:45 – 09:45
+        title: 🚌 台湾好行 6670A · 台中干城 → 日月潭水社
         transit: true
         detail: |
-          高铁台中站 1 楼 5 号出口搭乘台湾好行 6670A（日月潭线），终点站水社游客中心。全程约 1h45m–2h，沿途经埔里、鱼池、九族文化村，最后抵达水社。<strong>坐到终点 水社下车</strong>，先把行李扔酒店再出门玩。
+          从台中干城转运站 07:45 首班车上车，途经台中高铁站 → 埔里 → 鱼池 → 九族文化村，<strong>坐到终点水社</strong>约 2 小时。坐到水社下车，先把行李扔酒店再出门玩。
+          <br><br>
+          <strong>取票：</strong>最晚 07:25 到干城站南投客运柜台取纸本票（预购扫码留底的凭证），硬性 20 分钟规则。
         transit_route:
-          preferred: 08:45 台中 → 10:45 水社
-          alternatives: ["07:45", "09:45", "15:45 （末班）"]
+          preferred: 07:45 干城 → 09:45 水社
+          alternatives: ["08:45", "09:45", "15:45 （末班）"]
         tickets:
-          - { tag: 单程, value: NT$193, note: 台中高铁→水社 }
+          - { tag: 单程, value: NT$235, note: 台中干城→水社 }
           - { tag: 悠游卡, value: 约 88 折 }
         links:
           - { type: ticket, icon: 🎫, label: 6670A 时刻表, url: *url_bus_6670a }
           - { type: ticket, icon: 🎫, label: 购票（南投客运）, url: *url_bus_6670a_ticket }
           - { type: ticket, icon: 🎫, label: 台湾好行日月潭线, url: "https://www.taiwantrip.com.tw/line/11" }
+          - { type: map,    icon: 📍, label: 台中干城站, query: 台中干城转运站 }
           - { type: map,    icon: 📍, label: 水社游客中心, query: 水社游客中心 日月潭 }
 
-      - time: 10:45 – 11:15
+      - time: 09:45 – 10:15
         title: 🎒 水沙连大饭店 · 行李寄存
         detail: |
           水沙连就在水社码头步行 3 分钟内。正式 check-in 通常 15:00 后，但柜台可先帮忙保管行李（多数日月潭酒店均支持）。拿了船票、门票、换装轻便装备再出门，省得拖着大包跑景点。
         links:
           - { type: map, icon: 📍, label: 水沙连大饭店, query: Shui Sha Lian Hotel 水沙连大饭店 }
 
-      - time: 11:30 – 12:15
+      - time: 10:30 – 11:15
         title: ⛵ 日月潭游湖船（段 1+2）· 水社 → 玄光寺 → 伊达邵
         transit: true
         detail: |
@@ -365,13 +389,13 @@ days:
           - { type: ticket, icon: 🎫, label: 游湖船 Klook, url: "https://www.klook.com/zh-CN/activity/10687-sun-moon-lake-boat-ticket-taichung/" }
           - { type: ticket, icon: 🎫, label: 水社海官网, url: "https://www.boat.com.tw/ticket_order_detail.php" }
 
-      - time: 12:15 – 13:00
+      - time: 11:15 – 12:00
         title: 🍱 伊达邵码头午餐 · 邵族小吃
         detail: 阿婆香菇茶叶蛋、邵族麻糬、山猪肉串、总统鱼。码头周边摊贩集中，快吃完上缆车。
         links:
           - { type: map, icon: 📍, label: 伊达邵老街, query: 伊达邵老街 }
 
-      - time: 13:00 – 13:15
+      - time: 12:00 – 12:15
         title: 🚡 日月潭缆车 · 伊达邵 → 九族文化村
         transit: true
         detail: |
@@ -380,7 +404,7 @@ days:
           - { type: map, icon: 📍, label: 日月潭缆车, query: Sun Moon Lake Ropeway }
           - { icon: 🔗, label: 缆车官网, url: "https://www.ropeway.com.tw/" }
 
-      - time: 13:15 – 16:00
+      - time: 12:15 – 16:00
         title: 🎢 九族文化村
         detail: 一票玩到底 — 原住民九族文化展示、欧洲花园主题乐园、UFO 自由落体、加勒比海盗船。推荐：马雅探险、西班牙海岸大漩涡、原住民歌舞表演。反向进园从缆车站那头开逛，路线更顺。
         tickets:
