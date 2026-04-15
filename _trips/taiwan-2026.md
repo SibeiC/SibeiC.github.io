@@ -32,6 +32,7 @@ urls:
   bus_6670d_ticket: &url_bus_6670d_ticket "https://ntbus.welcometw.com/tour/MvmY"
   bus_6739_ticket:  &url_bus_6739_ticket  "https://ylbus-shop.fontour.com/tour/NOyj"
   boat_sml_ticket:  &url_boat_sml_ticket  "https://ntbus.welcometw.com/tour/WY09"
+  funcard_nine_combo: &url_funcard_nine_combo "https://centraltw.funcard.com.tw/tour/j6xD"
 
 cost:
   primary: NT$
@@ -77,7 +78,7 @@ cost:
       icon: 🎫
       items:
         - { label: 故宫博物院, amount: 350, in: primary }
-        - { label: "九族文化村（含缆车）", amount: 900, in: primary }
+        - { label: "九族 + 游湖套票（中台湾好玩卡）", amount: 1050, in: primary }
         - { label: "阿里山入园 + 支线 ×2", amount: 400, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
         - { label: "多罗满赏鲸（含免费接送）", amount: 900, in: primary }
@@ -408,12 +409,12 @@ days:
         title: 🎢 九族文化村
         detail: 一票玩到底 — 原住民九族文化展示、欧洲花园主题乐园、UFO 自由落体、加勒比海盗船。推荐：马雅探险、西班牙海岸大漩涡、原住民歌舞表演。反向进园从缆车站那头开逛，路线更顺。
         tickets:
-          - { tag: 全票, value: NT$900, note: 含日月潭缆车往返 }
-          - { tag: 线上购票, value: 约 NT$780–830 }
+          - { tag: 套票, value: "NT$1,050", note: "含日月潭缆车 + 游湖船（中台湾好玩卡）" }
           - { tag: 营业时间, value: 09:30–17:00 }
         links:
           - { type: map, label: 九族文化村, query: Formosan Aboriginal Culture Village }
           - { type: ticket, label: 九族官网, url: "https://www.nine.com.tw/" }
+          - { type: ticket, label: 中台湾好玩卡, url: *url_funcard_nine_combo }
           - { type: ticket, label: Klook, url: *url_klook_nine }
           - { type: ticket, label: KKday, url: *url_kkday_nine }
 
@@ -829,8 +830,10 @@ booking_channels:
     note: 提前 14 天早上开放订票，订位即付款
   - name: 九族文化村 + 日月潭缆车
     links:
+      - { label: 中台湾好玩卡, url: *url_funcard_nine_combo }
       - { label: Klook, url: *url_klook_nine }
       - { label: KKday, url: *url_kkday_nine }
+    note: "套票 NT$1,050 含九族 + 日月潭游湖船 + 缆车（日月潭线）"
   - name: 多罗满赏鲸
     links:
       - { label: Klook, url: *url_klook_whale }
