@@ -54,7 +54,7 @@ cost:
       icon: 🏨
       items:
         - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
-        - { label: "Hotel Hesper HSR 台中（1 晚）", amount: 83.60, in: secondary }
+        - { label: "台中赫丝珀高铁行旅（1 晚）", amount: 83.60, in: secondary }
         - { label: "水沙连大饭店（1 晚）", amount: 2800, in: primary, note: 估算 }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
@@ -103,11 +103,11 @@ hotels:
     dates: 5/28 (四) – 5/30 (六)
     address: 台北市中正区中华路一段 3 号
     map_query: citizenM Taipei North Gate
-  - name: Hotel Hesper HSR - Taichung
+  - name: 台中赫丝珀高铁行旅 Hesper HSR Hotel
     nights: 1
     dates: 5/30 (六) – 5/31 (日)
     address: 台中高铁站步行圈内（Day 4 早上在台中高铁停靠点上 6670A）
-    map_query: Hotel Hesper HSR Taichung
+    map_query: 台中赫丝珀高铁行旅
   - name: 水沙连大饭店 Shui Sha Lian Hotel
     nights: 1
     dates: 5/31 (日) – 6/1 (一)
@@ -314,15 +314,15 @@ days:
           - { type: map, label: 台中高铁站, query: HSR Taichung Station }
 
       - time: 17:30 – 18:30
-        title: 🏨 Hotel Hesper HSR · Check-in
+        title: 🏨 台中赫丝珀高铁行旅 · Check-in
         detail: 台中高铁站步行圈内，明早直接走 5 分钟到 台中高铁 就能上 6670A，不用折腾回干城。
         links:
-          - { type: map, label: Hotel Hesper HSR, query: Hotel Hesper HSR Taichung }
+          - { type: map, label: 台中赫丝珀高铁行旅, query: 台中赫丝珀高铁行旅 }
 
       - time: 19:00 – 21:30
         title: 🍢 台中晚餐
         detail: |
-          Hotel Hesper 在高铁站一带，市区餐饮需进市中心。
+          赫丝珀在高铁站一带，市区餐饮需进市中心。
           <br><br>
           <strong>逢甲夜市：</strong>全台最大夜市之一。从 HSR 搭计程车约 20 分钟，回程同。必吃：大肠包小肠、日船章鱼小丸子、豪大大鸡排、明伦蛋饼。
           <br><br>
@@ -334,7 +334,7 @@ days:
           - { type: map, label: 台中第二市场, query: 台中第二市场 }
           - { type: map, label: 台中高铁站美食街, query: 台中高铁站 }
     stay:
-      hotel: Hotel Hesper HSR - Taichung
+      hotel: 台中赫丝珀高铁行旅 Hesper HSR Hotel
 
   - num: 4
     color: "#2e86ab"
@@ -345,7 +345,7 @@ days:
     toc_label: 5/31 日月潭
     items:
       - time: 07:30 – 07:50
-        title: 🎒 Hotel Hesper 退房 · 走去 台中高铁站
+        title: 🎒 赫丝珀退房 · 走去 台中高铁站
         detail: 今早退房带上行李走 5 分钟到台中高铁站 6670A 上客点，07:50 前到站取票（20 分钟规则，为 08:10 bus buffer）。
 
       - time: 08:10 – 09:45
