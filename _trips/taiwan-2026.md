@@ -32,6 +32,7 @@ urls:
   bus_6670d_ticket: &url_bus_6670d_ticket "https://ntbus.welcometw.com/tour/MvmY"
   bus_6739_ticket:  &url_bus_6739_ticket  "https://ylbus-shop.fontour.com/tour/NOyj"
   boat_sml_ticket:  &url_boat_sml_ticket  "https://ntbus.welcometw.com/tour/WY09"
+  afrts_1150_down:  &url_afrts_1150_down  "https://forestpass.welcometw.com/tour/y1ZP"
   funcard_nine_combo: &url_funcard_nine_combo "https://centraltw.funcard.com.tw/tour/j6xD"
 
 cost:
@@ -573,7 +574,7 @@ days:
         detail: |
           百年蒸汽林铁下山首选，阿里山车站 11:50 发车，约 3h55m 抵达<strong>嘉义车站（TRA 普通站，非高铁站）</strong>。沿途经奋起湖、竹崎等站，山岚林海风景绝佳。
           <br><br>
-          <strong>⚠️ 抢票：</strong>必须出发前 14 天上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 订票（订位即付款，2026 年新制，逾时取消）。
+          <strong>⚠️ 抢票：</strong>首选官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 提前 14 天订票（订位即付款，2026 年新制，逾时取消）。若错过窗口或被抢光，可转<a href="https://forestpass.welcometw.com/tour/y1ZP" target="_blank">森林好好玩</a> 授权代售（11:50 下行专属链接，近日余位稳定）。
           <br><br>
           <strong>备选（若林铁票售罄）：</strong>改搭台湾好行 7329A 公车 10:10 / 12:00 / 13:30 发车，约 3h 直达<strong>嘉义高铁站</strong>，NT$283 现买即走。到高铁站后直接转高铁去台南（13 分钟 / NT$410），时间反而更早。
         transit_route:
@@ -584,6 +585,7 @@ days:
           - { tag: 7329A 公车（备选）, value: "NT$283" }
         links:
           - { type: ticket, label: 林铁官网订票, url: *url_afrts }
+          - { type: ticket, label: 森林好好玩 11:50 下行（授权代售）, url: *url_afrts_1150_down }
           - { type: ticket, label: 7329A 时刻表（备选）, url: *url_bus_7329a }
           - { type: ticket, label: 73290 慢车版（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" }
           - { type: map, label: 嘉义车站（TRA）, query: Chiayi TRA Station }
@@ -843,8 +845,10 @@ booking_channels:
   - name: 台湾好行 7329A（阿里山-嘉义）
     links: [{ label: 时刻表, url: *url_bus_7329a }]
   - name: 阿里山森林铁路
-    links: [{ label: afrts.forest.gov.tw, url: *url_afrts }]
-    note: 提前 14 天早上开放订票，订位即付款
+    links:
+      - { label: afrts.forest.gov.tw（官方）, url: *url_afrts }
+      - { label: 森林好好玩 11:50 下行（授权代售）, url: *url_afrts_1150_down }
+    note: 官方提前 14 天早上开放订票，订位即付款；森林好好玩为林保署授权代售，余位有时比官方更稳定
   - name: 九族文化村 + 日月潭缆车
     links:
       - { label: 中台湾好玩卡, url: *url_funcard_nine_combo }
