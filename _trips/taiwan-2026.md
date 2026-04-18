@@ -486,15 +486,13 @@ days:
           - { type: map, label: 阿里山入口, query: Alishan National Forest Recreation Area Entrance }
 
       - time: 12:00 – 12:20
-        title: 🎒 阿里山游客中心 · 免费行李寄放
+        title: 🎒 青山别馆 · 行李寄存
         detail: |
-          下了好行公车走到阿里山游客中心（从转运站步行 2 分钟），<strong>开放式行李架免费寄放</strong>，不收钱也不做保管 — <strong>贵重物品（护照、现金、相机、电子产品）务必随身</strong>，只把换洗衣物 / 大包丢进去。
+          下了好行公车步行约 5 分钟到青山别馆（园区内住宿）。正式 check-in 时间下午 14:00 后，但柜台可先收行李 — 把大件扔在行李房、轻装出门玩一下午，晚上回来再办正式入住。
           <br><br>
-          <strong>⚠️ 营业时间 08:30–17:00</strong>，必须在 17:00 前取回，沼平线下山务必 16:45 前抵达车站，留 15 分钟取行李走去青山别馆。
-          <br><br>
-          付费备案：阿里山车站 2F 投币置物柜 24 小时营业；转运站 1F 置物柜到 17:00。
+          <strong>⚠️ 园区内晚上 7 点后几乎无餐厅营业</strong>，记得下山前在车站 / 沼平周边买点夜宵带回去。
         links:
-          - { type: map, label: 阿里山游客中心, query: 阿里山国家森林游乐区游客中心 }
+          - { type: map, label: 青山别馆, query: Chin Shan Villa 青山别馆 阿里山 }
 
       - time: 12:30 – 13:20
         title: 🎫 阿里山入园 · 午餐
@@ -527,8 +525,8 @@ days:
           - { type: ticket, label: 林铁支线订票, url: *url_afrts }
 
       - time: "17:00"
-        title: 🏨 青山别馆 Chin Shan Villa · Check-in（顺路取行李）
-        detail: 沼平线下山到阿里山车站 → 游客中心取回行李（17:00 关门前）→ 步行 3 分钟至青山别馆。园区内住宿，靠近阿里山车站，方便隔日搭森林铁路下山。<strong>园区晚上 7 点后几乎无餐厅营业，建议提早用餐。</strong>
+        title: 🏨 青山别馆 Chin Shan Villa · Check-in
+        detail: 沼平线下山回阿里山车站，步行 3 分钟到青山别馆办正式入住（行李中午已先寄存）。园区内住宿，方便隔日搭森林铁路下山。
         links:
           - { type: map, label: 酒店位置, query: Chin Shan Villa 青山别馆 阿里山 }
     note: |
@@ -551,6 +549,10 @@ days:
           - { tag: 祝山线, value: NT$150 }
         links:
           - { type: map, label: 祝山站, query: 祝山观日楼 }
+
+      - time: 10:30 – 11:30
+        title: 🎒 青山别馆 · check-out + 走去阿里山车站
+        detail: 11:00 前退房拿回行李，步行约 3 分钟到阿里山车站月台。有时间在车站周边买个便当/饭团当午餐带上车，林铁沿途没有餐车。
 
       - time: 11:50 – 15:45
         title: 🚂 阿里山林铁本线 · 阿里山 → 嘉义（首选）
