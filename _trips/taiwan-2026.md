@@ -32,6 +32,7 @@ urls:
   bus_6670d_ticket: &url_bus_6670d_ticket "https://ntbus.welcometw.com/tour/MvmY"
   bus_6739_ticket:  &url_bus_6739_ticket  "https://ylbus-shop.fontour.com/tour/NOyj"
   boat_sml_ticket:  &url_boat_sml_ticket  "https://ntbus.welcometw.com/tour/WY09"
+  afrts_1150_down:  &url_afrts_1150_down  "https://forestpass.welcometw.com/tour/y1ZP"
   funcard_nine_combo: &url_funcard_nine_combo "https://centraltw.funcard.com.tw/tour/j6xD"
 
 cost:
@@ -80,7 +81,7 @@ cost:
         - { label: 故宫博物院 全票, amount: 350, in: primary }
         - { label: "故宫 语音导览子机（定时导览必租）", amount: 30, in: primary }
         - { label: "九族 + 游湖套票（中台湾好玩卡）", amount: 1050, in: primary }
-        - { label: "阿里山入园 + 支线 ×2", amount: 400, in: primary }
+        - { label: "阿里山入园（大众运输票）+ 支线 ×2", amount: 350, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
         - { label: "多罗满赏鲸（含免费接送）", amount: 900, in: primary }
 
@@ -496,10 +497,14 @@ days:
 
       - time: 12:30 – 13:20
         title: 🎫 阿里山入园 · 午餐
-        detail: 车站/转运站周边购买入园门票 + 简易午餐。6/1 为周一，适用非假日票价 NT$200。
+        detail: |
+          车站/转运站周边购买入园门票 + 简易午餐。搭 6739 台湾好行直达抵达适用<strong>大众运输优惠票 NT$150</strong> — 购票时出示当日 6739 车票票根即可，比一般全票便宜。
+          <br><br>
+          <strong>🏨 住宿在园区内青山别馆，一张票即可 —</strong> 当日入园后不出园，隔日直接从阿里山车站搭林铁下山，全程无需二次购票。
         tickets:
-          - { tag: 全票, value: NT$200, note: 非假日 }
-          - { tag: 假日, value: NT$300 }
+          - { tag: 大众运输优惠票, value: NT$150, note: 出示当日 6739 车票票根 }
+          - { tag: 非假日全票, value: NT$200 }
+          - { tag: 假日全票, value: NT$300 }
         links:
           - { type: ticket, label: 阿里山国家风景区（周边资讯）, url: "https://www.ali-nsa.net/" }
 
@@ -573,7 +578,7 @@ days:
         detail: |
           百年蒸汽林铁下山首选，阿里山车站 11:50 发车，约 3h55m 抵达<strong>嘉义车站（TRA 普通站，非高铁站）</strong>。沿途经奋起湖、竹崎等站，山岚林海风景绝佳。
           <br><br>
-          <strong>⚠️ 抢票：</strong>必须出发前 14 天上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 订票（订位即付款，2026 年新制，逾时取消）。
+          <strong>⚠️ 抢票：</strong>提前 14 天上官网 <a href="https://afrts.forest.gov.tw/OT01_1.aspx" target="_blank" rel="noopener">afrts.forest.gov.tw</a> 订票（订位即付款，2026 年新制，逾时取消）。若错过窗口或抢不到，见页尾「订票渠道 · 阿里山森林铁路」的备用入口。
           <br><br>
           <strong>备选（若林铁票售罄）：</strong>改搭台湾好行 7329A 公车 10:10 / 12:00 / 13:30 发车，约 3h 直达<strong>嘉义高铁站</strong>，NT$283 现买即走。到高铁站后直接转高铁去台南（13 分钟 / NT$410），时间反而更早。
         transit_route:
@@ -618,7 +623,7 @@ days:
         links:
           - { type: map, label: 酒店位置, query: Grand Banyan Hotel Tainan }
     note: |
-      <strong>💡 Day 6 林铁优先：</strong>首选搭阿里山森林铁路本线下山（NT$600，3h55m，百年路线），<strong>务必出发前 14 天</strong>上官网 <a href="https://afrts.forest.gov.tw" target="_blank">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。若林铁票售罄，退而求其次搭台湾好行 7329A 公车（现买即走，NT$283，直达嘉义高铁站，到站反而更早）。林铁终点是嘉义 TRA 站，后续台铁去台南即可；公车到的是嘉义高铁站，接高铁去台南更顺。
+      <strong>💡 Day 6 林铁优先：</strong>首选搭阿里山森林铁路本线下山（NT$600，3h55m，百年路线），<strong>务必出发前 14 天</strong>上官网 <a href="https://afrts.forest.gov.tw/OT01_1.aspx" target="_blank" rel="noopener">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。若林铁票售罄，退而求其次搭台湾好行 7329A 公车（现买即走，NT$283，直达嘉义高铁站，到站反而更早）。林铁终点是嘉义 TRA 站，后续台铁去台南即可；公车到的是嘉义高铁站，接高铁去台南更顺。
     stay:
       hotel: 禧榕轩大饭店 Grand Banyan Hotel
       label: 第 1 晚 / 共 2 晚
@@ -843,8 +848,10 @@ booking_channels:
   - name: 台湾好行 7329A（阿里山-嘉义）
     links: [{ label: 时刻表, url: *url_bus_7329a }]
   - name: 阿里山森林铁路
-    links: [{ label: afrts.forest.gov.tw, url: *url_afrts }]
-    note: 提前 14 天早上开放订票，订位即付款
+    links:
+      - { label: afrts.forest.gov.tw（官方）, url: *url_afrts }
+      - { label: 11:50 下行备用, url: *url_afrts_1150_down }
+    note: 官方提前 14 天早上开放订票，订位即付款
   - name: 九族文化村 + 日月潭缆车
     links:
       - { label: 中台湾好玩卡, url: *url_funcard_nine_combo }
