@@ -56,7 +56,7 @@ cost:
       icon: 🏨
       items:
         - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
-        - { label: "水沙连大饭店（2 晚）", amount: 5600, in: primary, note: 估算 }
+        - { label: "水沙连大饭店（2 晚）", amount: 195.18, in: secondary }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
         - { label: "S.E.A. 民宿（1 晚）", amount: 3510, in: primary }
