@@ -56,7 +56,7 @@ cost:
       icon: 🏨
       items:
         - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
-        - { label: "Mei Jen house B&B（2 晚）", amount: 5900, in: primary }
+        - { label: "水沙连大饭店（2 晚）", amount: 5600, in: primary, note: 估算 }
         - { label: "青山别馆（1 晚）", amount: 2500, in: primary, note: 估算 }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
         - { label: "S.E.A. 民宿（1 晚）", amount: 3510, in: primary }
@@ -105,11 +105,11 @@ hotels:
     dates: 5/28 (四) – 5/30 (六)
     address: 台北市中正区中华路一段 3 号
     map_query: citizenM Taipei North Gate
-  - name: Mei Jen house B&B 日月潭民宿
+  - name: 水沙连大饭店 Shui Sha Lian Hotel
     nights: 2
     dates: 5/30 (六) – 6/1 (一)
-    address: 南投县鱼池乡中山路 125 号
-    map_query: Mei Jen house B&B 日月潭民宿
+    address: 南投县鱼池乡民生街 5 号（日月潭水社）
+    map_query: Shui Sha Lian Hotel 水沙连大饭店
   - name: 青山别馆 Chin Shan Villa
     nights: 1
     dates: 6/1 (一) – 6/2 (二)
@@ -302,7 +302,7 @@ days:
         detail: |
           南下对号 1321 次，<strong>台北 16:01 发车 → 台中 16:54 抵达</strong>，约 53 分钟（途经南港→台北→桃园→台中 停站）。该车次运行日：一/二/三/四/六，周六 5/30 有车。
           <br><br>
-          抵达台中高铁后直接在站内 / 附近吃晚餐，吃完回到 1F 台湾好行站牌搭 6670D 南下日月潭水社 — 当晚住 Mei Jen house B&B。
+          抵达台中高铁后直接在站内 / 附近吃晚餐，吃完回到 1F 台湾好行站牌搭 6670D 南下日月潭水社 — 当晚住水沙连。
         tickets:
           - { tag: 标准车厢, value: NT$700 }
           - { tag: 早鸟 65 折, value: NT$455, note: 提前 5–28 天 }
@@ -348,19 +348,13 @@ days:
           - { type: map, label: 高铁台中站 好行站牌, query: 台中高铁站 台湾好行 }
           - { type: map, label: 水社游客中心, query: 水社游客中心 日月潭 }
 
-      - time: 21:00 – 22:00
-        title: 🎒 Mei Jen house B&B · 到店 check-in
-        detail: |
-          Booking 上给民宿报的到达时间 21:00–22:00。民宿地址在鱼池乡中山路 125 号（不在水社码头边），从水社下车后需再搭计程车 / 民宿接驳约 15 分钟才到。柜台办入住，早点休息 — 明天九族文化村 + 游湖 + 缆车走一整天。
-          <br><br>
-          <strong>⚠️ 仅收现金：</strong>入住时现场付 NT$ 5,900（两晚含税），出发前先备好。
-        tickets:
-          - { tag: 现金, value: "NT$ 5,900", note: 两晚含税，现场付 }
-          - { tag: 确认码, value: "6030320000 · PIN 7151" }
+      - time: 20:30 – 21:00
+        title: 🎒 水沙连大饭店 · 到店 check-in
+        detail: 水社下车步行 3 分钟到水沙连，柜台办入住，早点休息 — 明天九族文化村 + 游湖 + 缆车走一整天。
         links:
-          - { type: map, label: Mei Jen house B&B, query: Mei Jen house B&B 日月潭民宿 }
+          - { type: map, label: 水沙连大饭店, query: Shui Sha Lian Hotel 水沙连大饭店 }
     stay:
-      hotel: Mei Jen house B&B 日月潭民宿
+      hotel: 水沙连大饭店 Shui Sha Lian Hotel
       label: 第 1 晚
 
   - num: 4
@@ -374,7 +368,7 @@ days:
       - time: 07:30 – 09:30
         title: 🌅 水社晨间漫步 + 早餐
         detail: |
-          昨晚已到 Mei Jen house B&B、行李在房，今早先在民宿周边 / 水社老街解决早餐（民宿房费不含早），再搭接驳/计程车到水社码头，沿水社亲水步道散步 30–40 分钟，清晨湖面雾气特别出片。吃饱喝足，今天要走一整天（九族 + 游湖 2 段 + 缆车 2 次）。
+          昨晚已到水社、行李在房，今早先在水沙连吃早餐（含在房费里），再沿水社码头 → 水社亲水步道散步 30–40 分钟，清晨湖面雾气特别出片。吃饱喝足，今天要走一整天（九族 + 游湖 2 段 + 缆车 2 次）。
         links:
           - { type: map, label: 水社码头, query: 水社码头 }
           - { type: map, label: 水社亲水步道, query: 水社亲水步道 日月潭 }
@@ -445,7 +439,7 @@ days:
           - { type: map, label: 水社码头, query: 水社码头 }
 
       - time: "17:00 – 19:30"
-        title: 🏨 Mei Jen house B&B · 休整 + 觅食
+        title: 🏨 水沙连大饭店 · 休整 + 觅食
         detail: 回房间冲个澡、换衣服，再出门吃晚餐（水社码头周边小吃摊 / 邵族料理），顺路把脏衣服带去洗衣店。
 
       - time: 19:30 – 21:30
@@ -458,9 +452,9 @@ days:
         links:
           - { type: map, label: 招茗自助洗衣店, query: 招茗自助洗衣店 日月潭 }
     note: |
-      <strong>💡 为什么住 2 晚 Mei Jen house B&B：</strong>5/30 晚从台中高铁搭 6670D 直上水社再转接驳，隔天九族 + 游湖不用起早赶车；6/1 早上从水社 08:00 上 6739 直达阿里山，全程一次到位。
+      <strong>💡 为什么住 2 晚水沙连：</strong>5/30 晚从台中高铁搭 6670D 直上水社，隔天九族 + 游湖不用起早赶车；6/1 早上从水社 08:00 上 6739 直达阿里山，全程一次到位。
     stay:
-      hotel: Mei Jen house B&B 日月潭民宿
+      hotel: 水沙连大饭店 Shui Sha Lian Hotel
       label: 第 2 晚
 
   - num: 5
