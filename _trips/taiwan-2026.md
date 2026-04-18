@@ -533,9 +533,13 @@ days:
       - time: 可选 19:30 – 21:30
         title: ✨ 观星 / 追流星（可选）
         detail: |
-          阿里山海拔 2,200m + 光害低，是全台顶级观星点。晴朗夜可裸眼看银河、散发流星，运气好能抓到亮流星。<strong>小笠原山观景台</strong>（沼平线底站徒步约 10 分钟，有无障碍步道）和<strong>祝山观景台</strong>都是热门点；部分酒店 / 当地业者会组织夜间导览团，青山别馆 check-in 时可直接问柜台当晚有否开团、云量、推荐出发时间。
+          阿里山海拔 2,200m + 光害低，是全台顶级观星点。官方首推<strong>小笠原山观景台</strong>（沼平线底站徒步约 10 分钟，有无障碍步道 360° 无遮挡），<strong>祝山观景台</strong>为备选。
           <br><br>
-          <strong>⚠️ 完全看天：</strong>阿里山 5–6 月常云雾缭绕，云多就直接放弃回房间早睡。没有固定流星雨（Eta Aquariids 5 月上旬已过、Perseids 要等 8 月），纯粹碰运气的散发流星。
+          <strong>🌠 6/1 流星机会：</strong><a href="https://earthsky.org/astronomy-essentials/arietids-daytime-meteor-shower-peaks/" target="_blank">白羊座流星雨（Arietids）</a> 活跃期 5/22–7/3，峰值 6/10，虽以日间流星为主，但<strong>破晓前最后一小时的暗空窗口</strong>可能抓到几颗。6/1 非峰值，仅可期待零星，且当日月相为下弦至新月之间（6/8 下弦月），6/1 深夜后有一定月光干扰。
+          <br><br>
+          <strong>官方导览：</strong>林业保育署嘉义分署 + 嘉义市天文协会每年 4–6 月办<a href="https://www.facebook.com/AlishanForest/posts/952736067010416/" target="_blank">「春星斯麦尔」6 梯次 2 天 1 夜观星生态营</a>（小笠原平台专业望远镜 + 星座解说），但需提前报名。check-in 时问柜台当晚是否恰好有梯次、或酒店 / 在地业者有无夜间观星团。
+          <br><br>
+          <strong>⚠️ 完全看天：</strong>阿里山 5–6 月常云雾缭绕，云多就直接放弃回房间早睡。
           <br><br>
           <strong>装备：</strong>头灯 / 手电（红光最佳，不影响暗适应）、薄羽绒或厚外套（入夜 10–15°C）、防蚊液、星图 App（Sky Guide / Stellarium）。
         tickets:
@@ -544,6 +548,8 @@ days:
         links:
           - { type: map, label: 小笠原山观景台, query: 小笠原山观景台 阿里山 }
           - { type: map, label: 祝山观景台, query: 祝山观景台 }
+          - { label: Arietids 流星雨 (EarthSky), url: "https://earthsky.org/astronomy-essentials/arietids-daytime-meteor-shower-peaks/" }
+          - { label: 春星斯麦尔官方梯次, url: "https://www.facebook.com/AlishanForest/posts/952736067010416/" }
     note: |
       <strong>💡 观星替代日出：</strong>放弃传统 4:30 赶祝山观日出火车，改把阿里山高海拔 + 低光害的优势用在当晚观星上 — check-in 时先跟青山别馆柜台问当晚天气 / 有否开观星团。隔日睡饱再退房也更从容。
     stay:
