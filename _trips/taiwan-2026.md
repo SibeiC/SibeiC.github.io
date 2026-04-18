@@ -20,7 +20,6 @@ urls:
   railway:     &url_railway      "https://www.railway.gov.tw/tra-tip-web/tip?lang=ZH_TW"
   bus_6670d:   &url_bus_6670d    "http://www.ntbus.com.tw/hsr6.html"
   bus_6739:    &url_bus_6739     "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=67390&rn=1775391077195&lan=C"
-  bus_7329a:   &url_bus_7329a    "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=7329A&rn=1775391545330&lan=C"
   afrts:       &url_afrts        "https://afrts.forest.gov.tw/OT01_1.aspx"
   nantoubus:   &url_nantoubus    "https://www.nantoubus.com.tw/"
   klook_nine:  &url_klook_nine   "https://www.klook.com/zh-CN/activity/33027-formosa-aboriginal-cultural-village-ticket-sun-moon-lake-boat-pass/"
@@ -573,30 +572,20 @@ days:
         detail: 11:00 前退房拿回行李，步行约 3 分钟到阿里山车站月台。有时间在车站周边买个便当/饭团当午餐带上车，林铁沿途没有餐车。
 
       - time: 11:50 – 15:45
-        title: 🚂 阿里山林铁本线 · 阿里山 → 嘉义（首选）
+        title: 🚂 阿里山林铁本线 · 阿里山 → 嘉义
         transit: true
         detail: |
-          百年蒸汽林铁下山首选，阿里山车站 11:50 发车，约 3h55m 抵达<strong>嘉义车站（TRA 普通站，非高铁站）</strong>。沿途经奋起湖、竹崎等站，山岚林海风景绝佳。
-          <br><br>
-          <strong>⚠️ 抢票：</strong>提前 14 天上官网 <a href="https://afrts.forest.gov.tw/OT01_1.aspx" target="_blank" rel="noopener">afrts.forest.gov.tw</a> 订票（订位即付款，2026 年新制，逾时取消）。若错过窗口或抢不到，见页尾「订票渠道 · 阿里山森林铁路」的备用入口。
-          <br><br>
-          <strong>备选（若林铁票售罄）：</strong>改搭台湾好行 7329A 公车 10:10 / 12:00 / 13:30 发车，约 3h 直达<strong>嘉义高铁站</strong>，NT$283 现买即走。到高铁站后直接转高铁去台南（13 分钟 / NT$410），时间反而更早。
-        transit_route:
-          preferred: 林铁本线 11:50 阿里山 → 15:45 嘉义 TRA（NT$600）
-          alternatives: ["备选 · 好行 7329A 10:10 / 12:00 / 13:30 → 嘉义高铁（3h / NT$283）"]
+          百年蒸汽林铁下山，阿里山车站 11:50 发车，约 3h55m 抵达<strong>嘉义车站（TRA 普通站，非高铁站）</strong>。沿途经奋起湖、竹崎等站，山岚林海风景绝佳。<strong>已订票 NT$600。</strong>
         tickets:
-          - { tag: 林铁本线, value: "NT$600" }
-          - { tag: 7329A 公车（备选）, value: "NT$283" }
+          - { tag: 林铁本线, value: "NT$600", note: 已订 }
         links:
-          - { type: ticket, label: 林铁官网订票, url: *url_afrts }
-          - { type: ticket, label: 7329A 时刻表（备选）, url: *url_bus_7329a }
-          - { type: ticket, label: 73290 慢车版（备选）, url: "https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=73290&rn=1775222496370&lan=C" }
+          - { type: ticket, label: 林铁官网, url: *url_afrts }
           - { type: map, label: 嘉义车站（TRA）, query: Chiayi TRA Station }
 
       - time: 16:00 – 17:30
         title: 🍜 嘉义市区晚餐 · 鸡肉饭巡礼
         detail: |
-          林铁下车即嘉义 TRA 站，步行或短程计程车即可抵达市区老店。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。若走公车备选路线已到嘉义高铁站，可改搭 BRT（凭高铁票免费）或台铁 25 分钟进市区。
+          林铁下车即嘉义 TRA 站，步行或短程计程车即可抵达市区老店。必吃：林聪明沙锅鱼头、刘里长鸡肉饭、桃城豆花、嘉义喷水鸡肉饭。
           <br><br>
           <strong>🎒 不想拖行李：</strong>嘉义 TRA 站地下一楼有投币置物柜，小柜 NT$20 / 时、大柜 NT$50 / 时 — 夕阳前寄存，吃完饭回来取，省得拖着跑鸡肉饭老店。
         links:
@@ -606,24 +595,17 @@ days:
       - time: 17:45 – 18:30
         title: 🚆 台铁 · 嘉义 → 台南（约 40 分钟）
         transit: true
-        detail: |
-          林铁终点就是嘉义 TRA 站，直接转台铁自强号/区间车至台南车站，车程 35–45 分钟，步行或计程车约 15 分钟即可抵达禧榕轩大饭店。
-          <br><br>
-          <strong>若走公车备选路线：</strong>已在嘉义高铁站，改搭高铁 13 分钟到台南高铁站（NT$410），再转沙仑线 25 分钟进市区，反而更快到饭店。
+        detail: 林铁终点就是嘉义 TRA 站，直接转台铁自强号/区间车至台南车站，车程 35–45 分钟，步行或计程车约 15 分钟即可抵达禧榕轩大饭店。
         tickets:
           - { tag: 台铁自强, value: "NT$107" }
-          - { tag: 高铁（备选）, value: "NT$410" }
         links:
           - { type: ticket, label: 台铁订票, url: *url_railway }
-          - { type: ticket, label: 台湾高铁（备选）, url: *url_thsrc }
 
       - time: "19:00"
         title: 🏨 禧榕轩大饭店 Grand Banyan Hotel · Check-in
         detail: 位于台南北区成功路，邻近台南公园与台南火车站。check-in 后可在附近吃宵夜、逛神农街。
         links:
           - { type: map, label: 酒店位置, query: Grand Banyan Hotel Tainan }
-    note: |
-      <strong>💡 Day 6 林铁优先：</strong>首选搭阿里山森林铁路本线下山（NT$600，3h55m，百年路线），<strong>务必出发前 14 天</strong>上官网 <a href="https://afrts.forest.gov.tw/OT01_1.aspx" target="_blank" rel="noopener">afrts.forest.gov.tw</a> 抢票（订位即付款，2026 年新制，逾时取消）。若林铁票售罄，退而求其次搭台湾好行 7329A 公车（现买即走，NT$283，直达嘉义高铁站，到站反而更早）。林铁终点是嘉义 TRA 站，后续台铁去台南即可；公车到的是嘉义高铁站，接高铁去台南更顺。
     stay:
       hotel: 禧榕轩大饭店 Grand Banyan Hotel
       label: 第 1 晚 / 共 2 晚
@@ -845,8 +827,6 @@ booking_channels:
       - { label: 员林客运购票, url: *url_bus_6739_ticket }
       - { label: 南投客运, url: *url_nantoubus }
     note: 需电话或 APP 预约
-  - name: 台湾好行 7329A（阿里山-嘉义）
-    links: [{ label: 时刻表, url: *url_bus_7329a }]
   - name: 阿里山森林铁路
     links:
       - { label: afrts.forest.gov.tw（官方）, url: *url_afrts }
