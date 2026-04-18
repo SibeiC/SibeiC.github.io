@@ -81,7 +81,7 @@ cost:
         - { label: 故宫博物院 全票, amount: 350, in: primary }
         - { label: "故宫 语音导览子机（定时导览必租）", amount: 30, in: primary }
         - { label: "九族 + 游湖套票（中台湾好玩卡）", amount: 1050, in: primary }
-        - { label: "阿里山入园 + 支线 ×2", amount: 400, in: primary }
+        - { label: "阿里山入园（大众运输票）+ 支线 ×2", amount: 350, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
         - { label: "多罗满赏鲸（含免费接送）", amount: 900, in: primary }
 
@@ -497,10 +497,14 @@ days:
 
       - time: 12:30 – 13:20
         title: 🎫 阿里山入园 · 午餐
-        detail: 车站/转运站周边购买入园门票 + 简易午餐。6/1 为周一，适用非假日票价 NT$200。
+        detail: |
+          车站/转运站周边购买入园门票 + 简易午餐。搭 6739 台湾好行直达抵达适用<strong>大众运输优惠票 NT$150</strong> — 购票时出示当日 6739 车票票根即可，比一般全票便宜。
+          <br><br>
+          <strong>🏨 住宿在园区内青山别馆，一张票即可 —</strong> 当日入园后不出园，隔日直接从阿里山车站搭林铁下山，全程无需二次购票。
         tickets:
-          - { tag: 全票, value: NT$200, note: 非假日 }
-          - { tag: 假日, value: NT$300 }
+          - { tag: 大众运输优惠票, value: NT$150, note: 出示当日 6739 车票票根 }
+          - { tag: 非假日全票, value: NT$200 }
+          - { tag: 假日全票, value: NT$300 }
         links:
           - { type: ticket, label: 阿里山国家风景区（周边资讯）, url: "https://www.ali-nsa.net/" }
 
