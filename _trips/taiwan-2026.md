@@ -529,8 +529,29 @@ days:
         detail: 沼平线下山回阿里山车站，步行 3 分钟到青山别馆办正式入住（行李中午已先寄存）。园区内住宿，方便隔日搭森林铁路下山。
         links:
           - { type: map, label: 酒店位置, query: Chin Shan Villa 青山别馆 阿里山 }
+
+      - time: 可选 19:30 – 21:30
+        title: ✨ 观星 / 追流星（可选）
+        detail: |
+          阿里山海拔 2,200m + 光害低，是全台顶级观星点。官方首推<strong>小笠原山观景台</strong>（沼平线底站徒步约 10 分钟，有无障碍步道 360° 无遮挡），<strong>祝山观景台</strong>为备选。
+          <br><br>
+          <strong>🌠 6/1 流星机会：</strong><a href="https://earthsky.org/astronomy-essentials/arietids-daytime-meteor-shower-peaks/" target="_blank">白羊座流星雨（Arietids）</a> 活跃期 5/22–7/3，峰值 6/10，虽以日间流星为主，但<strong>破晓前最后一小时的暗空窗口</strong>可能抓到几颗。6/1 非峰值，仅可期待零星，且当日月相为下弦至新月之间（6/8 下弦月），6/1 深夜后有一定月光干扰。
+          <br><br>
+          <strong>官方导览：</strong>林业保育署嘉义分署 + 嘉义市天文协会每年 4–6 月办<a href="https://www.facebook.com/AlishanForest/posts/952736067010416/" target="_blank">「春星斯麦尔」6 梯次 2 天 1 夜观星生态营</a>（小笠原平台专业望远镜 + 星座解说），但需提前报名。check-in 时问柜台当晚是否恰好有梯次、或酒店 / 在地业者有无夜间观星团。
+          <br><br>
+          <strong>⚠️ 完全看天：</strong>阿里山 5–6 月常云雾缭绕，云多就直接放弃回房间早睡。
+          <br><br>
+          <strong>装备：</strong>头灯 / 手电（红光最佳，不影响暗适应）、薄羽绒或厚外套（入夜 10–15°C）、防蚊液、星图 App（Sky Guide / Stellarium）。
+        tickets:
+          - { tag: 自助前往, value: 免费 }
+          - { tag: 导览团（若酒店开团）, value: "NT$500–800/人", note: 视当晚天气与报名人数 }
+        links:
+          - { type: map, label: 小笠原山观景台, query: 小笠原山观景台 阿里山 }
+          - { type: map, label: 祝山观景台, query: 祝山观景台 }
+          - { label: Arietids 流星雨 (EarthSky), url: "https://earthsky.org/astronomy-essentials/arietids-daytime-meteor-shower-peaks/" }
+          - { label: 春星斯麦尔官方梯次, url: "https://www.facebook.com/AlishanForest/posts/952736067010416/" }
     note: |
-      <strong>💡 Day 5 看日出选择：</strong>若想看日出，可于隔天清晨（6/2）搭乘祝山线观日出火车（NT$150），发车时间依日出当日 4:30 公告，通常约 04:30–05:00 发车。在 Chin Shan Villa 柜台或阿里山车站购票。
+      <strong>💡 观星替代日出：</strong>放弃传统 4:30 赶祝山观日出火车，改把阿里山高海拔 + 低光害的优势用在当晚观星上 — check-in 时先跟青山别馆柜台问当晚天气 / 有否开观星团。隔日睡饱再退房也更从容。
     stay:
       hotel: 青山别馆 Chin Shan Villa
 
@@ -542,14 +563,6 @@ days:
     location: 百年林铁 · 古都入城
     toc_label: 6/2 阿里山→台南
     items:
-      - time: 可选 04:30
-        title: 🌅 祝山线观日出（可选）
-        detail: 前一天下午在阿里山车站或酒店柜台购票。搭观日出火车至祝山站 → 看日出 → 原路返回，约 2 小时。
-        tickets:
-          - { tag: 祝山线, value: NT$150 }
-        links:
-          - { type: map, label: 祝山站, query: 祝山观日楼 }
-
       - time: 10:30 – 11:30
         title: 🎒 青山别馆 · check-out + 走去阿里山车站
         detail: 11:00 前退房拿回行李，步行约 3 分钟到阿里山车站月台。有时间在车站周边买个便当/饭团当午餐带上车，林铁沿途没有餐车。
