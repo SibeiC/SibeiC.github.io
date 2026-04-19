@@ -64,7 +64,7 @@ cost:
     - name: 交通
       icon: 🚆
       items:
-        - { label: "高铁 1321 台北→台中（Klook）", amount: 24.15, in: secondary }
+        - { label: "高铁 1321 台北→台中（Klook BOGO）", amount: 24.15, in: secondary }
         - { label: "好行 6670D 台中→水社", amount: 193, in: primary }
         - { label: "好行 6739 日月潭→阿里山", amount: 329, in: primary }
         - { label: "林铁本线 阿里山→嘉义（首选）", amount: 600, in: primary }
@@ -304,7 +304,7 @@ days:
           <br><br>
           抵达台中高铁后直接在站内 / 附近吃晚餐，吃完回到 1F 台湾好行站牌搭 6670D 南下日月潭水社 — 当晚住水沙连。
         tickets:
-          - { tag: Klook 已订, value: "SGD 24.15", note: 标准车厢对号座 }
+          - { tag: Klook BOGO 已订, value: "SGD 24.15", note: 标准车厢对号 · 买一送一 }
         links:
           - { type: ticket, label: 台湾高铁官网, url: *url_thsrc }
           - { type: ticket, label: Klook 高铁票, url: "https://www.klook.com/zh-CN/activity/73749-thsr-one-way-ticket-taipei/" }
