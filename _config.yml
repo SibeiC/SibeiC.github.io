@@ -13,6 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+url: https://github.chencraft.com
+title: Sibei Chen
+description: Sibei Chen 的个人主页 · 简历 · 旅行行程 · 杯架收藏。Personal homepage with resume, trip itineraries, and cupholder collection.
+author:
+  name: Sibei Chen
+  email: contact@chencraft.com
+lang: en-US
 email: "@chencraft.com"
 # repository: required by jekyll-github-metadata (part of github-pages gem) to
 # populate site.github.* fields. GitHub Pages infers this from the git remote
@@ -28,6 +35,7 @@ theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 cloudflare_analytics: 54ec1fd326e94e19a351e401cb8f9eac
 
