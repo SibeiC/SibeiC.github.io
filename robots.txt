@@ -1,4 +1,8 @@
+---
+# Front matter intentionally empty — presence enables Liquid processing so
+# Sitemap: line below resolves {{ site.url }} at build time.
+---
 User-agent: *
 Allow: /
 
-Sitemap: https://github.chencraft.com/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
