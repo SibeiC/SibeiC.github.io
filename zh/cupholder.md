@@ -1,5 +1,6 @@
 ---
 layout: default
+lang: zh-CN
 permalink: /zh/audi_e-tron_rear_cupholder/
 title: 奥迪e-tron后排水杯架安装说明
 

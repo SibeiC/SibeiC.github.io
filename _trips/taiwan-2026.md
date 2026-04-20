@@ -1,5 +1,6 @@
 ---
 layout: trip
+lang: zh-CN
 title: 台湾九日环岛行程
 subtitle:
   - 台北
@@ -9,7 +10,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/4/18
+last_updated: 2026/4/20
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at

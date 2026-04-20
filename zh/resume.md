@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+lang: zh-CN
 permalink: /zh/resume/
 title: 陈思贝的个人简历
 email: resume
