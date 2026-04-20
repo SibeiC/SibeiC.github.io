@@ -78,7 +78,7 @@ cost:
     - name: 门票与体验
       icon: 🎫
       items:
-        - { label: 故宫博物院 全票, amount: 350, in: primary }
+        - { label: "故宫博物院 全票（trip.com）", amount: 12.71, in: secondary }
         - { label: "故宫 语音导览子机（定时导览必租）", amount: 30, in: primary }
         - { label: "九族 + 游湖套票（中台湾好玩卡）", amount: 1050, in: primary }
         - { label: "阿里山入园（大众运输票）+ 支线 ×2", amount: 350, in: primary }
@@ -210,7 +210,7 @@ days:
           <br><br>
           <strong>自驾：</strong>从台北车站出发约 25 分钟，馆区有停车场（小型车 NT$50/小时）。
         tickets:
-          - { tag: 全票, value: NT$350 }
+          - { tag: trip.com 已订, value: "SGD 12.71", note: 全票 }
           - { tag: 子机租金, value: NT$30, note: 参加定时导览者每人必租 }
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
           - { tag: 免费导览, value: 10:30 / 14:30 · 参观前 3 天截止预约 }
