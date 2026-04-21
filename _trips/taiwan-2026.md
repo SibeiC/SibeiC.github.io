@@ -56,7 +56,7 @@ cost:
     - name: 住宿（8 晚）
       icon: 🏨
       items:
-        - { label: "citizenM Taipei（2 晚）", amount: 7126, in: primary }
+        - { label: "citizenM Taipei（2 晚）", amount: 6104, in: primary }
         - { label: "水沙连大饭店（2 晚）", amount: 195.18, in: secondary }
         - { label: "青山别馆（1 晚）", amount: 2840, in: primary }
         - { label: "禧榕轩大饭店（2 晚）", amount: 228.78, in: secondary }
