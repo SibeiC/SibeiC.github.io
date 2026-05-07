@@ -67,7 +67,7 @@ cost:
       items:
         - { label: "高铁 1321 台北→台中（Klook BOGO）", amount: 24.15, in: secondary }
         - { label: "好行 6670D 台中→水社", amount: 193, in: primary }
-        - { label: "好行 6739 日月潭→阿里山", amount: 329, in: primary }
+        - { label: "好行 6739 日月潭→阿里山", amount: 292, in: primary }
         - { label: "林铁本线 阿里山→嘉义（首选）", amount: 600, in: primary }
         - { label: "台铁 嘉义→台南", amount: 107, in: primary }
         - { label: "台铁自强号 台南→花莲", amount: 962, in: primary }
@@ -476,8 +476,7 @@ days:
           preferred: 08:00 出发 → 12:00 抵达阿里山
           alternatives: ["08:30 出发"]
         tickets:
-          - { tag: 现金票价, value: NT$329 }
-          - { tag: 悠游卡, value: 约 88 折 }
+          - { tag: 已订, value: NT$292, note: 员林客运提前购票优惠 }
         links:
           - { type: ticket, label: 6739 时刻表, url: *url_bus_6739 }
           - { type: ticket, label: 购票（员林客运）, url: *url_bus_6739_ticket }
