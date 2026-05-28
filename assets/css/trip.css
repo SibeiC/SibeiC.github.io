@@ -535,6 +535,7 @@ body {
 
 .day-weather {
   margin-left: auto;
+  align-self: center;
   display: inline-flex;
   align-items: baseline;
   gap: 6px;
@@ -543,8 +544,17 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border);
   color: var(--muted);
+  text-decoration: none;
   font-size: 0.9em;
   white-space: nowrap;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+a.day-weather:hover,
+a.day-weather:focus-visible {
+  background: var(--panel-bg);
+  border-color: var(--day-color, var(--accent));
+  outline: none;
 }
 
 .day-weather:not(.loaded) {
