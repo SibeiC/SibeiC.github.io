@@ -111,7 +111,10 @@
 
   var startStr = fmtDate(reqStart);
   var endStr = fmtDate(reqEnd);
-  var cacheKey = 'weather:' + location.pathname + ':' + startStr + ':' + endStr;
+  // Include the coord signature so editing a day's lat/lon invalidates the
+  // cache instead of mapping stale data into a re-indexed `points` array.
+  var coordSig = points.map(function (p) { return p.lat + ',' + p.lon; }).join('|');
+  var cacheKey = 'weather:' + location.pathname + ':' + startStr + ':' + endStr + ':' + coordSig;
   var cacheTTL = 6 * 60 * 60 * 1000;
   var now = Date.now();
 
