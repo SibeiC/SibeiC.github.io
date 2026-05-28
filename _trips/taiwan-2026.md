@@ -10,7 +10,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/4/20
+last_updated: 2026/5/28
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
@@ -142,6 +142,8 @@ days:
   - num: 1
     color: "#8e44ad"
     date: 2026-05-28
+    lat: 25.0478
+    lon: 121.5170
     title: 抵达台北 · 赤峰街 · 士林夜市
     date_label: 5月28日（周四）
     location: 台北市区
@@ -182,6 +184,8 @@ days:
   - num: 2
     color: "#2980b9"
     date: 2026-05-29
+    lat: 25.1554
+    lon: 121.5601
     title: 故宫博物院 · 阳明山国家公园
     date_label: 5月29日（周五）
     location: 台北近郊
@@ -252,6 +256,8 @@ days:
   - num: 3
     color: "#16a085"
     date: 2026-05-30
+    lat: 25.0478
+    lon: 121.5170
     title: 中正纪念堂 · 市府彩虹起点 · 西门町 · 南下日月潭
     date_label: 5月30日（周六）
     location: 台北 → 日月潭
@@ -360,6 +366,8 @@ days:
   - num: 4
     color: "#2e86ab"
     date: 2026-05-31
+    lat: 23.8569
+    lon: 120.9116
     title: 日月潭 · 九族文化村
     date_label: 5月31日（周日）
     location: 日月潭
@@ -460,6 +468,8 @@ days:
   - num: 5
     color: "#27ae60"
     date: 2026-06-01
+    lat: 23.5093
+    lon: 120.8024
     title: 日月潭 → 阿里山
     date_label: 6月1日（周一）
     location: 高山公路
@@ -561,6 +571,8 @@ days:
   - num: 6
     color: "#c0392b"
     date: 2026-06-02
+    lat: 22.9999
+    lon: 120.2270
     title: 阿里山 → 嘉义 → 台南
     date_label: 6月2日（周二）
     location: 百年林铁 · 古都入城
@@ -612,6 +624,8 @@ days:
   - num: 7
     color: "#e67e22"
     date: 2026-06-03
+    lat: 22.9999
+    lon: 120.2270
     title: 台南古都一日 · 安平树屋 · 神农街
     date_label: 6月3日（周三）
     location: 台南文化漫游
@@ -676,6 +690,8 @@ days:
   - num: 8
     color: "#1abc9c"
     date: 2026-06-04
+    lat: 23.9871
+    lon: 121.6015
     title: 台南 → 花莲 · 多罗满赏鲸
     date_label: 6月4日（周四）
     location: 东海岸出海
@@ -741,6 +757,8 @@ days:
   - num: 9
     color: "#34495e"
     date: 2026-06-05
+    lat: 23.9871
+    lon: 121.6015
     title: 花莲 → 桃园机场 · 红眼返程
     date_label: 6月5日（周五）
     location: 归国日（6/6 00:55 航班）

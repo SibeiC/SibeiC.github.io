@@ -176,7 +176,7 @@
   <div class="day-section" id="d{{ day.num }}" style="--day-color: {{ day.color }}"{% if day.date %} data-date="{{ day.date }}"{% endif %}>
     <div class="day-header">
       <div class="day-num">D{{ day.num }}</div>
-      <div>
+      <div class="day-heading">
         <div class="day-title">{{ day.title }}</div>
         <div class="day-route">
           {%- if day.date_label -%}
@@ -188,6 +188,9 @@
           {% if day.location %} · {{ day.location }}{% endif %}
         </div>
       </div>
+      {% if day.lat and day.lon and day.date %}
+      <div class="day-weather" data-lat="{{ day.lat }}" data-lon="{{ day.lon }}" data-date="{{ day.date }}" aria-live="polite"></div>
+      {% endif %}
     </div>
 
     <div class="timeline">

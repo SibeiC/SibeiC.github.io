@@ -170,6 +170,8 @@ days:                                 # [REQUIRED] <array<object>>
     color: "#8e44ad"                  # [REQUIRED][AI:INFER] hex color, vary across days. Suggested 9-color palette:
                                       #   #8e44ad #2980b9 #16a085 #2e86ab #27ae60 #c0392b #e67e22 #1abc9c #34495e
     date: 2027-01-01                  # [REQUIRED for today-jump][FROM SOURCE] strict YYYY-MM-DD
+    lat: 35.6812                      # [OPTIONAL][AI:INFER] <number> latitude of the day's main location (4 decimals ≈ 11 m precision is plenty). Set lat+lon (with `date` above also set) to enable the auto weather chip on this day's header — pulled from Open-Meteo at runtime, no API key, cached 6h (keyed by coordinate set so edits invalidate stale entries), fetch only fires when today is within [trip_start - 14d, trip_end + 2d]. Pick the spot where the traveller spends the most outdoor time (e.g. afternoon activity, evening city); skip on pure transit days where it'd be misleading.
+    lon: 139.7671                     # [OPTIONAL] <number> longitude — must be paired with lat. Omit both to suppress the chip for this day.
     title: 这一天的标题                  # [REQUIRED][AI:INFER] compose from main activities/cities of the day
     date_label: 1月1日（周几）            # [OPTIONAL][AI:COMPUTE] format "M月D日（周N）" — compute weekday
     location: 城市/区域                  # [OPTIONAL][AI:INFER] one short phrase capturing the day's vibe

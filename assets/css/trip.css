@@ -521,10 +521,44 @@ body {
 .day-header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 14px;
   margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 2px solid var(--day-color, var(--accent));
+}
+
+.day-heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.day-weather {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.day-weather:not(.loaded) {
+  display: none;
+}
+
+.day-weather .wx-icon {
+  font-size: 1.15em;
+}
+
+.day-weather .wx-temp {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: var(--ink);
 }
 
 .day-num {
