@@ -189,7 +189,7 @@
         </div>
       </div>
       {% if day.lat and day.lon and day.date %}
-      <div class="day-weather" data-lat="{{ day.lat }}" data-lon="{{ day.lon }}" data-date="{{ day.date }}" aria-live="polite"></div>
+      <a class="day-weather" href="https://www.windy.com/?{{ day.lat }},{{ day.lon }},11" target="_blank" rel="noopener" data-lat="{{ day.lat }}" data-lon="{{ day.lon }}" data-date="{{ day.date }}" aria-live="polite"></a>
       {% endif %}
     </div>
 
