@@ -205,43 +205,57 @@ days:
           - { type: map, label: 取车门市, query: 固得租車 台北車站店 }
           - { type: ticket, label: GoodCars 官网预订, url: "https://www.goodcars.tw/" }
 
-      - time: 10:00 – 13:30
-        title: 🏛️ 国立故宫博物院
+      - time: 10:30 – 12:00
+        title: 🏛️ 国立故宫博物院 · 10:30 中文导览
         detail: |
-          世界四大博物馆之一，收藏近 70 万件中华艺术珍品，包括翠玉白菜、肉形石、毛公鼎等镇馆之宝。建议 3–4 小时细看。
+          参加 10:30 中文场免费定时导览（已预约），1 F 服务台集合，约 1.5 小时，由讲解员带看翠玉白菜、肉形石、毛公鼎等镇馆之宝 — 入门效率比自己瞎看高很多。今天行程紧凑，导览结束直接出馆赶下一站（山仔后午餐），常设展不再回头细看。
           <br><br>
-          <strong>🎧 免费定时导览（需预约）：</strong>中文场每日两场，<strong>上午 10:30 / 下午 14:30</strong>，每场 20 人，1 F 服务台集合，约 1.5 小时，跟导览解说入门比自己瞎看效率高很多。到故宫官方报名系统（signup.npm.edu.tw）网上预约，<strong>最迟参观前 3 天</strong>（含当日）截止，热门时段会被抢光 — 愈早订愈稳。参加者另需租用<strong>语音导览子机 NT$30/人</strong>（自 2023 年起实施）。英文 / 日文场时段官网当日公告，可现场询问。
+          <strong>🎧 子机：</strong>参加导览每人必租语音导览子机 NT$30 — 集合前在 1 F 服务台领取，离馆归还。
           <br><br>
-          <strong>自驾：</strong>从台北车站出发约 25 分钟，馆区有停车场（小型车 NT$50/小时）。
+          <strong>自驾：</strong>09:30 取车后约 25–30 分钟车程到馆，10:15 前抵 1 F 服务台集合最稳妥。馆区停车场小型车 NT$50/小时。
         tickets:
           - { tag: trip.com 已订, value: "SGD 12.71", note: 全票 }
-          - { tag: 子机租金, value: NT$30, note: 参加定时导览者每人必租 }
+          - { tag: 子机租金, value: NT$30/人, note: 参加导览每人必租 }
           - { tag: 开放, value: 09:00–17:00（周一休馆） }
-          - { tag: 免费导览, value: 10:30 / 14:30 · 参观前 3 天截止预约 }
+          - { tag: 已预约导览, value: 10:30 中文场 · 1 F 服务台集合 }
         links:
           - { type: map, label: 地图, query: National Palace Museum Taipei }
           - { type: ticket, label: 故宫官网, url: *url_npm }
           - { type: ticket, label: 免费导览预约, url: "https://signup.npm.edu.tw/Advice.aspx?ActivityId=6&LangId=1" }
           - { type: ticket, label: Klook 预约, url: *url_klook_npm }
 
-      - time: 13:30 – 14:30
-        title: 🍱 午餐 · 故宫晶华 或 士林老街
-        detail: 故宫内的晶华餐厅有「国宝宴」菜色，可吃到翠玉白菜、肉形石造型料理。预算有限可开车下山到士林吃铭传大学周边小吃。
-        links:
-          - { type: map, label: 故宫晶华, query: 故宫晶华 }
-
-      - time: 14:45 – 18:45
-        title: 🌋 阳明山国家公园
+      - time: 12:15 – 13:15
+        title: 🍱 午餐 · 台至醉（山仔后台菜）
         detail: |
-          台湾最大休眠火山群，有温泉、硫磺喷气口、花季步道。推荐路线：小油坑（火山地貌）→ 冷水坑（牛奶湖）→ 擎天岗（大草原、水牛）→ 竹子湖（季节限定海芋／绣球花）。
-          <br><br>
-          <strong>自驾：</strong>从故宫约 30 分钟经阳金公路上山。各景点停车场多为免费，周末车位紧张建议早上进山。
+          阳明山 山仔后地区的台菜小馆，从故宫沿仰德大道驱车约 15–20 分钟即达。招牌：卤肉、清蒸鱼、时令烫青菜，家常台味厚实下饭。午餐时段 11:00–14:00。
         links:
-          - { type: map, label: 阳明山, query: Yangmingshan National Park }
-          - { type: map, label: 小油坑, query: 小油坑 Xiaoyoukeng }
-          - { type: map, label: 冷水坑, query: 冷水坑 }
-          - { type: map, label: 擎天岗, query: 擎天岗 }
+          - { type: map, label: 台至醉, query: 台至醉 山仔后 }
+
+      - time: 13:45 – 14:30
+        title: 🌸 曹家花田 · 竹子湖绣球花
+        detail: |
+          竹子湖海拔约 700 米，<strong>5–6 月是绣球花（紫阳花）盛开期</strong> — 曹家花田是当地最具代表性的花田之一，整片山坡蓝、紫、粉相间，是阳明山六月最出片的角落之一。
+        tickets:
+          - { tag: 入园, value: "NT$100", note: 估算 }
+        links:
+          - { type: map, label: 曹家花田, query: 曹家花田 竹子湖 }
           - { type: map, label: 竹子湖, query: 竹子湖 阳明山 }
+
+      - time: 14:45 – 15:45
+        title: 🌋 小油坑 · 火山地貌
+        detail: |
+          阳明山最具代表性的硫磺喷气孔与硫磺结晶地带 — 沿地热步道近距离观察喷气孔、闻硫磺味，体验台湾少见的活火山景观。
+          <br><br>
+          <strong>⚠️ 闸门 16:30 关闭，务必 16:00 前入园。</strong>从竹子湖开过去约 10 分钟车程，时间留得很紧。
+        links:
+          - { type: map, label: 小油坑, query: 小油坑 Xiaoyoukeng }
+
+      - time: 16:00 – 17:30
+        title: 🐮 擎天岗 · 大草原
+        detail: |
+          阳明山最大草原，水牛悠闲漫步、四周山稜环绕，可远眺台北盆地。环状步道一圈约 40–50 分钟，慢走拍照刚好 1.5 小时。看完夕阳前下山，沿阳金公路驱车回市区约 60 分钟，<strong>务必 19:30 前开始下山，确保 20:30 前到店还车。</strong>
+        links:
+          - { type: map, label: 擎天岗, query: 擎天岗 }
 
       - time: 19:30 – 20:00
         title: 🚗 固得租車 台北车站店 · 还车
