@@ -225,11 +225,11 @@ days:
           - { type: ticket, label: Klook 预约, url: *url_klook_npm }
 
       - time: 12:15 – 13:15
-        title: 🍱 午餐 · 台至醉（山仔后台菜）
+        title: 🍱 午餐 · 台之最（山仔后台菜）
         detail: |
           阳明山 山仔后地区的台菜小馆，从故宫沿仰德大道驱车约 15–20 分钟即达。招牌：卤肉、清蒸鱼、时令烫青菜，家常台味厚实下饭。午餐时段 11:00–14:00。
         links:
-          - { type: map, label: 台至醉, query: 台至醉 山仔后 }
+          - { type: map, label: 台之最, query: 台之最 山仔后 }
 
       - time: 13:45 – 14:30
         title: 🌸 曹家花田 · 竹子湖绣球花
