@@ -10,7 +10,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/5/28
+last_updated: 2026/5/29
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
@@ -692,7 +692,7 @@ days:
           <strong>📞 现场座位多、不强制订位</strong>，但晚餐尖峰可能要等 — 出发前可电话 06-238-7771 先问当晚状况。从安平骑 WeMo 过去约 20–25 分钟（穿越市区到永康）。
         tickets:
           - { tag: 牛肉锅, value: "NT$300–500/人", note: 估算 · 视部位 }
-          - { tag: 营业, value: 11:00–00:00 }
+          - { tag: 营业, value: "11:00–00:00" }
         links:
           - { type: map, label: 永林綜合料理, query: 永林綜合料理 台南本店 }
 
