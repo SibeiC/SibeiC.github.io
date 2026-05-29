@@ -10,7 +10,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/5/28
+last_updated: 2026/5/29
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
@@ -680,21 +680,33 @@ days:
 
       - time: 16:00 – 17:30
         title: 🍧 安平老街
-        detail: 推荐：周氏虾卷、陈家蚵卷、同记安平豆花（招牌花生豆花）、林永泰兴蜜饯行（百年老店）。
+        detail: 推荐：周氏虾卷、陈家蚵卷、同记安平豆花（招牌花生豆花）、林永泰兴蜜饯行（百年老店）。<strong>留肚子给晚上的永林</strong> — 这里小吃浅尝即止。
         links:
           - { type: map, label: 安平老街, query: 安平老街 }
 
-      - time: 18:00 – 20:30
+      - time: 18:00 – 19:30
+        title: 🥩 永林綜合料理 · 温体牛肉火锅
+        detail: |
+          台南成大医院附近的温体牛肉火锅老字号，位在永康区東豐路。当日善化/关庙现宰温体牛肉，清汤涮煮，肉质鲜嫩弹牙 — 台南名物「温体牛肉」的经典吃法。营业 11:00–00:00，<strong>周一不杀牛但照常开门并有特价肉品</strong>，6/3 周三正常营业。
+          <br><br>
+          <strong>📞 现场座位多、不强制订位</strong>，但晚餐尖峰可能要等 — 出发前可电话 06-238-7771 先问当晚状况。从安平骑 WeMo 过去约 20–25 分钟（穿越市区到永康）。
+        tickets:
+          - { tag: 牛肉锅, value: "NT$300–500/人", note: 估算 · 视部位 }
+          - { tag: 营业, value: "11:00–00:00" }
+        links:
+          - { type: map, label: 永林綜合料理, query: 永林綜合料理 台南本店 }
+
+      - time: 20:00 – 21:30
         title: 🏮 神农街 Shennong Street
-        detail: 清代遗留的古老街道，两旁保留大量清末民初老屋，如今转型为文青酒吧、独立书店、选物店、老派咖啡馆聚落。傍晚灯笼亮起最有味道，是台南最美的一条老街。
+        detail: 清代遗留的古老街道，两旁保留大量清末民初老屋，如今转型为文青酒吧、独立书店、选物店、老派咖啡馆聚落。<strong>傍晚灯笼亮起最有味道</strong>，是台南最美的一条老街。从永林骑 WeMo 回市区约 15 分钟。
         links:
           - { type: map, label: 神农街, query: 神农街 台南 }
           - { type: map, label: 水仙宫, query: 台南水仙宫 }
           - { type: map, label: 赤崁楼, query: 赤崁楼 台南 }
 
-      - time: 21:00 起
+      - time: 21:30 起（可选）
         title: 🌃 夜宵 · 保安路小吃
-        detail: 6/3 为周三，台南花园夜市/大东夜市均未开市，可到保安路一带：阿村牛肉汤、阿明猪心、阿龙香肠熟肉、叶家小卷米粉（24 小时）。
+        detail: 6/3 为周三，台南花园夜市/大东夜市均未开市；若永林后仍有余地，可顺路走保安路：阿村牛肉汤、阿明猪心、阿龙香肠熟肉、叶家小卷米粉（24 小时）。吃饱了直接回禧榕轩也没毛病。
         links:
           - { type: map, label: 保安路, query: 保安路小吃 台南 }
     stay:
