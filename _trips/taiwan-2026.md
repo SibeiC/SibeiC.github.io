@@ -10,7 +10,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/5/29
+last_updated: 2026/6/1
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
@@ -82,6 +82,7 @@ cost:
         - { label: "故宫 语音导览子机（定时导览必租）", amount: 30, in: primary }
         - { label: "九族 + 游湖套票（中台湾好玩卡）", amount: 1050, in: primary }
         - { label: "阿里山入园（大众运输票）+ 支线 ×2", amount: 350, in: primary }
+        - { label: "阿里山观星导览（青山别馆开团，NT$200/人 × 2 人）", amount: 400, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
         - { label: "多罗满赏鲸（含免费接送）", amount: 900, in: primary }
 
@@ -557,28 +558,23 @@ days:
         links:
           - { type: map, label: 酒店位置, query: Chin Shan Villa 青山别馆 阿里山 }
 
-      - time: 可选 19:30 – 21:30
-        title: ✨ 观星 / 追流星（可选）
+      - time: 20:00 出发
+        title: ✨ 青山别馆观星导览 · 小笠原山观景台
         detail: |
-          阿里山海拔 2,200m + 光害低，是全台顶级观星点。官方首推<strong>小笠原山观景台</strong>（沼平线底站徒步约 10 分钟，有无障碍步道 360° 无遮挡），<strong>祝山观景台</strong>为备选。
+          青山别馆开团的夜间观星导览，<strong>20:00 集合出发</strong>，酒店带去观星点（阿里山官方首推<strong>小笠原山观景台</strong>，沼平线底站徒步约 10 分钟，无障碍步道 360° 无遮挡）。阿里山海拔 2,200m + 光害低，全台顶级观星点。
           <br><br>
           <strong>🌠 6/1 流星机会：</strong><a href="https://earthsky.org/astronomy-essentials/arietids-daytime-meteor-shower-peaks/" target="_blank">白羊座流星雨（Arietids）</a> 活跃期 5/22–7/3，峰值 6/10，虽以日间流星为主，但<strong>破晓前最后一小时的暗空窗口</strong>可能抓到几颗。6/1 非峰值，仅可期待零星，且当日月相为下弦至新月之间（6/8 下弦月），6/1 深夜后有一定月光干扰。
           <br><br>
-          <strong>官方导览：</strong>林业保育署嘉义分署 + 嘉义市天文协会每年 4–6 月办<a href="https://www.facebook.com/AlishanForest/posts/952736067010416/" target="_blank">「春星斯麦尔」6 梯次 2 天 1 夜观星生态营</a>（小笠原平台专业望远镜 + 星座解说），但需提前报名。check-in 时问柜台当晚是否恰好有梯次、或酒店 / 在地业者有无夜间观星团。
-          <br><br>
-          <strong>⚠️ 完全看天：</strong>阿里山 5–6 月常云雾缭绕，云多就直接放弃回房间早睡。
+          <strong>⚠️ 完全看天：</strong>阿里山 5–6 月常云雾缭绕，云多酒店会取消当晚出团 — 出发前先到柜台确认当晚是否照常出团。
           <br><br>
           <strong>装备：</strong>头灯 / 手电（红光最佳，不影响暗适应）、薄羽绒或厚外套（入夜 10–15°C）、防蚊液、星图 App（Sky Guide / Stellarium）。
         tickets:
-          - { tag: 自助前往, value: 免费 }
-          - { tag: 导览团（若酒店开团）, value: "NT$500–800/人", note: 视当晚天气与报名人数 }
+          - { tag: 已订, value: "NT$200/人", note: 青山别馆开团 · 20:00 出发 }
         links:
           - { type: map, label: 小笠原山观景台, query: 小笠原山观景台 阿里山 }
-          - { type: map, label: 祝山观景台, query: 祝山观景台 }
           - { label: Arietids 流星雨 (EarthSky), url: "https://earthsky.org/astronomy-essentials/arietids-daytime-meteor-shower-peaks/" }
-          - { label: 春星斯麦尔官方梯次, url: "https://www.facebook.com/AlishanForest/posts/952736067010416/" }
     note: |
-      <strong>💡 观星替代日出：</strong>放弃传统 4:30 赶祝山观日出火车，改把阿里山高海拔 + 低光害的优势用在当晚观星上 — check-in 时先跟青山别馆柜台问当晚天气 / 有否开观星团。隔日睡饱再退房也更从容。
+      <strong>💡 观星替代日出：</strong>放弃传统 4:30 赶祝山观日出火车，改把阿里山高海拔 + 低光害的优势用在当晚观星上 — 已订青山别馆开团的观星导览（20:00 出发，NT$200/人）。隔日睡饱再退房也更从容。
     stay:
       hotel: 青山别馆 Chin Shan Villa
 
