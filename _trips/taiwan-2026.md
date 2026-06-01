@@ -82,7 +82,7 @@ cost:
         - { label: "故宫 语音导览子机（定时导览必租）", amount: 30, in: primary }
         - { label: "九族 + 游湖套票（中台湾好玩卡）", amount: 1050, in: primary }
         - { label: "阿里山入园（大众运输票）+ 支线 ×2", amount: 350, in: primary }
-        - { label: "阿里山观星导览（青山别馆开团，NT$200/人）", amount: 400, in: primary }
+        - { label: "阿里山观星导览（青山别馆开团，NT$200/人 × 2 人）", amount: 400, in: primary }
         - { label: "安平树屋 + 古堡", amount: 70, in: primary }
         - { label: "多罗满赏鲸（含免费接送）", amount: 900, in: primary }
 
@@ -559,13 +559,13 @@ days:
           - { type: map, label: 酒店位置, query: Chin Shan Villa 青山别馆 阿里山 }
 
       - time: 20:00 出发
-        title: ✨ 青山别馆观星导览 · 小笠原山平台
+        title: ✨ 青山别馆观星导览 · 小笠原山观景台
         detail: |
           青山别馆开团的夜间观星导览，<strong>20:00 集合出发</strong>，酒店带去观星点（阿里山官方首推<strong>小笠原山观景台</strong>，沼平线底站徒步约 10 分钟，无障碍步道 360° 无遮挡）。阿里山海拔 2,200m + 光害低，全台顶级观星点。
           <br><br>
           <strong>🌠 6/1 流星机会：</strong><a href="https://earthsky.org/astronomy-essentials/arietids-daytime-meteor-shower-peaks/" target="_blank">白羊座流星雨（Arietids）</a> 活跃期 5/22–7/3，峰值 6/10，虽以日间流星为主，但<strong>破晓前最后一小时的暗空窗口</strong>可能抓到几颗。6/1 非峰值，仅可期待零星，且当日月相为下弦至新月之间（6/8 下弦月），6/1 深夜后有一定月光干扰。
           <br><br>
-          <strong>⚠️ 完全看天：</strong>阿里山 5–6 月常云雾缭绕，云多酒店会取消当晚出团 — 出发前柜台问确认状况。
+          <strong>⚠️ 完全看天：</strong>阿里山 5–6 月常云雾缭绕，云多酒店会取消当晚出团 — 出发前先到柜台确认当晚是否照常出团。
           <br><br>
           <strong>装备：</strong>头灯 / 手电（红光最佳，不影响暗适应）、薄羽绒或厚外套（入夜 10–15°C）、防蚊液、星图 App（Sky Guide / Stellarium）。
         tickets:
