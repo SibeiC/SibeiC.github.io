@@ -10,7 +10,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/6/1
+last_updated: 2026/6/4
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
@@ -723,7 +723,7 @@ days:
         title: 🚆 台铁自强号 301 · 台南 → 花莲
         transit: true
         detail: |
-          <strong>全程约 4.5 小时直达</strong>（自强号 3000 系列 301 次）。此为南回线顺时针绕半岛东岸的直达班次，沿途高雄、枋寮、台东、瑞穗、花莲，风景极佳（右侧座位看海）。
+          <strong>全程约 4.5 小时直达</strong>（自强号 3000 系列 301 次）。此为南回线顺时针绕半岛东岸的直达班次，沿途高雄、枋寮、台东、瑞穗、花莲，风景极佳。<strong>选位：</strong>EMU3000 标准车厢 1–8 车<strong>单数座位 = 左/靠山，双数座位 = 右/靠海</strong>（亲测确认）— 想看海挑双号。
           <br><br>
           <strong>⚠️ 座位紧俏</strong>，务必提前 14 天上台铁官网抢票（06:30 开抢）。车票费用 NT$962。
         transit_route:
