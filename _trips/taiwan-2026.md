@@ -10,7 +10,7 @@ subtitle:
   - 花莲
 date_range: 2026/5/28 – 6/6
 duration: 共 9 天 8 夜
-last_updated: 2026/6/4
+last_updated: 2026/6/6
 
 # Repeated URLs — declared once, referenced via YAML anchors (*url_xxx) below.
 # Only URLs used ≥ 2× across this file live here; one-off URLs stay inline at
@@ -237,7 +237,7 @@ days:
         detail: |
           竹子湖海拔约 700 米，<strong>5–6 月是绣球花（紫阳花）盛开期</strong> — 曹家花田是当地最具代表性的花田之一，整片山坡蓝、紫、粉相间，是阳明山六月最出片的角落之一。
         tickets:
-          - { tag: 入园, value: "NT$100", note: 估算 }
+          - { tag: 入园, value: "NT$100" }
         links:
           - { type: map, label: 曹家花田, query: 曹家花田 竹子湖 }
           - { type: map, label: 竹子湖, query: 竹子湖 阳明山 }
@@ -687,7 +687,7 @@ days:
           <br><br>
           <strong>📞 现场座位多、不强制订位</strong>，但晚餐尖峰可能要等 — 出发前可电话 06-238-7771 先问当晚状况。从安平骑 WeMo 过去约 20–25 分钟（穿越市区到永康）。
         tickets:
-          - { tag: 牛肉锅, value: "NT$300–500/人", note: 估算 · 视部位 }
+          - { tag: 牛肉锅, value: "NT$300–500/人", note: 视部位 }
           - { tag: 营业, value: "11:00–00:00" }
         links:
           - { type: map, label: 永林綜合料理, query: 永林綜合料理 台南本店 }

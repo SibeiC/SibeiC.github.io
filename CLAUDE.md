@@ -141,6 +141,15 @@ When the user sends a receipt image (optionally with a comment), do the followin
 
 **Cost override rule (important):** If the receipt's cost already has a corresponding **estimate** line (typically tagged `note: 估算`), **replace** that line's `amount` with the actual and **drop** `note: 估算` — do NOT add a second line. Matching heuristic: same `cost.groups[]` category + same / similar `label` + plausible date. If the match is ambiguous (e.g. generic "交通杂费" vs. specific taxi fare), ask before overwriting vs. appending. Never manually recompute totals — the Liquid layout sums everything.
 
+### Trip-end cleanup
+
+Once a trip is over (today is past the trip's `date_range` end), do a final pass on that `_trips/*.md` to retire the now-stale planning artifacts:
+
+1. **Drop leftover `估算` markers.** Any remaining `note: 估算` (on a `cost.groups[].items[]` line or a day item's `tickets[].value` chip) means a value the traveller never confirmed with a receipt. The trip is settled now, so the value won't get a real number — strip the `note: 估算` flag and keep the best-known figure as final. If the note carries genuinely-informative text alongside the estimate flag (e.g. `note: 估算 · 视部位` on a price that legitimately varies by cut), drop only the `估算 ·` part and keep the informative remainder (`note: 视部位`).
+2. **Bump `last_updated`** to the cleanup commit date (`YYYY/M/D`), same as any other content change.
+
+This is a tidy-up, not a logistics change, so it follows the **trivial cost-line** exception below — commit directly to `master`, no PR. The weather chip and today-jump self-disable once the date window passes, so there's nothing code-side to retire.
+
 ### Itinerary authoring: bag-drop before sightseeing on transition days
 
 On any day where the traveller moves from one accommodation to another, the day's `items[]` should include an explicit **`🎒 <hotel name> · 行李寄存`** (or `· Check-in`) step **before** the first sightseeing item at the destination. Don't assume the hotel is reachable only at `stay:` time in the evening — most hotels in Taiwan / Japan / SEA accept early luggage drop at the front desk even before the formal check-in window.
